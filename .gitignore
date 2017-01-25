@@ -1,6 +1,6 @@
 .DS_Store
 node_modules/*
-front/*
+front/compiled/*
 data/*
 research/*
 npm-debug.log*
