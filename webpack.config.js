@@ -45,6 +45,11 @@ module.exports = {
   resolve: {
     modulesDirectories: 'node_modules',
     extensions: ['', '.js', '.css']
+  },
+  devServer: {
+    contentBase: ['./front/compiled', './front/'],
+    compress: true,
+    port: 80
   }
 }
 
