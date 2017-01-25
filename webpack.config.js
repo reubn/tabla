@@ -43,7 +43,7 @@ module.exports = {
     }),
     new webpack.optimize.OccurrenceOrderPlugin()],
   resolve: {
-    modulesDirectories: 'node_modules',
+    modulesDirectories: ['node_modules'],
     extensions: ['', '.js', '.css']
   },
   devServer: {
