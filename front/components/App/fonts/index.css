@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Museo Sans Rounded';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./300.woff') format('woff'), url('./300.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Museo Sans Rounded';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./500.woff') format('woff'), url('./500.woff2') format('woff2');
+}

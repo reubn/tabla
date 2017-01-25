@@ -1,0 +1,44 @@
+@import './fonts';
+
+:root {
+  --colours-red: #f55;
+  --colours-yellow: #ffee62;
+  --colours-orange: #ffc233;
+
+  --colours-green: #5dedcb;
+  --colours-green-hover: #41f1c7;
+
+  --colours-blue: #60cbfc;
+  --colours-blue-hover: #36c0ff;
+  --colours-blue-dark: #38f;
+
+  --colours-pink: #ff3a8e;
+  --colours-pink-hover: #e40d68;
+
+  --colours-purple: #c34ef8;
+  --colours-purple-dark: #5959d3;
+
+  --colours-black: #1e1f1f;
+  --colours-black-trans: rgba(30, 31, 31, .4);
+  --colours-black-1: #333;
+  --colours-black-2: #444;
+  --colours-black-3: #525252;
+  --colours-black-4: #5d5d5d;
+  --colours-black-5: #676767;
+
+  --colours-grey: #dadada;
+  --colours-grey-1: #bbb;
+  --colours-grey-2: #999;
+  --colours-grey-3: #939393;
+  --colours-grey-4: #8c8c8c;
+  --colours-grey-5: #7b7b7b;
+
+  --colours-white: #fff;
+  --colours-white-1: #fbfbfb;
+  --colours-white-2: #f9f9f9;
+  --colours-white-3: #f2f2f2;
+  --colours-white-4: #ececec;
+  --colours-white-5: #e2e2e2;
+
+  --font-family: 'Museo Sans Rounded', 'Arial Rounded';
+}
