@@ -1,0 +1,9 @@
+{
+  "name": "tabla",
+  "version": "0.0.1",
+  "description": "Periodic Table",
+  "main": "./front",
+  "repository": "https://github.com/reubn/tabla.git",
+  "author": "reuben <reuben.eggar@me.com>",
+  "license": "MIT"
+}
