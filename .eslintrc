@@ -1,0 +1,79 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "plugin:import/errors", "plugin:import/warnings"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "semi": [2, "never"],
+    "max-len": 0,
+    "func-names": 0,
+    "prefer-arrow-callback": 0,
+    "arrow-parens": [2, "as-needed"],
+    "no-console": 0,
+    "comma-dangle": [2, "never"],
+    "space-before-function-paren": [2, "never"],
+    "space-before-blocks": [2, {"functions": "never", "keywords": "never", "classes": "always"}],
+    "object-curly-spacing": [2, "never"],
+    "curly": [2, "multi-line"],
+    "consistent-return": 0,
+    "no-plusplus": 0,
+    "block-spacing": [2, "never"],
+    "space-infix-ops": 0,
+    "no-prototype-builtins": 0,
+    "class-methods-use-this": 0,
+    "no-underscore-dangle": 0,
+    "no-param-reassign": [2, {"props": false}],
+    "keyword-spacing": [2, {
+      "after": false,
+      "overrides": {
+        "return": {
+          "after": true
+        },
+        "import": {
+          "after": true
+        },
+        "export": {
+          "after": true
+        },
+        "const": {
+          "after": true
+        },
+        "else": {
+          "after": true
+        },
+        "from": {
+          "after": true,
+          "before": true
+        },
+        "case": {
+          "after": true
+        }
+      }
+    }],
+    "react/jsx-filename-extension": 0,
+    "react/prop-types": 0,
+    "react/jsx-sort-prop": 0,
+    "import/extensions": 0,
+    "import/newline-after-import": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/label-has-for": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack.config.js"
+      }
+    },
+    "import/ignore": [(.*)?node_modules(.*)?, \.(scss|less|css)$],
+  }
+}

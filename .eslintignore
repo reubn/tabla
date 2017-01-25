@@ -1,0 +1,6 @@
+node_modules/*
+front/*
+data/*
+research/*
+npm-debug.log*
+yarn-error.log*
