@@ -1,0 +1,6 @@
+.spacer {
+  background: var(--colours-black-2);
+  height: 100%;
+  transition: 0.2s linear;
+  font-size: 0;
+}

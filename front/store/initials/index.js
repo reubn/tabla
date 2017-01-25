@@ -1,5 +1,5 @@
-import table from './table'
+import periodicTable from './periodicTable'
 
 export default {
-  table
+  periodicTable
 }

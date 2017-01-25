@@ -1,0 +1,6 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / var(--columns));
+  height: 100%;
+}
