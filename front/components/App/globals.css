@@ -40,5 +40,5 @@
   --colours-white-4: #ececec;
   --colours-white-5: #e2e2e2;
 
-  --font-family: 'Museo Sans Rounded', 'Arial Rounded';
+  --font-family: 'Museo Sans Rounded', 'PT Sans', 'Arial Rounded', sans-serif;
 }
