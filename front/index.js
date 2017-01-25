@@ -8,9 +8,13 @@ import {syncHistoryWithStore} from 'react-router-redux'
 import store from './store'
 import routes from './routes'
 
+import elements from '../data/master'
+
 function Tabla(){
   this.store = store
   this.history = syncHistoryWithStore(browserHistory, this.store)
+
+  this.elements = elements
 
   render(
     <Provider store={this.store}>
