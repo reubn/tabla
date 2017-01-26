@@ -49,6 +49,7 @@ module.exports = {
   devServer: {
     contentBase: ['./front/compiled', './front/'],
     compress: true,
+    host: '0.0.0.0',
     port: 80,
     historyApiFallback: {
       rewrites: [
