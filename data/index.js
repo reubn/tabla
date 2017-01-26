@@ -2280,7 +2280,7 @@ export default {
     meltingPoint: 1936,
     boilingPoint: 3675,
     density: 9.841,
-    groupBlock: 'transitionMetal',
+    groupBlock: 'lanthanoid',
     yearDiscovered: 1907,
     appearance: 'silvery white',
     discoveredBy: 'Georges Urbain',
@@ -3265,7 +3265,7 @@ export default {
       3
     ],
     meltingPoint: 1900,
-    groupBlock: 'transitionMetal',
+    groupBlock: 'actinoid',
     yearDiscovered: 1961,
     discoveredBy: 'Lawrence Berkeley National Laboratory',
     summary: 'Lawrencium is a synthetic chemical element with chemical symbol Lr (formerly Lw) and atomic number 103. It is named in honor of Ernest Lawrence, inventor of the cyclotron, a device that was used to discover many artificial radioactive elements. A radioactive metal, lawrencium is the eleventh transuranic element and is also the final member of the actinide series.',
@@ -3370,7 +3370,6 @@ export default {
       '6d7',
       '7s2'
     ],
-    groupBlock: 'transitionMetal',
     yearDiscovered: 1982,
     discoveredBy: 'Gesellschaft für Schwerionenforschung',
     summary: 'Meitnerium is a chemical element with symbol Mt and atomic number 109. It is an extremely radioactive synthetic element (an element not found in nature that can be created in a laboratory). The most stable known isotope, meitnerium-278, has a half-life of 7.6 seconds.',
@@ -3387,7 +3386,6 @@ export default {
       '6d9',
       '7s1'
     ],
-    groupBlock: 'transitionMetal',
     yearDiscovered: 1994,
     discoveredBy: 'Gesellschaft für Schwerionenforschung',
     summary: 'Darmstadtium is a chemical element with symbol Ds and atomic number 110. It is an extremely radioactive synthetic element. The most stable known isotope, darmstadtium-281, has a half-life of approximately 10 seconds.',
@@ -3404,7 +3402,6 @@ export default {
       '6d10',
       '7s1'
     ],
-    groupBlock: 'transitionMetal',
     yearDiscovered: 1994,
     discoveredBy: 'Gesellschaft für Schwerionenforschung',
     summary: 'Roentgenium is a chemical element with symbol Rg and atomic number 111. It is an extremely radioactive synthetic element (an element that can be created in a laboratory but is not found in nature); the most stable known isotope, roentgenium-282, has a half-life of 2.1 minutes. Roentgenium was first created in 1994 by the GSI Helmholtz Centre for Heavy Ion Research near Darmstadt, Germany.',
@@ -3439,7 +3436,6 @@ export default {
       '7s2',
       '7p1'
     ],
-    groupBlock: 'postTransitionMetal',
     yearDiscovered: 2003,
     discoveredBy: 'RIKEN',
     summary: 'Nihonium is a chemical element with atomic number 113. It has a symbol Nh. It is a synthetic element (an element that can be created in a laboratory but is not found in nature) and is extremely radioactive; its most stable known isotope, nihonium-286, has a half-life of 20 seconds.',
@@ -3475,7 +3471,6 @@ export default {
       '7s2',
       '7p3'
     ],
-    groupBlock: 'nonMetal',
     yearDiscovered: 2003,
     discoveredBy: 'Joint Institute for Nuclear Research',
     summary: 'Moscovium is the name of a synthetic superheavy element in the periodic table that has the symbol Mc and has the atomic number 115. It is an extremely radioactive element; its most stable known isotope, moscovium-289, has a half-life of only 220 milliseconds. It is also known as eka-bismuth or simply element 115.',
@@ -3493,7 +3488,6 @@ export default {
       '7s2',
       '7p4'
     ],
-    groupBlock: 'nobleGas',
     yearDiscovered: 2000,
     discoveredBy: 'Joint Institute for Nuclear Research',
     summary: 'Livermorium is a synthetic superheavy element with symbol Lv and atomic number 116. It is an extremely radioactive element that has only been created in the laboratory and has not been observed in nature. The element is named after the Lawrence Livermore National Laboratory in the United States, which collaborated with the Joint Institute for Nuclear Research in Dubna, Russia to discover livermorium in 2000.',
@@ -3511,7 +3505,6 @@ export default {
       '7s2',
       '7p5'
     ],
-    groupBlock: 'alkaliMetal',
     yearDiscovered: 2010,
     discoveredBy: 'Joint Institute for Nuclear Research',
     summary: 'Tennessine is a superheavy artificial chemical element with an atomic number of 117 and a symbol of Ts. Also known as eka-astatine or element 117, it is the second-heaviest known element and penultimate element of the 7th period of the periodic table. As of 2016, fifteen tennessine atoms have been observed:six when it was first synthesized in 2010, seven in 2012, and two in 2014.',
@@ -3529,9 +3522,6 @@ export default {
       '7s2',
       '7p6'
     ],
-    meltingPoint: null,
-    boilingPoint: null,
-    groupBlock: 'alkalineEarthMetal',
     yearDiscovered: 2002,
     discoveredBy: 'Joint Institute for Nuclear Research',
     summary: `Ooganesson is IUPAC's name for the transactinide element with the atomic number 118 and element symbol Og. It is also known as eka-radon or element 118, and on the periodic table of the elements it is a p-block element and the last one of the 7th period. Oganesson is currently the only synthetic member of group 18.`,
