@@ -1,6 +1,71 @@
 .element {
-  background: var(--colours-pink);
-  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: var(--size);
   transition: 0.2s linear;
-  font-size: 0;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-color: var(--colours-blue-dark-1);
+  border-radius: 3px;
+  color: var(--group-colour);
+  cursor: pointer;
 }
+
+.element:hover {
+  color: var(--colours-blue-dark-1);
+  background: var(--group-colour);
+}
+
+.atomicNumber {
+  font-size: 1.25vmin;
+  text-align: left;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  opacity: 0.8;
+}
+
+.element:hover .atomicNumber {
+  opacity: 1;
+}
+
+.symbol {
+  font-size: 2.5vmin;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.atomicMass {
+  display: block;
+  width: 80%;
+  font-size: 1vmin;
+  text-align: center;
+  position: absolute;
+  bottom: 10%;
+  overflow: hidden;
+  word-break: break-all;
+  height: 1vmin;
+  opacity: 0.5;
+}
+
+.element:hover .atomicMass {
+  opacity: 1;
+}
+
+.alkaliMetal {--group-colour: var(--colours-pink-red);}
+.nonMetal {--group-colour: var(--colours-blue);}
+.transitionMetal {--group-colour: var(--colours-green);}
+.postTransitionMetal {--group-colour: var(--colours-red);}
+.halogen {--group-colour: var(--colours-orange);}
+.nobleGas {--group-colour: var(--colours-yellow);}
+.metalloid {--group-colour: var(--colours-purple);}
+.alkalineEarthMetal {--group-colour: var(--colours-aqua);}
+.actinoid {--group-colour: var(--colours-purple-dark);}
+.lanthanoid {--group-colour: var(--colours-pink);}
+.unknown {--group-colour: var(--colours-blue-dark-2);}

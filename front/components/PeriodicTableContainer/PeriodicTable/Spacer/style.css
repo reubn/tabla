@@ -1,6 +1,7 @@
 .spacer {
-  background: var(--colours-black-2);
-  height: 100%;
+  flex-basis: var(--size);
   transition: 0.2s linear;
-  font-size: 0;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-color: var(--colours-blue-dark-1);
 }

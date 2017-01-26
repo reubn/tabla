@@ -11,7 +11,7 @@
   overflow: hidden;
   font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
-  background: var(--colours-white);
+  background: var(--colours-blue-dark);
 }
 
 ::-webkit-scrollbar {

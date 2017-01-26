@@ -9,7 +9,15 @@ import {periodicTable} from './style'
 import layout from './layout'
 
 const PeriodicTable = ({visibleElements}) => {
-  const groups = layout.map((group, index) => <Group key={index}>{group.map(part => part ? <ElementContainer atomicNumber={part} visible={visibleElements.includes(part)} /> : <Spacer />)}</Group>)
+  const groups =
+    layout.map((group, groupIndex) =>
+      <Group key={`group-${groupIndex}`}>
+        {group.map((part, partIndex) => (
+          part
+          ? <ElementContainer key={part} atomicNumber={part} visible={visibleElements.includes(part)} />
+          : <Spacer key={`spacer-${partIndex}`} />
+        ))}
+      </Group>)
   return <section className={periodicTable}>{groups}</section>
 }
 
