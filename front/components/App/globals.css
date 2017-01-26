@@ -6,20 +6,21 @@
   --colours-orange: #ffc233;
 
   --colours-green: #5dedcb;
-  --colours-green-hover: #41f1c7;
+
+  --colours-aqua: #05ffff;
 
   --colours-blue: #60cbfc;
-  --colours-blue-hover: #36c0ff;
-  --colours-blue-dark: #38f;
+  --colours-blue-dark: #1E2C36;
+  --colours-blue-dark-1: #202f37;
+  --colours-blue-dark-2: #303d46;
 
   --colours-pink: #ff3a8e;
-  --colours-pink-hover: #e40d68;
+  --colours-pink-red: #ff4775;
 
   --colours-purple: #c34ef8;
   --colours-purple-dark: #5959d3;
 
   --colours-black: #1e1f1f;
-  --colours-black-trans: rgba(30, 31, 31, .4);
   --colours-black-1: #333;
   --colours-black-2: #444;
   --colours-black-3: #525252;
