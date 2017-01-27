@@ -11,7 +11,7 @@ import layout from './layout'
 const PeriodicTable = ({visibleElements}) => {
   const groups =
     layout.map((group, groupIndex) =>
-      <Group key={`group-${groupIndex}`}>
+      <Group key={groupIndex}>
         {group.map((part, partIndex) => (
           part
           ? <ElementContainer key={part} atomicNumber={part} visible={visibleElements.includes(part)} />
