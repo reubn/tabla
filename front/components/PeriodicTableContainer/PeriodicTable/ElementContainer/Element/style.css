@@ -20,7 +20,7 @@
 }
 
 .atomicNumber {
-  font-size: 1.25vmin;
+  font-size: calc(var(--size) / 65);
   text-align: left;
   display: block;
   width: 100%;
@@ -35,7 +35,7 @@
 }
 
 .symbol {
-  font-size: 2.5vmin;
+  font-size: calc(var(--size) / 31);
   width: 100%;
   display: block;
   text-align: center;
@@ -44,13 +44,10 @@
 .atomicMass {
   display: block;
   width: 100%;
-  font-size: 1vmin;
+  font-size: calc(var(--size) / 80);
   text-align: center;
   position: absolute;
   bottom: 10%;
-  overflow: hidden;
-  word-break: break-all;
-  height: 1vmin;
   opacity: 0.5;
 }
 
