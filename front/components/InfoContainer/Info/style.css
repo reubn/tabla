@@ -1,5 +1,10 @@
 .info {
   height: 100%;
-  width: 20vw;
+  width: 0;
   background: var(--colours-red);
+  transition: 0.2s linear;
+}
+
+.open {
+  width: 20vw;
 }

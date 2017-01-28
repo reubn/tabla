@@ -1,9 +1,10 @@
 import React from 'react'
+import classnames from 'classnames'
 
-import {info} from './style'
+import {info, open} from './style'
 
-const Info = ({children}) => (
-  <section className={info}></section>
+const Info = ({elementSelected}) => (
+  <section className={classnames(info, {[open]: elementSelected})}></section>
 )
 
 export default Info
