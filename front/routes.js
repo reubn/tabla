@@ -6,6 +6,6 @@ import InfoContainer from './components/InfoContainer'
 
 export default (
   <Route path="/" component={App}>
-    <Route path="/:identifier" component={InfoContainer} />
+    <Route path="/:atomicNumber" component={InfoContainer} />
   </Route>
 )
