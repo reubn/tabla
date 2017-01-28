@@ -3,6 +3,7 @@
   width: 0;
   background: var(--colours-red);
   transition: 0.2s linear;
+  white-space: pre-wrap;
 }
 
 .open {
