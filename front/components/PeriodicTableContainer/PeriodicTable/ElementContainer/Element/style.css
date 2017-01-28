@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-.element:hover {
+.element:hover, .selected {
   color: var(--colours-blue-dark-1);
   background: var(--group-colour);
 }
@@ -30,7 +30,7 @@
   opacity: 0.8;
 }
 
-.element:hover .atomicNumber {
+.selected .atomicNumber {
   opacity: 1;
 }
 
@@ -51,7 +51,7 @@
   opacity: 0.5;
 }
 
-.element:hover .atomicMass {
+.selected .atomicMass {
   opacity: 1;
 }
 
