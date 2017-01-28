@@ -19,8 +19,8 @@ const groupColours = {
   unknown
 }
 
-const Element = ({element: {symbol, groupBlock, atomicMass, atomicNumber}}) => (
-  <section className={classnames(elementStyle, groupColours[groupBlock] || unknown)}>
+const Element = ({element: {symbol, groupBlock, atomicMass, atomicNumber}, select}) => (
+  <section className={classnames(elementStyle, groupColours[groupBlock] || unknown)} onClick={select}>
     <span className={atomicNumberStyle}>{atomicNumber}</span>
     <span className={symbolStyle}>{symbol}</span>
     <span className={atomicMassStyle}>{atomicMass.toPrecision(4)}</span>
