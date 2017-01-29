@@ -1,6 +1,5 @@
 node_modules/*
 front/compiled/*
-data/*
 research/*
 npm-debug.log*
 yarn-error.log*

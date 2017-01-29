@@ -1,4 +1,4 @@
-const data = {
+export default {
   1: {
     name: 'Hydrogen',
     symbol: 'H',
@@ -6,7 +6,7 @@ const data = {
     electronicConfiguration: [
       {
         shell: 1,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -40,7 +40,7 @@ const data = {
     electronicConfiguration: [
       {
         shell: 1,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -66,7 +66,7 @@ const data = {
       2,
       {
         shell: 2,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -88,7 +88,7 @@ const data = {
     appearance: 'silvery-white',
     discoveredBy: 'Johan August Arfwedson',
     molarHeat: 24.86,
-    summary: `Lithium (from Greek:λίθος lithos, 'stone') is a chemical element with the symbol Li and atomic number 3. It is a soft, silver-white metal belonging to the alkali metal group of chemical elements. Under standard conditions it is the lightest metal and the least dense solid element.`,
+    summary: "Lithium (from Greek:λίθος lithos, 'stone') is a chemical element with the symbol Li and atomic number 3. It is a soft, silver-white metal belonging to the alkali metal group of chemical elements. Under standard conditions it is the lightest metal and the least dense solid element.",
     y: 2,
     x: 1
   },
@@ -100,7 +100,7 @@ const data = {
       2,
       {
         shell: 2,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -132,12 +132,12 @@ const data = {
       2,
       {
         shell: 2,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 2,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 1
       }
     ],
@@ -160,7 +160,7 @@ const data = {
     appearance: 'black-brown',
     discoveredBy: 'Joseph Louis Gay-Lussac',
     molarHeat: 11.087,
-    summary: `Boron is a metalloid chemical element with symbol B and atomic number 5. Produced entirely by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a low-abundance element in both the Solar system and the Earth's crust. Boron is concentrated on Earth by the water-solubility of its more common naturally occurring compounds, the borate minerals.`,
+    summary: "Boron is a metalloid chemical element with symbol B and atomic number 5. Produced entirely by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a low-abundance element in both the Solar system and the Earth's crust. Boron is concentrated on Earth by the water-solubility of its more common naturally occurring compounds, the borate minerals.",
     y: 2,
     x: 13
   },
@@ -172,12 +172,12 @@ const data = {
       2,
       {
         shell: 2,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 2,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 2
       }
     ],
@@ -205,7 +205,7 @@ const data = {
     yearDiscovered: 'Ancient',
     discoveredBy: 'Ancient Egypt',
     molarHeat: 8.517,
-    summary: `Carbon (from Latin:carbo 'coal') is a chemical element with symbol C and atomic number 6. On the periodic table, it is the first (row 2) of six elements in column (group) 14, which have in common the composition of their outer electron shell. It is nonmetallic and tetravalent—making four electrons available to form covalent chemical bonds.`,
+    summary: "Carbon (from Latin:carbo 'coal') is a chemical element with symbol C and atomic number 6. On the periodic table, it is the first (row 2) of six elements in column (group) 14, which have in common the composition of their outer electron shell. It is nonmetallic and tetravalent—making four electrons available to form covalent chemical bonds.",
     y: 2,
     x: 14
   },
@@ -217,12 +217,12 @@ const data = {
       2,
       {
         shell: 2,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 2,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 3
       }
     ],
@@ -263,12 +263,12 @@ const data = {
       2,
       {
         shell: 2,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 2,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 4
       }
     ],
@@ -304,12 +304,12 @@ const data = {
       2,
       {
         shell: 2,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 2,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 5
       }
     ],
@@ -342,12 +342,12 @@ const data = {
       2,
       {
         shell: 2,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 2,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 6
       }
     ],
@@ -374,7 +374,7 @@ const data = {
       10,
       {
         shell: 3,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -409,7 +409,7 @@ const data = {
       10,
       {
         shell: 3,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -443,12 +443,12 @@ const data = {
       10,
       {
         shell: 3,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 3,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 1
       }
     ],
@@ -470,7 +470,7 @@ const data = {
     appearance: 'silvery gray metallic',
     molarHeat: 24.2,
     namedBy: 'Humphry Davy',
-    summary: `Aluminium (or aluminum; see different endings) is a chemical element in the boron group with symbol Al and atomic number 13. It is a silvery-white, soft, nonmagnetic, ductile metal. Aluminium is the third most abundant element (after oxygen and silicon), and the most abundant metal, in the Earth's crust.`,
+    summary: "Aluminium (or aluminum; see different endings) is a chemical element in the boron group with symbol Al and atomic number 13. It is a silvery-white, soft, nonmagnetic, ductile metal. Aluminium is the third most abundant element (after oxygen and silicon), and the most abundant metal, in the Earth's crust.",
     y: 3,
     x: 13
   },
@@ -482,12 +482,12 @@ const data = {
       10,
       {
         shell: 3,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 3,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 2
       }
     ],
@@ -517,7 +517,7 @@ const data = {
     discoveredBy: 'Jöns Jacob Berzelius',
     molarHeat: 19.789,
     namedBy: 'Thomas Thomson (chemist)',
-    summary: `Silicon is a chemical element with symbol Si and atomic number 14. It is a tetravalent metalloid, more reactive than germanium, the metalloid directly below it in the table. Controversy about silicon's character dates to its discovery.`,
+    summary: "Silicon is a chemical element with symbol Si and atomic number 14. It is a tetravalent metalloid, more reactive than germanium, the metalloid directly below it in the table. Controversy about silicon's character dates to its discovery.",
     y: 3,
     x: 14
   },
@@ -529,12 +529,12 @@ const data = {
       10,
       {
         shell: 3,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 3,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 3
       }
     ],
@@ -575,12 +575,12 @@ const data = {
       10,
       {
         shell: 3,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 3,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 4
       }
     ],
@@ -621,12 +621,12 @@ const data = {
       10,
       {
         shell: 3,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 3,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 5
       }
     ],
@@ -666,12 +666,12 @@ const data = {
       10,
       {
         shell: 3,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 3,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 6
       }
     ],
@@ -686,7 +686,7 @@ const data = {
     yearDiscovered: 1894,
     appearance: 'colorless gas exhibiting a lilac/violet glow when placed in a high voltage electric field',
     discoveredBy: 'Lord Rayleigh',
-    summary: `Argon is a chemical element with symbol Ar and atomic number 18. It is in group 18 of the periodic table and is a noble gas. Argon is the third most common gas in the Earth's atmosphere, at 0.934% (9,340 ppmv), making it over twice as abundant as the next most common atmospheric gas, water vapor (which averages about 4000 ppmv, but varies greatly), and 23 times as abundant as the next most common non-condensing atmospheric gas, carbon dioxide (400 ppmv), and more than 500 times as abundant as the next most common noble gas, neon (18 ppmv).`,
+    summary: "Argon is a chemical element with symbol Ar and atomic number 18. It is in group 18 of the periodic table and is a noble gas. Argon is the third most common gas in the Earth's atmosphere, at 0.934% (9,340 ppmv), making it over twice as abundant as the next most common atmospheric gas, water vapor (which averages about 4000 ppmv, but varies greatly), and 23 times as abundant as the next most common non-condensing atmospheric gas, carbon dioxide (400 ppmv), and more than 500 times as abundant as the next most common noble gas, neon (18 ppmv).",
     y: 3,
     x: 18
   },
@@ -698,7 +698,7 @@ const data = {
       18,
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -732,7 +732,7 @@ const data = {
       18,
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -752,7 +752,7 @@ const data = {
     yearDiscovered: 'Ancient',
     discoveredBy: 'Humphry Davy',
     molarHeat: 25.929,
-    summary: `Calcium is a chemical element with symbol Ca and atomic number 20. Calcium is a soft gray alkaline earth metal, fifth-most-abundant element by mass in the Earth's crust. The ion Ca2+ is also the fifth-most-abundant dissolved ion in seawater by both molarity and mass, after sodium, chloride, magnesium, and sulfate.`,
+    summary: "Calcium is a chemical element with symbol Ca and atomic number 20. Calcium is a soft gray alkaline earth metal, fifth-most-abundant element by mass in the Earth's crust. The ion Ca2+ is also the fifth-most-abundant dissolved ion in seawater by both molarity and mass, after sodium, chloride, magnesium, and sulfate.",
     y: 4,
     x: 2
   },
@@ -764,12 +764,12 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 1
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -804,12 +804,12 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 2
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -846,12 +846,12 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 3
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -888,12 +888,12 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 5
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -933,12 +933,12 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 5
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -979,12 +979,12 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 6
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -1012,7 +1012,7 @@ const data = {
     appearance: 'lustrous metallic with a grayish tinge',
     discoveredBy: '5000 BC',
     molarHeat: 25.1,
-    summary: `Iron is a chemical element with symbol Fe (from Latin:ferrum) and atomic number 26. It is a metal in the first transition series. It is by mass the most common element on Earth, forming much of Earth's outer and inner core.`,
+    summary: "Iron is a chemical element with symbol Fe (from Latin:ferrum) and atomic number 26. It is a metal in the first transition series. It is by mass the most common element on Earth, forming much of Earth's outer and inner core.",
     y: 4,
     x: 8
   },
@@ -1024,12 +1024,12 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 7
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -1055,7 +1055,7 @@ const data = {
     appearance: 'hard lustrous gray metal',
     discoveredBy: 'Georg Brandt',
     molarHeat: 24.81,
-    summary: `Cobalt is a chemical element with symbol Co and atomic number 27. Like nickel, cobalt in the Earth's crust is found only in chemically combined form, save for small deposits found in alloys of natural meteoric iron. The free element, produced by reductive smeltingPointing, is a hard, lustrous, silver-gray metal.`,
+    summary: "Cobalt is a chemical element with symbol Co and atomic number 27. Like nickel, cobalt in the Earth's crust is found only in chemically combined form, save for small deposits found in alloys of natural meteoric iron. The free element, produced by reductive smeltingPointing, is a hard, lustrous, silver-gray metal.",
     y: 4,
     x: 9
   },
@@ -1067,12 +1067,12 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 8
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -1110,12 +1110,12 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -1152,12 +1152,12 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -1190,17 +1190,17 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 4,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 1
       }
     ],
@@ -1236,17 +1236,17 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 4,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 2
       }
     ],
@@ -1283,17 +1283,17 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 4,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 3
       }
     ],
@@ -1330,17 +1330,17 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 4,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 4
       }
     ],
@@ -1377,17 +1377,17 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 4,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 5
       }
     ],
@@ -1412,7 +1412,7 @@ const data = {
     groupBlock: 'halogen',
     yearDiscovered: 1826,
     discoveredBy: 'Antoine Jérôme Balard',
-    summary: `Bromine (from Ancient Greek:βρῶμος, brómos, meaning 'stench') is a chemical element with symbol Br, and atomic number 35. It is a halogen. The element was isolated independently by two chemists, Carl Jacob Löwig and Antoine Jerome Balard, in 1825–1826.`,
+    summary: "Bromine (from Ancient Greek:βρῶμος, brómos, meaning 'stench') is a chemical element with symbol Br, and atomic number 35. It is a halogen. The element was isolated independently by two chemists, Carl Jacob Löwig and Antoine Jerome Balard, in 1825–1826.",
     y: 4,
     x: 17
   },
@@ -1424,17 +1424,17 @@ const data = {
       18,
       {
         shell: 3,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 4,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 4,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 6
       }
     ],
@@ -1452,7 +1452,7 @@ const data = {
     yearDiscovered: 1898,
     appearance: 'colorless gas, exhibiting a whitish glow in a high electric field',
     discoveredBy: 'William Ramsay',
-    summary: `Krypton (from Greek:κρυπτός kryptos 'the hidden one') is a chemical element with symbol Kr and atomic number 36. It is a member of group 18 (noble gases) elements. A colorless, odorless, tasteless noble gas, krypton occurs in trace amounts in the atmosphere, is isolated by fractionally distilling liquefied air, and is often used with other rare gases in fluorescent lamps.`,
+    summary: "Krypton (from Greek:κρυπτός kryptos 'the hidden one') is a chemical element with symbol Kr and atomic number 36. It is a member of group 18 (noble gases) elements. A colorless, odorless, tasteless noble gas, krypton occurs in trace amounts in the atmosphere, is isolated by fractionally distilling liquefied air, and is often used with other rare gases in fluorescent lamps.",
     y: 4,
     x: 18
   },
@@ -1464,7 +1464,7 @@ const data = {
       36,
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -1497,7 +1497,7 @@ const data = {
       36,
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -1529,12 +1529,12 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 1
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -1557,7 +1557,7 @@ const data = {
     appearance: 'silvery white',
     discoveredBy: 'Johan Gadolin',
     molarHeat: 26.53,
-    summary: `Yttrium is a chemical element with symbol Y and atomic number 39. It is a silvery-metallic transition metal chemically similar to the lanthanides and it has often been classified as a 'rare earth element'. Yttrium is almost always found combined with the lanthanides in rare earth minerals and is never found in nature as a free element.`,
+    summary: "Yttrium is a chemical element with symbol Y and atomic number 39. It is a silvery-metallic transition metal chemically similar to the lanthanides and it has often been classified as a 'rare earth element'. Yttrium is almost always found combined with the lanthanides in rare earth minerals and is never found in nature as a free element.",
     y: 5,
     x: 3
   },
@@ -1569,12 +1569,12 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 2
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -1598,7 +1598,7 @@ const data = {
     appearance: 'silvery white',
     discoveredBy: 'Martin Heinrich Klaproth',
     molarHeat: 25.36,
-    summary: `Zirconium is a chemical element with symbol Zr and atomic number 40. The name of zirconium is taken from the name of the mineral zircon, the most important source of zirconium. The word zircon comes from the Persian word zargun زرگون, meaning 'gold-colored'.`,
+    summary: "Zirconium is a chemical element with symbol Zr and atomic number 40. The name of zirconium is taken from the name of the mineral zircon, the most important source of zirconium. The word zircon comes from the Persian word zargun زرگون, meaning 'gold-colored'.",
     y: 5,
     x: 4
   },
@@ -1610,12 +1610,12 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 4
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -1652,12 +1652,12 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 5
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -1697,12 +1697,12 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 5
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -1743,12 +1743,12 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 7
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -1789,12 +1789,12 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 8
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -1833,7 +1833,7 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       }
     ],
@@ -1868,12 +1868,12 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -1897,7 +1897,7 @@ const data = {
     appearance: 'lustrous white metal',
     discoveredBy: 'unknown, before 5000 BC',
     molarHeat: 25.35,
-    summary: `Silver is a chemical element with symbol Ag (Greek:άργυρος árguros, Latin:argentum, both from the Indo-European root *h₂erǵ- for 'grey' or 'shining') and atomic number 47. A soft, white, lustrous transition metal, it possesses the highest electrical conductivity, thermal conductivity and reflectivity of any metal. The metal occurs naturally in its pure, free form (native silver), as an alloy with gold and other metals, and in minerals such as argentite and chlorargyrite.`,
+    summary: "Silver is a chemical element with symbol Ag (Greek:άργυρος árguros, Latin:argentum, both from the Indo-European root *h₂erǵ- for 'grey' or 'shining') and atomic number 47. A soft, white, lustrous transition metal, it possesses the highest electrical conductivity, thermal conductivity and reflectivity of any metal. The metal occurs naturally in its pure, free form (native silver), as an alloy with gold and other metals, and in minerals such as argentite and chlorargyrite.",
     y: 5,
     x: 11
   },
@@ -1909,12 +1909,12 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -1948,17 +1948,17 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 5,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 1
       }
     ],
@@ -1982,7 +1982,7 @@ const data = {
     appearance: 'silvery lustrous gray',
     discoveredBy: 'Ferdinand Reich',
     molarHeat: 26.74,
-    summary: `Indium is a chemical element with symbol In and atomic number 49. It is a post-transition metallic element that is rare in Earth's crust. The metal is very soft, malleable and easily fusible, with a meltingPointing point higher than sodium, but lower than lithium or tin.`,
+    summary: "Indium is a chemical element with symbol In and atomic number 49. It is a post-transition metallic element that is rare in Earth's crust. The metal is very soft, malleable and easily fusible, with a meltingPointing point higher than sodium, but lower than lithium or tin.",
     y: 5,
     x: 13
   },
@@ -1994,17 +1994,17 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 5,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 2
       }
     ],
@@ -2040,17 +2040,17 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 5,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 3
       }
     ],
@@ -2085,17 +2085,17 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 5,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 4
       }
     ],
@@ -2132,17 +2132,17 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 5,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 5
       }
     ],
@@ -2179,17 +2179,17 @@ const data = {
       36,
       {
         shell: 4,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 5,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 5,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 6
       }
     ],
@@ -2211,7 +2211,7 @@ const data = {
     yearDiscovered: 1898,
     appearance: 'colorless gas, exhibiting a blue glow when placed in a high voltage electric field',
     discoveredBy: 'William Ramsay',
-    summary: `Xenon is a chemical element with symbol Xe and atomic number 54. It is a colorless, dense, odorless noble gas, that occurs in the Earth's atmosphere in trace amounts. Although generally unreactive, xenon can undergo a few chemical reactions such as the formation of xenon hexafluoroplatinate, the first noble gas compound to be synthesized.`,
+    summary: "Xenon is a chemical element with symbol Xe and atomic number 54. It is a colorless, dense, odorless noble gas, that occurs in the Earth's atmosphere in trace amounts. Although generally unreactive, xenon can undergo a few chemical reactions such as the formation of xenon hexafluoroplatinate, the first noble gas compound to be synthesized.",
     y: 5,
     x: 18
   },
@@ -2223,7 +2223,7 @@ const data = {
       54,
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -2256,7 +2256,7 @@ const data = {
       54,
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2288,12 +2288,12 @@ const data = {
       54,
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 1
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2327,17 +2327,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 1
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 1
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2371,12 +2371,12 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 3
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2410,12 +2410,12 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 4
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2448,12 +2448,12 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 5
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2485,12 +2485,12 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 6
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2523,12 +2523,12 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 7
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2560,17 +2560,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 7
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 1
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2604,12 +2604,12 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 9
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2643,12 +2643,12 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 10
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2681,12 +2681,12 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 11
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2718,12 +2718,12 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 12
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2755,12 +2755,12 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 13
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2793,12 +2793,12 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2830,17 +2830,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 1
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2873,17 +2873,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 2
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2917,17 +2917,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 3
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -2964,17 +2964,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 4
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3014,17 +3014,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 5
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3054,7 +3054,7 @@ const data = {
     discoveredBy: 'Masataka Ogawa',
     molarHeat: 25.48,
     namedBy: 'Walter Noddack',
-    summary: `Rhenium is a chemical element with symbol Re and atomic number 75. It is a silvery-white, heavy, third-row transition metal in group 7 of the periodic table. With an estimated average concentration of 1 part per billion (ppb), rhenium is one of the rarest elements in the Earth's crust.`,
+    summary: "Rhenium is a chemical element with symbol Re and atomic number 75. It is a silvery-white, heavy, third-row transition metal in group 7 of the periodic table. With an estimated average concentration of 1 part per billion (ppb), rhenium is one of the rarest elements in the Earth's crust.",
     y: 6,
     x: 7
   },
@@ -3066,17 +3066,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 6
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3106,7 +3106,7 @@ const data = {
     appearance: 'silvery, blue cast',
     discoveredBy: 'Smithson Tennant',
     molarHeat: 24.7,
-    summary: `Osmium (from Greek osme (ὀσμή) meaning 'smell') is a chemical element with symbol Os and atomic number 76. It is a hard, brittle, bluish-white transition metal in the platinum group that is found as a trace element in alloys, mostly in platinum ores. Osmium is the densest naturally occurring element, with a density of 7004225900000000000♠22.59 g/cm3.`,
+    summary: "Osmium (from Greek osme (ὀσμή) meaning 'smell') is a chemical element with symbol Os and atomic number 76. It is a hard, brittle, bluish-white transition metal in the platinum group that is found as a trace element in alloys, mostly in platinum ores. Osmium is the densest naturally occurring element, with a density of 7004225900000000000♠22.59 g/cm3.",
     y: 6,
     x: 8
   },
@@ -3118,17 +3118,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 7
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3168,17 +3168,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 9
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -3203,7 +3203,7 @@ const data = {
     appearance: 'silvery white',
     discoveredBy: 'Antonio de Ulloa',
     molarHeat: 25.86,
-    summary: `Platinum is a chemical element with symbol Pt and atomic number 78. It is a dense, malleable, ductile, highly unreactive, precious, gray-white transition metal. Its name is derived from the Spanish term platina, which is literally translated into 'little silver'.`,
+    summary: "Platinum is a chemical element with symbol Pt and atomic number 78. It is a dense, malleable, ductile, highly unreactive, precious, gray-white transition metal. Its name is derived from the Spanish term platina, which is literally translated into 'little silver'.",
     y: 6,
     x: 10
   },
@@ -3215,17 +3215,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -3263,17 +3263,17 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3308,22 +3308,22 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 6,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 1
       }
     ],
@@ -3358,22 +3358,22 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 6,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 2
       }
     ],
@@ -3409,22 +3409,22 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 6,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 3
       }
     ],
@@ -3459,22 +3459,22 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 6,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 4
       }
     ],
@@ -3509,22 +3509,22 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 6,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 5
       }
     ],
@@ -3556,22 +3556,22 @@ const data = {
       54,
       {
         shell: 4,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 5,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 6,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 6,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 6
       }
     ],
@@ -3600,7 +3600,7 @@ const data = {
       86,
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -3626,7 +3626,7 @@ const data = {
       86,
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3656,12 +3656,12 @@ const data = {
       86,
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 1
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3691,12 +3691,12 @@ const data = {
       86,
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 2
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3729,17 +3729,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 2
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 1
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3772,17 +3772,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 3
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 1
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3816,17 +3816,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 4
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 1
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3861,12 +3861,12 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 6
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3901,12 +3901,12 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 7
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3940,17 +3940,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 7
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 1
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -3981,12 +3981,12 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 9
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4016,12 +4016,12 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 10
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4052,12 +4052,12 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 11
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4084,12 +4084,12 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 12
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4114,12 +4114,12 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 13
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4144,12 +4144,12 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4174,17 +4174,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 7,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 1
       }
     ],
@@ -4208,17 +4208,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 2
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4240,17 +4240,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 3
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4269,17 +4269,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 4
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4298,17 +4298,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 5
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4327,17 +4327,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 6
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4356,17 +4356,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 7
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4384,17 +4384,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 9
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -4412,17 +4412,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 1
       }
     ],
@@ -4440,17 +4440,17 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       }
     ],
@@ -4469,22 +4469,22 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 7,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 1
       }
     ],
@@ -4502,22 +4502,22 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 7,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 2
       }
     ],
@@ -4536,22 +4536,22 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 7,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 3
       }
     ],
@@ -4569,22 +4569,22 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 7,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 4
       }
     ],
@@ -4602,22 +4602,22 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 7,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 5
       }
     ],
@@ -4635,38 +4635,29 @@ const data = {
       86,
       {
         shell: 5,
-        subshell: 'f',
+        subshellType: 'f',
         electrons: 14
       },
       {
         shell: 6,
-        subshell: 'd',
+        subshellType: 'd',
         electrons: 10
       },
       {
         shell: 7,
-        subshell: 's',
+        subshellType: 's',
         electrons: 2
       },
       {
         shell: 7,
-        subshell: 'p',
+        subshellType: 'p',
         electrons: 6
       }
     ],
     yearDiscovered: 2002,
     discoveredBy: 'Joint Institute for Nuclear Research',
-    summary: `Ooganesson is IUPAC's name for the transactinide element with the atomic number 118 and element symbol Og. It is also known as eka-radon or element 118, and on the periodic table of the elements it is a p-block element and the last one of the 7th period. Oganesson is currently the only synthetic member of group 18.`,
+    summary: "Ooganesson is IUPAC's name for the transactinide element with the atomic number 118 and element symbol Og. It is also known as eka-radon or element 118, and on the periodic table of the elements it is a p-block element and the last one of the 7th period. Oganesson is currently the only synthetic member of group 18.",
     y: 7,
     x: 18
   }
 }
-
-export class Element {
-  constructor(atomicNumber, info){
-    this.atomicNumber = atomicNumber
-    for(let prop in info) this[prop] = info[prop]
-  }
-}
-
-export default Object.entries(data).reduce((table, [atomicNumber, info]) => ({...table, [atomicNumber]: new Element(atomicNumber, info)}), {})

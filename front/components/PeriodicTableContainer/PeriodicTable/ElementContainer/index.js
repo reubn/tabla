@@ -1,6 +1,6 @@
 import {connect} from 'react-redux'
 
-import elements from '../../../../../data'
+import elements from '../../../../elements'
 import selectElementAction from '../../../../store/actions/selectElement'
 
 import Element from './Element'

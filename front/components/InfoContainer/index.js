@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import elements from '../../../data'
+import elements from '../../elements'
 import selectElementAction from '../../store/actions/selectElement'
 
 import Info from './Info'
