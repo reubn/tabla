@@ -1,0 +1,29 @@
+.nucleus {
+  fill: var(--group-colour);
+}
+
+.nucleusText {
+  font-size: 160px;
+  font-family: var(--font-family);
+  fill: var(--colours-white);
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.shell {
+  fill: none;
+  stroke: var(--colours-white-3);
+  stroke-width: 14px;
+}
+
+.alkaliMetal {--group-colour: var(--colours-pink-red);}
+.nonMetal {--group-colour: var(--colours-blue);}
+.transitionMetal {--group-colour: var(--colours-green);}
+.postTransitionMetal {--group-colour: var(--colours-red);}
+.halogen {--group-colour: var(--colours-orange);}
+.nobleGas {--group-colour: var(--colours-yellow);}
+.metalloid {--group-colour: var(--colours-purple);}
+.alkalineEarthMetal {--group-colour: var(--colours-aqua);}
+.actinoid {--group-colour: var(--colours-purple-dark);}
+.lanthanoid {--group-colour: var(--colours-pink);}
+.unknown {--group-colour: var(--colours-blue-dark-2);}

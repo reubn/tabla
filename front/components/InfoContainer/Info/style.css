@@ -1,11 +1,33 @@
 .info {
   height: 100%;
   width: 0;
-  background: var(--colours-red);
+  background: var(--colours-white);
   transition: 0.2s linear;
-  white-space: pre-wrap;
+  box-sizing: border-box;
+  border-left: 2px solid var(--colours-white-3);
 }
 
 .open {
   width: 20vw;
+}
+
+.header {
+  display: block;
+  flex-grow: 1;
+  border-bottom: 1px solid var(--colours-white-3);
+}
+
+.name {
+  width: 100%;
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--colours-black-3);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.data {
+  display: block;
+  flex-grow: 1;
+  color: var(--colours-white-5);
 }
