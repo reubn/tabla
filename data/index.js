@@ -4,7 +4,11 @@ const data = {
     symbol: 'H',
     atomicMass: 1.00794,
     electronicConfiguration: [
-      '1s1'
+      {
+        shell: 1,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 2.2,
     atomicRadius: 37,
@@ -34,7 +38,11 @@ const data = {
     symbol: 'He',
     atomicMass: 4.002602,
     electronicConfiguration: [
-      '1s2'
+      {
+        shell: 1,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     atomicRadius: 32,
     vanDelWaalsRadius: 140,
@@ -55,8 +63,12 @@ const data = {
     symbol: 'Li',
     atomicMass: 6.941,
     electronicConfiguration: [
-      '[He]',
-      '2s1'
+      2,
+      {
+        shell: 2,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 0.98,
     atomicRadius: 134,
@@ -76,7 +88,7 @@ const data = {
     appearance: 'silvery-white',
     discoveredBy: 'Johan August Arfwedson',
     molarHeat: 24.86,
-    summary: `Lithium (from Greek:λίθος lithos, \'stone\') is a chemical element with the symbol Li and atomic number 3. It is a soft, silver-white metal belonging to the alkali metal group of chemical elements. Under standard conditions it is the lightest metal and the least dense solid element.`,
+    summary: `Lithium (from Greek:λίθος lithos, 'stone') is a chemical element with the symbol Li and atomic number 3. It is a soft, silver-white metal belonging to the alkali metal group of chemical elements. Under standard conditions it is the lightest metal and the least dense solid element.`,
     y: 2,
     x: 1
   },
@@ -85,8 +97,12 @@ const data = {
     symbol: 'Be',
     atomicMass: 9.012182,
     electronicConfiguration: [
-      '[He]',
-      '2s2'
+      2,
+      {
+        shell: 2,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.57,
     atomicRadius: 90,
@@ -113,9 +129,17 @@ const data = {
     symbol: 'B',
     atomicMass: 10.811,
     electronicConfiguration: [
-      '[He]',
-      '2s2',
-      '2p1'
+      2,
+      {
+        shell: 2,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 2,
+        subshell: 'p',
+        electrons: 1
+      }
     ],
     electronegativity: 2.04,
     atomicRadius: 82,
@@ -145,9 +169,17 @@ const data = {
     symbol: 'C',
     atomicMass: 12.0107,
     electronicConfiguration: [
-      '[He]',
-      '2s2',
-      '2p2'
+      2,
+      {
+        shell: 2,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 2,
+        subshell: 'p',
+        electrons: 2
+      }
     ],
     electronegativity: 2.55,
     atomicRadius: 77,
@@ -173,7 +205,7 @@ const data = {
     yearDiscovered: 'Ancient',
     discoveredBy: 'Ancient Egypt',
     molarHeat: 8.517,
-    summary: `Carbon (from Latin:carbo \'coal\') is a chemical element with symbol C and atomic number 6. On the periodic table, it is the first (row 2) of six elements in column (group) 14, which have in common the composition of their outer electron shell. It is nonmetallic and tetravalent—making four electrons available to form covalent chemical bonds.`,
+    summary: `Carbon (from Latin:carbo 'coal') is a chemical element with symbol C and atomic number 6. On the periodic table, it is the first (row 2) of six elements in column (group) 14, which have in common the composition of their outer electron shell. It is nonmetallic and tetravalent—making four electrons available to form covalent chemical bonds.`,
     y: 2,
     x: 14
   },
@@ -182,9 +214,17 @@ const data = {
     symbol: 'N',
     atomicMass: 14.0067,
     electronicConfiguration: [
-      '[He]',
-      '2s2',
-      '2p3'
+      2,
+      {
+        shell: 2,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 2,
+        subshell: 'p',
+        electrons: 3
+      }
     ],
     electronegativity: 3.04,
     atomicRadius: 75,
@@ -220,9 +260,17 @@ const data = {
     symbol: 'O',
     atomicMass: 15.9994,
     electronicConfiguration: [
-      '[He]',
-      '2s2',
-      '2p4'
+      2,
+      {
+        shell: 2,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 2,
+        subshell: 'p',
+        electrons: 4
+      }
     ],
     electronegativity: 3.44,
     atomicRadius: 73,
@@ -253,9 +301,17 @@ const data = {
     symbol: 'F',
     atomicMass: 18.9984032,
     electronicConfiguration: [
-      '[He]',
-      '2s2',
-      '2p5'
+      2,
+      {
+        shell: 2,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 2,
+        subshell: 'p',
+        electrons: 5
+      }
     ],
     electronegativity: 3.98,
     atomicRadius: 71,
@@ -283,9 +339,17 @@ const data = {
     symbol: 'Ne',
     atomicMass: 20.1797,
     electronicConfiguration: [
-      '[He]',
-      '2s2',
-      '2p6'
+      2,
+      {
+        shell: 2,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 2,
+        subshell: 'p',
+        electrons: 6
+      }
     ],
     atomicRadius: 69,
     vanDelWaalsRadius: 154,
@@ -307,8 +371,12 @@ const data = {
     symbol: 'Na',
     atomicMass: 22.98976928,
     electronicConfiguration: [
-      '[Ne]',
-      '3s1'
+      10,
+      {
+        shell: 3,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 0.93,
     atomicRadius: 154,
@@ -338,8 +406,12 @@ const data = {
     symbol: 'Mg',
     atomicMass: 24.305,
     electronicConfiguration: [
-      '[Ne]',
-      '3s2'
+      10,
+      {
+        shell: 3,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.31,
     atomicRadius: 130,
@@ -368,9 +440,17 @@ const data = {
     symbol: 'Al',
     atomicMass: 26.9815386,
     electronicConfiguration: [
-      '[Ne]',
-      '3s2',
-      '3p1'
+      10,
+      {
+        shell: 3,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 3,
+        subshell: 'p',
+        electrons: 1
+      }
     ],
     electronegativity: 1.61,
     atomicRadius: 118,
@@ -399,9 +479,17 @@ const data = {
     symbol: 'Si',
     atomicMass: 28.0855,
     electronicConfiguration: [
-      '[Ne]',
-      '3s2',
-      '3p2'
+      10,
+      {
+        shell: 3,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 3,
+        subshell: 'p',
+        electrons: 2
+      }
     ],
     electronegativity: 1.9,
     atomicRadius: 111,
@@ -438,9 +526,17 @@ const data = {
     symbol: 'P',
     atomicMass: 30.973762,
     electronicConfiguration: [
-      '[Ne]',
-      '3s2',
-      '3p3'
+      10,
+      {
+        shell: 3,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 3,
+        subshell: 'p',
+        electrons: 3
+      }
     ],
     electronegativity: 2.19,
     atomicRadius: 106,
@@ -476,9 +572,17 @@ const data = {
     symbol: 'S',
     atomicMass: 32.065,
     electronicConfiguration: [
-      '[Ne]',
-      '3s2',
-      '3p4'
+      10,
+      {
+        shell: 3,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 3,
+        subshell: 'p',
+        electrons: 4
+      }
     ],
     electronegativity: 2.58,
     atomicRadius: 102,
@@ -514,9 +618,17 @@ const data = {
     symbol: 'Cl',
     atomicMass: 35.453,
     electronicConfiguration: [
-      '[Ne]',
-      '3s2',
-      '3p5'
+      10,
+      {
+        shell: 3,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 3,
+        subshell: 'p',
+        electrons: 5
+      }
     ],
     electronegativity: 3.16,
     atomicRadius: 99,
@@ -551,9 +663,17 @@ const data = {
     symbol: 'Ar',
     atomicMass: 39.948,
     electronicConfiguration: [
-      '[Ne]',
-      '3s2',
-      '3p6'
+      10,
+      {
+        shell: 3,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 3,
+        subshell: 'p',
+        electrons: 6
+      }
     ],
     atomicRadius: 97,
     vanDelWaalsRadius: 188,
@@ -575,8 +695,12 @@ const data = {
     symbol: 'K',
     atomicMass: 39.0983,
     electronicConfiguration: [
-      '[Ar]',
-      '4s1'
+      18,
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 0.82,
     atomicRadius: 196,
@@ -605,8 +729,12 @@ const data = {
     symbol: 'Ca',
     atomicMass: 40.078,
     electronicConfiguration: [
-      '[Ar]',
-      '4s2'
+      18,
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1,
     atomicRadius: 174,
@@ -633,9 +761,17 @@ const data = {
     symbol: 'Sc',
     atomicMass: 44.955912,
     electronicConfiguration: [
-      '[Ar]',
-      '3d1',
-      '4s2'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 1
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.36,
     atomicRadius: 144,
@@ -665,9 +801,17 @@ const data = {
     symbol: 'Ti',
     atomicMass: 47.867,
     electronicConfiguration: [
-      '[Ar]',
-      '3d2',
-      '4s2'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 2
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.54,
     atomicRadius: 136,
@@ -699,9 +843,17 @@ const data = {
     symbol: 'V',
     atomicMass: 50.9415,
     electronicConfiguration: [
-      '[Ar]',
-      '3d3',
-      '4s2'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 3
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.63,
     atomicRadius: 125,
@@ -733,9 +885,17 @@ const data = {
     symbol: 'Cr',
     atomicMass: 51.9961,
     electronicConfiguration: [
-      '[Ar]',
-      '3d5',
-      '4s1'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 5
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 1.66,
     atomicRadius: 127,
@@ -770,9 +930,17 @@ const data = {
     symbol: 'Mn',
     atomicMass: 54.938045,
     electronicConfiguration: [
-      '[Ar]',
-      '3d5',
-      '4s2'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 5
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.55,
     atomicRadius: 139,
@@ -808,9 +976,17 @@ const data = {
     symbol: 'Fe',
     atomicMass: 55.845,
     electronicConfiguration: [
-      '[Ar]',
-      '3d6',
-      '4s2'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 6
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.83,
     atomicRadius: 125,
@@ -845,9 +1021,17 @@ const data = {
     symbol: 'Co',
     atomicMass: 58.933195,
     electronicConfiguration: [
-      '[Ar]',
-      '3d7',
-      '4s2'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 7
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.88,
     atomicRadius: 126,
@@ -880,9 +1064,17 @@ const data = {
     symbol: 'Ni',
     atomicMass: 58.6934,
     electronicConfiguration: [
-      '[Ar]',
-      '3d8',
-      '4s2'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 8
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.91,
     atomicRadius: 121,
@@ -915,9 +1107,17 @@ const data = {
     symbol: 'Cu',
     atomicMass: 63.546,
     electronicConfiguration: [
-      '[Ar]',
-      '3d10',
-      '4s1'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 1.9,
     atomicRadius: 138,
@@ -949,9 +1149,17 @@ const data = {
     symbol: 'Zn',
     atomicMass: 65.38,
     electronicConfiguration: [
-      '[Ar]',
-      '3d10',
-      '4s2'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.65,
     atomicRadius: 131,
@@ -979,10 +1187,22 @@ const data = {
     symbol: 'Ga',
     atomicMass: 69.723,
     electronicConfiguration: [
-      '[Ar]',
-      '3d10',
-      '4s2',
-      '4p1'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 4,
+        subshell: 'p',
+        electrons: 1
+      }
     ],
     electronegativity: 1.81,
     atomicRadius: 126,
@@ -1013,10 +1233,22 @@ const data = {
     symbol: 'Ge',
     atomicMass: 72.64,
     electronicConfiguration: [
-      '[Ar]',
-      '3d10',
-      '4s2',
-      '4p2'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 4,
+        subshell: 'p',
+        electrons: 2
+      }
     ],
     electronegativity: 2.01,
     atomicRadius: 122,
@@ -1048,10 +1280,22 @@ const data = {
     symbol: 'As',
     atomicMass: 74.9216,
     electronicConfiguration: [
-      '[Ar]',
-      '3d10',
-      '4s2',
-      '4p3'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 4,
+        subshell: 'p',
+        electrons: 3
+      }
     ],
     electronegativity: 2.18,
     atomicRadius: 119,
@@ -1083,10 +1327,22 @@ const data = {
     symbol: 'Se',
     atomicMass: 78.96,
     electronicConfiguration: [
-      '[Ar]',
-      '3d10',
-      '4s2',
-      '4p4'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 4,
+        subshell: 'p',
+        electrons: 4
+      }
     ],
     electronegativity: 2.55,
     atomicRadius: 116,
@@ -1118,10 +1374,22 @@ const data = {
     symbol: 'Br',
     atomicMass: 79.904,
     electronicConfiguration: [
-      '[Ar]',
-      '3d10',
-      '4s2',
-      '4p5'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 4,
+        subshell: 'p',
+        electrons: 5
+      }
     ],
     electronegativity: 2.96,
     atomicRadius: 114,
@@ -1144,7 +1412,7 @@ const data = {
     groupBlock: 'halogen',
     yearDiscovered: 1826,
     discoveredBy: 'Antoine Jérôme Balard',
-    summary: `Bromine (from Ancient Greek:βρῶμος, brómos, meaning \'stench\') is a chemical element with symbol Br, and atomic number 35. It is a halogen. The element was isolated independently by two chemists, Carl Jacob Löwig and Antoine Jerome Balard, in 1825–1826.`,
+    summary: `Bromine (from Ancient Greek:βρῶμος, brómos, meaning 'stench') is a chemical element with symbol Br, and atomic number 35. It is a halogen. The element was isolated independently by two chemists, Carl Jacob Löwig and Antoine Jerome Balard, in 1825–1826.`,
     y: 4,
     x: 17
   },
@@ -1153,10 +1421,22 @@ const data = {
     symbol: 'Kr',
     atomicMass: 83.798,
     electronicConfiguration: [
-      '[Ar]',
-      '3d10',
-      '4s2',
-      '4p6'
+      18,
+      {
+        shell: 3,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 4,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 4,
+        subshell: 'p',
+        electrons: 6
+      }
     ],
     atomicRadius: 110,
     vanDelWaalsRadius: 202,
@@ -1172,7 +1452,7 @@ const data = {
     yearDiscovered: 1898,
     appearance: 'colorless gas, exhibiting a whitish glow in a high electric field',
     discoveredBy: 'William Ramsay',
-    summary: `Krypton (from Greek:κρυπτός kryptos \'the hidden one\') is a chemical element with symbol Kr and atomic number 36. It is a member of group 18 (noble gases) elements. A colorless, odorless, tasteless noble gas, krypton occurs in trace amounts in the atmosphere, is isolated by fractionally distilling liquefied air, and is often used with other rare gases in fluorescent lamps.`,
+    summary: `Krypton (from Greek:κρυπτός kryptos 'the hidden one') is a chemical element with symbol Kr and atomic number 36. It is a member of group 18 (noble gases) elements. A colorless, odorless, tasteless noble gas, krypton occurs in trace amounts in the atmosphere, is isolated by fractionally distilling liquefied air, and is often used with other rare gases in fluorescent lamps.`,
     y: 4,
     x: 18
   },
@@ -1181,8 +1461,12 @@ const data = {
     symbol: 'Rb',
     atomicMass: 85.4678,
     electronicConfiguration: [
-      '[Kr]',
-      '5s1'
+      36,
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 0.82,
     atomicRadius: 211,
@@ -1210,8 +1494,12 @@ const data = {
     symbol: 'Sr',
     atomicMass: 87.62,
     electronicConfiguration: [
-      '[Kr]',
-      '5s2'
+      36,
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 0.95,
     atomicRadius: 192,
@@ -1238,9 +1526,17 @@ const data = {
     symbol: 'Y',
     atomicMass: 88.90585,
     electronicConfiguration: [
-      '[Kr]',
-      '4d1',
-      '5s2'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 1
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.22,
     atomicRadius: 162,
@@ -1261,7 +1557,7 @@ const data = {
     appearance: 'silvery white',
     discoveredBy: 'Johan Gadolin',
     molarHeat: 26.53,
-    summary: `Yttrium is a chemical element with symbol Y and atomic number 39. It is a silvery-metallic transition metal chemically similar to the lanthanides and it has often been classified as a \'rare earth element\'. Yttrium is almost always found combined with the lanthanides in rare earth minerals and is never found in nature as a free element.`,
+    summary: `Yttrium is a chemical element with symbol Y and atomic number 39. It is a silvery-metallic transition metal chemically similar to the lanthanides and it has often been classified as a 'rare earth element'. Yttrium is almost always found combined with the lanthanides in rare earth minerals and is never found in nature as a free element.`,
     y: 5,
     x: 3
   },
@@ -1270,9 +1566,17 @@ const data = {
     symbol: 'Zr',
     atomicMass: 91.224,
     electronicConfiguration: [
-      '[Kr]',
-      '4d2',
-      '5s2'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 2
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.33,
     atomicRadius: 148,
@@ -1294,7 +1598,7 @@ const data = {
     appearance: 'silvery white',
     discoveredBy: 'Martin Heinrich Klaproth',
     molarHeat: 25.36,
-    summary: `Zirconium is a chemical element with symbol Zr and atomic number 40. The name of zirconium is taken from the name of the mineral zircon, the most important source of zirconium. The word zircon comes from the Persian word zargun زرگون, meaning \'gold-colored\'.`,
+    summary: `Zirconium is a chemical element with symbol Zr and atomic number 40. The name of zirconium is taken from the name of the mineral zircon, the most important source of zirconium. The word zircon comes from the Persian word zargun زرگون, meaning 'gold-colored'.`,
     y: 5,
     x: 4
   },
@@ -1303,9 +1607,17 @@ const data = {
     symbol: 'Nb',
     atomicMass: 92.90638,
     electronicConfiguration: [
-      '[Kr]',
-      '4d4',
-      '5s1'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 4
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 1.6,
     atomicRadius: 137,
@@ -1337,9 +1649,17 @@ const data = {
     symbol: 'Mo',
     atomicMass: 95.96,
     electronicConfiguration: [
-      '[Kr]',
-      '4d5',
-      '5s1'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 5
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 2.16,
     atomicRadius: 145,
@@ -1374,9 +1694,17 @@ const data = {
     symbol: 'Tc',
     atomicMass: 98,
     electronicConfiguration: [
-      '[Kr]',
-      '4d5',
-      '5s2'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 5
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.9,
     atomicRadius: 156,
@@ -1412,9 +1740,17 @@ const data = {
     symbol: 'Ru',
     atomicMass: 101.07,
     electronicConfiguration: [
-      '[Kr]',
-      '4d7',
-      '5s1'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 7
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 2.2,
     atomicRadius: 126,
@@ -1450,9 +1786,17 @@ const data = {
     symbol: 'Rh',
     atomicMass: 102.9055,
     electronicConfiguration: [
-      '[Kr]',
-      '4d8',
-      '5s1'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 8
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 2.28,
     atomicRadius: 135,
@@ -1486,8 +1830,12 @@ const data = {
     symbol: 'Pd',
     atomicMass: 106.42,
     electronicConfiguration: [
-      '[Kr]',
-      '4d10'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 10
+      }
     ],
     electronegativity: 2.2,
     atomicRadius: 131,
@@ -1517,9 +1865,17 @@ const data = {
     symbol: 'Ag',
     atomicMass: 107.8682,
     electronicConfiguration: [
-      '[Kr]',
-      '4d10',
-      '5s1'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 1.93,
     atomicRadius: 153,
@@ -1541,7 +1897,7 @@ const data = {
     appearance: 'lustrous white metal',
     discoveredBy: 'unknown, before 5000 BC',
     molarHeat: 25.35,
-    summary: `Silver is a chemical element with symbol Ag (Greek:άργυρος árguros, Latin:argentum, both from the Indo-European root *h₂erǵ- for \'grey\' or \'shining\') and atomic number 47. A soft, white, lustrous transition metal, it possesses the highest electrical conductivity, thermal conductivity and reflectivity of any metal. The metal occurs naturally in its pure, free form (native silver), as an alloy with gold and other metals, and in minerals such as argentite and chlorargyrite.`,
+    summary: `Silver is a chemical element with symbol Ag (Greek:άργυρος árguros, Latin:argentum, both from the Indo-European root *h₂erǵ- for 'grey' or 'shining') and atomic number 47. A soft, white, lustrous transition metal, it possesses the highest electrical conductivity, thermal conductivity and reflectivity of any metal. The metal occurs naturally in its pure, free form (native silver), as an alloy with gold and other metals, and in minerals such as argentite and chlorargyrite.`,
     y: 5,
     x: 11
   },
@@ -1550,9 +1906,17 @@ const data = {
     symbol: 'Cd',
     atomicMass: 112.411,
     electronicConfiguration: [
-      '[Kr]',
-      '4d10',
-      '5s2'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.69,
     atomicRadius: 148,
@@ -1581,10 +1945,22 @@ const data = {
     symbol: 'In',
     atomicMass: 114.818,
     electronicConfiguration: [
-      '[Kr]',
-      '4d10',
-      '5s2',
-      '5p1'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 5,
+        subshell: 'p',
+        electrons: 1
+      }
     ],
     electronegativity: 1.78,
     atomicRadius: 144,
@@ -1615,10 +1991,22 @@ const data = {
     symbol: 'Sn',
     atomicMass: 118.71,
     electronicConfiguration: [
-      '[Kr]',
-      '4d10',
-      '5s2',
-      '5p2'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 5,
+        subshell: 'p',
+        electrons: 2
+      }
     ],
     electronegativity: 1.96,
     atomicRadius: 141,
@@ -1649,10 +2037,22 @@ const data = {
     symbol: 'Sb',
     atomicMass: 121.76,
     electronicConfiguration: [
-      '[Kr]',
-      '4d10',
-      '5s2',
-      '5p3'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 5,
+        subshell: 'p',
+        electrons: 3
+      }
     ],
     electronegativity: 2.05,
     atomicRadius: 138,
@@ -1682,10 +2082,22 @@ const data = {
     symbol: 'Te',
     atomicMass: 127.6,
     electronicConfiguration: [
-      '[Kr]',
-      '4d10',
-      '5s2',
-      '5p4'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 5,
+        subshell: 'p',
+        electrons: 4
+      }
     ],
     electronegativity: 2.1,
     atomicRadius: 135,
@@ -1717,10 +2129,22 @@ const data = {
     symbol: 'I',
     atomicMass: 126.90447,
     electronicConfiguration: [
-      '[Kr]',
-      '4d10',
-      '5s2',
-      '5p5'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 5,
+        subshell: 'p',
+        electrons: 5
+      }
     ],
     electronegativity: 2.66,
     atomicRadius: 133,
@@ -1752,10 +2176,22 @@ const data = {
     symbol: 'Xe',
     atomicMass: 131.293,
     electronicConfiguration: [
-      '[Kr]',
-      '4d10',
-      '5s2',
-      '5p6'
+      36,
+      {
+        shell: 4,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 5,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 5,
+        subshell: 'p',
+        electrons: 6
+      }
     ],
     atomicRadius: 130,
     ionRadius: '48 (+8)',
@@ -1784,8 +2220,12 @@ const data = {
     symbol: 'Cs',
     atomicMass: 132.9054519,
     electronicConfiguration: [
-      '[Xe]',
-      '6s1'
+      54,
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 0.79,
     atomicRadius: 225,
@@ -1813,8 +2253,12 @@ const data = {
     symbol: 'Ba',
     atomicMass: 137.327,
     electronicConfiguration: [
-      '[Xe]',
-      '6s2'
+      54,
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 0.89,
     atomicRadius: 198,
@@ -1841,9 +2285,17 @@ const data = {
     symbol: 'La',
     atomicMass: 138.90547,
     electronicConfiguration: [
-      '[Xe]',
-      '5d1',
-      '6s2'
+      54,
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 1
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.1,
     atomicRadius: 169,
@@ -1872,10 +2324,22 @@ const data = {
     symbol: 'Ce',
     atomicMass: 140.116,
     electronicConfiguration: [
-      '[Xe]',
-      '4f1',
-      '5d1',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 1
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 1
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.12,
     ionRadius: '102 (+3)',
@@ -1904,9 +2368,17 @@ const data = {
     symbol: 'Pr',
     atomicMass: 140.90765,
     electronicConfiguration: [
-      '[Xe]',
-      '4f3',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 3
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.13,
     ionRadius: '99 (+3)',
@@ -1935,9 +2407,17 @@ const data = {
     symbol: 'Nd',
     atomicMass: 144.242,
     electronicConfiguration: [
-      '[Xe]',
-      '4f4',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 4
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.14,
     ionRadius: '129 (+2)',
@@ -1965,9 +2445,17 @@ const data = {
     symbol: 'Pm',
     atomicMass: 145,
     electronicConfiguration: [
-      '[Xe]',
-      '4f5',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 5
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.13,
     ionRadius: '97 (+3)',
@@ -1994,9 +2482,17 @@ const data = {
     symbol: 'Sm',
     atomicMass: 150.36,
     electronicConfiguration: [
-      '[Xe]',
-      '4f6',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 6
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.17,
     ionRadius: '122 (+2)',
@@ -2024,9 +2520,17 @@ const data = {
     symbol: 'Eu',
     atomicMass: 151.964,
     electronicConfiguration: [
-      '[Xe]',
-      '4f7',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 7
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.2,
     ionRadius: '117 (+2)',
@@ -2053,10 +2557,22 @@ const data = {
     symbol: 'Gd',
     atomicMass: 157.25,
     electronicConfiguration: [
-      '[Xe]',
-      '4f7',
-      '5d1',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 7
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 1
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.2,
     ionRadius: '93.8 (+3)',
@@ -2085,9 +2601,17 @@ const data = {
     symbol: 'Tb',
     atomicMass: 158.92535,
     electronicConfiguration: [
-      '[Xe]',
-      '4f9',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 9
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.2,
     ionRadius: '92.3 (+3)',
@@ -2116,9 +2640,17 @@ const data = {
     symbol: 'Dy',
     atomicMass: 162.5,
     electronicConfiguration: [
-      '[Xe]',
-      '4f10',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 10
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.22,
     ionRadius: '107 (+2)',
@@ -2146,9 +2678,17 @@ const data = {
     symbol: 'Ho',
     atomicMass: 164.93032,
     electronicConfiguration: [
-      '[Xe]',
-      '4f11',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 11
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.23,
     ionRadius: '90.1 (+3)',
@@ -2175,9 +2715,17 @@ const data = {
     symbol: 'Er',
     atomicMass: 167.259,
     electronicConfiguration: [
-      '[Xe]',
-      '4f12',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 12
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.24,
     ionRadius: '89 (+3)',
@@ -2204,9 +2752,17 @@ const data = {
     symbol: 'Tm',
     atomicMass: 168.93421,
     electronicConfiguration: [
-      '[Xe]',
-      '4f13',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 13
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.25,
     ionRadius: '103 (+2)',
@@ -2234,9 +2790,17 @@ const data = {
     symbol: 'Yb',
     atomicMass: 173.054,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.1,
     ionRadius: '102 (+2)',
@@ -2263,10 +2827,22 @@ const data = {
     symbol: 'Lu',
     atomicMass: 174.9668,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d1',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 1
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.27,
     atomicRadius: 160,
@@ -2294,10 +2870,22 @@ const data = {
     symbol: 'Hf',
     atomicMass: 178.49,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d2',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 2
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.3,
     atomicRadius: 150,
@@ -2326,10 +2914,22 @@ const data = {
     symbol: 'Ta',
     atomicMass: 180.94788,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d3',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 3
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.5,
     atomicRadius: 138,
@@ -2361,10 +2961,22 @@ const data = {
     symbol: 'W',
     atomicMass: 183.84,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d4',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 4
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 2.36,
     atomicRadius: 146,
@@ -2399,10 +3011,22 @@ const data = {
     symbol: 'Re',
     atomicMass: 186.207,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d5',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 5
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.9,
     atomicRadius: 159,
@@ -2439,10 +3063,22 @@ const data = {
     symbol: 'Os',
     atomicMass: 190.23,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d6',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 6
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 2.2,
     atomicRadius: 128,
@@ -2470,7 +3106,7 @@ const data = {
     appearance: 'silvery, blue cast',
     discoveredBy: 'Smithson Tennant',
     molarHeat: 24.7,
-    summary: `Osmium (from Greek osme (ὀσμή) meaning \'smell\') is a chemical element with symbol Os and atomic number 76. It is a hard, brittle, bluish-white transition metal in the platinum group that is found as a trace element in alloys, mostly in platinum ores. Osmium is the densest naturally occurring element, with a density of 7004225900000000000♠22.59 g/cm3.`,
+    summary: `Osmium (from Greek osme (ὀσμή) meaning 'smell') is a chemical element with symbol Os and atomic number 76. It is a hard, brittle, bluish-white transition metal in the platinum group that is found as a trace element in alloys, mostly in platinum ores. Osmium is the densest naturally occurring element, with a density of 7004225900000000000♠22.59 g/cm3.`,
     y: 6,
     x: 8
   },
@@ -2479,10 +3115,22 @@ const data = {
     symbol: 'Ir',
     atomicMass: 192.217,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d7',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 7
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 2.2,
     atomicRadius: 137,
@@ -2517,10 +3165,22 @@ const data = {
     symbol: 'Pt',
     atomicMass: 195.084,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d9',
-      '6s1'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 9
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 2.28,
     atomicRadius: 128,
@@ -2543,7 +3203,7 @@ const data = {
     appearance: 'silvery white',
     discoveredBy: 'Antonio de Ulloa',
     molarHeat: 25.86,
-    summary: `Platinum is a chemical element with symbol Pt and atomic number 78. It is a dense, malleable, ductile, highly unreactive, precious, gray-white transition metal. Its name is derived from the Spanish term platina, which is literally translated into \'little silver\'.`,
+    summary: `Platinum is a chemical element with symbol Pt and atomic number 78. It is a dense, malleable, ductile, highly unreactive, precious, gray-white transition metal. Its name is derived from the Spanish term platina, which is literally translated into 'little silver'.`,
     y: 6,
     x: 10
   },
@@ -2552,10 +3212,22 @@ const data = {
     symbol: 'Au',
     atomicMass: 196.966569,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d10',
-      '6s1'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 2.54,
     atomicRadius: 144,
@@ -2588,10 +3260,22 @@ const data = {
     symbol: 'Hg',
     atomicMass: 200.59,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d10',
-      '6s2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 2,
     atomicRadius: 149,
@@ -2621,11 +3305,27 @@ const data = {
     symbol: 'Tl',
     atomicMass: 204.3833,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d10',
-      '6s2',
-      '6p1'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 6,
+        subshell: 'p',
+        electrons: 1
+      }
     ],
     electronegativity: 2.04,
     atomicRadius: 148,
@@ -2655,11 +3355,27 @@ const data = {
     symbol: 'Pb',
     atomicMass: 207.2,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d10',
-      '6s2',
-      '6p2'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 6,
+        subshell: 'p',
+        electrons: 2
+      }
     ],
     electronegativity: 2.33,
     atomicRadius: 147,
@@ -2690,11 +3406,27 @@ const data = {
     symbol: 'Bi',
     atomicMass: 208.9804,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d10',
-      '6s2',
-      '6p3'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 6,
+        subshell: 'p',
+        electrons: 3
+      }
     ],
     electronegativity: 2.02,
     atomicRadius: 146,
@@ -2724,11 +3456,27 @@ const data = {
     symbol: 'Po',
     atomicMass: 209,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d10',
-      '6s2',
-      '6p4'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 6,
+        subshell: 'p',
+        electrons: 4
+      }
     ],
     electronegativity: 2,
     ionRadius: '94 (+4)',
@@ -2758,11 +3506,27 @@ const data = {
     symbol: 'At',
     atomicMass: 210,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d10',
-      '6s2',
-      '6p5'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 6,
+        subshell: 'p',
+        electrons: 5
+      }
     ],
     electronegativity: 2.2,
     ionRadius: '62 (+7)',
@@ -2789,11 +3553,27 @@ const data = {
     symbol: 'Rn',
     atomicMass: 222,
     electronicConfiguration: [
-      '[Xe]',
-      '4f14',
-      '5d10',
-      '6s2',
-      '6p6'
+      54,
+      {
+        shell: 4,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 5,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 6,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 6,
+        subshell: 'p',
+        electrons: 6
+      }
     ],
     atomicRadius: 145,
     oxidationStates: [
@@ -2817,8 +3597,12 @@ const data = {
     symbol: 'Fr',
     atomicMass: 223,
     electronicConfiguration: [
-      '[Rn]',
-      '7s1'
+      86,
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     electronegativity: 0.7,
     ionRadius: '180 (+1)',
@@ -2839,8 +3623,12 @@ const data = {
     symbol: 'Ra',
     atomicMass: 226,
     electronicConfiguration: [
-      '[Rn]',
-      '7s2'
+      86,
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 0.9,
     ionRadius: '148 (+2)',
@@ -2865,9 +3653,17 @@ const data = {
     symbol: 'Ac',
     atomicMass: 227,
     electronicConfiguration: [
-      '[Rn]',
-      '6d1',
-      '7s2'
+      86,
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 1
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.1,
     ionRadius: '112 (+3)',
@@ -2892,9 +3688,17 @@ const data = {
     symbol: 'Th',
     atomicMass: 232.03806,
     electronicConfiguration: [
-      '[Rn]',
-      '6d2',
-      '7s2'
+      86,
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 2
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.3,
     ionRadius: '94 (+4)',
@@ -2922,10 +3726,22 @@ const data = {
     symbol: 'Pa',
     atomicMass: 231.03588,
     electronicConfiguration: [
-      '[Rn]',
-      '5f2',
-      '6d1',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 2
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 1
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.5,
     ionRadius: '104 (+3)',
@@ -2953,10 +3769,22 @@ const data = {
     symbol: 'U',
     atomicMass: 238.02891,
     electronicConfiguration: [
-      '[Rn]',
-      '5f3',
-      '6d1',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 3
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 1
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.38,
     ionRadius: '102.5 (+3)',
@@ -2985,10 +3813,22 @@ const data = {
     symbol: 'Np',
     atomicMass: 237,
     electronicConfiguration: [
-      '[Rn]',
-      '5f4',
-      '6d1',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 4
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 1
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.36,
     ionRadius: '110 (+2)',
@@ -3018,9 +3858,17 @@ const data = {
     symbol: 'Pu',
     atomicMass: 244,
     electronicConfiguration: [
-      '[Rn]',
-      '5f6',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 6
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.28,
     ionRadius: '100 (+3)',
@@ -3050,9 +3898,17 @@ const data = {
     symbol: 'Am',
     atomicMass: 243,
     electronicConfiguration: [
-      '[Rn]',
-      '5f7',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 7
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.3,
     ionRadius: '126 (+2)',
@@ -3081,10 +3937,22 @@ const data = {
     symbol: 'Cm',
     atomicMass: 247,
     electronicConfiguration: [
-      '[Rn]',
-      '5f7',
-      '6d1',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 7
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 1
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.3,
     ionRadius: '97 (+3)',
@@ -3110,9 +3978,17 @@ const data = {
     symbol: 'Bk',
     atomicMass: 247,
     electronicConfiguration: [
-      '[Rn]',
-      '5f9',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 9
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.3,
     ionRadius: '96 (+3)',
@@ -3137,9 +4013,17 @@ const data = {
     symbol: 'Cf',
     atomicMass: 251,
     electronicConfiguration: [
-      '[Rn]',
-      '5f10',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 10
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.3,
     ionRadius: '95 (+3)',
@@ -3165,9 +4049,17 @@ const data = {
     symbol: 'Es',
     atomicMass: 252,
     electronicConfiguration: [
-      '[Rn]',
-      '5f11',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 11
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.3,
     oxidationStates: [
@@ -3189,9 +4081,17 @@ const data = {
     symbol: 'Fm',
     atomicMass: 257,
     electronicConfiguration: [
-      '[Rn]',
-      '5f12',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 12
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.3,
     oxidationStates: [
@@ -3211,9 +4111,17 @@ const data = {
     symbol: 'Md',
     atomicMass: 258,
     electronicConfiguration: [
-      '[Rn]',
-      '5f13',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 13
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.3,
     oxidationStates: [
@@ -3233,9 +4141,17 @@ const data = {
     symbol: 'No',
     atomicMass: 259,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     electronegativity: 1.3,
     oxidationStates: [
@@ -3255,10 +4171,22 @@ const data = {
     symbol: 'Lr',
     atomicMass: 262,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '7s2',
-      '7p1'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 7,
+        subshell: 'p',
+        electrons: 1
+      }
     ],
     electronegativity: 1.3,
     oxidationStates: [
@@ -3277,10 +4205,22 @@ const data = {
     symbol: 'Rf',
     atomicMass: 267,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d2',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 2
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     oxidationStates: [
       4
@@ -3297,10 +4237,22 @@ const data = {
     symbol: 'Db',
     atomicMass: 268,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d3',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 3
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     groupBlock: 'transitionMetal',
     yearDiscovered: 1967,
@@ -3314,10 +4266,22 @@ const data = {
     symbol: 'Sg',
     atomicMass: 271,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d4',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 4
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     groupBlock: 'transitionMetal',
     yearDiscovered: 1974,
@@ -3331,10 +4295,22 @@ const data = {
     symbol: 'Bh',
     atomicMass: 272,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d5',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 5
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     groupBlock: 'transitionMetal',
     yearDiscovered: 1976,
@@ -3348,10 +4324,22 @@ const data = {
     symbol: 'Hs',
     atomicMass: 270,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d6',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 6
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     groupBlock: 'transitionMetal',
     yearDiscovered: 1984,
@@ -3365,10 +4353,22 @@ const data = {
     symbol: 'Mt',
     atomicMass: 276,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d7',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 7
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     yearDiscovered: 1982,
     discoveredBy: 'Gesellschaft für Schwerionenforschung',
@@ -3381,10 +4381,22 @@ const data = {
     symbol: 'Ds',
     atomicMass: 281,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d9',
-      '7s1'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 9
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     yearDiscovered: 1994,
     discoveredBy: 'Gesellschaft für Schwerionenforschung',
@@ -3397,10 +4409,22 @@ const data = {
     symbol: 'Rg',
     atomicMass: 280,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d10',
-      '7s1'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 1
+      }
     ],
     yearDiscovered: 1994,
     discoveredBy: 'Gesellschaft für Schwerionenforschung',
@@ -3413,10 +4437,22 @@ const data = {
     symbol: 'Cn',
     atomicMass: 285,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d10',
-      '7s2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      }
     ],
     groupBlock: 'transitionMetal',
     yearDiscovered: 1996,
@@ -3430,11 +4466,27 @@ const data = {
     symbol: 'Nh',
     atomicMass: 284,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d10',
-      '7s2',
-      '7p1'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 7,
+        subshell: 'p',
+        electrons: 1
+      }
     ],
     yearDiscovered: 2003,
     discoveredBy: 'RIKEN',
@@ -3447,11 +4499,27 @@ const data = {
     symbol: 'Fl',
     atomicMass: 289,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d10',
-      '7s2',
-      '7p2'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 7,
+        subshell: 'p',
+        electrons: 2
+      }
     ],
     groupBlock: 'postTransitionMetal',
     yearDiscovered: 1998,
@@ -3465,11 +4533,27 @@ const data = {
     symbol: 'Mc',
     atomicMass: 288,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d10',
-      '7s2',
-      '7p3'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 7,
+        subshell: 'p',
+        electrons: 3
+      }
     ],
     yearDiscovered: 2003,
     discoveredBy: 'Joint Institute for Nuclear Research',
@@ -3482,11 +4566,27 @@ const data = {
     symbol: 'Lv',
     atomicMass: 293,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d10',
-      '7s2',
-      '7p4'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 7,
+        subshell: 'p',
+        electrons: 4
+      }
     ],
     yearDiscovered: 2000,
     discoveredBy: 'Joint Institute for Nuclear Research',
@@ -3499,11 +4599,27 @@ const data = {
     symbol: 'Ts',
     atomicMass: 294,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d10',
-      '7s2',
-      '7p5'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 7,
+        subshell: 'p',
+        electrons: 5
+      }
     ],
     yearDiscovered: 2010,
     discoveredBy: 'Joint Institute for Nuclear Research',
@@ -3516,11 +4632,27 @@ const data = {
     symbol: 'Og',
     atomicMass: 294,
     electronicConfiguration: [
-      '[Rn]',
-      '5f14',
-      '6d10',
-      '7s2',
-      '7p6'
+      86,
+      {
+        shell: 5,
+        subshell: 'f',
+        electrons: 14
+      },
+      {
+        shell: 6,
+        subshell: 'd',
+        electrons: 10
+      },
+      {
+        shell: 7,
+        subshell: 's',
+        electrons: 2
+      },
+      {
+        shell: 7,
+        subshell: 'p',
+        electrons: 6
+      }
     ],
     yearDiscovered: 2002,
     discoveredBy: 'Joint Institute for Nuclear Research',
@@ -3529,4 +4661,12 @@ const data = {
     x: 18
   }
 }
-export default Object.entries(data).reduce((table, [atomicNumber, element]) => ({...table, [atomicNumber]: {...element, atomicNumber: +atomicNumber}}), {})
+
+export class Element {
+  constructor(atomicNumber, info){
+    this.atomicNumber = atomicNumber
+    for(let prop in info) this[prop] = info[prop]
+  }
+}
+
+export default Object.entries(data).reduce((table, [atomicNumber, info]) => ({...table, [atomicNumber]: new Element(atomicNumber, info)}), {})
