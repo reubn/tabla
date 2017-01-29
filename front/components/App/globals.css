@@ -41,5 +41,18 @@
   --colours-white-4: #ececec;
   --colours-white-5: #e2e2e2;
 
+  --colours-alkaliMetal: var(--colours-pink-red);
+  --colours-nonMetal: var(--colours-blue);
+  --colours-transitionMetal: var(--colours-green);
+  --colours-postTransitionMetal: var(--colours-red);
+  --colours-halogen: var(--colours-orange);
+  --colours-nobleGas: var(--colours-yellow);
+  --colours-metalloid: var(--colours-purple);
+  --colours-alkalineEarthMetal: var(--colours-aqua);
+  --colours-actinoid: var(--colours-purple-dark);
+  --colours-lanthanoid: var(--colours-pink);
+  --colours-unknown: var(--colours-blue-dark-2);
+
+
   --font-family: 'Museo Sans Rounded', 'PT Sans', 'Arial Rounded', sans-serif;
 }

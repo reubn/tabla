@@ -16,14 +16,14 @@
   stroke-width: 14px;
 }
 
-.alkaliMetal {--group-colour: var(--colours-pink-red);}
-.nonMetal {--group-colour: var(--colours-blue);}
-.transitionMetal {--group-colour: var(--colours-green);}
-.postTransitionMetal {--group-colour: var(--colours-red);}
-.halogen {--group-colour: var(--colours-orange);}
-.nobleGas {--group-colour: var(--colours-yellow);}
-.metalloid {--group-colour: var(--colours-purple);}
-.alkalineEarthMetal {--group-colour: var(--colours-aqua);}
-.actinoid {--group-colour: var(--colours-purple-dark);}
-.lanthanoid {--group-colour: var(--colours-pink);}
-.unknown {--group-colour: var(--colours-blue-dark-2);}
+.alkaliMetal {--group-colour: var(--colours-alkaliMetal);}
+.nonMetal {--group-colour: var(--colours-nonMetal);}
+.transitionMetal {--group-colour: var(--colours-transitionMetal);}
+.postTransitionMetal {--group-colour: var(--colours-postTransitionMetal);}
+.halogen {--group-colour: var(--colours-halogen);}
+.nobleGas {--group-colour: var(--colours-nobleGas);}
+.metalloid {--group-colour: var(--colours-metalloid);}
+.alkalineEarthMetal {--group-colour: var(--colours-alkalineEarthMetal);}
+.actinoid {--group-colour: var(--colours-actinoid);}
+.lanthanoid {--group-colour: var(--colours-lanthanoid);}
+.unknown {--group-colour: var(--colours-unknown);}
