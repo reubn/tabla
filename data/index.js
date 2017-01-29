@@ -266,7 +266,7 @@ export default {
       -1
     ],
     phase: 'gas',
-    bondingType: 'monatomic',
+    bondingType: 'covalent network',
     meltingPoint: 54,
     boilingPoint: 85,
     density: 0.001696,
