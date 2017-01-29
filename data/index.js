@@ -1,4 +1,4 @@
-export default {
+const data = {
   1: {
     name: 'Hydrogen',
     symbol: 'H',
@@ -3529,3 +3529,4 @@ export default {
     x: 18
   }
 }
+export default Object.entries(data).reduce((table, [atomicNumber, element]) => ({...table, [atomicNumber]: {...element, atomicNumber: +atomicNumber}}), {})

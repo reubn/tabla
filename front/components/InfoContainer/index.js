@@ -6,7 +6,7 @@ import selectElementAction from '../../store/actions/selectElement'
 
 import Info from './Info'
 
-const mapStateToProps = ({periodicTable: {selectedElement}}) => ({elementSelected: selectedElement !== null, element: {...elements[selectedElement], atomicNumber: selectedElement}})
+const mapStateToProps = ({periodicTable: {selectedElement}}) => ({elementSelected: selectedElement !== null, element: elements[selectedElement]})
 const mapDispatchToProps = {
   selectElement: atomicNumber => dispatch => selectElementAction(dispatch, atomicNumber, false)
 }

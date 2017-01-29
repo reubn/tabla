@@ -5,7 +5,7 @@ import Diagram from './Diagram'
 
 import {info, open, header, data, name as nameStyle} from './style'
 
-const Info = ({elementSelected, element, _: {name}=element}) => (
+const Info = ({elementSelected, element={}, _: {name}=element}) => (
   <section className={classnames(info, {[open]: elementSelected})}>
     <header className={header}>
       <Diagram element={element} />
