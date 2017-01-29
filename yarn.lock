@@ -5161,6 +5161,10 @@ sum-up@^1.0.1:
   dependencies:
     chalk "^1.0.0"
 
+superscript-number@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/superscript-number/-/superscript-number-1.0.0.tgz#763613e214891dadc188995d0c7485c8c0beb6ef"
+
 supports-color@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-0.2.0.tgz#d92de2694eb3f67323973d7ae3d8b55b4c22190a"
