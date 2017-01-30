@@ -9,7 +9,7 @@ export default ({shell, electrons}) => {
 
   const electronAngle = 360 / electrons
   const electronElements = []
-  for(let i = 0; i < electrons; i++) electronElements.push(<Electron radius={radius} angle={electronAngle} i={i} />)
+  for(let i = 0; i < electrons; i++) electronElements.push(<Electron key={i} radius={radius} angle={electronAngle} i={i} />)
 
   return (
     <g>
