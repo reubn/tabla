@@ -26,6 +26,8 @@ export class Element {
   }
 
   electronicConfiguration(expanded=true, format=true){
+    if(!this.electronicConfigurationRaw) return undefined
+
     const parts = this.electronicConfigurationRaw.reduce((list, part) => {
       if(typeof part === 'number'){
         const element = elements[part]
@@ -49,7 +51,10 @@ export class Element {
       .join(' ')
       : parts
   }
-  electronicDiagram(){
+
+  electronDiagram(){
+    if(!this.electronicConfigurationRaw) return undefined
+
     const parts = this.electronicConfigurationRaw.reduce((list, part) => typeof part === 'number' ? [...list, ...elements[part].electronicConfiguration(true, false)] : [...list, part], [])
 
     return parts.reduce((order, {shell, electrons}) => ({...order, [shell]: (order[shell] || 0) + electrons}), {})
