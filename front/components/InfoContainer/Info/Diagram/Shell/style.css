@@ -1,0 +1,5 @@
+.shell {
+  fill: none;
+  stroke: var(--colours-white-3);
+  stroke-width: 14px;
+}

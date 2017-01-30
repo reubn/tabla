@@ -8,12 +8,8 @@
   fill: var(--colours-white);
   text-anchor: middle;
   dominant-baseline: middle;
-}
-
-.shell {
-  fill: none;
-  stroke: var(--colours-white-3);
-  stroke-width: 14px;
+  user-select: none;
+  cursor: default;
 }
 
 .alkaliMetal {--group-colour: var(--colours-alkaliMetal);}

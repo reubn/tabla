@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import elements from '../../elements'
+import elements, {Element} from '../../elements'
 import selectElementAction from '../../store/actions/selectElement'
 
 import Info from './Info'
@@ -21,7 +21,7 @@ class InfoStateSyncer extends React.Component {
   init({params: {atomicNumber}, location: {action}, selectElement}){
     if(action === 'POP' || action === 'REPLACE') return selectElement(+atomicNumber)
   }
-  render(){return <Info {...this.props} />}
+  render(){return this.props.element instanceof Element ? <Info {...this.props} /> : null}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(InfoStateSyncer)

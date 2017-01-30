@@ -1,37 +1,13 @@
 import React from 'react'
-import classnames from 'classnames'
 
-import {shell, nucleus, nucleusText,
-        alkaliMetal, halogen, nonMetal, transitionMetal, nobleGas, postTransitionMetal, metalloid, alkalineEarthMetal, actinoid, lanthanoid, unknown} from './style'
+import Shell from './Shell'
+import Nucleus from './Nucleus'
 
-const groupColours = {
-  alkaliMetal,
-  halogen,
-  nonMetal,
-  transitionMetal,
-  nobleGas,
-  postTransitionMetal,
-  metalloid,
-  alkalineEarthMetal,
-  actinoid,
-  lanthanoid,
-  unknown
-}
-
-const Diagram = ({element: {symbol, groupBlock}}) => (
+const Diagram = ({element, _: {symbol, groupBlock}=element}) => (
   <svg viewBox="-1400 -1400 2800 2800">
-    <circle r="225" className={classnames(nucleus, groupColours[groupBlock] || unknown)} />
-    <text className={nucleusText}>
-      {symbol}
-    </text>
-    <circle r="350" className={shell} />
-    <circle r="500" className={shell} />
-    <circle r="650" className={shell} />
-    <circle r="800" className={shell} />
-    <circle r="950" className={shell} />
-    <circle r="1100" className={shell} />
-    <circle r="1250" className={shell} />
+    <Nucleus symbol={symbol} groupBlock={groupBlock} />
+    {Object.entries(element.electronDiagram()).map(([shell, electrons]) => <Shell shell={shell} electrons={electrons} />)}
   </svg>
-)
+  )
 
 export default Diagram
