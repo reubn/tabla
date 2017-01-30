@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
-  entry: ['./front/index.js'],
+  entry: ['babel-polyfill', './front/index.js'],
   output: {
     path: './front/compiled',
     filename: 'bundle.js'
