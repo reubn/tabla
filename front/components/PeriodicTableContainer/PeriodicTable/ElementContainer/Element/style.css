@@ -12,11 +12,24 @@
   border-radius: 3px;
   color: var(--group-colour);
   cursor: pointer;
+  z-index: 1;
+}
+
+.element:hover:not(.selected) {
+  box-shadow: 0 0 100px 7px var(--colours-blue-dark);
+  transform: scale(1.05);
+  z-index: 5;
 }
 
 .element:hover, .selected {
   color: var(--colours-blue-dark-1);
   background: var(--group-colour);
+}
+
+.selected {
+  box-shadow: 0 0 100px 15px var(--colours-blue-dark);
+  transform: scale(1.1);
+  z-index: 10;
 }
 
 .atomicNumber {
