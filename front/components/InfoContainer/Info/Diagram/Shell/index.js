@@ -4,7 +4,7 @@ import Electron from './Electron'
 
 import {shell as shellStyle} from './style'
 
-export default ({shell, electrons}) => {
+const Shell = ({shell, electrons}) => {
   const radius = 200 + (shell * 150)
 
   const electronAngle = 360 / electrons
@@ -18,3 +18,5 @@ export default ({shell, electrons}) => {
     </g>
   )
 }
+
+export default Shell
