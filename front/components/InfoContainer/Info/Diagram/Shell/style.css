@@ -1,5 +1,11 @@
 .shell {
+  animation: spin 120s linear infinite;
+}
+
+.shellRing {
   fill: none;
   stroke: var(--colours-white-3);
   stroke-width: 14px;
 }
+
+@keyframes spin {100% {transform:rotate(360deg)}}
