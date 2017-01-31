@@ -5,7 +5,7 @@
   justify-content: center;
   flex-direction: column;
   flex-basis: var(--size);
-  transition: 0.2s linear;
+  transition: 0.2s cubic-bezier(0.32, 0.93, 0.69, 0.76);
   border-top: 1px solid;
   border-left: 1px solid;
   border-color: var(--colours-blue-dark-1);
