@@ -24,6 +24,12 @@
   color: var(--colours-black-3);
   text-align: center;
   padding: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.name:hover {
+  color: var(--colours-black-5);
 }
 
 .data {

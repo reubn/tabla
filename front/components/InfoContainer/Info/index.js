@@ -5,11 +5,11 @@ import Diagram from './Diagram'
 
 import {info, open, header, data, name as nameStyle} from './style'
 
-const Info = ({elementSelected, element={}, _: {name}=element}) => (
+const Info = ({elementSelected, element={}, _: {name, atomicNumber}=element}) => (
   <section className={classnames(info, {[open]: elementSelected})}>
     <header className={header}>
       <Diagram element={element} />
-      <name className={nameStyle}>{name}</name>
+      <a href={`//en.wikipedia.org/wiki/Element_${atomicNumber}`} target="_blank" rel="noopener noreferrer" className={nameStyle}>{name}</a>
     </header>
     <section className={data}></section>
   </section>
