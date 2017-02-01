@@ -1,0 +1,10 @@
+.data {
+  display: block;
+  flex-grow: 1;
+  height: 50%;
+  overflow-y: scroll;
+}
+
+.scroll {
+  height: 10000px;
+}
