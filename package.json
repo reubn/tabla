@@ -40,7 +40,7 @@
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
-    "sigdig": "^1.0.4",
+    "sigdig": "^2.0.0",
     "superscript-number": "^1.0.0"
   },
   "scripts": {
