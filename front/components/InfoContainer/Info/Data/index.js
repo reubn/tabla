@@ -8,7 +8,7 @@ import {data, scroll} from './style'
 const Data = ({element}) => (
   <section className={data}>
     <section className={scroll}>
-      {schemes.map(scheme => <Entry element={element} scheme={scheme} />)}
+      {schemes.map((scheme, index) => <Entry key={index} element={element} scheme={scheme} />)}
     </section>
   </section>
 )
