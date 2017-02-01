@@ -1,3 +1,5 @@
+import sigdig from 'sigdig'
+
 const schemes = [
   {
     test: element => element.electronicConfigurationRaw,
@@ -18,8 +20,8 @@ const schemes = [
   {
     test: element => element.density,
     formats: [
-      element => ({title: 'Density', content: `${(element.density * 1000).toPrecision(4)} g dm⁻³`}),
-      element => ({title: 'Density', content: `${element.density.toPrecision(4)} g cm⁻³`})
+      element => ({title: 'Density', content: `${sigdig(element.density * 1000, 4)} g dm⁻³`}),
+      element => ({title: 'Density', content: `${sigdig(element.density, 4)} g cm⁻³`})
     ]
   }
 ]
