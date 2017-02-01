@@ -3,8 +3,10 @@ import React from 'react'
 import Shell from './Shell'
 import Nucleus from './Nucleus'
 
+import {diagram} from './style'
+
 const Diagram = ({element, _: {symbol, groupBlock}=element}) => (
-  <svg viewBox="-1400 -1400 2800 2800">
+  <svg className={diagram} viewBox="-1400 -1400 2800 2800">
     <Nucleus symbol={symbol} groupBlock={groupBlock} />
     {Object.entries(element.electronsPerShell()).map(([shell, electrons]) => <Shell key={shell} shell={shell} electrons={electrons} />)}
   </svg>
