@@ -44,7 +44,7 @@ export class Element {
 
         const indexA = subshellOrder.indexOf(shellA + subshellTypeA)
         const indexB = subshellOrder.indexOf(shellB + subshellTypeB)
-        console.log({indexA, indexB, a: shellA + subshellTypeA, b: shellB + subshellTypeB})
+
         return indexA - indexB
       })
       .map(part => typeof part === 'string' ? `[${part}]` : `${part.shell}${part.subshellType}${ssn(part.electrons)}`)
@@ -52,12 +52,14 @@ export class Element {
       : parts
   }
 
-  electronDiagram(){
+  electronsPerShell(string=false){
     if(!this.electronicConfigurationRaw) return undefined
 
     const parts = this.electronicConfigurationRaw.reduce((list, part) => typeof part === 'number' ? [...list, ...elements[part].electronicConfiguration(true, false)] : [...list, part], [])
 
-    return parts.reduce((order, {shell, electrons}) => ({...order, [shell]: (order[shell] || 0) + electrons}), {})
+    const shells = parts.reduce((order, {shell, electrons}) => ({...order, [shell]: (order[shell] || 0) + electrons}), {})
+
+    return string ? Object.values(shells).join(', ') : shells
   }
 }
 
