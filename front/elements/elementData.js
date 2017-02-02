@@ -2216,7 +2216,7 @@ export default {
     x: 18
   },
   55: {
-    name: 'Cesium',
+    name: 'Caesium',
     symbol: 'Cs',
     atomicMass: 132.9054519,
     electronicConfiguration: [
