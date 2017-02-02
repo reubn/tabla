@@ -1,4 +1,6 @@
 .info {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 0;
   background: var(--colours-white);
@@ -14,7 +16,7 @@
 
 .header {
   display: block;
-  flex-grow: 1;
+  flex-basis: 40%;
   border-bottom: 1px solid var(--colours-white-3);
 }
 
