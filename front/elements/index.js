@@ -61,6 +61,17 @@ export class Element {
 
     return string ? Object.values(shells).join(', ') : shells
   }
+
+  get groupBlockFormatted(){
+    return this.groupBlock ? ({
+      nobleGas: 'Noble Gas',
+      postTransitionMetal: 'Post Transition Metal',
+      nonMetal: 'Non Metal',
+      alkaliMetal: 'Alkali Metal',
+      alkalineEarthMetal: 'Alkaline Earth Metal',
+      transitionMetal: 'Transition Metal'
+    })[this.groupBlock] || this.groupBlock.replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()) : undefined
+  }
 }
 
 const elements = Object.entries(data).reduce((table, [atomicNumber, info]) => ({...table, [atomicNumber]: new Element(atomicNumber, info)}), {})

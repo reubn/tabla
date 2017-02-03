@@ -46,11 +46,11 @@ const schemes = [
   },
   {
     test: element => element.bondingType,
-    formats: [element => ({title: 'Bonding Type', content: element.bondingType})]
+    formats: [element => ({title: 'Bonding Type', content: element.bondingType.replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())})]
   },
   {
-    test: element => element.groupBlock,
-    formats: [element => ({title: 'Group Block', content: element.groupBlock})]
+    test: element => element.groupBlockFormatted,
+    formats: [element => ({title: 'Group Block', content: element.groupBlockFormatted})]
   },
   {
     test: element => element.namedBy,
