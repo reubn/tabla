@@ -1,5 +1,6 @@
 .info {
   display: flex;
+  position: relative;
   flex-direction: column;
   height: 100%;
   width: 0;
@@ -34,4 +35,15 @@
 
 .name:hover {
   color: var(--colours-black-5);
+}
+
+.close {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--colours-grey);
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
 }

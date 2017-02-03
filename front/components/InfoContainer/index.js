@@ -8,7 +8,8 @@ import Info from './Info'
 
 const mapStateToProps = ({periodicTable: {selectedElement}}) => ({elementSelected: selectedElement !== null, element: elements[selectedElement]})
 const mapDispatchToProps = {
-  selectElement: atomicNumber => dispatch => selectElementAction(dispatch, atomicNumber, false)
+  selectElement: atomicNumber => dispatch => selectElementAction(dispatch, atomicNumber, false),
+  close: () => dispatch => selectElementAction(dispatch, null)
 }
 
 class InfoStateSyncer extends React.Component {
