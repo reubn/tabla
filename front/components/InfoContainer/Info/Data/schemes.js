@@ -28,7 +28,7 @@ const schemes = [
     test: element => element.meltingPoint,
     formats: [
       element => ({title: 'Melting Point', content: `${sigdig(element.meltingPoint - 273, 4)} °C`}),
-      element => ({title: 'Melting Point', content: `${sigdig((element.meltingPoint * (9/5)) - 459.67, 4)} °F`}),
+      element => ({title: 'Melting Point', content: `${sigdig((element.meltingPoint * 1.8) - 459.67, 4)} °F`}),
       element => ({title: 'Melting Point', content: `${sigdig(element.meltingPoint, 4)} K`})
     ]
   },
@@ -36,7 +36,7 @@ const schemes = [
     test: element => element.boilingPoint,
     formats: [
       element => ({title: 'Boiling Point', content: `${sigdig(element.boilingPoint - 273, 4)} °C`}),
-      element => ({title: 'Boiling Point', content: `${sigdig((element.boilingPoint * (9/5)) - 459.67, 4)} °F`}),
+      element => ({title: 'Boiling Point', content: `${sigdig((element.boilingPoint * 1.8) - 459.67, 4)} °F`}),
       element => ({title: 'Boiling Point', content: `${sigdig(element.boilingPoint, 4)} K`})
     ]
   },
