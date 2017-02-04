@@ -1,9 +1,11 @@
 const webpack = require('webpack')
 
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
-  entry: ['babel-polyfill', './front/index.js'],
+  entry: ['babel-polyfill', './front/app.js'],
   output: {
     path: './front/compiled',
     filename: 'bundle.js'
@@ -66,7 +68,18 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': `"${process.env.NODE_ENV}"`,
       __DEVTOOLS__: devMode
-    })],
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      filename: 'index.html',
+      template: './front/index.js',
+      inject: false
+    }),    // Generates default index.html
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      filename: '404.html',
+      template: './front/index.js',
+      inject: false
+    })
+  ],
   devServer: {
     contentBase: ['./front/compiled', './front/'],
     compress: true,

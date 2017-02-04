@@ -1,23 +1,23 @@
+// export default ({htmlWebpackPlugin: {files: {chunks}}}) =>
+//   `<!DOCTYPE html>
+//   <meta name="apple-mobile-web-app-capable" content="yes">
+//   <title>Tabla</title>
+//   <section id="app"></section>
+//   ${Object.values(chunks).map(({entry}) => `<script src="${entry}"></script>`)}
+//   `
+//   // <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+//   // <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+//   // <% } %>
 import React from 'react'
-import {render} from 'react-dom'
-import {Provider} from 'react-redux'
+import {renderToStaticMarkup} from 'react-dom/server'
 
-import {Router, browserHistory} from 'react-router'
-import {syncHistoryWithStore} from 'react-router-redux'
+const index = ({htmlWebpackPlugin: {files: {chunks}}}) => (
+  <html>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Tabla</title>
+    <section id="app" />
+    {Object.values(chunks).map(({entry}) => <script src={entry} />)}
+  </html>
+)
 
-import store from './store'
-import routes from './routes'
-
-
-function Tabla(){
-  this.store = store
-  this.history = syncHistoryWithStore(browserHistory, this.store)
-
-  render(
-    <Provider store={this.store}>
-      <Router history={this.history} routes={routes} />
-    </Provider>, document.getElementById('app'))
-  return this
-}
-
-window.tabla = new Tabla()
+export default params => `<!DOCTYPE html> ${renderToStaticMarkup(index(params))}`
