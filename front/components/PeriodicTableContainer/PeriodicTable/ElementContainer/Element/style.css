@@ -6,9 +6,6 @@
   flex-direction: column;
   flex-basis: var(--table-height);
   transition: 0.2s cubic-bezier(0.32, 0.93, 0.69, 0.76);
-  border-top: 1px solid;
-  border-left: 1px solid;
-  border-color: var(--colours-blue-dark-1);
   border-radius: 3px;
   color: var(--group-colour);
   cursor: pointer;
