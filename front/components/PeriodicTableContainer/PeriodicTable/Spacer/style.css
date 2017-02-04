@@ -1,5 +1,5 @@
 .spacer {
-  flex-basis: var(--size);
+  flex-basis: var(--table-height);
   transition: 0.2s linear;
   border-top: 1px solid;
   border-left: 1px solid;

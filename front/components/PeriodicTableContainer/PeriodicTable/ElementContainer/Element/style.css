@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  flex-basis: var(--size);
+  flex-basis: var(--table-height);
   transition: 0.2s cubic-bezier(0.32, 0.93, 0.69, 0.76);
   border-top: 1px solid;
   border-left: 1px solid;
@@ -31,7 +31,7 @@
 }
 
 .atomicNumber {
-  font-size: calc(var(--size) / 65);
+  font-size: calc(var(--table-height) / 65);
   text-align: left;
   display: block;
   width: 100%;
@@ -46,7 +46,7 @@
 }
 
 .symbol {
-  font-size: calc(var(--size) / 31);
+  font-size: calc(var(--table-height) / 31);
   width: 100%;
   display: block;
   text-align: center;
@@ -55,7 +55,7 @@
 .atomicMass {
   display: block;
   width: 100%;
-  font-size: calc(var(--size) / 80);
+  font-size: calc(var(--table-height) / 80);
   text-align: center;
   position: absolute;
   bottom: 10%;

@@ -1,12 +1,13 @@
 .periodicTable {
-  --size: 80vmin;
-  --columns: 18;
+  --table-height: 80vmin;
+  --table-width: calc(var(--table-height) * 1.4);
+  --table-columns: 18;
 
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  width: calc(var(--size) * 1.4);
-  height: var(--size);
+  width: var(--table-width);
+  height: var(--table-height);
   margin-left: auto;
   margin-right: auto;
   padding: 2vmin;
