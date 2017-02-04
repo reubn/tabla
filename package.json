@@ -48,7 +48,7 @@
   "scripts": {
     "start": "sudo node_modules/.bin/webpack-dev-server --env=development",
     "build": "sudo webpack --env=production",
-    "deploy": "git subtree push --prefix front/compiled origin gh-pages",
+    "deploy": "gh-pages -m '🎉' -d front/compiled",
     "lint": "eslint ./ || true",
     "lint:fix": "eslint --fix ./ || true",
     "info": "git diff --stat 4b825dc642cb6eb9a060e54bf8d69288fbee4904 | cat"
