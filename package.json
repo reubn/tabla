@@ -15,6 +15,7 @@
     "babel-preset-env": "^1.1.8",
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
+    "babili-webpack-plugin": "^0.0.9",
     "css-loader": "^0.26.1",
     "cssnano": "^3.10.0",
     "eslint": "^3.14.0",
@@ -45,8 +46,8 @@
     "superscript-number": "^1.0.0"
   },
   "scripts": {
-    "start": "NODE_ENV=development sudo node_modules/.bin/webpack-dev-server",
-    "build": "NODE_ENV=production sudo webpack",
+    "start": "sudo node_modules/.bin/webpack-dev-server --env=development",
+    "build": "sudo webpack --env=production",
     "lint": "eslint ./ || true",
     "lint:fix": "eslint --fix ./ || true",
     "info": "git diff --stat 4b825dc642cb6eb9a060e54bf8d69288fbee4904 | cat"
