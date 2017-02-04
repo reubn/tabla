@@ -875,7 +875,7 @@ export default {
     appearance: 'blue-silver-grey metal',
     discoveredBy: 'Andrés Manuel del Río',
     molarHeat: 24.89,
-    namedBy: 'Isotopes of vanadium',
+    namedBy: 'Nils Gabriel Sefström',
     summary: 'Vanadium is a chemical element with symbol V and atomic number 23. It is a hard, silvery grey, ductile and malleable transition metal. The element is found only in chemically combined form in nature, but once isolated artificially, the formation of an oxide layer stabilizes the free metal somewhat against further oxidation.',
     y: 4,
     x: 5
