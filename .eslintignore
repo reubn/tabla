@@ -1,5 +1,0 @@
-node_modules/*
-front/compiled/*
-research/*
-npm-debug.log*
-yarn-error.log*
