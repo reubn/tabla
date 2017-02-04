@@ -11,6 +11,10 @@
   background: var(--colours-white-2);
 }
 
+.entry:last-child:not(:nth-child(2n)) {
+  border-bottom: 1px solid var(--colours-white-3);
+}
+
 .title {
   display: flex;
   float: left;
@@ -28,7 +32,7 @@
   cursor: pointer;
 }
 
-.changeable:hover{
+.changeable:hover {
   color: var(--colours-grey-4);
 }
 
