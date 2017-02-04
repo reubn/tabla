@@ -16,12 +16,16 @@
 }
 
 .header {
+  position: relative;
   display: block;
   flex-basis: 40%;
   border-bottom: 1px solid var(--colours-white-3);
 }
 
 .name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   display: inline-block;
   font-size: 2rem;
