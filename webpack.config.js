@@ -85,7 +85,7 @@ module.exports = env => {
       })
     ],
     devServer: {
-      contentBase: ['./front/compiled', './front/'],
+      contentBase: './front/compiled',
       compress: true,
       host: '0.0.0.0',
       port: 80,
