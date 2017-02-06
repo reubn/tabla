@@ -1,10 +1,13 @@
 .entry {
-  display: block;
+  --height: 3.5rem;
+
+  display: flex;
   width: 100%;
-  height: 3.5rem;
+  min-height: var(--height);
   background: var(--colours-white);
   color: var(--colours-grey-5);
   overflow: hidden;
+  align-items: center;
 }
 
 .entry:nth-child(2n) {
@@ -22,7 +25,7 @@
   width: 40%;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
+  height: var(--height);
   text-align: center;
   user-select: none;
   cursor: default;
@@ -43,6 +46,6 @@
   width: 60%;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
+  min-height: var(--height);
   text-align: center;
 }
