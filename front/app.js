@@ -1,3 +1,5 @@
+/* global __BUILD__:true */
+
 import React from 'react'
 import {render} from 'react-dom'
 import {Provider} from 'react-redux'
@@ -10,6 +12,7 @@ import routes from './routes'
 
 
 function Tabla(){
+  this.build = __BUILD__
   this.store = store
   this.history = syncHistoryWithStore(browserHistory, this.store)
 
@@ -17,6 +20,9 @@ function Tabla(){
     <Provider store={this.store}>
       <Router history={this.history} routes={routes} />
     </Provider>, document.getElementById('app'))
+
+  if(process.env.NODE_ENV === 'development') console.log(this, this.build)
+
   return this
 }
 

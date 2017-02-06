@@ -48,7 +48,7 @@
   },
   "scripts": {
     "start": "sudo node_modules/.bin/webpack-dev-server --env=development",
-    "build": "sudo webpack --env=production",
+    "build": "git diff-index --quiet HEAD -- && sudo webpack --env=production || echo '❌  Cannot build with uncommited changes!'",
     "deploy": "gh-pages -m '🎉' -d front/compiled",
     "lint": "eslint ./ || true",
     "lint:fix": "eslint --fix ./ || true",

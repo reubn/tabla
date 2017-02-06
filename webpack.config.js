@@ -1,3 +1,5 @@
+const childProcess = require('child_process')
+
 const webpack = require('webpack')
 
 const BabiliPlugin = require('babili-webpack-plugin')
@@ -70,7 +72,8 @@ module.exports = env => {
         'process.env': {
           NODE_ENV: JSON.stringify(devMode ? 'development' : 'production')
         },
-        __DEVTOOLS__: devMode
+        __DEVTOOLS__: devMode,
+        __BUILD__: devMode ? JSON.stringify('DEV') : childProcess.execSync('git rev-list HEAD --count').toString()
       }),
       !devMode ? new BabiliPlugin({deadcode: false}) : () => undefined,
       new HtmlWebpackPlugin({
