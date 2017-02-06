@@ -49,6 +49,10 @@ const schemes = [
     formats: [element => ({title: 'Bonding Type', content: element.bondingType.replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())})]
   },
   {
+    test: element => element.appearance,
+    formats: [element => ({title: 'Appearance', content: element.appearance.replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())})]
+  },
+  {
     test: element => element.groupBlockFormatted,
     formats: [element => ({title: 'Group Block', content: element.groupBlockFormatted})]
   },

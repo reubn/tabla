@@ -4,7 +4,7 @@ import data from './elementData'
 import subshellOrder from './subshellOrder'
 
 export class Element {
-  constructor(atomicNumber, {name, symbol, atomicMass, electronicConfiguration, electronegativity, atomicRadius, oxidationStates, bondingType, meltingPoint, boilingPoint, density, groupBlock, namedBy, yearDiscovered, discoveredBy, summary}){
+  constructor(atomicNumber, {name, symbol, atomicMass, electronicConfiguration, electronegativity, atomicRadius, oxidationStates, bondingType, meltingPoint, boilingPoint, density, groupBlock, namedBy, yearDiscovered, discoveredBy, summary, appearance}){
     this.atomicNumber = atomicNumber
 
     this.name = name
@@ -23,6 +23,7 @@ export class Element {
     this.yearDiscovered = yearDiscovered
     this.discoveredBy = discoveredBy
     this.summary = summary
+    this.appearance = appearance
   }
 
   electronicConfiguration(expanded=true, format=true){
