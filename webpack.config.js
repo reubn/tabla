@@ -89,11 +89,7 @@ module.exports = env => {
       compress: true,
       host: '0.0.0.0',
       port: 80,
-      historyApiFallback: {
-        rewrites: [
-          {from: /[^/]/, to: 'index.html'}
-        ]
-      }
+      historyApiFallback: 'index.html'
     },
     resolve: {
       extensions: ['.js', '.css']
