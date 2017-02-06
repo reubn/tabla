@@ -73,7 +73,7 @@ module.exports = env => {
           NODE_ENV: JSON.stringify(devMode ? 'development' : 'production')
         },
         __DEVTOOLS__: devMode,
-        __BUILD__: devMode ? JSON.stringify('DEV') : childProcess.execSync('git rev-list HEAD --count').toString()
+        __BUILD__: devMode ? JSON.stringify('DEV') : childProcess.execSync('git rev-parse HEAD').toString()
       }),
       !devMode ? new BabiliPlugin({deadcode: false}) : () => undefined,
       new HtmlWebpackPlugin({
