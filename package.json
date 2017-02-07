@@ -49,6 +49,7 @@
   "scripts": {
     "start": "sudo node_modules/.bin/webpack-dev-server --env=development",
     "build": "git diff-index --quiet HEAD -- && sudo webpack --env=production || echo '❌  Cannot build with uncommited changes!'",
+    "build:force": "sudo webpack --env=production",
     "deploy": "sudo sh -c 'echo \"tabla.reuben.science\" > front/compiled/CNAME' && gh-pages -m '🎉' -d front/compiled",
     "lint": "eslint ./ || true",
     "lint:fix": "eslint --fix ./ || true",
