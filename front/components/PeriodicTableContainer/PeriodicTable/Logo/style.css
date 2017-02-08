@@ -1,5 +1,5 @@
 .logo {
-  width: 100%;
+  width: var(--table-width);
   height: 3rem;
   position: absolute;
   top: 2rem;
