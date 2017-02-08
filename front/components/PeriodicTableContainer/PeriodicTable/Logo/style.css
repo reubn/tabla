@@ -1,0 +1,25 @@
+.logo {
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  top: 2rem;
+}
+
+.dot, .cross {
+  fill: var(--colours-blue-dark-2);
+  transition: fill 0.25s cubic-bezier(0.47, 0, 0.75, 0.72);
+  height: 50px;
+  rx: 8;
+}
+
+.dot {
+  transition-delay: 0.1s;
+}
+
+.logo:hover .cross {
+  fill: var(--colours-pink-red);
+}
+
+.logo:hover .dot {
+  fill: var(--colours-white-1);
+}

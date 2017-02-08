@@ -3,6 +3,7 @@ import React from 'react'
 import Group from './Group'
 import ElementContainer from './ElementContainer'
 import Spacer from './Spacer'
+import Logo from './Logo'
 
 import {periodicTable} from './style'
 
@@ -18,7 +19,13 @@ const PeriodicTable = ({visibleElements}) => {
           : <Spacer key={`spacer-${partIndex}`} />
         ))}
       </Group>)
-  return <section className={periodicTable}>{groups}</section>
+
+  return (
+    <section className={periodicTable}>
+      <Logo />
+      {groups}
+    </section>
+  )
 }
 
 export default PeriodicTable
