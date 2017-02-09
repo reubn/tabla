@@ -29,7 +29,7 @@ module.exports = env => {
             {
               loader: 'css-loader',
               query: {
-                localIdentName: devMode ? '[local]-[name]-[hash:base64:10]' : undefined,
+                localIdentName: devMode ? '[local]-[emoji:1]' : '[emoji:2]',
                 modules: true
               }
             }
