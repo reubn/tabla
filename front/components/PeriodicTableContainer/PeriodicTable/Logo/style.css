@@ -3,6 +3,8 @@
   height: 3rem;
   position: absolute;
   top: 2rem;
+  user-select: none;
+  cursor: pointer;
 }
 
 .dot, .cross {
