@@ -16,6 +16,9 @@ class InfoStateSyncer extends React.Component {
   componentWillMount(){
     this.init(this.props)
   }
+  componentWillUnmount(){
+    this.props.close()
+  }
   componentWillReceiveProps(nextProps){
     if(nextProps.params.atomicNumber !== this.props.params.atomicNumber) this.init(nextProps)
   }
