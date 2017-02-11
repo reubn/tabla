@@ -9,7 +9,7 @@ const options = {
   distance: 100,
   maxPatternLength: 32,
   minMatchCharLength: 2,
-  keys: ['name', 'symbol']
+  keys: ['name', 'symbol', 'atomicNumber']
 }
 
 const fuse = new Fuse(Object.values(elements), options)
