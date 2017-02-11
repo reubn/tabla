@@ -23,9 +23,6 @@
 }
 
 .name {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   display: inline-block;
   font-size: 2rem;
