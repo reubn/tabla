@@ -1,8 +1,8 @@
 .logo {
-  width: var(--table-width);
   height: 3rem;
   position: absolute;
   top: 2rem;
+  left: 2rem;
   user-select: none;
   cursor: pointer;
 }
