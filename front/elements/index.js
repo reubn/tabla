@@ -1,6 +1,6 @@
 import ssn from 'superscript-number'
 
-import data from './elementData'
+import data from './raw'
 import subshellOrder from './subshellOrder'
 
 export class Element {
