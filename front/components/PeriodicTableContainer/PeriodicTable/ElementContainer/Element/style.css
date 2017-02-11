@@ -16,7 +16,7 @@
   box-shadow: 0 0 100px 7px var(--colours-blue-dark);
 }
 
-.element:hover, .selected {
+.element:hover:not(.invisible), .selected {
   color: var(--colours-blue-dark-1);
   background: var(--group-colour);
 }
@@ -40,6 +40,11 @@
 
 .selected .atomicNumber {
   opacity: 1;
+}
+
+.invisible {
+  cursor: default;
+  opacity: 0.2;
 }
 
 .symbol {

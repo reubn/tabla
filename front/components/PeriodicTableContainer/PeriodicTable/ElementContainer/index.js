@@ -9,6 +9,6 @@ const mapStateToProps = ({periodicTable: {visibleElements, selectedElement}}, {a
 const mapDispatchToProps = {
   selectElementAction: atomicNumber => dispatch => selectElementAction(dispatch, atomicNumber)
 }
-const mergeProps = (stateProps, dispatchProps, ownProps) => ({...ownProps, ...stateProps, select: () => dispatchProps.selectElementAction((ownProps.atomicNumber))})
+const mergeProps = (stateProps, dispatchProps, ownProps) => ({...ownProps, ...stateProps, select: () => ownProps.visible ? dispatchProps.selectElementAction((ownProps.atomicNumber)): null})
 
 export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(Element)
