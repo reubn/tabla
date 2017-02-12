@@ -10,7 +10,7 @@
   background: var(--colours-blue-dark);
   height: 1.75rem;
   width: 16rem;
-  color: var(--colours-white-3);
+  color: var(--colours-grey-5);
   line-height: 1.75rem;
   font-size: 1.25rem;
   padding-left: 0.5rem;
@@ -19,5 +19,6 @@
 }
 
 .searchBar:focus {
+  color: var(--colours-white-3);
   border-bottom: 2px solid var(--colours-blue-dark-2);
 }
