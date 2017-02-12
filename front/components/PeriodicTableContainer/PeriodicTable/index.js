@@ -3,6 +3,7 @@ import React from 'react'
 import Group from './Group'
 import ElementContainer from './ElementContainer'
 import Spacer from './Spacer'
+import SearchBarContainer from './SearchBarContainer'
 
 import {periodicTable} from './style'
 
@@ -21,6 +22,7 @@ const PeriodicTable = ({visibleElements}) => {
 
   return (
     <section className={periodicTable}>
+      <SearchBarContainer />
       {groups}
     </section>
   )

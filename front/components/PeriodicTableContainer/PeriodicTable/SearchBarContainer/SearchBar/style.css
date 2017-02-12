@@ -1,0 +1,20 @@
+.container {
+  position: absolute;
+  top: 2rem;
+  display: inline-block;
+}
+
+.searchBar {
+  -webkit-appearance: none;
+  border: 1px solid var(--colours-blue-dark-2);
+  background: var(--colours-blue-dark-1);
+  border-radius: 5px;
+  height: 1.75rem;
+  width: 16rem;
+  color: var(--colours-white-3);
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  padding-left: 0.5rem;
+  font-family: var(--font-family);
+  outline: none;
+}
