@@ -6,9 +6,8 @@
 
 .searchBar {
   -webkit-appearance: none;
-  border: 1px solid var(--colours-blue-dark-2);
-  background: var(--colours-blue-dark-1);
-  border-radius: 5px;
+  border: none;
+  background: var(--colours-blue-dark);
   height: 1.75rem;
   width: 16rem;
   color: var(--colours-white-3);
@@ -17,4 +16,8 @@
   padding-left: 0.5rem;
   font-family: var(--font-family);
   outline: none;
+}
+
+.searchBar:focus {
+  border-bottom: 2px solid var(--colours-blue-dark-2);
 }
