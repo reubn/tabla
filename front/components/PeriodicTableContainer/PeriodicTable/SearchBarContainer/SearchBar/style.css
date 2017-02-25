@@ -2,6 +2,8 @@
   position: absolute;
   top: 2rem;
   display: inline-block;
+  width: var(--table-width);
+  text-align: center;
 }
 
 .searchBar {
