@@ -9,6 +9,7 @@
 .searchBar {
   -webkit-appearance: none;
   border: none;
+  border-radius: 0;
   background: var(--colours-blue-dark);
   height: 1.75rem;
   width: 16rem;
