@@ -5,7 +5,9 @@
   justify-content: center;
   flex-direction: column;
   flex-basis: var(--table-height);
-  transition: 0.2s cubic-bezier(0.32, 0.93, 0.69, 0.76);
+  transition-timing-function: cubic-bezier(0.32, 0.93, 0.69, 0.76);
+  transition-duration: 0.2s;
+  transition-property: color, background, opacity;
   border-radius: 3px;
   color: var(--group-colour);
   cursor: pointer;
