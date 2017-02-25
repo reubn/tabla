@@ -4,10 +4,7 @@ import elements from '../../elements'
 
 const options = {
   id: 'atomicNumber',
-  threshold: 0.3,
-  location: 0,
-  distance: 100,
-  maxPatternLength: 32,
+  threshold: 0.2,
   minMatchCharLength: 2,
   keys: ['name', 'symbol', 'atomicNumber']
 }
