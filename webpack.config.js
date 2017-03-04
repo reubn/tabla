@@ -8,9 +8,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = env => {
   const devMode = env !== 'production'
   const config = {
-    entry: ['babel-polyfill', './front/app.js'],
+    entry: ['babel-polyfill', './src/app.js'],
     output: {
-      path: './front/compiled',
+      path: './dist',
       filename: 'bundle.js'
     },
     devtool: devMode ? 'source-map' : undefined,
@@ -78,17 +78,17 @@ module.exports = env => {
       !devMode ? new BabiliPlugin({deadcode: false}) : () => undefined,
       new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: './front/index.js',
+        template: './src/index.js',
         inject: false
       }),
       new HtmlWebpackPlugin({
         filename: '404.html',
-        template: './front/index.js',
+        template: './src/index.js',
         inject: false
       })
     ],
     devServer: {
-      contentBase: './front/compiled',
+      contentBase: './dist',
       compress: true,
       host: '0.0.0.0',
       port: 80,

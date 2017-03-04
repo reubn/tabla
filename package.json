@@ -2,7 +2,7 @@
   "name": "tabla",
   "version": "0.0.1",
   "description": "Periodic Table",
-  "main": "./front",
+  "main": "./src",
   "homepage": "tabla.reuben.science",
   "repository": "https://github.com/reubn/tabla.git",
   "author": "reuben <reuben.eggar@me.com>",
@@ -52,7 +52,7 @@
     "start": "sudo node_modules/.bin/webpack-dev-server --env=development",
     "build": "git diff-index --quiet HEAD -- && sudo webpack --env=production || echo '❌  Cannot build with uncommited changes!'",
     "build:force": "sudo webpack --env=production",
-    "deploy": "sudo sh -c 'node -pe \"require(\\`./package.json\\`).homepage\" > front/compiled/CNAME' && gh-pages -m '🎉' -d front/compiled",
+    "deploy": "sudo sh -c 'node -pe \"require(\\`./package.json\\`).homepage\" > dist/CNAME' && gh-pages -m '🎉' -d dist",
     "lint": "eslint ./ || true",
     "lint:fix": "eslint --fix ./ || true",
     "info": "git diff --stat 4b825dc642cb6eb9a060e54bf8d69288fbee4904 | cat"
