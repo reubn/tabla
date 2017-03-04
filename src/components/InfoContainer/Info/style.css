@@ -50,3 +50,26 @@
   user-select: none;
   cursor: pointer;
 }
+
+@media only screen
+  and (max-device-width: 736px)
+  and (orientation: portrait) {
+  .open {
+    width: 100vw;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+  }
+
+  .close {
+    font-size: 6rem;
+    top: 3rem;
+    left: 3rem;
+  }
+
+  .name {
+    font-size: 5rem;
+    padding: 1rem;
+  }
+}

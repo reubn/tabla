@@ -49,3 +49,12 @@
   min-height: var(--height);
   text-align: center;
 }
+
+@media only screen
+  and (max-device-width: 736px)
+  and (orientation: portrait) {
+  .entry {
+    --height: 6rem;
+    font-size: 2rem;
+  }
+}

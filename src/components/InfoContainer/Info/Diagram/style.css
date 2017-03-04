@@ -1,3 +1,11 @@
 .diagram {
   margin: 5%;
 }
+
+@media only screen
+  and (max-device-width: 736px)
+  and (orientation: portrait) {
+  .diagram {
+    margin: 0;
+  }
+}
