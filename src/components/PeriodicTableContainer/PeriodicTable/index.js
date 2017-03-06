@@ -4,6 +4,7 @@ import Group from './Group'
 import ElementContainer from './ElementContainer'
 import Spacer from './Spacer'
 import SearchBarContainer from './SearchBarContainer'
+import Footer from './Footer'
 
 import {periodicTable} from './style'
 
@@ -24,6 +25,7 @@ const PeriodicTable = ({visibleElements}) => {
     <section className={periodicTable}>
       <SearchBarContainer />
       {groups}
+      <Footer />
     </section>
   )
 }

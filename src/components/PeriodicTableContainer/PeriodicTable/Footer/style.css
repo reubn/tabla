@@ -1,0 +1,45 @@
+.footer {
+  position: absolute;
+  bottom: 0.5rem;
+  display: inline-block;
+  width: var(--table-width);
+  text-align: center;
+  color: var(--colours-blue-dark-2);
+  cursor: pointer;
+  font-size: 0.75rem;
+  transform: scaleX(1.1);
+  transition: all ease-in-out 0.2s;
+}
+
+.footer:hover {
+  color: var(--colours-pink-red);
+  font-size: 1.5rem;
+  animation: heartbeat 1.25s infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1) scaleX(1.1);
+  }
+
+  20% {
+    transform: scale(0.75) scaleX(1.1);
+  }
+
+  40% {
+    transform: scale(1) scaleX(1.1);
+  }
+
+  60% {
+    transform: scale(0.75) scaleX(1.1);
+  }
+
+  80% {
+    transform: scale(0.75) scaleX(1.1);
+  }
+
+  100% {
+    transform: scale(1) scaleX(1.1);
+  }
+}
