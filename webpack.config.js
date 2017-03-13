@@ -10,7 +10,7 @@ module.exports = env => {
   const config = {
     entry: ['babel-polyfill', './src/app.js'],
     output: {
-      path: './dist',
+      path: '/dist',
       filename: 'bundle.js'
     },
     devtool: devMode ? 'source-map' : undefined,
@@ -75,7 +75,7 @@ module.exports = env => {
         __DEVTOOLS__: devMode,
         __BUILD__: JSON.stringify(devMode ? 'DEV' : childProcess.execSync('git rev-parse HEAD').toString().trim())
       }),
-      !devMode ? new BabiliPlugin({deadcode: false}) : () => undefined,
+      !devMode ? new BabiliPlugin() : () => undefined,
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: './src/index.js',
@@ -92,7 +92,7 @@ module.exports = env => {
       compress: true,
       host: '0.0.0.0',
       port: 80,
-      historyApiFallback: 'index.html'
+      historyApiFallback: true
     },
     resolve: {
       extensions: ['.js', '.css']
