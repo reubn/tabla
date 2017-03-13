@@ -10,7 +10,7 @@ module.exports = env => {
   const config = {
     entry: ['babel-polyfill', './src/app.js'],
     output: {
-      path: '/dist',
+      path: devMode ? '/' : './dist',
       filename: 'bundle.js'
     },
     devtool: devMode ? 'source-map' : undefined,
