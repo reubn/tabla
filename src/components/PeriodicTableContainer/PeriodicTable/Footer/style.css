@@ -4,43 +4,49 @@
   display: inline-block;
   width: var(--table-width);
   text-align: center;
-  color: var(--colours-blue-dark-2);
-  cursor: pointer;
-  font-size: 0.75rem;
-  transform: scaleX(1.1);
-  transition: all ease-in-out 0.2s;
+  height: 0.75rem;
   text-decoration: none;
+  transition: all ease-in-out 0.2s;
 }
 
 .footer:hover {
-  color: var(--colours-pink-red);
-  font-size: 1.5rem;
+  height: 1.5rem;
   animation: heartbeat 1.25s infinite;
   animation-delay: 0.25s;
 }
 
+.heart {
+  fill: var(--colours-blue-dark-2);
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.footer:hover .heart {
+  fill: var(--colours-pink-red);
+}
+
 @keyframes heartbeat {
   0% {
-    transform: scale(1) scaleX(1.1);
+    transform: scale(1);
   }
 
   20% {
-    transform: scale(0.75) scaleX(1.1);
+    transform: scale(0.75);
   }
 
   40% {
-    transform: scale(1) scaleX(1.1);
+    transform: scale(1);
   }
 
   60% {
-    transform: scale(0.75) scaleX(1.1);
+    transform: scale(0.75);
   }
 
   80% {
-    transform: scale(0.75) scaleX(1.1);
+    transform: scale(0.75);
   }
 
   100% {
-    transform: scale(1) scaleX(1.1);
+    transform: scale(1);
   }
 }
