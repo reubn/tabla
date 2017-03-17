@@ -1,12 +1,14 @@
 import React from 'react'
 import classnames from 'classnames'
 
+import {Element} from '../../../elements'
+
 import Diagram from './Diagram'
 import Data from './Data'
 
 import {info, open, header, name as nameStyle, close as closeStyle} from './style'
 
-const Info = ({elementSelected, close, element={}, _: {name, atomicNumber}=element}) => (
+const Info = ({elementSelected, close, element={}, _: {name, atomicNumber}=element}) => element instanceof Element ? (
   <section className={classnames(info, {[open]: elementSelected})}>
     <header className={header}>
       <span className={closeStyle} onClick={close}>✕</span>
@@ -15,6 +17,6 @@ const Info = ({elementSelected, close, element={}, _: {name, atomicNumber}=eleme
     </header>
     <Data element={element} />
   </section>
-)
+) : null
 
 export default Info

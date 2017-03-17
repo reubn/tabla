@@ -1,15 +1,17 @@
 import React from 'react'
+import {Route} from 'react-router-dom'
 
 import PeriodicTableContainer from '../PeriodicTableContainer'
+import InfoContainer from '../InfoContainer'
 import Logo from '../Logo'
 
 import {app} from './style'
 
-const App = ({children}) => (
+const App = () => (
   <section className={app}>
     <Logo />
     <PeriodicTableContainer />
-    {children}
+    <InfoContainer />
   </section>
 )
 

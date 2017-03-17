@@ -4,21 +4,23 @@ import React from 'react'
 import {render} from 'react-dom'
 import {Provider} from 'react-redux'
 
-import {Router, browserHistory} from 'react-router'
-import {syncHistoryWithStore} from 'react-router-redux'
+import {Router} from 'react-router-dom'
 
 import store from './store'
-import routes from './routes'
+import {history, linkHistoryToStore} from './routing'
 
+import App from './components/App'
 
 function Tabla(){
   this.build = __BUILD__
-  this.store = store
-  this.history = syncHistoryWithStore(browserHistory, this.store)
+
+  linkHistoryToStore(store)
 
   render(
-    <Provider store={this.store}>
-      <Router history={this.history} routes={routes} />
+    <Provider store={store}>
+      <Router history={history}>
+        <App />
+      </Router>
     </Provider>, document.getElementById('app'))
 
   if(process.env.NODE_ENV === 'development') console.log(this, this.build)
