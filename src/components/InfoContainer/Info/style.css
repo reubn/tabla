@@ -3,16 +3,51 @@
   position: relative;
   flex-direction: column;
   height: 100%;
-  width: 0;
   background: var(--colours-white);
-  transition: 0.2s linear;
   box-sizing: border-box;
-  border-left: 2px solid var(--colours-white-3);
+}
+.info > * {
+  transition: opacity 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  opacity: 0;
 }
 
 .open {
   width: 20vw;
   min-width: 300px;
+  border-left: 2px solid var(--colours-white-3);
+}
+.open:not(.enter):not(.leave) > * {
+  opacity: 1;
+}
+
+.enter {
+  width: 0;
+  min-width: 0;
+}
+
+.enterActive {
+  transition: none 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-property: width, min-width;
+
+  width: 20vw;
+  min-width: 300px;
+}
+
+.leave {
+  width: 20vw;
+  min-width: 300px;
+}
+.leave > * {
+  transition: opacity 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  opacity: 0;
+}
+
+.leaveActive {
+  transition: none 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-property: width, min-width;
+
+  width: 0;
+  min-width: 0;
 }
 
 .header {
