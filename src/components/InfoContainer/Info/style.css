@@ -5,6 +5,7 @@
   height: 100%;
   background: var(--colours-white);
   box-sizing: border-box;
+  z-index: 20;
 }
 .info > * {
   transition: opacity 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
