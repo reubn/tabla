@@ -10,14 +10,12 @@ export default ({dispatch}) => next => action => {
     transitionID = Math.random()
 
     dispatch(push(`/${action.atomicNumber || ''}`, {transitionID}))
-    return next(action)
   }
 
   if(action.type === LOCATION_CHANGE && (!action.payload.state || action.payload.state.transitionID !== transitionID)){
     const {params: {atomicNumber}={}} = matchPath(action.payload.pathname, {path: '/:atomicNumber'}) || {}
     transitionID = Math.random()
     selectElement(dispatch, +atomicNumber || null, false)
-    return next(action)
   }
 
   return next(action)
