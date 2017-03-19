@@ -3,21 +3,20 @@ import {LOCATION_CHANGE, push} from 'react-router-redux'
 
 import selectElement from '../actions/selectElement'
 
-// Set new random ID for page load transition
 let transitionID = Math.random()
 
 export default ({dispatch}) => next => action => {
-  if(action.type === 'SELECT_ELEMENT' && action.redirect){
+  if(action.type === 'SELECT_ELEMENT' && action.triggerRedirect){
     transitionID = Math.random()
 
-    dispatch(push(`/${action.atomicNumber || ''}`, {redirect: false, transitionID}))
+    dispatch(push(`/${action.atomicNumber || ''}`, {transitionID}))
     return next(action)
   }
 
-  if(action.type === LOCATION_CHANGE && (!action.payload.state || action.payload.state.redirect || action.payload.state.transitionID !== transitionID)){
+  if(action.type === LOCATION_CHANGE && (!action.payload.state || action.payload.state.transitionID !== transitionID)){
     const {params: {atomicNumber}={}} = matchPath(action.payload.pathname, {path: '/:atomicNumber'}) || {}
-
-    if(atomicNumber) selectElement(dispatch, +atomicNumber, false)
+    transitionID = Math.random()
+    selectElement(dispatch, +atomicNumber || null, false)
     return next(action)
   }
 
