@@ -8,7 +8,6 @@ let transitionID = Math.random()
 export default ({dispatch}) => next => action => {
   if(action.type === 'SELECT_ELEMENT' && action.triggerRedirect){
     transitionID = Math.random()
-
     dispatch(push(`/${action.atomicNumber || ''}`, {transitionID}))
   }
 
