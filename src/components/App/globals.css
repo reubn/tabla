@@ -5,9 +5,9 @@
   --colours-yellow: #ffee62;
   --colours-orange: #ffc233;
 
-  --colours-green: #5dedcb;
+  --colours-green: #41fb82;
 
-  --colours-aqua: #0df8f8;
+  --colours-aqua: #5dedcb;
 
   --colours-blue: #66d6ff;
   --colours-blue-dark: #1E2C36;
@@ -43,12 +43,12 @@
 
   --colours-alkaliMetal: var(--colours-pink-red);
   --colours-nonMetal: var(--colours-blue);
-  --colours-transitionMetal: var(--colours-green);
+  --colours-transitionMetal: var(--colours-aqua);
   --colours-postTransitionMetal: var(--colours-red);
   --colours-halogen: var(--colours-orange);
   --colours-nobleGas: var(--colours-yellow);
   --colours-metalloid: var(--colours-purple);
-  --colours-alkalineEarthMetal: var(--colours-aqua);
+  --colours-alkalineEarthMetal: var(--colours-green);
   --colours-actinoid: var(--colours-purple-dark);
   --colours-lanthanoid: var(--colours-pink);
   --colours-unknown: var(--colours-blue-dark-2);
