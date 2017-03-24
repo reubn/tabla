@@ -1,26 +1,10 @@
 import React from 'react'
-import classnames from 'classnames'
 
-import {nucleus, nucleusText,
-        alkaliMetal, halogen, nonMetal, transitionMetal, nobleGas, postTransitionMetal, metalloid, alkalineEarthMetal, actinoid, lanthanoid, unknown} from './style'
+import {nucleus, nucleusText} from './style'
 
-const groupColours = {
-  alkaliMetal,
-  halogen,
-  nonMetal,
-  transitionMetal,
-  nobleGas,
-  postTransitionMetal,
-  metalloid,
-  alkalineEarthMetal,
-  actinoid,
-  lanthanoid,
-  unknown
-}
-
-const Nucleus = ({groupBlock, symbol}) => (
+const Nucleus = ({symbol}) => (
   <g>
-    <circle r="225" className={classnames(nucleus, groupColours[groupBlock] || unknown)} />
+    <circle r="225" className={nucleus} />
     <text className={nucleusText}>
       {symbol}
     </text>

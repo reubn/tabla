@@ -11,15 +11,3 @@
   user-select: none;
   cursor: default;
 }
-
-.alkaliMetal {--group-colour: var(--colours-alkaliMetal);}
-.nonMetal {--group-colour: var(--colours-nonMetal);}
-.transitionMetal {--group-colour: var(--colours-transitionMetal);}
-.postTransitionMetal {--group-colour: var(--colours-postTransitionMetal);}
-.halogen {--group-colour: var(--colours-halogen);}
-.nobleGas {--group-colour: var(--colours-nobleGas);}
-.metalloid {--group-colour: var(--colours-metalloid);}
-.alkalineEarthMetal {--group-colour: var(--colours-alkalineEarthMetal);}
-.actinoid {--group-colour: var(--colours-actinoid);}
-.lanthanoid {--group-colour: var(--colours-lanthanoid);}
-.unknown {--group-colour: var(--colours-unknown);}
