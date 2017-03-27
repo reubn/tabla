@@ -13,7 +13,7 @@ import layout from './layout'
 const PeriodicTable = ({visibleElements}) => {
   const groups =
     layout.map((group, groupIndex) =>
-      <Group key={groupIndex}>
+      <Group key={groupIndex} index={groupIndex} total={layout.length}>
         {group.map((part, partIndex) => (
           part
           ? <ElementContainer key={part} atomicNumber={part} visible={visibleElements.includes(part)} />

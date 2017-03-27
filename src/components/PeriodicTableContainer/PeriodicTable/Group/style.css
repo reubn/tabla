@@ -3,4 +3,13 @@
   flex-direction: column;
   width: calc(100% / var(--table-columns));
   height: 100%;
+  opacity: 0;
+  animation: reveal 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes reveal {
+  50% {transform: scale(1.1)}
+  100% {opacity: 1;}
 }
