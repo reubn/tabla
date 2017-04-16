@@ -16,7 +16,7 @@ class SearchBar extends React.Component {
   render(){
     return (
       <section className={container}>
-        <input type="text" className={searchBar} value={this.state.query} onChange={event => this.onChange(event)} placeholder="Search..." />
+        <input type="text" className={searchBar} value={this.state.query} onChange={event => this.onChange(event)} placeholder="Search..." autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" />
       </section>
     )
   }
