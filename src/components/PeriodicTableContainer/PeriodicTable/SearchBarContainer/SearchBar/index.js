@@ -1,6 +1,7 @@
 import React from 'react'
+import classnames from 'classnames'
 
-import {container, searchBar} from './style'
+import {container, searchBar, swipeContainer, swipe, full} from './style'
 
 class SearchBar extends React.Component {
   constructor(props){
@@ -16,7 +17,10 @@ class SearchBar extends React.Component {
   render(){
     return (
       <section className={container}>
-        <input type="text" className={searchBar} value={this.state.query} onChange={event => this.onChange(event)} placeholder="Search..." autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" />
+        <input type="text" className={searchBar} value={this.state.query} onFocus={() => this.setState({focus: true})} onBlur={() => this.setState({focus: false})} onChange={event => this.onChange(event)} placeholder="Search..." autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" />
+        <span className={swipeContainer}>
+          <span className={classnames(swipe, {[full]: this.state.focus})} />
+        </span>
       </section>
     )
   }
