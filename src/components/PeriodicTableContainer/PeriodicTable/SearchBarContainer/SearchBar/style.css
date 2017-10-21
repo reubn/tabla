@@ -23,5 +23,25 @@
 
 .searchBar:focus {
   color: var(--colours-white-3);
+}
+
+.swipeContainer {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.swipe {
   border-bottom: 2px solid var(--colours-blue-dark-2);
+  width: 0;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -14px;
+  transition: width 0.125s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.full {
+  width: calc(16rem + 8px);
 }
