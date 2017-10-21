@@ -6,6 +6,8 @@
   background: var(--colours-white);
   box-sizing: border-box;
   z-index: 20;
+  width: 0;
+  min-width: 0;
 }
 .info > * {
   transition: opacity 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -17,7 +19,7 @@
   min-width: 300px;
   border-left: 2px solid var(--colours-white-3);
 }
-.open:not(.enter):not(.leave) > * {
+.open:not(.enter):not(.exit) > * {
   opacity: 1;
 }
 
@@ -34,16 +36,16 @@
   min-width: 300px;
 }
 
-.leave {
+.exit {
   width: 20vw;
   min-width: 300px;
 }
-.leave > * {
+.exit > * {
   transition: opacity 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   opacity: 0;
 }
 
-.leaveActive {
+.exitActive {
   transition: none 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition-property: width, min-width;
 
