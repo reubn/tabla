@@ -1,5 +1,4 @@
 import React from 'react'
-import {Route} from 'react-router-dom'
 
 import PeriodicTableContainer from '../PeriodicTableContainer'
 import InfoContainer from '../InfoContainer'
