@@ -25,7 +25,7 @@ module.exports = env => {
           test: /\.css$/,
           exclude: /node_modules/,
           use: [
-            'style-loader',
+            'universal-style-loader',
             {
               loader: 'css-loader',
               query: {
@@ -38,7 +38,7 @@ module.exports = env => {
         {
           test: /\.css$/,
           include: /node_modules/,
-          use: ['style-loader', 'css-loader']
+          use: ['universal-style-loader', 'css-loader']
         },
         {
           test: /\.woff2?$/,
@@ -91,7 +91,8 @@ module.exports = env => {
       contentBase: './dist',
       compress: true,
       host: '0.0.0.0',
-      port: 80,
+      disableHostCheck: true,
+      port: 1616,
       historyApiFallback: true
     },
     resolve: {

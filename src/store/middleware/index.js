@@ -11,5 +11,5 @@ export default compose(
     urlSync,
     routerMiddleware(history)
   ),
-  window.devToolsExtension ? window.devToolsExtension() : f => f
+  typeof window === "object" && window.devToolsExtension ? window.devToolsExtension() : f => f
 )

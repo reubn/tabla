@@ -1,5 +1,4 @@
-import createHistory from 'history/createBrowserHistory'
+import createBrowserHistory from 'history/createBrowserHistory'
+import createMemoryHistory from 'history/createMemoryHistory'
 
-const history = createHistory()
-
-export default history
+export default typeof window === 'object' ? createBrowserHistory() : createMemoryHistory()
