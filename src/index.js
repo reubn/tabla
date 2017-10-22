@@ -14,8 +14,8 @@ function index({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumbe
   history.push(`/${atomicNumber}`)
   linkHistoryToStore(store)
 
-  const initialStyleTagString = collectInitial()
-  const appRenderedString = renderToString(
+  const preRenderedStyleTagString = collectInitial()
+  const preRenderedAppString = renderToString(
     <Provider store={store}>
       <StaticRouter history={history} location={`/${atomicNumber}`} >
         <App />
@@ -29,8 +29,8 @@ function index({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumbe
     <html>
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <title>Tabla</title>
-      <p dangerouslySetInnerHTML={{__html: initialStyleTagString}} />
-      <section id="app" dangerouslySetInnerHTML={{__html: appRenderedString }} />
+      <p dangerouslySetInnerHTML={{__html: preRenderedStyleTagString}} />
+      <section id="app" dangerouslySetInnerHTML={{__html: preRenderedAppString}} />
       <script dangerouslySetInnerHTML={{__html: preRenderedStateScriptString}} />
       {Object.values(chunks).map(({entry}) => <script src={entry} />)}
     </html>
