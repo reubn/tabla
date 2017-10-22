@@ -9,6 +9,6 @@ const Nucleus = ({symbol}) => (
       {symbol}
     </text>
   </g>
-  )
+)
 
 export default Nucleus

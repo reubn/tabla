@@ -1,7 +1,7 @@
 import React from 'react'
 import {renderToString, renderToStaticMarkup} from 'react-dom/server'
 
-import {collectInitial as collectStyles} from 'node-style-loader/collect'
+import {collectInitial as collectStyles} from 'node-style-loader/collect' // eslint-disable-line import/no-extraneous-dependencies
 
 import store from './store'
 import {history, linkHistoryToStore} from './routing'

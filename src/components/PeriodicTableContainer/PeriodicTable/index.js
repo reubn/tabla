@@ -12,14 +12,17 @@ import layout from './layout'
 
 const PeriodicTable = ({visibleElements}) => {
   const groups =
-    layout.map((group, groupIndex) =>
+    layout.map((group, groupIndex) => (
+      // eslint-disable-next-line react/no-array-index-key
       <Group key={groupIndex} index={groupIndex} total={layout.length}>
         {group.map((part, partIndex) => (
           part
           ? <ElementContainer key={part} atomicNumber={part} visible={visibleElements.includes(part)} />
+          // eslint-disable-next-line react/no-array-index-key
           : <Spacer key={`spacer-${partIndex}`} />
         ))}
-      </Group>)
+      </Group>
+    ))
 
   return (
     <section className={periodicTable}>

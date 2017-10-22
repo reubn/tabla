@@ -12,8 +12,8 @@ const options = {
 const fuse = new Fuse(Object.values(elements), options)
 
 const operators = [
-  {lex: '=', func: (a, b) => a == b},
-  {lex: '!=', func: (a, b) => a != b},
+  {lex: '=', func: (a, b) => a == b}, // eslint-disable-line eqeqeq
+  {lex: '!=', func: (a, b) => a != b}, // eslint-disable-line eqeqeq
   {lex: '>', func: (a, b) => +a > +b},
   {lex: '<', func: (a, b) => +a < +b},
   {lex: '>=', func: (a, b) => +a >= +b},
@@ -29,20 +29,17 @@ const parse = string => string.split(' ').reduce((queries, query) => {
   if(!lex) return queries
 
   const [key, value] = query.split(lex)
-  console.log([...queries, {func, key, value}])
   return [...queries, {func, key, value}]
 }, [])
 
-const search = (data, queries) => data.filter(element => {
-  for(const {func, key, value} of queries) if(!func(element[key], value)) return false
-  return true
-})
+const search = (data, queries) => data.filter(element => !queries.some(({func, key, value}) => !func(element[key], value)))
 
+const operatorSearch = query => search(Object.values(elements), parse(query)).map(({atomicNumber}) => +atomicNumber)
+const fuseSearch = query => (query.trim() ? fuse.search(query).map(n => +n) : Object.keys(elements).map(n => +n))
 
-function searchElementsAction(dispatch, query){
-  const atomicNumbers = query.includes('=') || query.includes('>') || query.includes('<')
-    ? search(Object.values(elements), parse(query)).map(({atomicNumber}) => +atomicNumber)
-    : query.trim() ? fuse.search(query).map(n => +n) : Object.keys(elements).map(n => +n)
+const searchElementsAction = (dispatch, query) => {
+  const test = query.includes('=') || query.includes('>') || query.includes('<')
+  const atomicNumbers = (test ? operatorSearch : fuseSearch)(query)
 
   dispatch({type: 'VISIBLE_ELEMENTS', atomicNumbers})
 }

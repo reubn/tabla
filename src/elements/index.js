@@ -31,7 +31,7 @@ export class Element {
 
     const parts = this.electronicConfigurationRaw.reduce((list, part) => {
       if(typeof part === 'number'){
-        const element = elements[part]
+        const element = elements[part] // eslint-disable-line no-use-before-define
         if(expanded) return [...list, ...element.electronicConfiguration(true, false)]
         return [...list, element.symbol]
       }
@@ -39,16 +39,15 @@ export class Element {
       return [...list, part]
     }, [])
 
-    return format ? parts.sort(
-      ({shell: shellA, subshellType: subshellTypeA}, {shell: shellB, subshellType: subshellTypeB}) => {
-        if(!shellA) return -1; if(!shellB) return 1
+    return format ? parts.sort(({shell: shellA, subshellType: subshellTypeA}, {shell: shellB, subshellType: subshellTypeB}) => {
+      if(!shellA) return -1; if(!shellB) return 1
 
-        const indexA = subshellOrder.indexOf(shellA + subshellTypeA)
-        const indexB = subshellOrder.indexOf(shellB + subshellTypeB)
+      const indexA = subshellOrder.indexOf(shellA + subshellTypeA)
+      const indexB = subshellOrder.indexOf(shellB + subshellTypeB)
 
-        return indexA - indexB
-      })
-      .map(part => typeof part === 'string' ? `[${part}]` : `${part.shell}${part.subshellType}${ssn(part.electrons)}`)
+      return indexA - indexB
+    })
+      .map(part => (typeof part === 'string' ? `[${part}]` : `${part.shell}${part.subshellType}${ssn(part.electrons)}`))
       .join(' ')
       : parts
   }
@@ -56,7 +55,7 @@ export class Element {
   electronsPerShell(string=false){
     if(!this.electronicConfigurationRaw) return undefined
 
-    const parts = this.electronicConfigurationRaw.reduce((list, part) => typeof part === 'number' ? [...list, ...elements[part].electronicConfiguration(true, false)] : [...list, part], [])
+    const parts = this.electronicConfigurationRaw.reduce((list, part) => (typeof part === 'number' ? [...list, ...elements[part].electronicConfiguration(true, false)] : [...list, part]), []) // eslint-disable-line no-use-before-define
 
     const shells = parts.reduce((order, {shell, electrons}) => ({...order, [shell]: (order[shell] || 0) + electrons}), {})
 

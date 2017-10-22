@@ -7,7 +7,7 @@ import {data} from './style'
 
 const Data = ({element}) => (
   <section className={data}>
-    {schemes.map((scheme, index) => <Entry key={index} element={element} scheme={scheme} />)}
+    {schemes.map(scheme => <Entry key={scheme.id} element={element} scheme={scheme} />)}
   </section>
 )
 

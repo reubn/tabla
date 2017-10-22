@@ -1,2 +1,2 @@
-export history from './history'
-export linkHistoryToStore from './linkHistoryToStore'
+export {default as history} from './history'
+export {default as linkHistoryToStore} from './linkHistoryToStore'

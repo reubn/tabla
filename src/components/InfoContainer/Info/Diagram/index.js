@@ -10,6 +10,6 @@ const Diagram = ({element, _: {symbol}=element}) => (
     <Nucleus symbol={symbol} />
     {Object.entries(element.electronsPerShell()).map(([shell, electrons]) => <Shell key={shell} shell={shell} electrons={electrons} />)}
   </svg>
-  )
+)
 
 export default Diagram

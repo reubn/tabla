@@ -68,6 +68,6 @@ const schemes = [
     test: element => element.yearDiscovered,
     formats: [element => ({title: 'Year Discovered', content: element.yearDiscovered})]
   }
-]
+].map((scheme, index) => ({...scheme, id: index}))
 
 export default schemes
