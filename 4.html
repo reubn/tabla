@@ -1,20 +1,20 @@
-<!DOCTYPE html> <html><meta name="apple-mobile-web-app-capable" content="yes"/><title>Tabla</title><p><style class="server-style-loader-element">.group-👩🏾‍💼 {
+<!DOCTYPE html> <html><meta name="apple-mobile-web-app-capable" content="yes"/><title>Tabla</title><p><style class="server-style-loader-element">.TESTgroup {
   display: flex;
   flex-direction: column;
   width: calc(100% / var(--table-columns));
   height: 100%;
   opacity: 0;
-  animation: reveal-🎅🏻 0.5s;
+  animation: TESTreveal 0.5s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
 
-@keyframes reveal-🎅🏻 {
+@keyframes TESTreveal {
   50% {transform: scale(1.1)}
   100% {opacity: 1;}
 }
 
-.element-🕴🏾 {
+.TESTelement {
   position: relative;
   display: flex;
   align-items: center;
@@ -30,22 +30,22 @@
   z-index: 1;
 }
 
-.element-🕴🏾:hover:not(.selected-🇸🇸) {
+.TESTelement:hover:not(.TESTselected) {
   box-shadow: 0 0 100px 7px var(--colours-blue-dark);
 }
 
-.element-🕴🏾:hover:not(.invisible-😴), .selected-🇸🇸 {
+.TESTelement:hover:not(.TESTinvisible), .TESTselected {
   color: var(--colours-blue-dark-1);
   background: var(--group-colour);
 }
 
-.selected-🇸🇸 {
+.TESTselected {
   box-shadow: 0 0 100px 15px var(--colours-blue-dark);
   transform: scale(1.1);
   z-index: 10;
 }
 
-.atomicNumber-👺 {
+.TESTatomicNumber {
   font-size: calc(var(--table-height) / 65);
   text-align: left;
   display: block;
@@ -56,23 +56,23 @@
   opacity: 0.8;
 }
 
-.selected-🇸🇸 .atomicNumber-👺 {
+.TESTselected .TESTatomicNumber {
   opacity: 1;
 }
 
-.invisible-😴 {
+.TESTinvisible {
   cursor: default;
   opacity: 0.2;
 }
 
-.symbol-🇷🇼 {
+.TESTsymbol {
   font-size: calc(var(--table-height) / 31);
   width: 100%;
   display: block;
   text-align: center;
 }
 
-.atomicMass-💆🏾 {
+.TESTatomicMass {
   display: block;
   width: 100%;
   font-size: calc(var(--table-height) / 80);
@@ -82,27 +82,27 @@
   opacity: 0.5;
 }
 
-.selected-🇸🇸 .atomicMass-💆🏾 {
+.TESTselected .TESTatomicMass {
   opacity: 1;
 }
 
-.alkaliMetal-🕘 {--group-colour: var(--colours-alkaliMetal);}
-.nonMetal-🔯 {--group-colour: var(--colours-nonMetal);}
-.transitionMetal-🇬🇹 {--group-colour: var(--colours-transitionMetal);}
-.postTransitionMetal-👩‍👩‍👦 {--group-colour: var(--colours-postTransitionMetal);}
-.halogen-🌬 {--group-colour: var(--colours-halogen);}
-.nobleGas-🛤 {--group-colour: var(--colours-nobleGas);}
-.metalloid-🤝🏿 {--group-colour: var(--colours-metalloid);}
-.alkalineEarthMetal-👨‍🚀 {--group-colour: var(--colours-alkalineEarthMetal);}
-.actinoid-👨🏾‍🌾 {--group-colour: var(--colours-actinoid);}
-.lanthanoid-🗑 {--group-colour: var(--colours-lanthanoid);}
-.unknown-🤾‍♀️ {--group-colour: var(--colours-unknown);}
+.TESTalkaliMetal {--group-colour: var(--colours-alkaliMetal);}
+.TESTnonMetal {--group-colour: var(--colours-nonMetal);}
+.TESTtransitionMetal {--group-colour: var(--colours-transitionMetal);}
+.TESTpostTransitionMetal {--group-colour: var(--colours-postTransitionMetal);}
+.TESThalogen {--group-colour: var(--colours-halogen);}
+.TESTnobleGas {--group-colour: var(--colours-nobleGas);}
+.TESTmetalloid {--group-colour: var(--colours-metalloid);}
+.TESTalkalineEarthMetal {--group-colour: var(--colours-alkalineEarthMetal);}
+.TESTactinoid {--group-colour: var(--colours-actinoid);}
+.TESTlanthanoid {--group-colour: var(--colours-lanthanoid);}
+.TESTunknown {--group-colour: var(--colours-unknown);}
 
-.spacer-🇪🇹 {
+.TESTspacer {
   flex-basis: var(--table-height);
 }
 
-.container-🤸🏻‍♂️ {
+.TESTcontainer {
   position: absolute;
   top: 2rem;
   display: inline-block;
@@ -110,7 +110,7 @@
   text-align: center;
 }
 
-.searchBar-💂🏼‍♂️ {
+.TESTsearchBar {
   -webkit-appearance: none;
   border: none;
   border-radius: 0;
@@ -125,17 +125,17 @@
   outline: none;
 }
 
-.searchBar-💂🏼‍♂️:focus {
+.TESTsearchBar:focus {
   color: var(--colours-white-3);
 }
 
-.swipeContainer-🤸🏽‍♀️ {
+.TESTswipeContainer {
   display: block;
   width: 100%;
   text-align: center;
 }
 
-.swipe-🤸🏻‍♀️ {
+.TESTswipe {
   border-bottom: 2px solid var(--colours-blue-dark-2);
   width: 0;
   display: inline-block;
@@ -146,11 +146,11 @@
   transition: width 0.125s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-.full-🇨🇽 {
+.TESTfull {
   width: calc(16rem + 8px);
 }
 
-.footer-🥖 {
+.TESTfooter {
   position: absolute;
   bottom: 0.5rem;
   display: inline-block;
@@ -161,23 +161,23 @@
   transition: all ease-in-out 0.2s;
 }
 
-.footer-🥖:hover {
+.TESTfooter:hover {
   height: 1.5rem;
-  animation: heartbeat-🇫🇰 1.25s infinite;
+  animation: TESTheartbeat 1.25s infinite;
   animation-delay: 0.25s;
 }
 
-.heart-🏃🏼‍♀️ {
+.TESTheart {
   fill: var(--colours-blue-dark-2);
   cursor: pointer;
   transition: all ease-in-out 0.2s;
 }
 
-.footer-🥖:hover .heart-🏃🏼‍♀️ {
+.TESTfooter:hover .TESTheart {
   fill: var(--colours-pink-red);
 }
 
-@keyframes heartbeat-🇫🇰 {
+@keyframes TESTheartbeat {
   0% {
     transform: scale(1);
   }
@@ -203,7 +203,7 @@
   }
 }
 
-.periodicTable-💁🏼‍♂️ {
+.TESTperiodicTable {
   --table-height: 80vmin;
   --table-width: calc(var(--table-height) * 1.4);
   --table-columns: 18;
@@ -219,30 +219,30 @@
   user-select: none;
 }
 
-.electron-🦄 {
+.TESTelectron {
   fill: var(--colours-blue-dark-2);
   r: 36px;
   transition: none 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition-property: cx, cy;
 }
 
-.shell-🚵🏼‍♂️ {
-  animation: spin-🕢 120s linear infinite;
+.TESTshell {
+  animation: TESTspin 120s linear infinite;
 }
 
-.shellRing-🏄🏼‍♂️ {
+.TESTshellRing {
   fill: none;
   stroke: var(--colours-white-3);
   stroke-width: 14px;
 }
 
-@keyframes spin-🕢 {100% {transform:rotate(360deg)}}
+@keyframes TESTspin {100% {transform:rotate(360deg)}}
 
-.nucleus-🇻🇺 {
+.TESTnucleus {
   fill: var(--group-colour);
 }
 
-.nucleusText-👩‍🚒 {
+.TESTnucleusText {
   font-size: 160px;
   font-family: var(--font-family);
   fill: var(--colours-white);
@@ -252,19 +252,19 @@
   cursor: default;
 }
 
-.diagram-✌🏿 {
+.TESTdiagram {
   margin: 5%;
 }
 
 @media only screen
   and (max-device-width: 736px)
   and (orientation: portrait) {
-  .diagram-✌🏿 {
+  .TESTdiagram {
     margin: 0;
   }
 }
 
-.entry-🇲🇿 {
+.TESTentry {
   --height: 2rem;
 
   display: flex;
@@ -276,15 +276,15 @@
   align-items: center;
 }
 
-.entry-🇲🇿:nth-child(2n) {
+.TESTentry:nth-child(2n) {
   background: var(--colours-white-2);
 }
 
-.entry-🇲🇿:last-child:not(:nth-child(2n)) {
+.TESTentry:last-child:not(:nth-child(2n)) {
   border-bottom: 1px solid var(--colours-white-3);
 }
 
-.title-👩‍🏫 {
+.TESTtitle {
   display: flex;
   float: left;
   color: var(--colours-grey-2);
@@ -297,15 +297,15 @@
   cursor: default;
 }
 
-.changeable-🙅🏻‍♂️ {
+.TESTchangeable {
   cursor: pointer;
 }
 
-.changeable-🙅🏻‍♂️:hover {
+.TESTchangeable:hover {
   color: var(--colours-grey-4);
 }
 
-.content-🙋🏿‍♀️ {
+.TESTcontent {
   display: flex;
   float: right;
   color: var(--colours-grey-5);
@@ -321,19 +321,19 @@
 @media only screen
   and (max-device-width: 736px)
   and (orientation: portrait) {
-  .entry-🇲🇿 {
+  .TESTentry {
     --height: 6rem;
     font-size: 2rem;
   }
 }
 
-.data-👩🏽‍🏭 {
+.TESTdata {
   display: block;
   flex-basis: 60%;
   overflow-y: scroll;
 }
 
-.info-🇶🇦 {
+.TESTinfo {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -344,26 +344,26 @@
   width: 0;
   min-width: 0;
 }
-.info-🇶🇦 > * {
+.TESTinfo > * {
   transition: opacity 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   opacity: 0;
 }
 
-.open-👨‍🔬 {
+.TESTopen {
   width: 20vw;
   min-width: 300px;
   border-left: 2px solid var(--colours-white-3);
 }
-.open-👨‍🔬:not(.enter-🈳):not(.exit-🏋🏽) > * {
+.TESTopen:not(.TESTenter):not(.TESTexit) > * {
   opacity: 1;
 }
 
-.enter-🈳 {
+.TESTenter {
   width: 0;
   min-width: 0;
 }
 
-.enterActive-👷‍♂️ {
+.TESTenterActive {
   transition: none 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition-property: width, min-width;
 
@@ -371,16 +371,16 @@
   min-width: 300px;
 }
 
-.exit-🏋🏽 {
+.TESTexit {
   width: 20vw;
   min-width: 300px;
 }
-.exit-🏋🏽 > * {
+.TESTexit > * {
   transition: opacity 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   opacity: 0;
 }
 
-.exitActive-🇱🇦 {
+.TESTexitActive {
   transition: none 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition-property: width, min-width;
 
@@ -388,7 +388,7 @@
   min-width: 0;
 }
 
-.header-🤘🏼 {
+.TESTheader {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -397,7 +397,7 @@
   border-bottom: 1px solid var(--colours-white-3);
 }
 
-.name-🚑 {
+.TESTname {
   width: 100%;
   display: inline-block;
   font-size: 2rem;
@@ -411,14 +411,14 @@
   transition-property: color, background, box-shadow;
 }
 
-.name-🚑:hover {
+.TESTname:hover {
   background: var(--group-colour);
   color: var(--colours-white);
   border-color: transparent;
   box-shadow: var(--group-colour) -1px 0px 0 1px;
 }
 
-.close-🐭 {
+.TESTclose {
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
@@ -429,22 +429,22 @@
   cursor: pointer;
 }
 
-.alkaliMetal-👳🏽‍♀️ {--group-colour: var(--colours-alkaliMetal);}
-.nonMetal-👩🏻‍🏭 {--group-colour: var(--colours-nonMetal);}
-.transitionMetal-💇🏻 {--group-colour: var(--colours-transitionMetal);}
-.postTransitionMetal-🐵 {--group-colour: var(--colours-postTransitionMetal);}
-.halogen-🤙🏼 {--group-colour: var(--colours-halogen);}
-.nobleGas-🍳 {--group-colour: var(--colours-nobleGas);}
-.metalloid-🙃 {--group-colour: var(--colours-metalloid);}
-.alkalineEarthMetal-🚵🏾 {--group-colour: var(--colours-alkalineEarthMetal);}
-.actinoid-🤽🏽‍♂️ {--group-colour: var(--colours-actinoid);}
-.lanthanoid-🚺 {--group-colour: var(--colours-lanthanoid);}
-.unknown-💇🏾 {--group-colour: var(--colours-unknown);}
+.TESTalkaliMetal {--group-colour: var(--colours-alkaliMetal);}
+.TESTnonMetal {--group-colour: var(--colours-nonMetal);}
+.TESTtransitionMetal {--group-colour: var(--colours-transitionMetal);}
+.TESTpostTransitionMetal {--group-colour: var(--colours-postTransitionMetal);}
+.TESThalogen {--group-colour: var(--colours-halogen);}
+.TESTnobleGas {--group-colour: var(--colours-nobleGas);}
+.TESTmetalloid {--group-colour: var(--colours-metalloid);}
+.TESTalkalineEarthMetal {--group-colour: var(--colours-alkalineEarthMetal);}
+.TESTactinoid {--group-colour: var(--colours-actinoid);}
+.TESTlanthanoid {--group-colour: var(--colours-lanthanoid);}
+.TESTunknown {--group-colour: var(--colours-unknown);}
 
 @media only screen
   and (max-device-width: 736px)
   and (orientation: portrait) {
-  .open-👨‍🔬 {
+  .TESTopen {
     width: 100vw;
     position: absolute;
     z-index: 100;
@@ -452,19 +452,19 @@
     left: 0;
   }
 
-  .close-🐭 {
+  .TESTclose {
     font-size: 6rem;
     top: 3rem;
     left: 3rem;
   }
 
-  .name-🚑 {
+  .TESTname {
     font-size: 5rem;
     padding: 1rem;
   }
 }
 
-.logo-🐔 {
+.TESTlogo {
   height: 3rem;
   position: absolute;
   top: 2rem;
@@ -474,22 +474,22 @@
   z-index: 10;
 }
 
-.dot-👩🏻‍⚕️, .cross-🉐 {
+.TESTdot, .TESTcross {
   fill: var(--colours-blue-dark-2);
   transition: fill 0.25s cubic-bezier(0.47, 0, 0.75, 0.72);
   height: 50px;
   rx: 8;
 }
 
-.dot-👩🏻‍⚕️ {
+.TESTdot {
   transition-delay: 0.1s;
 }
 
-.logo-🐔:hover .cross-🉐 {
+.TESTlogo:hover .TESTcross {
   fill: var(--colours-pink-red);
 }
 
-.logo-🐔:hover .dot-👩🏻‍⚕️ {
+.TESTlogo:hover .TESTdot {
   fill: var(--colours-white-1);
 }
 
@@ -564,7 +564,7 @@
   --font-family: 'Museo Sans Rounded', 'PT Sans', 'Arial Rounded', sans-serif;
 }
 
-.app-🇫🇮 {
+.TESTapp {
   position: absolute;
   top: 0;
   left: 0;
@@ -590,4 +590,4 @@
   background: #fff;
   border-radius: 4px;
 }
-</style></p><section id="app"><section class="app-🇫🇮" data-reactroot=""><a href="/"><svg viewBox="0 0 264 264" class="logo-🐔"><rect class="dot-👩🏻‍⚕️" transform="rotate(45 132 35.833)" x="107" y="10.833" width="50"></rect><rect class="dot-👩🏻‍⚕️" transform="rotate(45 228.167 132)" x="203.167" y="107" width="50"></rect><rect class="dot-👩🏻‍⚕️" transform="rotate(45 35.833 132)" x="10.833" y="107" width="50"></rect><rect class="dot-👩🏻‍⚕️" transform="rotate(45 132 228.167)" x="107" y="203.167" width="50"></rect><rect class="cross-🉐" transform="rotate(45 132 132)" x="107" y="107" width="50"></rect><rect class="cross-🉐" transform="rotate(45 197.76 197.76)" x="147.761" y="172.761" width="100"></rect><rect class="cross-🉐" transform="rotate(45 66.24 66.24)" x="16.239" y="41.239" width="100"></rect><rect class="cross-🉐" transform="rotate(135 66.24 197.76)" x="16.239" y="172.761" width="100"></rect><rect class="cross-🉐" transform="rotate(135 197.76 66.24)" x="147.761" y="41.239" width="100"></rect></svg></a><section class="periodicTable-💁🏼‍♂️"><section class="container-🤸🏻‍♂️"><input type="text" class="searchBar-💂🏼‍♂️" value="" placeholder="Search..." autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false"/><span class="swipeContainer-🤸🏽‍♀️"><span class="swipe-🤸🏻‍♀️"></span></span></section><section class="group-👩🏾‍💼" style="animation-delay:0s"><section class="element-🕴🏾 nonMetal-🔯"><span class="atomicNumber-👺">1</span><span class="symbol-🇷🇼">H</span><span class="atomicMass-💆🏾">1.008</span></section><section class="element-🕴🏾 alkaliMetal-🕘"><span class="atomicNumber-👺">3</span><span class="symbol-🇷🇼">Li</span><span class="atomicMass-💆🏾">6.941</span></section><section class="element-🕴🏾 alkaliMetal-🕘"><span class="atomicNumber-👺">11</span><span class="symbol-🇷🇼">Na</span><span class="atomicMass-💆🏾">22.99</span></section><section class="element-🕴🏾 alkaliMetal-🕘"><span class="atomicNumber-👺">19</span><span class="symbol-🇷🇼">K</span><span class="atomicMass-💆🏾">39.1</span></section><section class="element-🕴🏾 alkaliMetal-🕘"><span class="atomicNumber-👺">37</span><span class="symbol-🇷🇼">Rb</span><span class="atomicMass-💆🏾">85.47</span></section><section class="element-🕴🏾 alkaliMetal-🕘"><span class="atomicNumber-👺">55</span><span class="symbol-🇷🇼">Cs</span><span class="atomicMass-💆🏾">132.9</span></section><section class="element-🕴🏾 alkaliMetal-🕘"><span class="atomicNumber-👺">87</span><span class="symbol-🇷🇼">Fr</span><span class="atomicMass-💆🏾">223</span></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.002674897119341564s"><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 selected-🇸🇸 alkalineEarthMetal-👨‍🚀"><span class="atomicNumber-👺">4</span><span class="symbol-🇷🇼">Be</span><span class="atomicMass-💆🏾">9.012</span></section><section class="element-🕴🏾 alkalineEarthMetal-👨‍🚀"><span class="atomicNumber-👺">12</span><span class="symbol-🇷🇼">Mg</span><span class="atomicMass-💆🏾">24.31</span></section><section class="element-🕴🏾 alkalineEarthMetal-👨‍🚀"><span class="atomicNumber-👺">20</span><span class="symbol-🇷🇼">Ca</span><span class="atomicMass-💆🏾">40.08</span></section><section class="element-🕴🏾 alkalineEarthMetal-👨‍🚀"><span class="atomicNumber-👺">38</span><span class="symbol-🇷🇼">Sr</span><span class="atomicMass-💆🏾">87.62</span></section><section class="element-🕴🏾 alkalineEarthMetal-👨‍🚀"><span class="atomicNumber-👺">56</span><span class="symbol-🇷🇼">Ba</span><span class="atomicMass-💆🏾">137.3</span></section><section class="element-🕴🏾 alkalineEarthMetal-👨‍🚀"><span class="atomicNumber-👺">88</span><span class="symbol-🇷🇼">Ra</span><span class="atomicMass-💆🏾">226</span></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.0102880658436214s"><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">21</span><span class="symbol-🇷🇼">Sc</span><span class="atomicMass-💆🏾">44.96</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">39</span><span class="symbol-🇷🇼">Y</span><span class="atomicMass-💆🏾">88.91</span></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">57</span><span class="symbol-🇷🇼">La</span><span class="atomicMass-💆🏾">138.9</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">89</span><span class="symbol-🇷🇼">Ac</span><span class="atomicMass-💆🏾">227</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.02222222222222222s"><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">22</span><span class="symbol-🇷🇼">Ti</span><span class="atomicMass-💆🏾">47.87</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">40</span><span class="symbol-🇷🇼">Zr</span><span class="atomicMass-💆🏾">91.22</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">72</span><span class="symbol-🇷🇼">Hf</span><span class="atomicMass-💆🏾">178.5</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">104</span><span class="symbol-🇷🇼">Rf</span><span class="atomicMass-💆🏾">267</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">58</span><span class="symbol-🇷🇼">Ce</span><span class="atomicMass-💆🏾">140.1</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">90</span><span class="symbol-🇷🇼">Th</span><span class="atomicMass-💆🏾">232</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.037860082304526754s"><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">23</span><span class="symbol-🇷🇼">V</span><span class="atomicMass-💆🏾">50.94</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">41</span><span class="symbol-🇷🇼">Nb</span><span class="atomicMass-💆🏾">92.91</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">73</span><span class="symbol-🇷🇼">Ta</span><span class="atomicMass-💆🏾">180.9</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">105</span><span class="symbol-🇷🇼">Db</span><span class="atomicMass-💆🏾">268</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">59</span><span class="symbol-🇷🇼">Pr</span><span class="atomicMass-💆🏾">140.9</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">91</span><span class="symbol-🇷🇼">Pa</span><span class="atomicMass-💆🏾">231</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.05658436213991771s"><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">24</span><span class="symbol-🇷🇼">Cr</span><span class="atomicMass-💆🏾">52</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">42</span><span class="symbol-🇷🇼">Mo</span><span class="atomicMass-💆🏾">95.96</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">74</span><span class="symbol-🇷🇼">W</span><span class="atomicMass-💆🏾">183.8</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">106</span><span class="symbol-🇷🇼">Sg</span><span class="atomicMass-💆🏾">271</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">60</span><span class="symbol-🇷🇼">Nd</span><span class="atomicMass-💆🏾">144.2</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">92</span><span class="symbol-🇷🇼">U</span><span class="atomicMass-💆🏾">238</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.07777777777777778s"><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">25</span><span class="symbol-🇷🇼">Mn</span><span class="atomicMass-💆🏾">54.94</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">43</span><span class="symbol-🇷🇼">Tc</span><span class="atomicMass-💆🏾">98</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">75</span><span class="symbol-🇷🇼">Re</span><span class="atomicMass-💆🏾">186.2</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">107</span><span class="symbol-🇷🇼">Bh</span><span class="atomicMass-💆🏾">272</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">61</span><span class="symbol-🇷🇼">Pm</span><span class="atomicMass-💆🏾">145</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">93</span><span class="symbol-🇷🇼">Np</span><span class="atomicMass-💆🏾">237</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.10082304526748972s"><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">26</span><span class="symbol-🇷🇼">Fe</span><span class="atomicMass-💆🏾">55.85</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">44</span><span class="symbol-🇷🇼">Ru</span><span class="atomicMass-💆🏾">101.1</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">76</span><span class="symbol-🇷🇼">Os</span><span class="atomicMass-💆🏾">190.2</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">108</span><span class="symbol-🇷🇼">Hs</span><span class="atomicMass-💆🏾">270</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">62</span><span class="symbol-🇷🇼">Sm</span><span class="atomicMass-💆🏾">150.4</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">94</span><span class="symbol-🇷🇼">Pu</span><span class="atomicMass-💆🏾">244</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.12510288065843622s"><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">27</span><span class="symbol-🇷🇼">Co</span><span class="atomicMass-💆🏾">58.93</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">45</span><span class="symbol-🇷🇼">Rh</span><span class="atomicMass-💆🏾">102.9</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">77</span><span class="symbol-🇷🇼">Ir</span><span class="atomicMass-💆🏾">192.2</span></section><section class="element-🕴🏾 unknown-🤾‍♀️"><span class="atomicNumber-👺">109</span><span class="symbol-🇷🇼">Mt</span><span class="atomicMass-💆🏾">276</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">63</span><span class="symbol-🇷🇼">Eu</span><span class="atomicMass-💆🏾">152</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">95</span><span class="symbol-🇷🇼">Am</span><span class="atomicMass-💆🏾">243</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.15000000000000002s"><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">28</span><span class="symbol-🇷🇼">Ni</span><span class="atomicMass-💆🏾">58.69</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">46</span><span class="symbol-🇷🇼">Pd</span><span class="atomicMass-💆🏾">106.4</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">78</span><span class="symbol-🇷🇼">Pt</span><span class="atomicMass-💆🏾">195.1</span></section><section class="element-🕴🏾 unknown-🤾‍♀️"><span class="atomicNumber-👺">110</span><span class="symbol-🇷🇼">Ds</span><span class="atomicMass-💆🏾">281</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">64</span><span class="symbol-🇷🇼">Gd</span><span class="atomicMass-💆🏾">157.3</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">96</span><span class="symbol-🇷🇼">Cm</span><span class="atomicMass-💆🏾">247</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.17489711934156382s"><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">29</span><span class="symbol-🇷🇼">Cu</span><span class="atomicMass-💆🏾">63.55</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">47</span><span class="symbol-🇷🇼">Ag</span><span class="atomicMass-💆🏾">107.9</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">79</span><span class="symbol-🇷🇼">Au</span><span class="atomicMass-💆🏾">197</span></section><section class="element-🕴🏾 unknown-🤾‍♀️"><span class="atomicNumber-👺">111</span><span class="symbol-🇷🇼">Rg</span><span class="atomicMass-💆🏾">280</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">65</span><span class="symbol-🇷🇼">Tb</span><span class="atomicMass-💆🏾">158.9</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">97</span><span class="symbol-🇷🇼">Bk</span><span class="atomicMass-💆🏾">247</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.1991769547325103s"><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">30</span><span class="symbol-🇷🇼">Zn</span><span class="atomicMass-💆🏾">65.38</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">48</span><span class="symbol-🇷🇼">Cd</span><span class="atomicMass-💆🏾">112.4</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">80</span><span class="symbol-🇷🇼">Hg</span><span class="atomicMass-💆🏾">200.6</span></section><section class="element-🕴🏾 transitionMetal-🇬🇹"><span class="atomicNumber-👺">112</span><span class="symbol-🇷🇼">Cn</span><span class="atomicMass-💆🏾">285</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">66</span><span class="symbol-🇷🇼">Dy</span><span class="atomicMass-💆🏾">162.5</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">98</span><span class="symbol-🇷🇼">Cf</span><span class="atomicMass-💆🏾">251</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.2222222222222222s"><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 metalloid-🤝🏿"><span class="atomicNumber-👺">5</span><span class="symbol-🇷🇼">B</span><span class="atomicMass-💆🏾">10.81</span></section><section class="element-🕴🏾 postTransitionMetal-👩‍👩‍👦"><span class="atomicNumber-👺">13</span><span class="symbol-🇷🇼">Al</span><span class="atomicMass-💆🏾">26.98</span></section><section class="element-🕴🏾 postTransitionMetal-👩‍👩‍👦"><span class="atomicNumber-👺">31</span><span class="symbol-🇷🇼">Ga</span><span class="atomicMass-💆🏾">69.72</span></section><section class="element-🕴🏾 postTransitionMetal-👩‍👩‍👦"><span class="atomicNumber-👺">49</span><span class="symbol-🇷🇼">In</span><span class="atomicMass-💆🏾">114.8</span></section><section class="element-🕴🏾 postTransitionMetal-👩‍👩‍👦"><span class="atomicNumber-👺">81</span><span class="symbol-🇷🇼">Tl</span><span class="atomicMass-💆🏾">204.4</span></section><section class="element-🕴🏾 unknown-🤾‍♀️"><span class="atomicNumber-👺">113</span><span class="symbol-🇷🇼">Nh</span><span class="atomicMass-💆🏾">284</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">67</span><span class="symbol-🇷🇼">Ho</span><span class="atomicMass-💆🏾">164.9</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">99</span><span class="symbol-🇷🇼">Es</span><span class="atomicMass-💆🏾">252</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.2434156378600823s"><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 nonMetal-🔯"><span class="atomicNumber-👺">6</span><span class="symbol-🇷🇼">C</span><span class="atomicMass-💆🏾">12.01</span></section><section class="element-🕴🏾 metalloid-🤝🏿"><span class="atomicNumber-👺">14</span><span class="symbol-🇷🇼">Si</span><span class="atomicMass-💆🏾">28.09</span></section><section class="element-🕴🏾 metalloid-🤝🏿"><span class="atomicNumber-👺">32</span><span class="symbol-🇷🇼">Ge</span><span class="atomicMass-💆🏾">72.64</span></section><section class="element-🕴🏾 postTransitionMetal-👩‍👩‍👦"><span class="atomicNumber-👺">50</span><span class="symbol-🇷🇼">Sn</span><span class="atomicMass-💆🏾">118.7</span></section><section class="element-🕴🏾 postTransitionMetal-👩‍👩‍👦"><span class="atomicNumber-👺">82</span><span class="symbol-🇷🇼">Pb</span><span class="atomicMass-💆🏾">207.2</span></section><section class="element-🕴🏾 postTransitionMetal-👩‍👩‍👦"><span class="atomicNumber-👺">114</span><span class="symbol-🇷🇼">Fl</span><span class="atomicMass-💆🏾">289</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">68</span><span class="symbol-🇷🇼">Er</span><span class="atomicMass-💆🏾">167.3</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">100</span><span class="symbol-🇷🇼">Fm</span><span class="atomicMass-💆🏾">257</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.2621399176954733s"><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 nonMetal-🔯"><span class="atomicNumber-👺">7</span><span class="symbol-🇷🇼">N</span><span class="atomicMass-💆🏾">14.01</span></section><section class="element-🕴🏾 nonMetal-🔯"><span class="atomicNumber-👺">15</span><span class="symbol-🇷🇼">P</span><span class="atomicMass-💆🏾">30.97</span></section><section class="element-🕴🏾 metalloid-🤝🏿"><span class="atomicNumber-👺">33</span><span class="symbol-🇷🇼">As</span><span class="atomicMass-💆🏾">74.92</span></section><section class="element-🕴🏾 metalloid-🤝🏿"><span class="atomicNumber-👺">51</span><span class="symbol-🇷🇼">Sb</span><span class="atomicMass-💆🏾">121.8</span></section><section class="element-🕴🏾 postTransitionMetal-👩‍👩‍👦"><span class="atomicNumber-👺">83</span><span class="symbol-🇷🇼">Bi</span><span class="atomicMass-💆🏾">209</span></section><section class="element-🕴🏾 unknown-🤾‍♀️"><span class="atomicNumber-👺">115</span><span class="symbol-🇷🇼">Mc</span><span class="atomicMass-💆🏾">288</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">69</span><span class="symbol-🇷🇼">Tm</span><span class="atomicMass-💆🏾">168.9</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">101</span><span class="symbol-🇷🇼">Md</span><span class="atomicMass-💆🏾">258</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.27777777777777785s"><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 nonMetal-🔯"><span class="atomicNumber-👺">8</span><span class="symbol-🇷🇼">O</span><span class="atomicMass-💆🏾">16</span></section><section class="element-🕴🏾 nonMetal-🔯"><span class="atomicNumber-👺">16</span><span class="symbol-🇷🇼">S</span><span class="atomicMass-💆🏾">32.07</span></section><section class="element-🕴🏾 nonMetal-🔯"><span class="atomicNumber-👺">34</span><span class="symbol-🇷🇼">Se</span><span class="atomicMass-💆🏾">78.96</span></section><section class="element-🕴🏾 metalloid-🤝🏿"><span class="atomicNumber-👺">52</span><span class="symbol-🇷🇼">Te</span><span class="atomicMass-💆🏾">127.6</span></section><section class="element-🕴🏾 postTransitionMetal-👩‍👩‍👦"><span class="atomicNumber-👺">84</span><span class="symbol-🇷🇼">Po</span><span class="atomicMass-💆🏾">209</span></section><section class="element-🕴🏾 unknown-🤾‍♀️"><span class="atomicNumber-👺">116</span><span class="symbol-🇷🇼">Lv</span><span class="atomicMass-💆🏾">293</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">70</span><span class="symbol-🇷🇼">Yb</span><span class="atomicMass-💆🏾">173.1</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">102</span><span class="symbol-🇷🇼">No</span><span class="atomicMass-💆🏾">259</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.2897119341563787s"><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 halogen-🌬"><span class="atomicNumber-👺">9</span><span class="symbol-🇷🇼">F</span><span class="atomicMass-💆🏾">19</span></section><section class="element-🕴🏾 halogen-🌬"><span class="atomicNumber-👺">17</span><span class="symbol-🇷🇼">Cl</span><span class="atomicMass-💆🏾">35.45</span></section><section class="element-🕴🏾 halogen-🌬"><span class="atomicNumber-👺">35</span><span class="symbol-🇷🇼">Br</span><span class="atomicMass-💆🏾">79.9</span></section><section class="element-🕴🏾 halogen-🌬"><span class="atomicNumber-👺">53</span><span class="symbol-🇷🇼">I</span><span class="atomicMass-💆🏾">126.9</span></section><section class="element-🕴🏾 halogen-🌬"><span class="atomicNumber-👺">85</span><span class="symbol-🇷🇼">At</span><span class="atomicMass-💆🏾">210</span></section><section class="element-🕴🏾 unknown-🤾‍♀️"><span class="atomicNumber-👺">117</span><span class="symbol-🇷🇼">Ts</span><span class="atomicMass-💆🏾">294</span></section><section class="spacer-🇪🇹"></section><section class="element-🕴🏾 lanthanoid-🗑"><span class="atomicNumber-👺">71</span><span class="symbol-🇷🇼">Lu</span><span class="atomicMass-💆🏾">175</span></section><section class="element-🕴🏾 actinoid-👨🏾‍🌾"><span class="atomicNumber-👺">103</span><span class="symbol-🇷🇼">Lr</span><span class="atomicMass-💆🏾">262</span></section></section><section class="group-👩🏾‍💼" style="animation-delay:0.2973251028806585s"><section class="element-🕴🏾 nobleGas-🛤"><span class="atomicNumber-👺">2</span><span class="symbol-🇷🇼">He</span><span class="atomicMass-💆🏾">4.003</span></section><section class="element-🕴🏾 nobleGas-🛤"><span class="atomicNumber-👺">10</span><span class="symbol-🇷🇼">Ne</span><span class="atomicMass-💆🏾">20.18</span></section><section class="element-🕴🏾 nobleGas-🛤"><span class="atomicNumber-👺">18</span><span class="symbol-🇷🇼">Ar</span><span class="atomicMass-💆🏾">39.95</span></section><section class="element-🕴🏾 nobleGas-🛤"><span class="atomicNumber-👺">36</span><span class="symbol-🇷🇼">Kr</span><span class="atomicMass-💆🏾">83.8</span></section><section class="element-🕴🏾 nobleGas-🛤"><span class="atomicNumber-👺">54</span><span class="symbol-🇷🇼">Xe</span><span class="atomicMass-💆🏾">131.3</span></section><section class="element-🕴🏾 nobleGas-🛤"><span class="atomicNumber-👺">86</span><span class="symbol-🇷🇼">Rn</span><span class="atomicMass-💆🏾">222</span></section><section class="element-🕴🏾 unknown-🤾‍♀️"><span class="atomicNumber-👺">118</span><span class="symbol-🇷🇼">Og</span><span class="atomicMass-💆🏾">294</span></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section><section class="spacer-🇪🇹"></section></section><svg viewBox="-3.3 128.8 601.8 594" class="footer-🥖"><a href="//github.com/reubn/tabla" target="_blank" rel="noopener noreferrer"><path class="heart-🏃🏼‍♀️" d="M297.4 716.4c-14.1-13.2-28.1-26-41.8-39.2-29.3-28.1-59.2-55.6-87.4-84.9-44.6-46.4-86-95.5-119.1-151-18.2-30.5-32.9-62.6-40.7-97.4C-3.7 289.4 5.2 238.7 38 193.1c22.8-31.7 54.5-49.2 92.9-55.1 24-3.6 48.1-4.2 71.9 1.4 43.1 10 69.4 37.8 82.4 79.2 2.5 8.1 4.1 16.5 6.3 24.7.9 3.2 1.2 7.7 5.9 7.6 4.6-.1 5.7-4.2 6.6-7.7 1.6-6 2.7-12 4.2-18 7.5-31.6 24.1-56.9 52.6-73.4 12.1-7 25.6-10 39.2-12.6 17.1-3.3 34.3-4.9 51.7-3 32.4 3.4 61.6 14.6 86.9 35.1 26.7 21.6 41.8 50.4 48.5 83.6 11.6 57 2.4 111-25 162-20.7 38.6-46.1 74-74 107.7-38.3 46.2-81.6 87.6-125 128.9-21.8 20.7-43.5 41.6-65.7 62.9z"></path></a></svg></section><section class="info-🇶🇦 open-👨‍🔬 alkalineEarthMetal-🚵🏾"><header class="header-🤘🏼"><span class="close-🐭">✕</span><svg class="diagram-✌🏿" viewBox="-1400 -1400 2800 2800"><g><circle r="225" class="nucleus-🇻🇺"></circle><text class="nucleusText-👩‍🚒">Be</text></g><g class="shell-🚵🏼‍♂️"><circle r="350" class="shellRing-🏄🏼‍♂️"></circle><circle cx="0" cy="-350" class="electron-🦄" style="transition-delay:0s"></circle><circle cx="4.2862637970157365e-14" cy="350" class="electron-🦄" style="transition-delay:0.01s"></circle></g><g class="shell-🚵🏼‍♂️"><circle r="500" class="shellRing-🏄🏼‍♂️"></circle><circle cx="0" cy="-500" class="electron-🦄" style="transition-delay:0s"></circle><circle cx="6.123233995736766e-14" cy="500" class="electron-🦄" style="transition-delay:0.01s"></circle></g></svg><a href="//en.wikipedia.org/wiki/Element_4" target="_blank" rel="noopener noreferrer" class="name-🚑">Beryllium</a></header><section class="data-👩🏽‍🏭"><span class="entry-🇲🇿"><span class="title-👩‍🏫 changeable-🙅🏻‍♂️">Electronic Configuration</span><span class="content-🙋🏿‍♀️">[He] 2s²</span></span><span class="entry-🇲🇿"><span class="title-👩‍🏫">Electronegativity</span><span class="content-🙋🏿‍♀️">1.57</span></span><span class="entry-🇲🇿"><span class="title-👩‍🏫">Oxidation States</span><span class="content-🙋🏿‍♀️">2</span></span><span class="entry-🇲🇿"><span class="title-👩‍🏫 changeable-🙅🏻‍♂️">Density</span><span class="content-🙋🏿‍♀️">1848 g dm⁻³</span></span><span class="entry-🇲🇿"><span class="title-👩‍🏫 changeable-🙅🏻‍♂️">Melting Point</span><span class="content-🙋🏿‍♀️">1287 °C</span></span><span class="entry-🇲🇿"><span class="title-👩‍🏫 changeable-🙅🏻‍♂️">Boiling Point</span><span class="content-🙋🏿‍♀️">2470 °C</span></span><span class="entry-🇲🇿"><span class="title-👩‍🏫">Atomic Radius</span><span class="content-🙋🏿‍♀️">90 m⁻¹²</span></span><span class="entry-🇲🇿"><span class="title-👩‍🏫">Bonding Type</span><span class="content-🙋🏿‍♀️">Metallic</span></span><span class="entry-🇲🇿"><span class="title-👩‍🏫">Appearance</span><span class="content-🙋🏿‍♀️">White-gray Metallic</span></span><span class="entry-🇲🇿"><span class="title-👩‍🏫">Group Block</span><span class="content-🙋🏿‍♀️">Alkaline Earth Metal</span></span><span class="entry-🇲🇿"><span class="title-👩‍🏫">Discovered By</span><span class="content-🙋🏿‍♀️">Louis Nicolas Vauquelin</span></span><span class="entry-🇲🇿"><span class="title-👩‍🏫">Year Discovered</span><span class="content-🙋🏿‍♀️">1798</span></span></section></section></section></section><script src="bundle.js"></script></html>
+</style></p><section id="app"><section class="TESTapp" data-reactroot=""><a href="/"><svg viewBox="0 0 264 264" class="TESTlogo"><rect class="TESTdot" transform="rotate(45 132 35.833)" x="107" y="10.833" width="50"></rect><rect class="TESTdot" transform="rotate(45 228.167 132)" x="203.167" y="107" width="50"></rect><rect class="TESTdot" transform="rotate(45 35.833 132)" x="10.833" y="107" width="50"></rect><rect class="TESTdot" transform="rotate(45 132 228.167)" x="107" y="203.167" width="50"></rect><rect class="TESTcross" transform="rotate(45 132 132)" x="107" y="107" width="50"></rect><rect class="TESTcross" transform="rotate(45 197.76 197.76)" x="147.761" y="172.761" width="100"></rect><rect class="TESTcross" transform="rotate(45 66.24 66.24)" x="16.239" y="41.239" width="100"></rect><rect class="TESTcross" transform="rotate(135 66.24 197.76)" x="16.239" y="172.761" width="100"></rect><rect class="TESTcross" transform="rotate(135 197.76 66.24)" x="147.761" y="41.239" width="100"></rect></svg></a><section class="TESTperiodicTable"><section class="TESTcontainer"><input type="text" class="TESTsearchBar" value="" placeholder="Search..." autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false"/><span class="TESTswipeContainer"><span class="TESTswipe"></span></span></section><section class="TESTgroup" style="animation-delay:0s"><section class="TESTelement TESTnonMetal"><span class="TESTatomicNumber">1</span><span class="TESTsymbol">H</span><span class="TESTatomicMass">1.008</span></section><section class="TESTelement TESTalkaliMetal"><span class="TESTatomicNumber">3</span><span class="TESTsymbol">Li</span><span class="TESTatomicMass">6.941</span></section><section class="TESTelement TESTalkaliMetal"><span class="TESTatomicNumber">11</span><span class="TESTsymbol">Na</span><span class="TESTatomicMass">22.99</span></section><section class="TESTelement TESTalkaliMetal"><span class="TESTatomicNumber">19</span><span class="TESTsymbol">K</span><span class="TESTatomicMass">39.1</span></section><section class="TESTelement TESTalkaliMetal"><span class="TESTatomicNumber">37</span><span class="TESTsymbol">Rb</span><span class="TESTatomicMass">85.47</span></section><section class="TESTelement TESTalkaliMetal"><span class="TESTatomicNumber">55</span><span class="TESTsymbol">Cs</span><span class="TESTatomicMass">132.9</span></section><section class="TESTelement TESTalkaliMetal"><span class="TESTatomicNumber">87</span><span class="TESTsymbol">Fr</span><span class="TESTatomicMass">223</span></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section></section><section class="TESTgroup" style="animation-delay:0.002674897119341564s"><section class="TESTspacer"></section><section class="TESTelement TESTselected TESTalkalineEarthMetal"><span class="TESTatomicNumber">4</span><span class="TESTsymbol">Be</span><span class="TESTatomicMass">9.012</span></section><section class="TESTelement TESTalkalineEarthMetal"><span class="TESTatomicNumber">12</span><span class="TESTsymbol">Mg</span><span class="TESTatomicMass">24.31</span></section><section class="TESTelement TESTalkalineEarthMetal"><span class="TESTatomicNumber">20</span><span class="TESTsymbol">Ca</span><span class="TESTatomicMass">40.08</span></section><section class="TESTelement TESTalkalineEarthMetal"><span class="TESTatomicNumber">38</span><span class="TESTsymbol">Sr</span><span class="TESTatomicMass">87.62</span></section><section class="TESTelement TESTalkalineEarthMetal"><span class="TESTatomicNumber">56</span><span class="TESTsymbol">Ba</span><span class="TESTatomicMass">137.3</span></section><section class="TESTelement TESTalkalineEarthMetal"><span class="TESTatomicNumber">88</span><span class="TESTsymbol">Ra</span><span class="TESTatomicMass">226</span></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section></section><section class="TESTgroup" style="animation-delay:0.0102880658436214s"><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">21</span><span class="TESTsymbol">Sc</span><span class="TESTatomicMass">44.96</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">39</span><span class="TESTsymbol">Y</span><span class="TESTatomicMass">88.91</span></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">57</span><span class="TESTsymbol">La</span><span class="TESTatomicMass">138.9</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">89</span><span class="TESTsymbol">Ac</span><span class="TESTatomicMass">227</span></section></section><section class="TESTgroup" style="animation-delay:0.02222222222222222s"><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">22</span><span class="TESTsymbol">Ti</span><span class="TESTatomicMass">47.87</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">40</span><span class="TESTsymbol">Zr</span><span class="TESTatomicMass">91.22</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">72</span><span class="TESTsymbol">Hf</span><span class="TESTatomicMass">178.5</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">104</span><span class="TESTsymbol">Rf</span><span class="TESTatomicMass">267</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">58</span><span class="TESTsymbol">Ce</span><span class="TESTatomicMass">140.1</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">90</span><span class="TESTsymbol">Th</span><span class="TESTatomicMass">232</span></section></section><section class="TESTgroup" style="animation-delay:0.037860082304526754s"><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">23</span><span class="TESTsymbol">V</span><span class="TESTatomicMass">50.94</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">41</span><span class="TESTsymbol">Nb</span><span class="TESTatomicMass">92.91</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">73</span><span class="TESTsymbol">Ta</span><span class="TESTatomicMass">180.9</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">105</span><span class="TESTsymbol">Db</span><span class="TESTatomicMass">268</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">59</span><span class="TESTsymbol">Pr</span><span class="TESTatomicMass">140.9</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">91</span><span class="TESTsymbol">Pa</span><span class="TESTatomicMass">231</span></section></section><section class="TESTgroup" style="animation-delay:0.05658436213991771s"><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">24</span><span class="TESTsymbol">Cr</span><span class="TESTatomicMass">52</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">42</span><span class="TESTsymbol">Mo</span><span class="TESTatomicMass">95.96</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">74</span><span class="TESTsymbol">W</span><span class="TESTatomicMass">183.8</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">106</span><span class="TESTsymbol">Sg</span><span class="TESTatomicMass">271</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">60</span><span class="TESTsymbol">Nd</span><span class="TESTatomicMass">144.2</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">92</span><span class="TESTsymbol">U</span><span class="TESTatomicMass">238</span></section></section><section class="TESTgroup" style="animation-delay:0.07777777777777778s"><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">25</span><span class="TESTsymbol">Mn</span><span class="TESTatomicMass">54.94</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">43</span><span class="TESTsymbol">Tc</span><span class="TESTatomicMass">98</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">75</span><span class="TESTsymbol">Re</span><span class="TESTatomicMass">186.2</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">107</span><span class="TESTsymbol">Bh</span><span class="TESTatomicMass">272</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">61</span><span class="TESTsymbol">Pm</span><span class="TESTatomicMass">145</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">93</span><span class="TESTsymbol">Np</span><span class="TESTatomicMass">237</span></section></section><section class="TESTgroup" style="animation-delay:0.10082304526748972s"><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">26</span><span class="TESTsymbol">Fe</span><span class="TESTatomicMass">55.85</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">44</span><span class="TESTsymbol">Ru</span><span class="TESTatomicMass">101.1</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">76</span><span class="TESTsymbol">Os</span><span class="TESTatomicMass">190.2</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">108</span><span class="TESTsymbol">Hs</span><span class="TESTatomicMass">270</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">62</span><span class="TESTsymbol">Sm</span><span class="TESTatomicMass">150.4</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">94</span><span class="TESTsymbol">Pu</span><span class="TESTatomicMass">244</span></section></section><section class="TESTgroup" style="animation-delay:0.12510288065843622s"><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">27</span><span class="TESTsymbol">Co</span><span class="TESTatomicMass">58.93</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">45</span><span class="TESTsymbol">Rh</span><span class="TESTatomicMass">102.9</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">77</span><span class="TESTsymbol">Ir</span><span class="TESTatomicMass">192.2</span></section><section class="TESTelement TESTunknown"><span class="TESTatomicNumber">109</span><span class="TESTsymbol">Mt</span><span class="TESTatomicMass">276</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">63</span><span class="TESTsymbol">Eu</span><span class="TESTatomicMass">152</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">95</span><span class="TESTsymbol">Am</span><span class="TESTatomicMass">243</span></section></section><section class="TESTgroup" style="animation-delay:0.15000000000000002s"><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">28</span><span class="TESTsymbol">Ni</span><span class="TESTatomicMass">58.69</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">46</span><span class="TESTsymbol">Pd</span><span class="TESTatomicMass">106.4</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">78</span><span class="TESTsymbol">Pt</span><span class="TESTatomicMass">195.1</span></section><section class="TESTelement TESTunknown"><span class="TESTatomicNumber">110</span><span class="TESTsymbol">Ds</span><span class="TESTatomicMass">281</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">64</span><span class="TESTsymbol">Gd</span><span class="TESTatomicMass">157.3</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">96</span><span class="TESTsymbol">Cm</span><span class="TESTatomicMass">247</span></section></section><section class="TESTgroup" style="animation-delay:0.17489711934156382s"><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">29</span><span class="TESTsymbol">Cu</span><span class="TESTatomicMass">63.55</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">47</span><span class="TESTsymbol">Ag</span><span class="TESTatomicMass">107.9</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">79</span><span class="TESTsymbol">Au</span><span class="TESTatomicMass">197</span></section><section class="TESTelement TESTunknown"><span class="TESTatomicNumber">111</span><span class="TESTsymbol">Rg</span><span class="TESTatomicMass">280</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">65</span><span class="TESTsymbol">Tb</span><span class="TESTatomicMass">158.9</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">97</span><span class="TESTsymbol">Bk</span><span class="TESTatomicMass">247</span></section></section><section class="TESTgroup" style="animation-delay:0.1991769547325103s"><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">30</span><span class="TESTsymbol">Zn</span><span class="TESTatomicMass">65.38</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">48</span><span class="TESTsymbol">Cd</span><span class="TESTatomicMass">112.4</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">80</span><span class="TESTsymbol">Hg</span><span class="TESTatomicMass">200.6</span></section><section class="TESTelement TESTtransitionMetal"><span class="TESTatomicNumber">112</span><span class="TESTsymbol">Cn</span><span class="TESTatomicMass">285</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">66</span><span class="TESTsymbol">Dy</span><span class="TESTatomicMass">162.5</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">98</span><span class="TESTsymbol">Cf</span><span class="TESTatomicMass">251</span></section></section><section class="TESTgroup" style="animation-delay:0.2222222222222222s"><section class="TESTspacer"></section><section class="TESTelement TESTmetalloid"><span class="TESTatomicNumber">5</span><span class="TESTsymbol">B</span><span class="TESTatomicMass">10.81</span></section><section class="TESTelement TESTpostTransitionMetal"><span class="TESTatomicNumber">13</span><span class="TESTsymbol">Al</span><span class="TESTatomicMass">26.98</span></section><section class="TESTelement TESTpostTransitionMetal"><span class="TESTatomicNumber">31</span><span class="TESTsymbol">Ga</span><span class="TESTatomicMass">69.72</span></section><section class="TESTelement TESTpostTransitionMetal"><span class="TESTatomicNumber">49</span><span class="TESTsymbol">In</span><span class="TESTatomicMass">114.8</span></section><section class="TESTelement TESTpostTransitionMetal"><span class="TESTatomicNumber">81</span><span class="TESTsymbol">Tl</span><span class="TESTatomicMass">204.4</span></section><section class="TESTelement TESTunknown"><span class="TESTatomicNumber">113</span><span class="TESTsymbol">Nh</span><span class="TESTatomicMass">284</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">67</span><span class="TESTsymbol">Ho</span><span class="TESTatomicMass">164.9</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">99</span><span class="TESTsymbol">Es</span><span class="TESTatomicMass">252</span></section></section><section class="TESTgroup" style="animation-delay:0.2434156378600823s"><section class="TESTspacer"></section><section class="TESTelement TESTnonMetal"><span class="TESTatomicNumber">6</span><span class="TESTsymbol">C</span><span class="TESTatomicMass">12.01</span></section><section class="TESTelement TESTmetalloid"><span class="TESTatomicNumber">14</span><span class="TESTsymbol">Si</span><span class="TESTatomicMass">28.09</span></section><section class="TESTelement TESTmetalloid"><span class="TESTatomicNumber">32</span><span class="TESTsymbol">Ge</span><span class="TESTatomicMass">72.64</span></section><section class="TESTelement TESTpostTransitionMetal"><span class="TESTatomicNumber">50</span><span class="TESTsymbol">Sn</span><span class="TESTatomicMass">118.7</span></section><section class="TESTelement TESTpostTransitionMetal"><span class="TESTatomicNumber">82</span><span class="TESTsymbol">Pb</span><span class="TESTatomicMass">207.2</span></section><section class="TESTelement TESTpostTransitionMetal"><span class="TESTatomicNumber">114</span><span class="TESTsymbol">Fl</span><span class="TESTatomicMass">289</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">68</span><span class="TESTsymbol">Er</span><span class="TESTatomicMass">167.3</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">100</span><span class="TESTsymbol">Fm</span><span class="TESTatomicMass">257</span></section></section><section class="TESTgroup" style="animation-delay:0.2621399176954733s"><section class="TESTspacer"></section><section class="TESTelement TESTnonMetal"><span class="TESTatomicNumber">7</span><span class="TESTsymbol">N</span><span class="TESTatomicMass">14.01</span></section><section class="TESTelement TESTnonMetal"><span class="TESTatomicNumber">15</span><span class="TESTsymbol">P</span><span class="TESTatomicMass">30.97</span></section><section class="TESTelement TESTmetalloid"><span class="TESTatomicNumber">33</span><span class="TESTsymbol">As</span><span class="TESTatomicMass">74.92</span></section><section class="TESTelement TESTmetalloid"><span class="TESTatomicNumber">51</span><span class="TESTsymbol">Sb</span><span class="TESTatomicMass">121.8</span></section><section class="TESTelement TESTpostTransitionMetal"><span class="TESTatomicNumber">83</span><span class="TESTsymbol">Bi</span><span class="TESTatomicMass">209</span></section><section class="TESTelement TESTunknown"><span class="TESTatomicNumber">115</span><span class="TESTsymbol">Mc</span><span class="TESTatomicMass">288</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">69</span><span class="TESTsymbol">Tm</span><span class="TESTatomicMass">168.9</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">101</span><span class="TESTsymbol">Md</span><span class="TESTatomicMass">258</span></section></section><section class="TESTgroup" style="animation-delay:0.27777777777777785s"><section class="TESTspacer"></section><section class="TESTelement TESTnonMetal"><span class="TESTatomicNumber">8</span><span class="TESTsymbol">O</span><span class="TESTatomicMass">16</span></section><section class="TESTelement TESTnonMetal"><span class="TESTatomicNumber">16</span><span class="TESTsymbol">S</span><span class="TESTatomicMass">32.07</span></section><section class="TESTelement TESTnonMetal"><span class="TESTatomicNumber">34</span><span class="TESTsymbol">Se</span><span class="TESTatomicMass">78.96</span></section><section class="TESTelement TESTmetalloid"><span class="TESTatomicNumber">52</span><span class="TESTsymbol">Te</span><span class="TESTatomicMass">127.6</span></section><section class="TESTelement TESTpostTransitionMetal"><span class="TESTatomicNumber">84</span><span class="TESTsymbol">Po</span><span class="TESTatomicMass">209</span></section><section class="TESTelement TESTunknown"><span class="TESTatomicNumber">116</span><span class="TESTsymbol">Lv</span><span class="TESTatomicMass">293</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">70</span><span class="TESTsymbol">Yb</span><span class="TESTatomicMass">173.1</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">102</span><span class="TESTsymbol">No</span><span class="TESTatomicMass">259</span></section></section><section class="TESTgroup" style="animation-delay:0.2897119341563787s"><section class="TESTspacer"></section><section class="TESTelement TESThalogen"><span class="TESTatomicNumber">9</span><span class="TESTsymbol">F</span><span class="TESTatomicMass">19</span></section><section class="TESTelement TESThalogen"><span class="TESTatomicNumber">17</span><span class="TESTsymbol">Cl</span><span class="TESTatomicMass">35.45</span></section><section class="TESTelement TESThalogen"><span class="TESTatomicNumber">35</span><span class="TESTsymbol">Br</span><span class="TESTatomicMass">79.9</span></section><section class="TESTelement TESThalogen"><span class="TESTatomicNumber">53</span><span class="TESTsymbol">I</span><span class="TESTatomicMass">126.9</span></section><section class="TESTelement TESThalogen"><span class="TESTatomicNumber">85</span><span class="TESTsymbol">At</span><span class="TESTatomicMass">210</span></section><section class="TESTelement TESTunknown"><span class="TESTatomicNumber">117</span><span class="TESTsymbol">Ts</span><span class="TESTatomicMass">294</span></section><section class="TESTspacer"></section><section class="TESTelement TESTlanthanoid"><span class="TESTatomicNumber">71</span><span class="TESTsymbol">Lu</span><span class="TESTatomicMass">175</span></section><section class="TESTelement TESTactinoid"><span class="TESTatomicNumber">103</span><span class="TESTsymbol">Lr</span><span class="TESTatomicMass">262</span></section></section><section class="TESTgroup" style="animation-delay:0.2973251028806585s"><section class="TESTelement TESTnobleGas"><span class="TESTatomicNumber">2</span><span class="TESTsymbol">He</span><span class="TESTatomicMass">4.003</span></section><section class="TESTelement TESTnobleGas"><span class="TESTatomicNumber">10</span><span class="TESTsymbol">Ne</span><span class="TESTatomicMass">20.18</span></section><section class="TESTelement TESTnobleGas"><span class="TESTatomicNumber">18</span><span class="TESTsymbol">Ar</span><span class="TESTatomicMass">39.95</span></section><section class="TESTelement TESTnobleGas"><span class="TESTatomicNumber">36</span><span class="TESTsymbol">Kr</span><span class="TESTatomicMass">83.8</span></section><section class="TESTelement TESTnobleGas"><span class="TESTatomicNumber">54</span><span class="TESTsymbol">Xe</span><span class="TESTatomicMass">131.3</span></section><section class="TESTelement TESTnobleGas"><span class="TESTatomicNumber">86</span><span class="TESTsymbol">Rn</span><span class="TESTatomicMass">222</span></section><section class="TESTelement TESTunknown"><span class="TESTatomicNumber">118</span><span class="TESTsymbol">Og</span><span class="TESTatomicMass">294</span></section><section class="TESTspacer"></section><section class="TESTspacer"></section><section class="TESTspacer"></section></section><svg viewBox="-3.3 128.8 601.8 594" class="TESTfooter"><a href="//github.com/reubn/tabla" target="_blank" rel="noopener noreferrer"><path class="TESTheart" d="M297.4 716.4c-14.1-13.2-28.1-26-41.8-39.2-29.3-28.1-59.2-55.6-87.4-84.9-44.6-46.4-86-95.5-119.1-151-18.2-30.5-32.9-62.6-40.7-97.4C-3.7 289.4 5.2 238.7 38 193.1c22.8-31.7 54.5-49.2 92.9-55.1 24-3.6 48.1-4.2 71.9 1.4 43.1 10 69.4 37.8 82.4 79.2 2.5 8.1 4.1 16.5 6.3 24.7.9 3.2 1.2 7.7 5.9 7.6 4.6-.1 5.7-4.2 6.6-7.7 1.6-6 2.7-12 4.2-18 7.5-31.6 24.1-56.9 52.6-73.4 12.1-7 25.6-10 39.2-12.6 17.1-3.3 34.3-4.9 51.7-3 32.4 3.4 61.6 14.6 86.9 35.1 26.7 21.6 41.8 50.4 48.5 83.6 11.6 57 2.4 111-25 162-20.7 38.6-46.1 74-74 107.7-38.3 46.2-81.6 87.6-125 128.9-21.8 20.7-43.5 41.6-65.7 62.9z"></path></a></svg></section><section class="TESTinfo TESTopen TESTalkalineEarthMetal"><header class="TESTheader"><span class="TESTclose">✕</span><svg class="TESTdiagram" viewBox="-1400 -1400 2800 2800"><g><circle r="225" class="TESTnucleus"></circle><text class="TESTnucleusText">Be</text></g><g class="TESTshell"><circle r="350" class="TESTshellRing"></circle><circle cx="0" cy="-350" class="TESTelectron" style="transition-delay:0s"></circle><circle cx="4.2862637970157365e-14" cy="350" class="TESTelectron" style="transition-delay:0.01s"></circle></g><g class="TESTshell"><circle r="500" class="TESTshellRing"></circle><circle cx="0" cy="-500" class="TESTelectron" style="transition-delay:0s"></circle><circle cx="6.123233995736766e-14" cy="500" class="TESTelectron" style="transition-delay:0.01s"></circle></g></svg><a href="//en.wikipedia.org/wiki/Element_4" target="_blank" rel="noopener noreferrer" class="TESTname">Beryllium</a></header><section class="TESTdata"><span class="TESTentry"><span class="TESTtitle TESTchangeable">Electronic Configuration</span><span class="TESTcontent">[He] 2s²</span></span><span class="TESTentry"><span class="TESTtitle">Electronegativity</span><span class="TESTcontent">1.57</span></span><span class="TESTentry"><span class="TESTtitle">Oxidation States</span><span class="TESTcontent">2</span></span><span class="TESTentry"><span class="TESTtitle TESTchangeable">Density</span><span class="TESTcontent">1848 g dm⁻³</span></span><span class="TESTentry"><span class="TESTtitle TESTchangeable">Melting Point</span><span class="TESTcontent">1287 °C</span></span><span class="TESTentry"><span class="TESTtitle TESTchangeable">Boiling Point</span><span class="TESTcontent">2470 °C</span></span><span class="TESTentry"><span class="TESTtitle">Atomic Radius</span><span class="TESTcontent">90 m⁻¹²</span></span><span class="TESTentry"><span class="TESTtitle">Bonding Type</span><span class="TESTcontent">Metallic</span></span><span class="TESTentry"><span class="TESTtitle">Appearance</span><span class="TESTcontent">White-gray Metallic</span></span><span class="TESTentry"><span class="TESTtitle">Group Block</span><span class="TESTcontent">Alkaline Earth Metal</span></span><span class="TESTentry"><span class="TESTtitle">Discovered By</span><span class="TESTcontent">Louis Nicolas Vauquelin</span></span><span class="TESTentry"><span class="TESTtitle">Year Discovered</span><span class="TESTcontent">1798</span></span></section></section></section></section><script src="bundle.js"></script></html>
