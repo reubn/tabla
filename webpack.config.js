@@ -104,7 +104,12 @@ module.exports = env => {
       host: '0.0.0.0',
       disableHostCheck: true,
       port: 1616,
-      historyApiFallback: true
+      historyApiFallback: {
+        rewrites: [{
+          from: /^.*\/(.+)\/?$/,
+          to: context => `/${context.match[0]}.html`
+        }]
+      }
     },
     resolve: {
       extensions: ['.js', '.css', '.json']
