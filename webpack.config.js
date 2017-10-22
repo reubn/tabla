@@ -107,8 +107,7 @@ module.exports = env => {
           data: atomicNumber,
           cache: false,
           inject: false
-        })
-      )
+        }))
     ],
     devServer: {
       contentBase: './dist',
