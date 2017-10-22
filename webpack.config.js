@@ -25,7 +25,7 @@ module.exports = env => {
           test: /\.css$/,
           exclude: /node_modules/,
           use: [
-            'universal-style-loader',
+            'node-style-loader',
             {
               loader: 'css-loader',
               query: {
@@ -38,7 +38,7 @@ module.exports = env => {
         {
           test: /\.css$/,
           include: /node_modules/,
-          use: ['universal-style-loader', 'css-loader']
+          use: ['node-style-loader', 'css-loader']
         },
         {
           test: /\.woff2?$/,
