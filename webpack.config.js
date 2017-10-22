@@ -6,6 +6,8 @@ const webpack = require('webpack')
 const BabiliPlugin = require('babili-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const elements = require('./src/elements/raw.json')
+
 module.exports = env => {
   const devMode = env !== 'production'
   const config = {
@@ -86,7 +88,15 @@ module.exports = env => {
         filename: '404.html',
         template: './src/index.js',
         inject: false
-      })
+      }),
+      ...(devMode ? Object.keys(elements).slice(0, 5) : Object.keys(elements)).map(atomicNumber =>
+        new HtmlWebpackPlugin({
+          filename: `${atomicNumber}.html`,
+          template: './src/index.js',
+          data: atomicNumber,
+          inject: false
+        })
+      )
     ],
     devServer: {
       contentBase: './dist',
