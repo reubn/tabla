@@ -33,7 +33,8 @@ module.exports = env => {
               loader: 'css-loader',
               query: {
                 localIdentName: devMode ? '[local]-[emoji:1]' : '[emoji:2]',
-                modules: true
+                modules: true,
+                minimize: !devMode
               }
             }
           ]
@@ -41,7 +42,15 @@ module.exports = env => {
         {
           test: /\.css$/,
           include: /node_modules/,
-          use: ['node-style-loader', 'css-loader']
+          use: [
+            'node-style-loader',
+            {
+              loader: 'css-loader',
+              query: {
+                minimize: !devMode
+              }
+            }
+          ]
         },
         {
           test: /\.woff2?$/,
