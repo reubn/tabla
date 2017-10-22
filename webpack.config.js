@@ -82,11 +82,13 @@ module.exports = env => {
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: './src/index.js',
+        cache: false,
         inject: false
       }),
       new HtmlWebpackPlugin({
         filename: '404.html',
         template: './src/index.js',
+        cache: false,
         inject: false
       }),
       ...(devMode ? Object.keys(elements).slice(0, 5) : Object.keys(elements)).map(atomicNumber =>
@@ -94,6 +96,7 @@ module.exports = env => {
           filename: `${atomicNumber}.html`,
           template: './src/index.js',
           data: atomicNumber,
+          cache: false,
           inject: false
         })
       )
