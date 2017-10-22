@@ -1,4 +1,5 @@
 const childProcess = require('child_process')
+const path = require('path')
 
 const webpack = require('webpack')
 
@@ -10,7 +11,7 @@ module.exports = env => {
   const config = {
     entry: ['babel-polyfill', './src/app.js'],
     output: {
-      path: devMode ? '/' : './dist',
+      path: devMode ? '/' : path.resolve('./dist'),
       filename: 'bundle.js'
     },
     devtool: devMode ? 'source-map' : undefined,
