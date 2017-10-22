@@ -107,7 +107,7 @@ module.exports = env => {
       historyApiFallback: true
     },
     resolve: {
-      extensions: ['.js', '.css']
+      extensions: ['.js', '.css', '.json']
     }
   }
 
