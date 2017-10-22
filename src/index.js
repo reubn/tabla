@@ -1,40 +1,23 @@
 import React from 'react'
 import {renderToString, renderToStaticMarkup} from 'react-dom/server'
-import {Provider} from 'react-redux'
 
-import {StaticRouter} from 'react-router'
-import {collectInitial} from 'node-style-loader/collect'
+import {collectInitial as collectStyles} from 'node-style-loader/collect'
 
 import store from './store'
 import {history, linkHistoryToStore} from './routing'
 
-import App from './components/App'
+import Document from './components/Document'
+import Tabla from './components/Tabla'
 
-function index({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumber}}}){
+export default ({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumber}}}) => {
   history.push(`/${atomicNumber}`)
   linkHistoryToStore(store)
 
-  const preRenderedStyleTagString = collectInitial()
-  const preRenderedAppString = renderToString(
-    <Provider store={store}>
-      <StaticRouter history={history} location={`/${atomicNumber}`} >
-        <App />
-      </StaticRouter>
-    </Provider>
-  )
+  const styleTagString = collectStyles()
+  const renderedAppString = renderToString(<Tabla store={store} history={history} />)
+  const stateScriptString = `window.preRenderedState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
 
-  const preRenderedStateScriptString = `window.preRenderedState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
+  const documentString = renderToStaticMarkup(<Document chunks={chunks} styleTagString={styleTagString} renderedAppString={renderedAppString} stateScriptString={stateScriptString} />)
 
-  return (
-    <html lang="en">
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <title>Tabla</title>
-      <p dangerouslySetInnerHTML={{__html: preRenderedStyleTagString}} />
-      <section id="app" dangerouslySetInnerHTML={{__html: preRenderedAppString}} />
-      <script dangerouslySetInnerHTML={{__html: preRenderedStateScriptString}} />
-      {Object.values(chunks).map(({entry}) => <script src={entry} />)}
-    </html>
-  )
+  return `<!DOCTYPE html> ${documentString}`
 }
-
-export default params => `<!DOCTYPE html> ${renderToStaticMarkup(index(params))}`
