@@ -15,7 +15,7 @@ export default ({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumb
 
   const styleTagString = collectStyles()
   const renderedAppString = renderToString(<Tabla store={store} history={history} />)
-  const stateScriptString = `window.preRenderedState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
+  const stateScriptString = `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
 
   const documentString = renderToStaticMarkup(<Document chunks={chunks} styleTagString={styleTagString} renderedAppString={renderedAppString} stateScriptString={stateScriptString} />)
 
