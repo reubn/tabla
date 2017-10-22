@@ -1,5 +1,5 @@
 import periodicTable from './periodicTable'
 
-export default {
+export default (typeof window === 'object' && window.preRenderedState) || {
   periodicTable
 }

@@ -23,12 +23,15 @@ function index({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumbe
     </Provider>
   )
 
+  const preRenderedStateScriptString = `window.preRenderedState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
+
   return (
     <html>
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <title>Tabla</title>
       <p dangerouslySetInnerHTML={{__html: initialStyleTagString}} />
       <section id="app" dangerouslySetInnerHTML={{__html: appRenderedString }} />
+      <script dangerouslySetInnerHTML={{__html: preRenderedStateScriptString}} />
       {Object.values(chunks).map(({entry}) => <script src={entry} />)}
     </html>
   )
