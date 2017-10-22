@@ -10,7 +10,7 @@ import Document from './components/Document'
 import Tabla from './components/Tabla'
 
 export default ({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumber}}}) => {
-  history.push(`/${atomicNumber}`)
+  history.push(`/${atomicNumber||''}`)
   linkHistoryToStore(store)
 
   const styleTagString = collectStyles()
