@@ -1,5 +1,5 @@
 import React from 'react'
-import {renderToStaticMarkup} from 'react-dom/server'
+import {renderToString, renderToStaticMarkup} from 'react-dom/server'
 import {Provider} from 'react-redux'
 
 import {StaticRouter} from 'react-router'
@@ -14,7 +14,7 @@ function index({htmlWebpackPlugin: {files: {chunks}}}){
   linkHistoryToStore(store)
 
   const initialStyleTagString = collectInitial()
-  const appRenderedString = renderToStaticMarkup(
+  const appRenderedString = renderToString(
     <Provider store={store}>
       <StaticRouter history={history}>
         <App />
