@@ -11,7 +11,7 @@ const elements = require('./src/elements/raw.json')
 module.exports = env => {
   const devMode = env !== 'production'
   const config = {
-    entry: ['babel-polyfill', './src/app.js'],
+    entry: ['babel-polyfill', './src/client.js'],
     output: {
       path: devMode ? '/' : path.resolve('./dist'),
       filename: 'bundle.js'
@@ -90,20 +90,20 @@ module.exports = env => {
       !devMode ? new BabiliPlugin() : () => undefined,
       new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: './src/index.js',
+        template: './src/static.js',
         cache: false,
         inject: false
       }),
       new HtmlWebpackPlugin({
         filename: '404.html',
-        template: './src/index.js',
+        template: './src/static.js',
         cache: false,
         inject: false
       }),
       ...(devMode ? Object.keys(elements).slice(0, 5) : Object.keys(elements)).map(atomicNumber =>
         new HtmlWebpackPlugin({
           filename: `${atomicNumber}.html`,
-          template: './src/index.js',
+          template: './src/static.js',
           data: atomicNumber,
           cache: false,
           inject: false
