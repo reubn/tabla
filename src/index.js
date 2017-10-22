@@ -10,13 +10,14 @@ import {history, linkHistoryToStore} from './routing'
 
 import App from './components/App'
 
-function index({htmlWebpackPlugin: {files: {chunks}}}){
+function index({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumber}}}){
+  history.push(`/${atomicNumber}`)
   linkHistoryToStore(store)
 
   const initialStyleTagString = collectInitial()
   const appRenderedString = renderToString(
     <Provider store={store}>
-      <StaticRouter history={history}>
+      <StaticRouter history={history} location={`/${atomicNumber}`} >
         <App />
       </StaticRouter>
     </Provider>
