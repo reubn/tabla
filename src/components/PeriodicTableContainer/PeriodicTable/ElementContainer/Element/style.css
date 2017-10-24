@@ -27,7 +27,7 @@
 }
 
 .selected {
-  box-shadow: 0 0 100px 15px var(--gradients-blue-dark);
+  box-shadow: 0 0 100px 15px var(--colours-blue-dark);
   transform: scale(1.1);
   z-index: 10;
 }
