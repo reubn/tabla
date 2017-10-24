@@ -9,6 +9,10 @@
   animation-fill-mode: forwards;
 }
 
+.group:hover {
+ z-index: 8;
+}
+
 .containsSelectedElement{
   z-index: 10;
 }
