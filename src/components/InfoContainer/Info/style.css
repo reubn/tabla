@@ -77,10 +77,10 @@
 }
 
 .name:hover {
-  background: var(--group-colour);
+  background: var(--group-gradient);
   color: var(--colours-white);
   border-color: transparent;
-  box-shadow: var(--group-colour) -1px 0px 0 1px;
+  box-shadow: var(--group-gradient) -1px 0px 0 1px;
 }
 
 .close {
