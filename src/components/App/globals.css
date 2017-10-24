@@ -1,24 +1,40 @@
 @import './fonts';
 
 :root {
-  --colours-red: #f55;
-  --colours-yellow: #ffee62;
+  --colours-red: #ff5252;
+  --colours-red-hint: #ff5260;
+
+  --colours-yellow: #ffed61;
+  --colours-yellow-hint: #fff157;
+
   --colours-orange: #ffc233;
+  --colours-orange-hint: #ffc629;
 
-  --colours-green: #41fb82;
+  --colours-green: #3dfa7c;
+  --colours-green-hint: #3dfa89;
 
-  --colours-aqua: #5dedcb;
+  --colours-aqua: #5aedc8;
+  --colours-aqua-hint: #46ebba;
 
   --colours-blue: #66d6ff;
+  --colours-blue-hint: #4dbeff;
+
   --colours-blue-dark: #1E2C36;
   --colours-blue-dark-1: #202f37;
   --colours-blue-dark-2: #2A3A45;
+  --colours-blue-dark-2-hint: #253641;
 
-  --colours-pink: #ff3a8e;
-  --colours-pink-red: #ff4775;
+  --colours-pink: #ff388e;
+  --colours-pink-hint: #ff337e;
 
-  --colours-purple: #c34ef8;
-  --colours-purple-dark: #5454de;
+  --colours-pink-red: #ff4271;
+  --colours-pink-red-hint: #ff387a;
+
+  --colours-purple: #c34ef9;
+  --colours-purple-hint: #952ff5;
+
+  --colours-purple-dark: #5555dd;
+  --colours-purple-dark-hint: #5d51dd;
 
   --colours-black: #1e1f1f;
   --colours-black-1: #333;
@@ -52,6 +68,19 @@
   --colours-actinoid: var(--colours-purple-dark);
   --colours-lanthanoid: var(--colours-pink);
   --colours-unknown: var(--colours-blue-dark-2);
+
+  --gradient-angle: 0deg;
+  --gradients-alkaliMetal: linear-gradient(var(--gradient-angle), var(--colours-pink-red), var(--colours-pink-red-hint));
+  --gradients-nonMetal: linear-gradient(var(--gradient-angle), var(--colours-blue), var(--colours-blue-hint));
+  --gradients-transitionMetal: linear-gradient(var(--gradient-angle), var(--colours-aqua), var(--colours-aqua-hint));
+  --gradients-postTransitionMetal: linear-gradient(var(--gradient-angle), var(--colours-red), var(--colours-red-hint));
+  --gradients-halogen: linear-gradient(var(--gradient-angle), var(--colours-orange), var(--colours-orange-hint));
+  --gradients-nobleGas: linear-gradient(var(--gradient-angle), var(--colours-yellow), var(--colours-yellow-hint));
+  --gradients-metalloid: linear-gradient(var(--gradient-angle), var(--colours-purple), var(--colours-purple-hint));
+  --gradients-alkalineEarthMetal: linear-gradient(var(--gradient-angle), var(--colours-green), var(--colours-green-hint));
+  --gradients-actinoid: linear-gradient(var(--gradient-angle), var(--colours-purple-dark), var(--colours-purple-dark-hint));
+  --gradients-lanthanoid: linear-gradient(var(--gradient-angle), var(--colours-pink), var(--colours-pink-hint));
+  --gradients-unknown: linear-gradient(var(--gradient-angle), var(--colours-blue-dark-2), var(--colours-blue-dark-2-hint));
 
 
   --font-family: 'Museo Sans Rounded', 'PT Sans', 'Arial Rounded', sans-serif;
