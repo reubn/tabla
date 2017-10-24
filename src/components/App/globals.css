@@ -1,40 +1,40 @@
 @import './fonts';
 
 :root {
-  --colours-red: hsl(0, 100%, 66%);
-  --colours-red-hint: hsl(355, 100%, 66%);
+  --colours-red: #ff5252;
+  --colours-red-hint: #ff5260;
 
-  --colours-yellow: hsl(53, 100%, 69%);
-  --colours-yellow-hint: hsl(55, 100%, 67%);
+  --colours-yellow: #ffed61;
+  --colours-yellow-hint: #fff157;
 
-  --colours-orange: hsl(42, 100%, 60%);
-  --colours-orange-hint: hsl(44, 100%, 58%);
+  --colours-orange: #ffc233;
+  --colours-orange-hint: #ffc629;
 
-  --colours-green: hsl(140, 95%, 61%);
-  --colours-green-hint: hsl(144, 95%, 61%);
+  --colours-green: #3dfa7c;
+  --colours-green-hint: #3dfa89;
 
-  --colours-aqua: hsl(165, 80%, 64%);
-  --colours-aqua-hint: hsl(162, 80%, 60%);
+  --colours-aqua: #5aedc8;
+  --colours-aqua-hint: #46ebba;
 
-  --colours-blue: hsl(196, 100%, 70%);
-  --colours-blue-hint: hsl(202, 100%, 65%);
+  --colours-blue: #66d6ff;
+  --colours-blue-hint: #4dbeff;
 
   --colours-blue-dark: #1E2C36;
   --colours-blue-dark-1: #202f37;
   --colours-blue-dark-2: #2A3A45;
-  --colours-blue-dark-2-hint: hsl(204, 28%, 20%);
+  --colours-blue-dark-2-hint: #253641;
 
-  --colours-pink: hsl(334, 100%, 61%);
-  --colours-pink-hint: hsl(338, 100%, 60%);
+  --colours-pink: #ff388e;
+  --colours-pink-hint: #ff337e;
 
-  --colours-pink-red: hsl(345, 100%, 63%);
-  --colours-pink-red-hint: hsl(340, 100%, 61%);
+  --colours-pink-red: #ff4271;
+  --colours-pink-red-hint: #ff387a;
 
-  --colours-purple: hsl(281, 93%, 64%);
-  --colours-purple-hint: hsl(271, 91%, 57%);
+  --colours-purple: #c34ef9;
+  --colours-purple-hint: #952ff5;
 
-  --colours-purple-dark: hsl(240, 67%, 60%);
-  --colours-purple-dark-hint: hsl(245, 67%, 59%);
+  --colours-purple-dark: #5555dd;
+  --colours-purple-dark-hint: #5d51dd;
 
   --colours-black: #1e1f1f;
   --colours-black-1: #333;
