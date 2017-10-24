@@ -9,6 +9,14 @@
   animation-fill-mode: forwards;
 }
 
+.group:hover {
+ z-index: 8;
+}
+
+.containsSelectedElement{
+  z-index: 10;
+}
+
 @keyframes reveal {
   50% {transform: scale(1.1)}
   100% {opacity: 1;}
