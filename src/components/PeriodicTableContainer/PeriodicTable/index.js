@@ -10,11 +10,11 @@ import {periodicTable} from './style'
 
 import layout from './layout'
 
-const PeriodicTable = ({visibleElements}) => {
+const PeriodicTable = ({visibleElements, selectedElement}) => {
   const groups =
     layout.map((group, groupIndex) => (
       // eslint-disable-next-line react/no-array-index-key
-      <Group key={groupIndex} index={groupIndex} total={layout.length}>
+      <Group key={groupIndex} index={groupIndex} total={layout.length} containsSelectedElement={group.includes(selectedElement)}>
         {group.map((part, partIndex) => (
           part
           ? <ElementContainer key={part} atomicNumber={part} visible={visibleElements.includes(part)} />
