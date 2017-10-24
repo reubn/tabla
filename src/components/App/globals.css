@@ -68,6 +68,19 @@
   --colours-lanthanoid: var(--colours-pink);
   --colours-unknown: var(--colours-blue-dark-2);
 
+  --gradient-angle: 0deg;
+  --gradients-alkaliMetal: linear-gradient(var(--gradient-angle), var(--colours-pink-red), var(--colours-pink-red-hint));
+  --gradients-nonMetal: linear-gradient(var(--gradient-angle), var(--colours-blue), var(--colours-blue-hint));
+  --gradients-transitionMetal: linear-gradient(var(--gradient-angle), var(--colours-aqua), var(--colours-aqua-hint));
+  --gradients-postTransitionMetal: linear-gradient(var(--gradient-angle), var(--colours-red), var(--colours-red-hint));
+  --gradients-halogen: linear-gradient(var(--gradient-angle), var(--colours-orange), var(--colours-orange-hint));
+  --gradients-nobleGas: linear-gradient(var(--gradient-angle), var(--colours-yellow), var(--colours-yellow-hint));
+  --gradients-metalloid: linear-gradient(var(--gradient-angle), var(--colours-purple), var(--colours-purple-hint));
+  --gradients-alkalineEarthMetal: linear-gradient(var(--gradient-angle), var(--colours-green), var(--colours-green-hint));
+  --gradients-actinoid: linear-gradient(var(--gradient-angle), var(--colours-purple-dark), var(--colours-purple-dark-hint));
+  --gradients-lanthanoid: linear-gradient(var(--gradient-angle), var(--colours-pink), var(--colours-pink-hint));
+  --gradients-unknown: linear-gradient(var(--gradient-angle), var(--colours-blue-dark-2), var(--colours-blue-dark-2));
+
 
   --font-family: 'Museo Sans Rounded', 'PT Sans', 'Arial Rounded', sans-serif;
 }
