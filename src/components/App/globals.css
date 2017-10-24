@@ -22,6 +22,7 @@
   --colours-blue-dark: #1E2C36;
   --colours-blue-dark-1: #202f37;
   --colours-blue-dark-2: #2A3A45;
+  --colours-blue-dark-2-hint: hsl(204, 28%, 20%);
 
   --colours-pink: hsl(334, 100%, 61%);
   --colours-pink-hint: hsl(338, 100%, 60%);
@@ -79,7 +80,7 @@
   --gradients-alkalineEarthMetal: linear-gradient(var(--gradient-angle), var(--colours-green), var(--colours-green-hint));
   --gradients-actinoid: linear-gradient(var(--gradient-angle), var(--colours-purple-dark), var(--colours-purple-dark-hint));
   --gradients-lanthanoid: linear-gradient(var(--gradient-angle), var(--colours-pink), var(--colours-pink-hint));
-  --gradients-unknown: linear-gradient(var(--gradient-angle), var(--colours-blue-dark-2), var(--colours-blue-dark-2));
+  --gradients-unknown: linear-gradient(var(--gradient-angle), var(--colours-blue-dark-2), var(--colours-blue-dark-2-hint));
 
 
   --font-family: 'Museo Sans Rounded', 'PT Sans', 'Arial Rounded', sans-serif;
