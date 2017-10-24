@@ -23,7 +23,7 @@
 }
 
 .element:hover:not(.invisible), .selected {
-  color: var(--gradients-blue-dark-1);
+  color: var(--colours-blue-dark-1);
   background-clip: initial;
 }
 
