@@ -19,6 +19,7 @@
 
 .element:hover:not(.selected) {
   box-shadow: 0 0 100px 7px var(--colours-blue-dark);
+  z-index: 8;
 }
 
 .element:hover:not(.invisible), .selected {
