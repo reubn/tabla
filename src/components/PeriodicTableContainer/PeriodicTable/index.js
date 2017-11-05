@@ -5,12 +5,13 @@ import ElementContainer from './ElementContainer'
 import Spacer from './Spacer'
 import SearchBarContainer from './SearchBarContainer'
 import Footer from './Footer'
+import KeyCombo from '../../KeyCombo'
 
 import {periodicTable} from './style'
 
 import {layout} from '../../../elements'
 
-const PeriodicTable = ({visibleElements, selectedElement}) => {
+const PeriodicTable = ({visibleElements, selectedElement, cursorMove}) => {
   const groups =
     layout.map((group, groupIndex) => (
       // eslint-disable-next-line react/no-array-index-key
@@ -29,6 +30,11 @@ const PeriodicTable = ({visibleElements, selectedElement}) => {
       <SearchBarContainer />
       {groups}
       <Footer />
+
+      <KeyCombo combo="top" handler={() => cursorMove([0, -1])} />
+      <KeyCombo combo="down" handler={() => cursorMove([0, 1])} />
+      <KeyCombo combo="left" handler={() => cursorMove([-1, 0])} />
+      <KeyCombo combo="right" handler={() => cursorMove([1, 0])} />
     </section>
   )
 }
