@@ -7,14 +7,14 @@ import store from './store'
 import {history, linkHistoryToStore} from './routing'
 
 import Document from './components/Document'
-import Tabla from './components/Tabla'
+import Root from './components/Root'
 
 export default ({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumber}}}) => {
   history.push(`/${atomicNumber||''}`)
   linkHistoryToStore(store)
 
   const styleTagString = collectStyles()
-  const renderedAppString = renderToString(<Tabla store={store} history={history} />)
+  const renderedAppString = renderToString(<Root store={store} />)
   const stateScriptString = `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
 
   const documentString = renderToStaticMarkup(<Document chunks={chunks} styleTagString={styleTagString} renderedAppString={renderedAppString} stateScriptString={stateScriptString} />)
