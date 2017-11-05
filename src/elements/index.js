@@ -76,3 +76,4 @@ export class Element {
 
 const elements = Object.entries(data).reduce((table, [atomicNumber, info]) => ({...table, [atomicNumber]: new Element(atomicNumber, info)}), {})
 export default elements
+export {default as layout} from './layout'

@@ -5938,6 +5938,10 @@ shebang-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
 
+shortway@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/shortway/-/shortway-0.4.0.tgz#1416a6a86c507cb5fc46d77789ad7ccfac7a90e4"
+
 sigdig@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/sigdig/-/sigdig-2.0.0.tgz#860820b7a507d9f8f6c54a4e058dbd4073b9e0e7"
