@@ -8,7 +8,7 @@ import Footer from './Footer'
 
 import {periodicTable} from './style'
 
-import layout from './layout'
+import {layout} from '../../../elements'
 
 const PeriodicTable = ({visibleElements, selectedElement}) => {
   const groups =
