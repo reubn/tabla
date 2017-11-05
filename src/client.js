@@ -4,12 +4,12 @@ import React from 'react'
 import {hydrate} from 'react-dom'
 
 import store from './store'
-import {history, linkHistoryToStore} from './routing'
+import {linkHistoryToStore} from './routing'
 
-import Tabla from './components/Tabla'
+import Root from './components/Root'
 
 window.build = __BUILD__
 
 linkHistoryToStore(store)
 
-hydrate(<Tabla store={store} history={history} />, document.getElementById('app'))
+hydrate(<Root store={store} />, document.getElementById('app'))
