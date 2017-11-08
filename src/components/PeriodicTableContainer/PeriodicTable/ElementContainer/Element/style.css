@@ -9,13 +9,11 @@
   transition-duration: 0.2s;
   transition-property: color, background, opacity, transform;
   border-radius: 3px;
-  color: transparent;
-  background-image: var(--group-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
+  color: var(--group-colour);
   cursor: pointer;
   z-index: 1;
 }
+
 
 .element:hover:not(.selected) {
   box-shadow: 0 0 100px 7px var(--colours-blue-dark);
@@ -24,7 +22,7 @@
 
 .element:hover:not(.invisible), .selected {
   color: var(--colours-blue-dark-1);
-  background-clip: initial;
+  background: var(--group-gradient);
 }
 
 .selected {
@@ -42,10 +40,6 @@
   top: 10%;
   left: 10%;
   opacity: 0.8;
-
-  background-image: var(--group-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .selected .atomicNumber {
@@ -72,24 +66,20 @@
   position: absolute;
   bottom: 10%;
   opacity: 0.5;
-
-  background-image: var(--group-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .selected .atomicMass {
   opacity: 1;
 }
 
-.alkaliMetal {--group-gradient: var(--gradients-alkaliMetal);}
-.nonMetal {--group-gradient: var(--gradients-nonMetal);}
-.transitionMetal {--group-gradient: var(--gradients-transitionMetal);}
-.postTransitionMetal {--group-gradient: var(--gradients-postTransitionMetal);}
-.halogen {--group-gradient: var(--gradients-halogen);}
-.nobleGas {--group-gradient: var(--gradients-nobleGas);}
-.metalloid {--group-gradient: var(--gradients-metalloid);}
-.alkalineEarthMetal {--group-gradient: var(--gradients-alkalineEarthMetal);}
-.actinoid {--group-gradient: var(--gradients-actinoid);}
-.lanthanoid {--group-gradient: var(--gradients-lanthanoid);}
-.unknown {--group-gradient: var(--gradients-unknown);}
+.alkaliMetal {--group-colour: var(--colours-alkaliMetal); --group-gradient: var(--gradients-alkaliMetal);}
+.nonMetal {--group-colour: var(--colours-nonMetal); --group-gradient: var(--gradients-nonMetal);}
+.transitionMetal {--group-colour: var(--colours-transitionMetal); --group-gradient: var(--gradients-transitionMetal);}
+.postTransitionMetal {--group-colour: var(--colours-postTransitionMetal); --group-gradient: var(--gradients-postTransitionMetal);}
+.halogen {--group-colour: var(--colours-halogen); --group-gradient: var(--gradients-halogen);}
+.nobleGas {--group-colour: var(--colours-nobleGas); --group-gradient: var(--gradients-nobleGas);}
+.metalloid {--group-colour: var(--colours-metalloid); --group-gradient: var(--gradients-metalloid);}
+.alkalineEarthMetal {--group-colour: var(--colours-alkalineEarthMetal); --group-gradient: var(--gradients-alkalineEarthMetal);}
+.actinoid {--group-colour: var(--colours-actinoid); --group-gradient: var(--gradients-actinoid);}
+.lanthanoid {--group-colour: var(--colours-lanthanoid); --group-gradient: var(--gradients-lanthanoid);}
+.unknown {--group-colour: var(--colours-unknown); --group-gradient: var(--gradients-unknown);}
