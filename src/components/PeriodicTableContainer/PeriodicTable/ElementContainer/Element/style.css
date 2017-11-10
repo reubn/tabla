@@ -14,7 +14,7 @@
   z-index: 1;
 }
 
-.element:hover:not(.selected) {
+.element:hover:not(.invisible):not(.selected) {
   box-shadow: 0 0 100px 20px var(--colours-blue-dark);
   transform: scale(1.1);
   transition-delay: 0.15s;
