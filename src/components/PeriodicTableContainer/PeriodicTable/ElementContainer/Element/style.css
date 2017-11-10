@@ -14,7 +14,6 @@
   z-index: 1;
 }
 
-
 .element:hover:not(.selected) {
   box-shadow: 0 0 100px 20px var(--colours-blue-dark);
   z-index: 8;
