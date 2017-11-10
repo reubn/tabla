@@ -16,6 +16,8 @@
 
 .element:hover:not(.selected) {
   box-shadow: 0 0 100px 20px var(--colours-blue-dark);
+  transform: scale(1.1);
+  transition-delay: 0.15s;
   z-index: 8;
 }
 
@@ -25,9 +27,10 @@
 }
 
 .selected {
-  transform: scale(1.1);
   box-shadow: 0 0 100px 26px var(--colours-blue-dark);
+  transform: scale(1.2);
   z-index: 10;
+  transition-delay: 0;
 }
 
 .atomicNumber {
