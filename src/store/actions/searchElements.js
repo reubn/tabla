@@ -40,11 +40,14 @@ const operatorSearch = query => search(Object.values(elements), parse(query)).ma
 const fuseSearch = query => (query.trim() ? fuse.search(query).map(n => +n) : Object.keys(elements).map(n => +n))
 
 const searchElementsAction = (dispatch, query) => {
+  if(!query) return selectElementAction(dispatch, null) && dispatch({type: 'VISIBLE_ELEMENTS', atomicNumbers: Object.keys(elements).map(n => +n)})
+
   const test = query.includes('=') || query.includes('>') || query.includes('<')
   const atomicNumbers = (test ? operatorSearch : fuseSearch)(query)
 
   dispatch({type: 'VISIBLE_ELEMENTS', atomicNumbers})
   if(atomicNumbers[0]) return selectElementAction(dispatch, atomicNumbers[0])
+  selectElementAction(dispatch, null)
 }
 
 export default searchElementsAction
