@@ -7,7 +7,7 @@
   flex-basis: var(--table-height);
   transition-timing-function: cubic-bezier(0.32, 0.93, 0.69, 0.76);
   transition-duration: 0.2s;
-  transition-property: color, background, opacity, transform;
+  transition-property: color, background, opacity, transform, box-shadow;
   border-radius: 3px;
   color: var(--group-colour);
   cursor: pointer;
