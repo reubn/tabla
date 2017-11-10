@@ -16,7 +16,7 @@
 
 
 .element:hover:not(.selected) {
-  box-shadow: 0 0 100px 7px var(--colours-blue-dark);
+  box-shadow: 0 0 100px 20px var(--colours-blue-dark);
   z-index: 8;
 }
 
@@ -26,8 +26,8 @@
 }
 
 .selected {
-  box-shadow: 0 0 100px 15px var(--colours-blue-dark);
   transform: scale(1.1);
+  box-shadow: 0 0 100px 26px var(--colours-blue-dark);
   z-index: 10;
 }
 
