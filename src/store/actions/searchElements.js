@@ -2,6 +2,8 @@ import Fuse from 'fuse.js'
 
 import elements from '../../elements'
 
+import selectElementAction from './selectElement'
+
 const options = {
   id: 'atomicNumber',
   threshold: 0.2,
@@ -42,6 +44,7 @@ const searchElementsAction = (dispatch, query) => {
   const atomicNumbers = (test ? operatorSearch : fuseSearch)(query)
 
   dispatch({type: 'VISIBLE_ELEMENTS', atomicNumbers})
+  if(atomicNumbers[0]) return selectElementAction(dispatch, atomicNumbers[0])
 }
 
 export default searchElementsAction
