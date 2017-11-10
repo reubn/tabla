@@ -92,6 +92,12 @@
   text-align: center;
   user-select: none;
   cursor: pointer;
+  transition: color 0.1s ease-in;
+}
+
+.close:hover {
+  transition: color 0.1s ease-out;
+  color: var(--colours-grey-1);
 }
 
 .alkaliMetal {--group-colour: var(--colours-alkaliMetal); --group-gradient: var(--gradients-alkaliMetal);}
