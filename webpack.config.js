@@ -94,12 +94,6 @@ module.exports = env => {
         cache: false,
         inject: false
       }),
-      new HtmlWebpackPlugin({
-        filename: '404.html',
-        template: './src/static.js',
-        cache: false,
-        inject: false
-      }),
       ...(devMode ? Object.keys(elements).slice(0, 5) : Object.keys(elements)).map(atomicNumber =>
         new HtmlWebpackPlugin({
           filename: `${atomicNumber}.html`,
