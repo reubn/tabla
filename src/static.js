@@ -1,5 +1,9 @@
+import 'babel-polyfill'
+
 import React from 'react'
 import {renderToString, renderToStaticMarkup} from 'react-dom/server'
+
+import asyncBootstrapper from 'react-async-bootstrapper'
 
 import {collectInitial as collectStyles} from 'node-style-loader/collect' // eslint-disable-line import/no-extraneous-dependencies
 
@@ -14,10 +18,14 @@ export default ({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumb
   linkHistoryToStore(store)
 
   const styleTagString = collectStyles()
-  const renderedAppString = renderToString(<Root store={store} />)
-  const stateScriptString = `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
+  const root = <Root store={store} />
 
-  const documentString = renderToStaticMarkup(<Document chunks={chunks} styleTagString={styleTagString} renderedAppString={renderedAppString} stateScriptString={stateScriptString} />)
+  return asyncBootstrapper(root).then(() => {
+    const renderedAppString = renderToString(root)
+    const stateScriptString = `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
 
-  return `<!DOCTYPE html> ${documentString}`
+    const documentString = renderToStaticMarkup(<Document chunks={chunks} styleTagString={styleTagString} renderedAppString={renderedAppString} stateScriptString={stateScriptString} />)
+
+    return `<!DOCTYPE html> ${documentString}`
+  })
 }
