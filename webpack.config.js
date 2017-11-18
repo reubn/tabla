@@ -6,7 +6,7 @@ const webpack = require('webpack')
 const BabiliPlugin = require('babili-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const elements = require('./src/elements/raw.json')
+const elements = require('./data/dist/basic')
 
 module.exports = env => {
   const devMode = env !== 'production'
@@ -14,7 +14,7 @@ module.exports = env => {
     entry: ['babel-polyfill', './src/client.js'],
     output: {
       path: devMode ? '/' : path.resolve('./dist'),
-      filename: 'bundle.js'
+      filename: devMode ? '[name]-[chunkhash:8].js' : '[chunkhash:5]'
     },
     devtool: devMode ? 'source-map' : undefined,
     module: {
@@ -80,6 +80,10 @@ module.exports = env => {
       ]
     },
     plugins: [
+      // new webpack.optimize.CommonsChunkPlugin({
+      //   name: 'COMMON',
+      //   chunks: elements.map(atomicNumber => `./elements/output/${atomicNumber}`)
+      // }),
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(devMode ? 'development' : 'production')

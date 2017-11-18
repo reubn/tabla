@@ -1,5 +1,6 @@
-function selectElementAction(dispatch, atomicNumber, triggerRedirect=true){
+import {fullElement} from '../../elements'
+
+export default async (dispatch, atomicNumber, triggerRedirect=true) => {
+  await fullElement(atomicNumber)
   return dispatch({type: 'SELECT_ELEMENT', triggerRedirect, atomicNumber})
 }
-
-export default selectElementAction
