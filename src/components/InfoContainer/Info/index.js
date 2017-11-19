@@ -24,18 +24,18 @@ const groupColours = {
   unknown
 }
 
-const asyncBootstrapHack = {}
-
 class Info extends Component {
   constructor({atomicNumber}){
     super()
     this.state = {
-      element: atomicNumber ? asyncBootstrapHack[atomicNumber] || basicElements[atomicNumber] : {}
+      element: typeof window === 'object' ? (atomicNumber ? basicElements[atomicNumber] : {}) : (global.fullElementHack || {})
     }
   }
   async componentWillMount(){
-    const resolvedElement = await this.props.fullElement
-    this.setState({element: resolvedElement})
+    if(typeof window === 'object'){
+      const resolvedElement = await this.props.fullElement
+      this.setState({element: resolvedElement})
+    }
   }
 
   async componentWillReceiveProps({atomicNumber: newAtomicNumber, fullElement}){
@@ -46,11 +46,6 @@ class Info extends Component {
 
     const resolvedElement = await fullElement
     this.setState({element: resolvedElement})
-  }
-
-  async asyncBootstrap(){
-    const resolvedElement = await this.props.fullElement
-    asyncBootstrapHack[this.props.atomicNumber] = resolvedElement
   }
 
   render(){
