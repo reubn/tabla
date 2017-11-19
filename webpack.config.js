@@ -6,6 +6,7 @@ const webpack = require('webpack')
 const BabiliPlugin = require('babili-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const SimpleProgressPlugin = require('webpack-simple-progress-plugin')
 
 const elements = require('./data/dist/basic')
 
@@ -85,6 +86,7 @@ module.exports = env => {
       //   name: 'COMMON',
       //   chunks: elements.map(atomicNumber => `./elements/output/${atomicNumber}`)
       // }),
+      new SimpleProgressPlugin(),
       new CopyWebpackPlugin([{
         from: './data/dist/'
       }], {ignore: ['basic.json']}),
