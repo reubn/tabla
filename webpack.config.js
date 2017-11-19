@@ -102,7 +102,7 @@ module.exports = env => {
         cache: false,
         inject: false
       }),
-      ...(devMode ? Object.keys(elements).slice(0, 5) : Object.keys(elements)).map(atomicNumber =>
+      ...(devMode ? Object.keys(elements).slice(1, 5 + 1) : Object.keys(elements).slice(1)).map(atomicNumber =>
         new HtmlWebpackPlugin({
           filename: `${atomicNumber}.html`,
           template: './src/static.js',
