@@ -37,7 +37,8 @@
     "style-loader": "^0.19.0",
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.3"
+    "webpack-dev-server": "^2.9.4",
+    "webpack-simple-progress-plugin": "^0.0.3"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -60,8 +61,8 @@
   "scripts": {
     "start": "sudo node_modules/.bin/webpack-dev-server --env=development",
     "data": "sudo node data/src",
-    "build": "git diff-index --quiet HEAD -- && sudo webpack --env=production || echo '❌  Cannot build with uncommited changes!'",
-    "build:force": "sudo webpack --env=production",
+    "build": "git diff-index --quiet HEAD -- && sudo node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js --env=production || echo '❌  Cannot build with uncommited changes!'",
+    "build:force": "sudo node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js --env=production",
     "deploy": "sudo sh -c 'node -pe \"require(\\`./package.json\\`).homepage\" > dist/CNAME' && gh-pages -m '🎉' -d dist",
     "lint": "eslint ./ || true",
     "lint:fix": "eslint --fix ./ || true",

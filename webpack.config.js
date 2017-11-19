@@ -22,7 +22,7 @@ module.exports = env => {
       rules: [
         {
           test: /\.js$/,
-          use: 'babel-loader',
+          use: devMode ? 'babel-loader' : 'babel-loader?cacheDirectory',
           exclude: /node_modules/
         },
         {
