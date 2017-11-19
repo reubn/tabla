@@ -89,7 +89,7 @@ module.exports = env => {
       new SimpleProgressPlugin(),
       new CopyWebpackPlugin([{
         from: './data/dist/'
-      }], {ignore: ['basic.json']}),
+      }], {ignore: ['basic.json', 'full.json']}),
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(devMode ? 'development' : 'production')
