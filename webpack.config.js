@@ -15,7 +15,7 @@ module.exports = env => {
     entry: ['babel-polyfill', './src/client.js'],
     output: {
       path: devMode ? '/' : path.resolve('./dist'),
-      filename: devMode ? '[name]-[chunkhash:8].js' : '[chunkhash:5]'
+      filename: 'bundle.js'
     },
     devtool: devMode ? 'source-map' : undefined,
     module: {
