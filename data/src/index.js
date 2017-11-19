@@ -6,7 +6,7 @@ const cheerio = require('cheerio')
 const groupBlocks = require('./groupBlocks')
 
 const atomicNumberToURL = atomicNumber => `https://www.rsc.org/periodic-table/element/${atomicNumber}`
-const atomicNumberToCachePath = atomicNumber => `${__dirname}/../dist/cache/${atomicNumber}`
+const atomicNumberToCachePath = atomicNumber => `${__dirname}/../cache/${atomicNumber}`
 
 const getFromRSC = atomicNumber => fetch(atomicNumberToURL(atomicNumber)).then(res => res.text()).catch(() => false)
 const saveToCache = (atomicNumber, content) => new Promise(resolve => fs.writeFile(atomicNumberToCachePath(atomicNumber), content, err => resolve(err ? false : content)))
