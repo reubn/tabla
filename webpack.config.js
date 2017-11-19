@@ -5,6 +5,7 @@ const webpack = require('webpack')
 
 const BabiliPlugin = require('babili-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const elements = require('./data/dist/basic')
 
@@ -84,6 +85,9 @@ module.exports = env => {
       //   name: 'COMMON',
       //   chunks: elements.map(atomicNumber => `./elements/output/${atomicNumber}`)
       // }),
+      new CopyWebpackPlugin([{
+        from: './data/dist/'
+      }], {ignore: ['basic.json']}),
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(devMode ? 'development' : 'production')
