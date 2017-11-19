@@ -95,7 +95,7 @@ Promise.all(Array(118).fill().map((_, i) => start(i + 1)))
   // .then(test => test.forEach(e => console.log(e.name, JSON.stringify(e.electronicConfiguration, null, 2))))
   .then(full => {
     // Full
-    // fs.writeFile(`${__dirname}/../dist/full.json`, JSON.stringify([0, ...full]), () => 0)
+    fs.writeFile(`${__dirname}/../dist/full.json`, JSON.stringify([0, ...full]), () => 0)
 
     // Basic
     const basic = [0, ...full.map(element => ({
