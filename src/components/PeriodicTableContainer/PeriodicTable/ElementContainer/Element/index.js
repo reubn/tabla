@@ -20,11 +20,11 @@ const groupColours = {
   unknown
 }
 
-const Element = ({element: {symbol, groupBlock, atomicMass, atomicNumber}, select, selected, visible}) => (
+const Element = ({basicElement: {symbol, groupBlock, atomicMass, atomicNumber}, select, selected, visible}) => (
   <section className={classnames(elementStyle, {[selectedStyle]: selected, [invisible]: !visible}, groupColours[groupBlock] || unknown)} onClick={select}>
     <span className={atomicNumberStyle}>{atomicNumber}</span>
     <span className={symbolStyle}>{symbol}</span>
-    <span className={atomicMassStyle}>{sigdig(atomicMass, 4)}</span>
+    <span className={atomicMassStyle}>{atomicMass.mostStableIsotope ? `(${atomicMass.v})` : sigdig(atomicMass, 4)}</span>
   </section>
 )
 

@@ -1,11 +1,11 @@
 import {connect} from 'react-redux'
 
-import elements from '../../../../elements'
+import {basicElements} from '../../../../elements'
 import selectElementAction from '../../../../store/actions/selectElement'
 
 import Element from './Element'
 
-const mapStateToProps = ({periodicTable: {selectedElement}}, {atomicNumber}) => ({element: elements[atomicNumber], selected: selectedElement === atomicNumber})
+const mapStateToProps = ({periodicTable: {selectedElement}}, {atomicNumber}) => ({basicElement: basicElements[atomicNumber], selected: selectedElement === atomicNumber})
 const mapDispatchToProps = {
   selectElementAction: atomicNumber => dispatch => selectElementAction(dispatch, atomicNumber)
 }

@@ -8,7 +8,7 @@ import {diagram} from './style'
 const Diagram = ({element, _: {symbol}=element}) => (
   <svg className={diagram} viewBox="-1400 -1400 2800 2800">
     <Nucleus symbol={symbol} />
-    {Object.entries(element.electronsPerShell()).map(([shell, electrons]) => <Shell key={shell} shell={shell} electrons={electrons} />)}
+    {element.electronsPerShell && Object.entries(element.electronsPerShell()).map(([shell, electrons]) => <Shell key={shell} shell={shell} electrons={electrons} />)}
   </svg>
 )
 

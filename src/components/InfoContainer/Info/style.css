@@ -15,8 +15,8 @@
 }
 
 .open {
-  width: 20vw;
-  min-width: 300px;
+  width: 25vw;
+  min-width: 450px;
   border-left: 2px solid var(--colours-white-3);
 }
 .open:not(.enter):not(.exit) > * {
@@ -59,28 +59,25 @@
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 40%;
-  border-bottom: 1px solid var(--colours-white-3);
 }
 
 .name {
-  width: 100%;
   display: inline-block;
-  font-size: 2rem;
-  color: var(--colours-black-3);
+  font-size: 1.75rem;
+  font-weight: lighter;
+  color: var(--colours-grey-1);
   text-align: center;
   padding: 0.5rem;
   text-decoration: none;
   cursor: pointer;
-  border-top: 1px solid var(--colours-white-3);
-  transition: none 0.15s ease-in-out;
-  transition-property: color, background, box-shadow;
+  transition: none 0.15s ease-in;
+  transition-property: color;
+  position: relative;
+  top: 3.3rem;
 }
 
 .name:hover {
-  background: var(--group-gradient);
-  color: var(--colours-white);
-  border-color: transparent;
-  box-shadow: var(--group-gradient) -1px 0px 0 1px;
+  color: var(--colours-grey-5);
 }
 
 .close {
@@ -113,7 +110,7 @@
 .unknown {--group-colour: var(--colours-unknown); --group-gradient: var(--gradients-unknown);}
 
 @media only screen
-  and (max-device-width: 736px)
+  and (max-device-width: 1000px)
   and (orientation: portrait) {
   .open {
     width: 100vw;
@@ -130,7 +127,6 @@
   }
 
   .name {
-    font-size: 5rem;
     padding: 1rem;
   }
 }

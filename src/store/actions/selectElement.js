@@ -1,5 +1,1 @@
-function selectElementAction(dispatch, atomicNumber, triggerRedirect=true){
-  return dispatch({type: 'SELECT_ELEMENT', triggerRedirect, atomicNumber})
-}
-
-export default selectElementAction
+export default (dispatch, atomicNumber, triggerRedirect=true) => dispatch({type: 'SELECT_ELEMENT', triggerRedirect, atomicNumber})
