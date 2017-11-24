@@ -63,4 +63,4 @@ export default class BasicElement {
   }
 }
 
-export const basicElements = basicJSON.map((json, index) => json ? new BasicElement(index, json) : null)
+export const basicElements = basicJSON.map((json, index) => json ? new BasicElement(index, json) : {})
