@@ -1,6 +1,6 @@
-import elements from '../../elements'
+import {basicElements} from '../../elements'
 
 export default {
-  visibleElements: Object.keys(elements).map(n => +n),
+  visibleElements: Object.keys(basicElements).map(n => +n),
   selectedElement: null
 }
