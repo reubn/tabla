@@ -12,11 +12,8 @@ const elements = require('./data/dist/basic')
 
 module.exports = env => {
   const devMode = env !== 'production'
-  const config = {
-    entry: {
-      client: ['babel-polyfill', './src/client.js'],
-      static: './src/static.js'
-    },
+
+  const baseConfig = {
     output: {
       path: devMode ? '/' : path.resolve('./dist'),
       filename: '[name].js',
@@ -91,17 +88,7 @@ module.exports = env => {
       //   name: 'COMMON',
       //   chunks: elements.map(atomicNumber => `./elements/output/${atomicNumber}`)
       // }),
-      new StaticSiteGeneratorPlugin({entry: 'static'}),
-      ...(devMode ? Object.keys(elements).slice(1, 5) : Object.keys(elements).slice(1)).map(atomicNumber =>
-        new StaticSiteGeneratorPlugin({
-          entry: 'static',
-          paths: `${atomicNumber}.html`,
-          locals: {atomicNumber}
-        })),
       new SimpleProgressPlugin(),
-      new CopyWebpackPlugin([{
-        from: './data/dist/'
-      }], {ignore: ['basic.json', 'full.json']}),
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(devMode ? 'development' : 'production')
@@ -130,5 +117,28 @@ module.exports = env => {
     }
   }
 
-  return config
+  return [
+    Object.assign({}, baseConfig, {
+      entry: {
+        client: ['babel-polyfill', './src/client.js']
+      },
+      target: 'web'
+    }),
+    Object.assign({}, baseConfig, {
+      entry: {
+        static: './src/static.js'
+      },
+      target: 'node',
+      plugins: [
+        ...baseConfig.plugins,
+        new StaticSiteGeneratorPlugin({entry: 'static'}),
+        ...(devMode ? Object.keys(elements).slice(1, 5) : Object.keys(elements).slice(1)).map(atomicNumber =>
+          new StaticSiteGeneratorPlugin({
+            entry: 'static',
+            paths: `${atomicNumber}.html`,
+            locals: {atomicNumber}
+          }))
+      ]
+    })
+  ]
 }

@@ -6,9 +6,7 @@ export const fullElement = async atomicNumber => {
 
   if(fullElementsCache[atomicNumber]) return fullElementsCache[atomicNumber]
 
-  const json = typeof window === 'object'
-    ? (await fetch(`/${atomicNumber}.json`)).json()
-    : {}
+  const json = require(`../../data/dist/${atomicNumber}.json`)
 
   fullElementsCache[atomicNumber] = new FullElement(atomicNumber, await json)
   return fullElementsCache[atomicNumber]
