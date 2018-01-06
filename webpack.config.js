@@ -4,7 +4,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 const BabiliPlugin = require('babili-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const SimpleProgressPlugin = require('webpack-simple-progress-plugin')
 
@@ -13,11 +13,16 @@ const elements = require('./data/dist/basic')
 module.exports = env => {
   const devMode = env !== 'production'
   const config = {
-    entry: ['babel-polyfill', './src/client.js'],
+    entry: {
+      client: ['babel-polyfill', './src/client.js'],
+      static: './src/static.js'
+    },
     output: {
       path: devMode ? '/' : path.resolve('./dist'),
-      filename: 'bundle.js'
+      filename: '[name].js',
+      libraryTarget: 'umd'
     },
+    target: 'node',
     devtool: devMode ? 'source-map' : undefined,
     module: {
       rules: [
@@ -86,6 +91,13 @@ module.exports = env => {
       //   name: 'COMMON',
       //   chunks: elements.map(atomicNumber => `./elements/output/${atomicNumber}`)
       // }),
+      new StaticSiteGeneratorPlugin({entry: 'static'}),
+      ...(devMode ? Object.keys(elements).slice(1, 5) : Object.keys(elements).slice(1)).map(atomicNumber =>
+        new StaticSiteGeneratorPlugin({
+          entry: 'static',
+          paths: `${atomicNumber}.html`,
+          locals: {atomicNumber}
+        })),
       new SimpleProgressPlugin(),
       new CopyWebpackPlugin([{
         from: './data/dist/'
@@ -97,21 +109,7 @@ module.exports = env => {
         __DEVTOOLS__: devMode,
         __BUILD__: JSON.stringify(devMode ? 'DEV' : childProcess.execSync('git rev-parse HEAD').toString().trim())
       }),
-      !devMode ? new BabiliPlugin() : () => undefined,
-      new HtmlWebpackPlugin({
-        filename: 'index.html',
-        template: './src/static.js',
-        cache: false,
-        inject: false
-      }),
-      ...(devMode ? Object.keys(elements).slice(1, 5 + 1) : Object.keys(elements).slice(1)).map(atomicNumber =>
-        new HtmlWebpackPlugin({
-          filename: `${atomicNumber}.html`,
-          template: './src/static.js',
-          data: atomicNumber,
-          cache: false,
-          inject: false
-        }))
+      !devMode ? new BabiliPlugin() : () => undefined
     ],
     devServer: {
       contentBase: './dist',
@@ -119,6 +117,7 @@ module.exports = env => {
       host: '0.0.0.0',
       disableHostCheck: true,
       port: 1616,
+      inline: false,
       historyApiFallback: {
         rewrites: [{
           from: /^.*\/(.+)\/?$/,

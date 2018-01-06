@@ -15,7 +15,9 @@ import {history, linkHistoryToStore} from './routing'
 import Document from './components/Document'
 import Root from './components/Root'
 
-export default ({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumber}}}) => {
+export default ({atomicNumber, webpackStats: {compilation: {assets}}}) => {
+  const chunks = Object.keys(assets).filter(name => name !== 'static.js' && name.match(/\.js$/))
+
   history.push(`/${atomicNumber||''}`)
   linkHistoryToStore(store)
 
@@ -29,5 +31,6 @@ export default ({htmlWebpackPlugin: {files: {chunks}, options: {data: atomicNumb
 
   const documentString = renderToStaticMarkup(<Document chunks={chunks} styleTagString={styleTagString} renderedAppString={renderedAppString} stateScriptString={stateScriptString} />)
 
+  console.log('⚡️', atomicNumber)
   return `<!DOCTYPE html> ${documentString}`
 }

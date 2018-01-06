@@ -8,6 +8,6 @@ export default ({styleTagString, renderedAppString, stateScriptString, chunks}) 
     <p dangerouslySetInnerHTML={{__html: styleTagString}} />
     <section id="app" dangerouslySetInnerHTML={{__html: renderedAppString}} />
     <script dangerouslySetInnerHTML={{__html: stateScriptString}} />
-    {Object.values(chunks).map(({entry}) => <script key={entry} src={entry} />)}
+    {Object.values(chunks).map(entry => <script key={entry} src={entry} />)}
   </html>
 )
