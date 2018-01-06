@@ -8,7 +8,7 @@ const options = {
   id: 'atomicNumber',
   threshold: 0.2,
   minMatchCharLength: 2,
-  keys: ['name', 'symbol', 'atomicNumber']
+  keys: ['name', 'symbol', 'atomicNumber', 'atomicMass', 'atomicMass.v']
 }
 
 const fuse = new Fuse(Object.values(basicElements), options)
