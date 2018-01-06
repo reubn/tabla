@@ -131,12 +131,20 @@ module.exports = env => {
       target: 'node',
       plugins: [
         ...baseConfig.plugins,
-        new StaticSiteGeneratorPlugin({entry: 'static'}),
+        new StaticSiteGeneratorPlugin({
+          entry: 'static',
+          locals: {
+            chunks: ['client.js']
+          }
+        }),
         ...(devMode ? Object.keys(elements).slice(1, 5) : Object.keys(elements).slice(1)).map(atomicNumber =>
           new StaticSiteGeneratorPlugin({
             entry: 'static',
             paths: `${atomicNumber}.html`,
-            locals: {atomicNumber}
+            locals: {
+              atomicNumber,
+              chunks: ['client.js']
+            }
           }))
       ]
     })

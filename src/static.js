@@ -15,9 +15,7 @@ import {history, linkHistoryToStore} from './routing'
 import Document from './components/Document'
 import Root from './components/Root'
 
-export default ({atomicNumber, webpackStats: {compilation: {assets}}}) => {
-  const chunks = Object.keys(assets).filter(name => name !== 'static.js' && name.match(/\.js$/))
-
+export default ({atomicNumber, chunks}) => {
   history.push(`/${atomicNumber||''}`)
   linkHistoryToStore(store)
 
