@@ -11,7 +11,7 @@ import {periodicTable} from './style'
 
 import {layout} from '../../../elements'
 
-const PeriodicTable = ({visibleElements, selectedElement, cursorMove}) => {
+const PeriodicTable = ({visibleElements, selectedElement, cursorMove, deselect}) => {
   const groups =
     layout.map((group, groupIndex) => (
       // eslint-disable-next-line react/no-array-index-key
@@ -35,6 +35,7 @@ const PeriodicTable = ({visibleElements, selectedElement, cursorMove}) => {
       <KeyCombo combo="down" handler={() => cursorMove([0, 1])} />
       <KeyCombo combo="left" handler={() => cursorMove([-1, 0])} />
       <KeyCombo combo="right" handler={() => cursorMove([1, 0])} />
+      <KeyCombo combo="esc" handler={deselect} />
     </section>
   )
 }
