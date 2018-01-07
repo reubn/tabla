@@ -74,6 +74,7 @@
   transition-property: color;
   position: relative;
   top: 3.3rem;
+  z-index: 1;
 }
 
 .name:hover {
@@ -90,6 +91,7 @@
   user-select: none;
   cursor: pointer;
   transition: color 0.1s ease-in;
+  z-index: 2;
 }
 
 .close:hover {
@@ -121,12 +123,13 @@
   }
 
   .close {
-    font-size: 6rem;
-    top: 3rem;
-    left: 3rem;
+    font-size: 4rem;
+    top: 4rem;
+    left: 4rem;
   }
 
   .name {
     padding: 1rem;
+    font-size: 4rem;
   }
 }

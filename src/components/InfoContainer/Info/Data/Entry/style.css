@@ -80,4 +80,10 @@
     --height: 6rem;
     font-size: 2rem;
   }
+
+  .unit {
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding: 3px 5px 3px;
+  }
 }
