@@ -5,6 +5,7 @@ const webpack = require('webpack')
 
 const BabiliPlugin = require('babili-webpack-plugin')
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const SimpleProgressPlugin = require('webpack-simple-progress-plugin')
 
 const elements = require('./data/dist/basic')
