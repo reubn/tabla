@@ -97,7 +97,7 @@ module.exports = env => {
           chunks: ['client.js']
         }
       }),
-      ...(devMode ? Object.keys(elements).slice(1, 5) : Object.keys(elements).slice(1)).map(atomicNumber =>
+      ...(devMode ? Object.keys(elements).slice(1, 18 + 1) : Object.keys(elements).slice(1)).map(atomicNumber =>
         new StaticSiteGeneratorPlugin({
           entry: 'static',
           paths: `${atomicNumber}.html`,
