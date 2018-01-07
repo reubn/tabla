@@ -1,6 +1,7 @@
 import FullElement from './FullElement'
 
-const fullElementsCache = {}
+export const fullElementsCache = typeof window === 'object' && window.dryfullElement ? {[+window.dryfullElement.atomicNumber]: new FullElement(window.dryfullElement.atomicNumber, window.dryfullElement)} : {}
+
 export const fullElement = async atomicNumber => {
   if(!atomicNumber) return {}
 
