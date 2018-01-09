@@ -31,9 +31,9 @@ export default ({atomicNumber, testElements, webpackStats: {compilation: {assets
 
   const documentString = renderToStaticMarkup(<Document chunks={chunks} styleTagString={styleTagString} renderedAppString={renderedAppString} stateScriptString={stateScriptString} />)
 
-  process.stdout.clearLine()
-  process.stdout.cursorTo(0)
-  process.stdout.write(`⚡️ ${atomicNumber || 'H'} / ${testElements.length}`)
+  process.stdout.cursorTo(45)
+  process.stdout.clearLine(1)
+  process.stdout.write(`rendering page ${atomicNumber || 'H'} / ${testElements.length}`)
 
   return `<!DOCTYPE html> ${documentString}`
 }
