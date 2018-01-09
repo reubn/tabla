@@ -1,14 +1,14 @@
-const childProcess = require('child_process')
-const path = require('path')
+import childProcess from 'child_process'
+import path from 'path'
 
-const webpack = require('webpack')
+import webpack from 'webpack'
 
-const BabiliPlugin = require('babili-webpack-plugin')
-const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const SimpleProgressPlugin = require('webpack-simple-progress-plugin')
+import BabiliPlugin from 'babili-webpack-plugin'
+import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import SimpleProgressPlugin from 'webpack-simple-progress-plugin'
 
-const elements = require('./data/dist/basic')
+import elements from './data/dist/basic'
 
 module.exports = env => {
   const devMode = env !== 'production'
