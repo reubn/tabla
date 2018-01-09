@@ -1,5 +1,3 @@
-import 'babel-polyfill'
-
 import React from 'react'
 import {renderToString, renderToStaticMarkup} from 'react-dom/server'
 

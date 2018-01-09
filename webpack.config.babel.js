@@ -15,7 +15,7 @@ export default env => {
   const config = {
     entry: {
       client: ['babel-polyfill', './src/client.js'],
-      static: './src/static.js'
+      static: ['babel-polyfill', './src/static.js']
     },
     output: {
       path: devMode ? '/' : path.resolve('./dist'),
