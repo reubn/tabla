@@ -2,6 +2,7 @@ import React from 'react'
 
 import PeriodicTableContainer from '../PeriodicTableContainer'
 import InfoContainer from '../InfoContainer'
+import AboutContainer from '../AboutContainer'
 import Logo from '../Logo'
 
 import {app} from './style'
@@ -11,6 +12,7 @@ const App = () => (
     <Logo />
     <PeriodicTableContainer />
     <InfoContainer />
+    <AboutContainer />
   </section>
 )
 

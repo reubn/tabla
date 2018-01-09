@@ -1,0 +1,18 @@
+.about {
+  position: absolute;
+  width: 70vmin;
+  height: 50vmin;
+  z-index: 100;
+  top: calc((100vh - 50vmin) / 2);
+  left: calc((100vw - 70vmin) / 2);
+  border-radius: 5px;
+  background: var(--colours-white);
+  box-shadow: 0 0 200px 52px var(--colours-blue-dark);
+  opacity: 0;
+  display: none;
+}
+
+.open {
+  opacity: 1;
+  display: flex;
+}
