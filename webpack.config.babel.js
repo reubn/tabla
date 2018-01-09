@@ -12,6 +12,8 @@ import elements from './data/dist/basic'
 
 export default env => {
   const devMode = env !== 'production'
+  const testElements = Object.keys(elements).slice(1, devMode ? 18 + 1 : undefined)
+
   const config = {
     entry: {
       client: ['babel-polyfill', './src/client.js'],
@@ -90,15 +92,17 @@ export default env => {
       new StaticSiteGeneratorPlugin({
         entry: 'static',
         locals: {
-          chunks: ['client.js']
+          chunks: ['client.js'],
+          testElements
         }
       }),
-      ...(devMode ? Object.keys(elements).slice(1, 18 + 1) : Object.keys(elements).slice(1)).map(atomicNumber =>
+      ...testElements.map(atomicNumber =>
         new StaticSiteGeneratorPlugin({
           entry: 'static',
           paths: `${atomicNumber}.html`,
           locals: {
             atomicNumber,
+            testElements,
             chunks: ['client.js']
           }
         })),
