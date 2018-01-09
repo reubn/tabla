@@ -25,11 +25,13 @@ export default ({atomicNumber, testElements, webpackStats: {compilation: {assets
   global.fullElementHack = atomicNumber ? new FullElement(atomicNumber, fullElements[atomicNumber]) : {}
 
   const renderedAppString = renderToString(<Root store={store} />)
-  const stateScriptString =
-    `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')};
-     window.dryfullElement = ${JSON.stringify(atomicNumber ? fullElements[atomicNumber] : {}).replace(/</g, '\\u003c')}`
 
-  const documentString = renderToStaticMarkup(<Document chunks={chunks} styleTagString={styleTagString} renderedAppString={renderedAppString} stateScriptString={stateScriptString} />)
+  const dryStateString = `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')};`
+  const dryFullElementString = `window.dryfullElement = ${JSON.stringify(atomicNumber ? fullElements[atomicNumber] : {}).replace(/</g, '\\u003c')}`
+  const continuityScriptString = dryStateString + dryFullElementString
+
+
+  const documentString = renderToStaticMarkup(<Document chunks={chunks} styleTagString={styleTagString} renderedAppString={renderedAppString} continuityScriptString={continuityScriptString} />)
 
   process.stdout.cursorTo(45)
   process.stdout.clearLine(1)
