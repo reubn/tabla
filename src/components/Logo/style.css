@@ -8,8 +8,18 @@
   z-index: 10;
 }
 
+.lightBackground{
+  --resting: var(--colours-blue-dark-2);
+  --active: var(--colours-blue-dark-2);
+}
+
+.darkBackground{
+  --resting: var(--colours-blue-dark-2);
+  --active: var(--colours-white-1);
+}
+
 .dot, .cross {
-  fill: var(--colours-blue-dark-2);
+  fill: var(--resting);
   transition: fill 0.25s cubic-bezier(0.47, 0, 0.75, 0.72);
   height: 50px;
   rx: 8;
@@ -24,5 +34,5 @@
 }
 
 .logo:hover .dot {
-  fill: var(--colours-white-1);
+  fill: var(--active);
 }
