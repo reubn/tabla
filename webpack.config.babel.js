@@ -10,7 +10,7 @@ import SimpleProgressPlugin from 'webpack-simple-progress-plugin'
 
 import elements from './data/dist/basic'
 
-module.exports = env => {
+export default env => {
   const devMode = env !== 'production'
   const config = {
     entry: {
@@ -87,10 +87,6 @@ module.exports = env => {
       ]
     },
     plugins: [
-      // new webpack.optimize.CommonsChunkPlugin({
-      //   name: 'COMMON',
-      //   chunks: elements.map(atomicNumber => `./elements/output/${atomicNumber}`)
-      // }),
       new StaticSiteGeneratorPlugin({
         entry: 'static',
         locals: {
