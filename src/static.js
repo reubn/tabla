@@ -28,7 +28,7 @@ export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilatio
   const renderedAppString = renderToString(<Root store={store} />)
 
   const dryStateString = `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
-  const dryFullElementString = `window.dryfullElement = ${JSON.stringify(atomicNumberHack ? fullElements[atomicNumberHack] : {}).replace(/</g, '\\u003c')}`
+  const dryFullElementString = atomicNumberHack ? `window.dryfullElement = ${JSON.stringify(fullElements[atomicNumberHack]).replace(/</g, '\\u003c')}` : ''
   const continuityScriptString = [dryStateString, dryFullElementString].join(';')
 
 
