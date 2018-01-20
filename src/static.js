@@ -21,8 +21,9 @@ export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilatio
 
   const styleTagString = collectStyles()
 
-  // HACK: Pass FullElement down for render
   const atomicNumberHack = store.getState().periodicTable.selectedElement
+
+  // HACK: Pass FullElement down for render
   global.fullElementHack = typeof atomicNumberHack === 'number' ? new FullElement(atomicNumberHack, fullElements[atomicNumberHack]) : {}
 
   const renderedAppString = renderToString(<Root store={store} />)
