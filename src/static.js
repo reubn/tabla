@@ -32,7 +32,14 @@ export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilatio
   const continuityScriptString = [dryStateString, dryFullElementString].join(';')
 
 
-  const documentString = renderToStaticMarkup(<Document chunks={chunks} styleTagString={styleTagString} renderedAppString={renderedAppString} continuityScriptString={continuityScriptString} />)
+  const documentString = renderToStaticMarkup((
+    <Document
+      chunks={chunks}
+      styleTagString={styleTagString}
+      renderedAppString={renderedAppString}
+      continuityScriptString={continuityScriptString}
+    />
+  ))
 
   process.stdout.cursorTo(45)
   process.stdout.clearLine(1)
