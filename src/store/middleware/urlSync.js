@@ -18,7 +18,7 @@ export default routes => ({getState, dispatch}) => next => action => {
 
   if(matchingRoute && action.triggerRedirect){
     transitionID = Math.random()
-    dispatch(push(matchingRoute.pathCreator(action), {transitionID}))
+    dispatch(push(matchingRoute.pathCreator(action, getState), {transitionID}))
   }
 
   return next(action)
