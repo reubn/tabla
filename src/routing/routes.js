@@ -11,6 +11,7 @@ export default [
     path: '/:atomicNumber',
     action: 'SELECT_ELEMENT',
     actionCreator: (getState, dispatch, {params: {atomicNumber}={}}) => selectElement(dispatch, +atomicNumber || null, false),
-    pathCreator: ({atomicNumber}) => `/${atomicNumber || ''}`
+    pathCreator: ({atomicNumber}) => `/${atomicNumber || ''}`,
+    dataSource: ({elements}) => elements.map(element => ({atomicNumber: element}))
   }
 ]
