@@ -19,7 +19,6 @@ export default env => {
     elements: Object.keys(elements).slice(1, devMode ? 18 + 1 : undefined)
   }
   const routerPaths = getRouterPaths(routesData)
-  console.log(routerPaths)
 
   const config = {
     entry: {
