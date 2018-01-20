@@ -43,7 +43,7 @@ export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilatio
 
   process.stdout.cursorTo(45)
   process.stdout.clearLine(1)
-  process.stdout.write(`rendering page ${routeNumber} / ${routerPaths.length}`)
+  process.stdout.write(`rendering path ${routerPath} ${routeNumber} / ${routerPaths.length}`)
 
   return `<!DOCTYPE html> ${documentString}`
 }
