@@ -8,11 +8,18 @@ import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 import SimpleProgressPlugin from 'webpack-simple-progress-plugin'
 
+import {getRouterPaths} from './src/routing'
+
 import elements from './data/dist/basic'
 
 export default env => {
   const devMode = env !== 'production'
-  const testElements = Object.keys(elements).slice(1, devMode ? 18 + 1 : undefined)
+
+  const routesData = {
+    elements: Object.keys(elements).slice(1, devMode ? 18 + 1 : undefined)
+  }
+  const routerPaths = getRouterPaths(routesData)
+  console.log(routerPaths)
 
   const config = {
     entry: {
@@ -89,23 +96,15 @@ export default env => {
       ]
     },
     plugins: [
-      new StaticSiteGeneratorPlugin({
+      ...routerPaths.map((routerPath, routeNumber) => new StaticSiteGeneratorPlugin({
         entry: 'static',
+        paths: routerPath.endsWith('.html') ? routerPath : `${routerPath}.html`,
         locals: {
-          chunks: ['client.js'],
-          testElements
+          routerPath,
+          routeNumber,
+          routerPaths
         }
-      }),
-      ...testElements.map(atomicNumber =>
-        new StaticSiteGeneratorPlugin({
-          entry: 'static',
-          paths: `${atomicNumber}.html`,
-          locals: {
-            atomicNumber,
-            testElements,
-            chunks: ['client.js']
-          }
-        })),
+      })),
       new SimpleProgressPlugin(),
       new CopyWebpackPlugin([{
         from: './data/dist/'

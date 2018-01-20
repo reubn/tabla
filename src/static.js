@@ -13,21 +13,22 @@ import {history, linkHistoryToStore} from './routing'
 import Document from './components/Document'
 import Root from './components/Root'
 
-export default ({atomicNumber, testElements, webpackStats: {compilation: {assets}}}) => {
+export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilation: {assets}}}) => {
   const chunks = Object.keys(assets).filter(name => name !== 'static.js' && name.match(/\.js$/))
 
-  history.push(`/${atomicNumber||''}`)
+  history.push(routerPath)
   linkHistoryToStore(store)
 
   const styleTagString = collectStyles()
 
   // HACK: Pass FullElement down for render
-  global.fullElementHack = atomicNumber ? new FullElement(atomicNumber, fullElements[atomicNumber]) : {}
+  const atomicNumberHack = store.getState().periodicTable.selectedElement
+  global.fullElementHack = typeof atomicNumberHack === 'number' ? new FullElement(atomicNumberHack, fullElements[atomicNumberHack]) : {}
 
   const renderedAppString = renderToString(<Root store={store} />)
 
   const dryStateString = `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
-  const dryFullElementString = `window.dryfullElement = ${JSON.stringify(atomicNumber ? fullElements[atomicNumber] : {}).replace(/</g, '\\u003c')}`
+  const dryFullElementString = `window.dryfullElement = ${JSON.stringify(atomicNumberHack ? fullElements[atomicNumberHack] : {}).replace(/</g, '\\u003c')}`
   const continuityScriptString = [dryStateString, dryFullElementString].join(';')
 
 
@@ -35,7 +36,7 @@ export default ({atomicNumber, testElements, webpackStats: {compilation: {assets
 
   process.stdout.cursorTo(45)
   process.stdout.clearLine(1)
-  process.stdout.write(`rendering page ${atomicNumber || 'H'} / ${testElements.length}`)
+  process.stdout.write(`rendering page ${routeNumber} / ${routerPaths.length}`)
 
   return `<!DOCTYPE html> ${documentString}`
 }
