@@ -85,7 +85,7 @@
   "settings": {
     "import/resolver": {
       "webpack": {
-        "config": "./webpack.config.js"
+        "config": "webpack.config.babel.js"
       }
     },
     "import/ignore": [(.*)?node_modules(.*)?, \.(scss|less|css)$],
