@@ -26,9 +26,9 @@ export default ({atomicNumber, testElements, webpackStats: {compilation: {assets
 
   const renderedAppString = renderToString(<Root store={store} />)
 
-  const dryStateString = `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')};`
+  const dryStateString = `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
   const dryFullElementString = `window.dryfullElement = ${JSON.stringify(atomicNumber ? fullElements[atomicNumber] : {}).replace(/</g, '\\u003c')}`
-  const continuityScriptString = dryStateString + dryFullElementString
+  const continuityScriptString = [dryStateString, dryFullElementString].join(';')
 
 
   const documentString = renderToStaticMarkup(<Document chunks={chunks} styleTagString={styleTagString} renderedAppString={renderedAppString} continuityScriptString={continuityScriptString} />)
