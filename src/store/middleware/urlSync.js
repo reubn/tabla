@@ -1,20 +1,24 @@
-import {matchPath} from 'react-router-dom'
+import {matchPath} from 'react-router'
 import {LOCATION_CHANGE, push} from 'react-router-redux'
-
-import selectElement from '../actions/selectElement'
 
 let transitionID = Math.random()
 
-export default ({dispatch}) => next => action => {
-  if(action.type === 'SELECT_ELEMENT' && action.triggerRedirect){
-    transitionID = Math.random()
-    dispatch(push(`/${action.atomicNumber || ''}`, {transitionID}))
+export default routes => ({getState, dispatch}) => next => action => {
+  if(action.type === LOCATION_CHANGE && (!action.payload.state || action.payload.state.transitionID !== transitionID)){
+    const matchingRoute = routes.find(({path: p}) => (typeof p === 'function' ? p : pn => matchPath(pn, {path: p}))(action.payload.pathname))
+
+    if(matchingRoute){
+      const result = matchPath(action.payload.pathname, {path: matchingRoute.path})
+      transitionID = Math.random()
+      matchingRoute.actionCreator(getState, dispatch, result)
+    }
   }
 
-  if(action.type === LOCATION_CHANGE && (!action.payload.state || action.payload.state.transitionID !== transitionID)){
-    const {params: {atomicNumber}={}} = matchPath(action.payload.pathname, {path: '/:atomicNumber'}) || {}
+  const matchingRoute = routes.find(({action: a}) => (typeof a === 'function' ? a : ({type: t}) => t === a)(action))
+
+  if(matchingRoute && action.triggerRedirect){
     transitionID = Math.random()
-    selectElement(dispatch, +atomicNumber || null, false)
+    dispatch(push(matchingRoute.pathCreator(action), {transitionID}))
   }
 
   return next(action)
