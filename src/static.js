@@ -21,15 +21,15 @@ export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilatio
 
   const styleTagString = collectStyles()
 
-  const atomicNumberHack = store.getState().periodicTable.selectedElement
+  const atomicNumber = store.getState().periodicTable.selectedElement
 
   // HACK: Pass FullElement down for render
-  global.fullElementHack = typeof atomicNumberHack === 'number' ? new FullElement(atomicNumberHack, fullElements[atomicNumberHack]) : {}
+  global.fullElementHack = typeof atomicNumber === 'number' ? new FullElement(atomicNumber, fullElements[atomicNumber]) : {}
 
   const renderedAppString = renderToString(<Root store={store} />)
 
   const dryStateString = `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
-  const dryFullElementString = atomicNumberHack ? `window.dryfullElement = ${JSON.stringify(fullElements[atomicNumberHack]).replace(/</g, '\\u003c')}` : ''
+  const dryFullElementString = atomicNumber ? `window.dryfullElement = ${JSON.stringify(fullElements[atomicNumber]).replace(/</g, '\\u003c')}` : ''
   const continuityScriptString = [dryStateString, dryFullElementString].join(';')
 
 
