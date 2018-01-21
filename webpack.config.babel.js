@@ -6,6 +6,7 @@ import webpack from 'webpack'
 import BabiliPlugin from 'babili-webpack-plugin'
 import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
+import NoEmitPlugin from 'no-emit-webpack-plugin'
 import SimpleProgressPlugin from 'webpack-simple-progress-plugin'
 
 import {getRouterPaths} from './src/routing'
@@ -115,7 +116,8 @@ export default env => {
         __DEVTOOLS__: devMode,
         __BUILD__: JSON.stringify(devMode ? 'DEV' : childProcess.execSync('git rev-parse HEAD').toString().trim())
       }),
-      !devMode ? new BabiliPlugin() : () => undefined
+      !devMode ? new BabiliPlugin() : () => undefined,
+      new NoEmitPlugin('static.js')
     ],
     devServer: {
       contentBase: './dist',
