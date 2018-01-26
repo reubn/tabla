@@ -1,9 +1,6 @@
 import React from 'react'
 import {renderToString, renderToStaticMarkup} from 'react-dom/server'
 
-
-import {collectInitial as collectStyles} from 'node-style-loader/collect' // eslint-disable-line import/no-extraneous-dependencies
-
 import fullElements from '../data/dist/full'
 import {FullElement} from './elements'
 
@@ -13,13 +10,13 @@ import {history, linkHistoryToStore} from './routing'
 import Document from './components/Document'
 import Root from './components/Root'
 
-export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilation: {hash, assets}}}) => {
+export default ({routerPath, routeNumber, routerPaths, cssIdentifier, webpackStats: {compilation: {hash, assets}}}) => {
   const chunks = Object.keys(assets).filter(name => name !== 'static.js' && name.match(/\.js$/))
 
   history.push(routerPath)
   linkHistoryToStore(store)
 
-  const styleTagString = collectStyles()
+  const cssString = assets[cssIdentifier].children[0]._value
 
   const atomicNumber = store.getState().periodicTable.selectedElement
 
@@ -39,7 +36,7 @@ export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilatio
   const documentString = renderToStaticMarkup((
     <Document
       chunks={chunks}
-      styleTagString={styleTagString}
+      cssString={cssString}
       renderedAppString={renderedAppString}
       continuityScriptString={continuityScriptString}
     />

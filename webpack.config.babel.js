@@ -8,6 +8,7 @@ import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 import NoEmitPlugin from 'no-emit-webpack-plugin'
 import SimpleProgressPlugin from 'webpack-simple-progress-plugin'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 import {getRouterPaths} from './src/routing'
 
@@ -20,6 +21,8 @@ export default env => {
     elements: Object.keys(elements).slice(1, devMode ? 18 + 1 : undefined)
   }
   const routerPaths = getRouterPaths(routesData)
+
+  const cssIdentifier = 'css.css'
 
   const config = {
     entry: {
@@ -43,17 +46,14 @@ export default env => {
         {
           test: /\.css$/,
           exclude: /node_modules/,
-          use: [
-            'node-style-loader',
-            {
-              loader: 'css-loader',
+          use: ExtractTextPlugin.extract({
+            use: {loader: 'css-loader',
               query: {
                 localIdentName: devMode ? '[local]-[emoji:1]' : '[emoji:2]',
                 modules: true,
                 minimize: !devMode
-              }
-            }
-          ]
+              }}
+          })
         },
         {
           test: /\.css$/,
@@ -102,9 +102,13 @@ export default env => {
         locals: {
           routerPath,
           routeNumber,
-          routerPaths
+          routerPaths,
+          cssIdentifier
         }
       })),
+      new ExtractTextPlugin(cssIdentifier, {
+        allChunks: true
+      }),
       new SimpleProgressPlugin(),
       new CopyWebpackPlugin([{
         from: './data/dist/'
@@ -116,7 +120,7 @@ export default env => {
         __DEVTOOLS__: devMode
       }),
       !devMode ? new BabiliPlugin() : () => undefined,
-      new NoEmitPlugin('static.js')
+      new NoEmitPlugin(['static.js', 'static.map.js', 'all.css'])
     ],
     devServer: {
       contentBase: './dist',
