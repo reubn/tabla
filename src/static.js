@@ -13,7 +13,7 @@ import {history, linkHistoryToStore} from './routing'
 import Document from './components/Document'
 import Root from './components/Root'
 
-export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilation: {assets}}}) => {
+export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilation: {hash, assets}}}) => {
   const chunks = Object.keys(assets).filter(name => name !== 'static.js' && name.match(/\.js$/))
 
   history.push(routerPath)
@@ -23,6 +23,8 @@ export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilatio
 
   const atomicNumber = store.getState().periodicTable.selectedElement
 
+  global.build = `${process.env.NODE_ENV !== 'production' ? 'd' : 'p'}${hash}`
+
   // HACK: Pass FullElement down for render
   global.fullElementHack = typeof atomicNumber === 'number' ? new FullElement(atomicNumber, fullElements[atomicNumber]) : {}
 
@@ -30,7 +32,8 @@ export default ({routerPath, routeNumber, routerPaths, webpackStats: {compilatio
 
   const dryStateString = `window.dryState = ${JSON.stringify(store.getState()).replace(/</g, '\\u003c')}`
   const dryFullElementString = atomicNumber ? `window.dryfullElement = ${JSON.stringify(fullElements[atomicNumber]).replace(/</g, '\\u003c')}` : ''
-  const continuityScriptString = [dryStateString, dryFullElementString].join(';')
+  const buildString =`window.build = ${JSON.stringify(global.build)}`
+  const continuityScriptString = [dryStateString, dryFullElementString, buildString].join(';')
 
 
   const documentString = renderToStaticMarkup((

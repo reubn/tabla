@@ -113,8 +113,7 @@ export default env => {
         'process.env': {
           NODE_ENV: JSON.stringify(devMode ? 'development' : 'production')
         },
-        __DEVTOOLS__: devMode,
-        __BUILD__: JSON.stringify(devMode ? 'DEV' : childProcess.execSync('git rev-parse HEAD').toString().trim())
+        __DEVTOOLS__: devMode
       }),
       !devMode ? new BabiliPlugin() : () => undefined,
       new NoEmitPlugin('static.js')
