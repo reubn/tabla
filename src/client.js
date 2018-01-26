@@ -1,5 +1,3 @@
-/* global __BUILD__:true */
-
 import React from 'react'
 import {hydrate} from 'react-dom'
 
