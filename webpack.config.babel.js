@@ -119,7 +119,7 @@ export default env => {
         __DEVTOOLS__: devMode
       }),
       !devMode ? new BabiliPlugin() : () => undefined,
-      new NoEmitPlugin(['static.js', 'static.map.js', 'all.css'])
+      new NoEmitPlugin(['static.js', 'static.map.js', cssIdentifier])
     ],
     devServer: {
       contentBase: './dist',
