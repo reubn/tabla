@@ -81,24 +81,6 @@
   color: var(--colours-grey-5);
 }
 
-.close {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  font-size: 1.5rem;
-  color: var(--colours-grey);
-  text-align: center;
-  user-select: none;
-  cursor: pointer;
-  transition: color 0.1s ease-in;
-  z-index: 2;
-}
-
-.close:hover {
-  transition: color 0.1s ease-out;
-  color: var(--colours-grey-1);
-}
-
 .alkaliMetal {--group-colour: var(--colours-alkaliMetal); --group-gradient: var(--gradients-alkaliMetal);}
 .nonMetal {--group-colour: var(--colours-nonMetal); --group-gradient: var(--gradients-nonMetal);}
 .transitionMetal {--group-colour: var(--colours-transitionMetal); --group-gradient: var(--gradients-transitionMetal);}
@@ -120,12 +102,6 @@
     z-index: 100;
     top: 0;
     left: 0;
-  }
-
-  .close {
-    font-size: 4rem;
-    top: 4rem;
-    left: 4rem;
   }
 
   .name {

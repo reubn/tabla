@@ -4,10 +4,12 @@ import classnames from 'classnames'
 
 import {basicElements} from '../../../elements'
 
+import Close from '../../Close'
+
 import Diagram from './Diagram'
 import Data from './Data'
 
-import {info, open, header, name as nameStyle, close as closeStyle, enter, enterActive, exit, exitActive, appear, appearActive,
+import {info, open, header, name as nameStyle, enter, enterActive, exit, exitActive, appear, appearActive,
   alkaliMetal, halogen, nonMetal, transitionMetal, nobleGas, postTransitionMetal, metalloid, alkalineEarthMetal, actinoid, lanthanoid, unknown} from './style'
 
 const groupColours = {
@@ -57,7 +59,7 @@ class Info extends Component {
       >
         <section className={classnames(info, {[open]: this.props.elementSelected}, groupColours[this.state.element.groupBlock] || unknown)}>
           <header className={header}>
-            <span className={closeStyle} onClick={this.props.close}>✕</span>
+            <Close onClick={this.props.close} />
             <a href={`//en.wikipedia.org/wiki/Element_${this.state.element.atomicNumber}`} target="_blank" rel="noopener noreferrer" className={nameStyle}>{this.state.element.name}</a>
             <Diagram element={this.state.element} />
           </header>

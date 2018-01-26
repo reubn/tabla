@@ -1,0 +1,27 @@
+.close {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--colours-grey);
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  transition: color 0.1s ease-in;
+  z-index: 2;
+}
+
+.close:hover {
+  transition: color 0.1s ease-out;
+  color: var(--colours-grey-1);
+}
+
+@media only screen
+  and (max-device-width: 1000px)
+  and (orientation: portrait) {
+  .close {
+    font-size: 4rem;
+    top: 4rem;
+    left: 4rem;
+  }
+}
