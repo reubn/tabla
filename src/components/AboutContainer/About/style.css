@@ -15,4 +15,10 @@
 .open {
   opacity: 1;
   display: flex;
+.logo {
+  --size: 9rem;
+
+  height: var(--size);
+  margin: calc(var(--size) / 3) 0;
+}
 }

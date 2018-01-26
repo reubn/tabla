@@ -4,8 +4,8 @@ import classnames from 'classnames'
 
 import {logo, dot, cross, lightBackground, darkBackground} from './style'
 
-const Logo = ({light=false, dotClassname=classnames(dot, light ? lightBackground : darkBackground), crossClassname=classnames(cross, light ? lightBackground : darkBackground)}) => (
-    <svg viewBox="0 0 264 264" className={logo}>
+const Logo = ({light=false, dotClassname=classnames(dot, light ? lightBackground : darkBackground), crossClassname=classnames(cross, light ? lightBackground : darkBackground), className, ...props}) => (
+    <svg {...props} viewBox="0 0 264 264" className={classnames(className, logo)}>
       <rect className={dotClassname} transform="rotate(45 132 35.833)" x="107" y="10.833" width="50" />
       <rect className={dotClassname} transform="rotate(45 228.167 132)" x="203.167" y="107" width="50" />
       <rect className={dotClassname} transform="rotate(45 35.833 132)" x="10.833" y="107" width="50" />

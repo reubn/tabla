@@ -6,12 +6,12 @@ import AboutContainer from '../AboutContainer'
 import Link from '../Link'
 import Logo from '../Logo'
 
-import {app} from './style'
+import {app, logo} from './style'
 
 const App = () => (
   <section className={app}>
     <Link to="/about">
-      <Logo />
+      <Logo className={logo} />
     </Link>
     <PeriodicTableContainer />
     <InfoContainer />
