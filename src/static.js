@@ -16,7 +16,7 @@ export default ({routerPath, routeNumber, routerPaths, cssIdentifier, webpackSta
   history.push(routerPath)
   linkHistoryToStore(store)
 
-  const cssString = assets[cssIdentifier].children[0]._value
+  const cssString = assets[cssIdentifier].children.reduce((string, {_value}) => string + _value, '')
 
   const atomicNumber = store.getState().periodicTable.selectedElement
 
