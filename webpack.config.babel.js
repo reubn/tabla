@@ -1,4 +1,3 @@
-import childProcess from 'child_process'
 import path from 'path'
 
 import webpack from 'webpack'
