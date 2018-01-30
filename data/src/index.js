@@ -2,11 +2,16 @@ const fs = require('fs')
 
 const fetch = require('node-fetch')
 const cheerio = require('cheerio')
+const makeDir = require('make-dir')
 
 const groupBlocks = require('./groupBlocks')
 
 const atomicNumberToURL = atomicNumber => `https://www.rsc.org/periodic-table/element/${atomicNumber}`
-const atomicNumberToCachePath = atomicNumber => `${__dirname}/../cache/${atomicNumber}`
+
+const cachePath = `${__dirname}/../cache/`
+makeDir(cachePath)
+
+const atomicNumberToCachePath = atomicNumber => `${cachePath}${atomicNumber}`
 
 const getFromRSC = atomicNumber => fetch(atomicNumberToURL(atomicNumber)).then(res => res.text()).catch(() => false)
 const saveToCache = (atomicNumber, content) => new Promise(resolve => fs.writeFile(atomicNumberToCachePath(atomicNumber), content, err => resolve(err ? false : content)))
@@ -93,9 +98,10 @@ Promise.all(Array(118).fill().map((_, i) => start(i + 1)))
     electronicConfiguration: element.electronicConfiguration.map(p => typeof p === 'string' ? array.find(({symbol}) => symbol === p).atomicNumber : p)
   })))
   // .then(test => test.forEach(e => console.log(e.name, JSON.stringify(e.electronicConfiguration, null, 2))))
-  .then(full => {
+  .then(async full => ({full, path: await makeDir(`${__dirname}/../dist`)}))
+  .then(({full, path}) => {
     // Full
-    fs.writeFile(`${__dirname}/../dist/full.json`, JSON.stringify([0, ...full]), () => 0)
+    fs.writeFile(`${path}/full.json`, JSON.stringify([0, ...full]), () => console.log('Output', 'full'))
 
     // Basic
     const basic = [0, ...full.map(element => ({
@@ -106,11 +112,11 @@ Promise.all(Array(118).fill().map((_, i) => start(i + 1)))
       groupBlock: element.groupBlock,
       electronicConfiguration: element.electronicConfiguration
     }))]
-    fs.writeFile(`${__dirname}/../dist/basic.json`, JSON.stringify(basic), () => 0)
+    fs.writeFile(`${path}/basic.json`, JSON.stringify(basic), () => console.log('Output', 'basic'))
 
     // Individual
     full.forEach(element => {
-      fs.writeFile(`${__dirname}/../dist/${element.atomicNumber}.json`, JSON.stringify(element), () => 0)
+      fs.writeFile(`${path}/${element.atomicNumber}.json`, JSON.stringify(element), () => console.log('Output', element.atomicNumber))
     })
   })
   .catch(err => console.error(err))
