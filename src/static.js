@@ -1,3 +1,5 @@
+import readline from 'readline'
+
 import React from 'react'
 import {renderToString, renderToStaticMarkup} from 'react-dom/server'
 
@@ -42,8 +44,8 @@ export default ({routerPath, routeNumber, routerPaths, cssIdentifier, webpackSta
     />
   ))
 
-  process.stdout.cursorTo(45)
-  process.stdout.clearLine(1)
+  readline.cursorTo(process.stdout, 45)
+  readline.clearLine(process.stdout, 1)
   process.stdout.write(`rendering path ${routerPath} ${routeNumber + 1} / ${routerPaths.length}`)
 
   return `<!DOCTYPE html> ${documentString}`
