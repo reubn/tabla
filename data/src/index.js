@@ -53,7 +53,7 @@ const processPage = async (atomicNumber, content) => {
     period: +page('.text_bold.tlbox_even_ca.trbox_ca:nth-of-type(2)').text().trim(),
     block: page('.element_hover_table_ca > tbody > tr:nth-of-type(3) > .text_bold.trbox_ca:nth-of-type(2)').text().trim(),
     stateAt20c: page('.element_hover_table_ca > tbody > tr:nth-of-type(5) > .text_bold.trbox_ca:nth-of-type(2)').text().trim(),
-    electronicConfiguration: page('.alternate_style:nth-of-type(6) > .text_bold.tdlast_ca.trbox_ca:nth-of-type(2)').html().trim()
+    electronicConfiguration: (page('.alternate_style:nth-of-type(6) > .text_bold.tdlast_ca.trbox_ca:nth-of-type(2)').html() || '').trim()
       .split(/\s/)
       .reduce((a, b) => [
         ...a,
