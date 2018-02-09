@@ -10,9 +10,7 @@ import {app, logo} from './style'
 
 const App = () => (
   <section className={app}>
-    <Link to="/about">
-      <Logo className={logo} />
-    </Link>
+    <Logo className={logo} />
     <PeriodicTableContainer />
     <InfoContainer />
     <AboutContainer />
