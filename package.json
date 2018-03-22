@@ -43,6 +43,7 @@
     "webpack-simple-progress-plugin": "^0.0.3"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "classnames": "^2.2.5",
     "fuse.js": "^3.2.0",
     "history": "^4.7.2",
@@ -61,7 +62,7 @@
   },
   "scripts": {
     "start": "sudo node_modules/.bin/webpack-dev-server --env=development",
-    "data": "sudo node data/src",
+    "data": "sudo babel-node data/src",
     "build": "sudo node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js --env=production",
     "deploy": "sudo sh -c 'node -pe \"require(\\`./package.json\\`).homepage\" > dist/CNAME' && gh-pages -m '🎉' -d dist",
     "lint": "eslint ./ || true",
