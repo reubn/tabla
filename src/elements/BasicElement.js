@@ -5,14 +5,14 @@ import basicJSON from '../../data/dist/basic'
 import subshellOrder from './subshellOrder'
 
 export default class BasicElement {
-  constructor(atomicNumber, {name, symbol, atomicMass, electronicConfiguration, groupBlock}){
+  constructor(atomicNumber, {n, s, am, ec, gb}){
     this.atomicNumber = atomicNumber
 
-    this.name = name
-    this.symbol = symbol
-    this.atomicMass = atomicMass
-    this.electronicConfigurationRaw = electronicConfiguration
-    this.groupBlock = groupBlock
+    this.name = n
+    this.symbol = s
+    this.atomicMass = am
+    this.electronicConfigurationRaw = ec.map(part => part.sh ? {shell: part.sh, subshell: part.su, electrons: part.e} : part)
+    this.groupBlock = gb
   }
 
   electronicConfiguration(expanded=true, format=true){

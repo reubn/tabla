@@ -11,8 +11,8 @@ import formatElement from './formatElement'
 const cacheFolder = `${__dirname}/../cache`
 const cacheFilename = `${cacheFolder}/data.db`
 
-const distFolder = `${__dirname}/../cache`
-const distMasterFilename = `${distFolder}/master.json`
+const distFolder = `${__dirname}/../dist`
+const distFullFilename = `${distFolder}/full.json`
 const distBasicFilename = `${distFolder}/basic.json`
 const distIndividualFilename = atomicNumber => `${distFolder}/${atomicNumber}.json`
 
@@ -49,19 +49,11 @@ const go = async () => {
 
   await distDirectory
 
-  // Master
-  writeFile(distMasterFilename, JSON.stringify([0, ...elements]), () => console.log('Output Master'))
+  // Full
+  writeFile(distFullFilename, JSON.stringify([0, ...elements]), () => console.log('Output Full'))
 
   // Basic
-  const basic = elements.map(element => ({
-    n: element.n,
-    s: element.s,
-    am: element.am,
-    an: element.an,
-    gb: element.gb,
-    ec: element.ec
-  }))
-  writeFile(distBasicFilename, JSON.stringify([0, ...basic]), () => console.log('Output Basic'))
+  writeFile(distBasicFilename, JSON.stringify([0, ...elements], ['n', 's', 'am', 'an', 'gb', 'ec', 'sh', 'su', 'e']), () => console.log('Output Basic'))
 
   // Individual
   elements.forEach(element => {

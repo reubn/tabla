@@ -38,7 +38,7 @@ export default ({ieData, isotopesData, oxidationStatesData}) => data => {
 
     eh: data.evaporation_heat,
     fh: data.fusion_heat,
-    sh: data.specific_heat,
+    sph: data.specific_heat,
     hof: data.heat_of_formation,
     tc: data.thermal_conductivity,
 
