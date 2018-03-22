@@ -44,7 +44,7 @@ const go = async () => {
 
   const elements = elementsData.map(formatElement({ieData, isotopesData, oxidationStatesData})).map((element, index, all) => typeof element.ec[0] === 'string' ? {
     ...element,
-    ec: [all.find(({s}) => s === element.ec[0]).an, element.ec.slice(1)]
+    ec: [all.find(({s}) => s === element.ec[0]).an, ...element.ec.slice(1)]
   } : element)
 
   await distDirectory
