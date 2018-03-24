@@ -1,8 +1,11 @@
 import FullElement from './FullElement'
+import {basicElements} from './BasicElement'
 
 export const fullElementsCache = typeof window === 'object' && window.dryfullElement ? {[+window.dryfullElement.an]: new FullElement(window.dryfullElement.an, window.dryfullElement)} : {}
 
 // FullElement is not available initally as code in the global namespace is run before atomicNumbers are passed in from webpack
+
+export const bestElement = atomicNumber => fullElementsCache[atomicNumber] || basicElements[atomicNumber]
 
 export const fullElement = async atomicNumber => {
   if(!atomicNumber) return {}
@@ -24,6 +27,7 @@ export const fullElement = async atomicNumber => {
 }
 
 export {default as layout} from './layout'
+export {default as BasicElement} from './BasicElement'
 
-export {default as BasicElement, basicElements} from './BasicElement'
+export {basicElements}
 export {FullElement}

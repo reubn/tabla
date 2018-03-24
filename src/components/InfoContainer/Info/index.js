@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {CSSTransition} from 'react-transition-group'
 import classnames from 'classnames'
 
-import {basicElements} from '../../../elements'
+import {bestElement} from '../../../elements'
 
 import Close from '../../Close'
 
@@ -30,7 +30,7 @@ class Info extends Component {
   constructor({atomicNumber}){
     super()
     this.state = {
-      element: typeof window === 'object' ? (atomicNumber ? basicElements[atomicNumber] : {}) : (global.fullElementHack || {})
+      element: bestElement(atomicNumber) || {}
     }
   }
   async componentWillMount(){
@@ -44,7 +44,7 @@ class Info extends Component {
     const oldAtomicNumber = this.props.atomicNumber
     if((newAtomicNumber === oldAtomicNumber) || !newAtomicNumber) return
 
-    this.setState({element: newAtomicNumber ? basicElements[newAtomicNumber] : {}})
+    this.setState({element: bestElement(newAtomicNumber) || {}})
 
     const resolvedElement = await fullElement
     this.setState({element: resolvedElement})
