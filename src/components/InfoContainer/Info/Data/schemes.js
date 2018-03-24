@@ -23,7 +23,7 @@ const schemes = [
     formats: [element => ({title: 'Ionisation Energies', content: element.ionisationEnergies.join(', '), unit: 'kJ mol⁻¹'})]
   },
   {
-    test: element => element.keyIsotopes&& element.keyIsotopes.length,
+    test: element => element.keyIsotopes && element.keyIsotopes.length,
     formats: [element => ({title: 'Key Isotopes', content: element.keyIsotopes.length ? element.keyIsotopes.join(', ') : element.keyIsotopes})]
   },
   {
