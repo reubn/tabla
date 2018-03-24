@@ -19,11 +19,11 @@ export default class FullElement extends BasicElement {
     this.boilingPoint = json.bp
     this.density = json.dp
 
-    this.isotopes = json.i.map(({n, a, r , hl:{t, u}={}}) => ({
+    this.isotopes = json.i ? json.i.map(({n, a, r, hl: {t, u}={}}) => ({
       neutrons: n,
       abundance: a,
       radioactive: r,
       halfLife: t ? {time: t, unit: u} : undefined
-    }))
+    })) : undefined
   }
 }
