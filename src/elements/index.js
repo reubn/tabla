@@ -7,6 +7,12 @@ export const fullElement = async atomicNumber => {
 
   if(fullElementsCache[atomicNumber]) return fullElementsCache[atomicNumber]
 
+  if(typeof window !== 'object' && atomicNumber === global.fullElementHack.atomicNumber){
+    fullElementsCache[atomicNumber] = global.fullElementHack
+
+    return fullElementsCache[atomicNumber]
+  }
+
   const json = typeof window === 'object'
     ? (await fetch(`/${atomicNumber}.json`)).json()
     : {}
