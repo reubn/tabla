@@ -23,6 +23,8 @@ export default ({ieData, isotopesData, oxidationStatesData}) => data => ({
   // Group Block
   gb: groupBlocks[data.atomic_number],
 
+
+
   // CAS
   cas: data.cas,
 
@@ -72,7 +74,7 @@ export default ({ieData, isotopesData, oxidationStatesData}) => data => ({
   // Density
   d: data.density,
 
-  // Evapouration Heat
+  // Evaporation Heat
   eh: data.evaporation_heat,
 
   // Fusion Heat
@@ -111,7 +113,7 @@ export default ({ieData, isotopesData, oxidationStatesData}) => data => ({
   // Gas Basicity
   gbas: data.gas_basicity,
 
-  // Dipole Polarisation
+  // Dipole Polarisability
   dp: data.dipole_polarizability,
 
   // Electron Affinity
