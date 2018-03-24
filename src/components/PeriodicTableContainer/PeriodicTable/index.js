@@ -18,7 +18,7 @@ const PeriodicTable = ({visibleElements, selectedElement, cursorMove, deselect})
       <Group key={groupIndex} index={groupIndex} total={layout.length} containsSelectedElement={group.includes(selectedElement)}>
         {group.map((part, partIndex) => (
           part
-          ? <ElementContainer key={part} atomicNumber={part} visible={visibleElements.includes(part)} />
+            ? <ElementContainer key={part} atomicNumber={part} visible={visibleElements.includes(part)} />
           // eslint-disable-next-line react/no-array-index-key
           : <Spacer key={`spacer-${partIndex}`} />
         ))}

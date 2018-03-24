@@ -27,31 +27,3 @@ export default class FullElement extends BasicElement {
     }))
   }
 }
-
-// eh: data.evaporation_heat,
-// fh: data.fusion_heat,
-// sph: data.specific_heat,
-// hof: data.heat_of_formation,
-// tc: data.thermal_conductivity,
-// av: data.atomic_volume,
-// mr: data.metallic_radius,
-// vdwr: data.vdw_radius,
-// crd: data.covalent_radius_pyykko_double,
-// crt: data.covalent_radius_pyykko_triple,
-// gbas: data.gas_basicity,
-// dp: data.dipole_polarizability,
-// pa: data.proton_affinity,
-// lc: data.lattice_constant,
-// ls: data.lattice_structure,
-// c6: data.c6,
-// r: data.radioactive,
-// ca: data.abundance_crust,
-// sa: data.abundance_sea,
-// u: data.uses,
-// sour: data.sources,
-// desc: data.description,
-// no: data.name_origin,
-// disc: data.discoverers,
-// discLoc: data.discovery_location,
-// discYear: data.discovery_year,
-// ann: data.annotation

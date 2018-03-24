@@ -1,5 +1,4 @@
 import {createWriteStream, writeFile} from 'fs'
-import {promisify} from 'util'
 
 import fetch from 'node-fetch'
 import cheerio from 'cheerio'
