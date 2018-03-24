@@ -13,6 +13,9 @@ import {getRouterPaths} from './src/routing'
 
 import elements from './data/dist/basic'
 
+// Ensure Full Errors are Shown
+process.on('unhandledRejection', r => console.error(r))
+
 export default env => {
   const devMode = env !== 'production'
 
