@@ -52,7 +52,7 @@ const go = async () => {
   writeFile(distFullFilename, JSON.stringify([0, ...elements]), () => console.log('Output Full'))
 
   // Basic
-  writeFile(distBasicFilename, JSON.stringify([0, ...elements], ['n', 's', 'am', 'an', 'gb', 'ec', 'sh', 'su', 'e']), () => console.log('Output Basic'))
+  writeFile(distBasicFilename, JSON.stringify([0, ...elements], ['n', 's', 'am', 'an', 'gb', 'ec', 'sh', 'su', 'e', 'r']), () => console.log('Output Basic'))
 
   // Individual
   elements.forEach(element => {

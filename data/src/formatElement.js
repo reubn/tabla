@@ -23,6 +23,8 @@ export default ({ieData, isotopesData, oxidationStatesData}) => data => ({
   // Group Block
   gb: groupBlocks[data.atomic_number],
 
+  // Radioactive?
+  r: data.radioactive,
 
 
   // CAS
@@ -134,9 +136,6 @@ export default ({ieData, isotopesData, oxidationStatesData}) => data => ({
 
   // Dispersion in Au
   c6: data.c6,
-
-  // Radioactive?
-  r: data.radioactive,
 
   // Abundance in Crust
   ca: data.abundance_crust,
