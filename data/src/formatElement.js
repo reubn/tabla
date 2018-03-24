@@ -17,7 +17,7 @@ export default ({ieData, isotopesData, oxidationStatesData}) => data => ({
   ec: data.electronic_configuration.split(' ').reduce((a, b) => {
     if(b.startsWith('[')) return [...a, b.replace(/\[|\]/g, '')]
     const split = b.replace(/(\D)/, '|$1|').split('|')
-    return [...a, {sh: +split[0], su: split[1], e: +split[2]}]
+    return [...a, {sh: +split[0], su: split[1], e: +split[2] || 1}]
   }, []),
 
   // Group Block
