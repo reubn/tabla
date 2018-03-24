@@ -16,7 +16,7 @@ const schemes = [
   },
   {
     test: element => element.oxidationStates && element.oxidationStates.length,
-    formats: [element => ({title: 'Oxidation States', content: element.oxidationStates.join(', ')})]
+    formats: [element => ({title: 'Oxidation States', content: element.oxidationStates.map(n => n > 0 ? `+${n}` : n).join(', ')})]
   },
   {
     test: element => element.ionisationEnergies && element.ionisationEnergies.length,
