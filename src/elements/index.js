@@ -1,6 +1,8 @@
 import FullElement from './FullElement'
 
-export const fullElementsCache = typeof window === 'object' && window.dryfullElement ? {[+window.dryfullElement.atomicNumber]: new FullElement(window.dryfullElement.atomicNumber, window.dryfullElement)} : {}
+export const fullElementsCache = typeof window === 'object' && window.dryfullElement ? {[+window.dryfullElement.an]: new FullElement(window.dryfullElement.an, window.dryfullElement)} : {}
+
+// FullElement is not available initally as code in the global namespace is run before atomicNumbers are passed in from webpack
 
 export const fullElement = async atomicNumber => {
   if(!atomicNumber) return {}
