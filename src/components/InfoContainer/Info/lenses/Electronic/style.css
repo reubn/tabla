@@ -12,6 +12,19 @@
   text-align: center;
 }
 
+.inside {
+  border-radius: 1px;
+  box-shadow: 0 21px 0 0 transparent;
+  height: 2px;
+  display: inline-block;
+  transition: box-shadow 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.full:hover {
+  cursor: pointer;
+  box-shadow: 0 21px 0 0 var(--group-colour);
+}
+
 .electronsSuperscript {
   vertical-align: super;
   font-size: 0.8rem;
@@ -29,6 +42,7 @@
   width: fit-content;
   display: inline-block;
   vertical-align: text-bottom;
+  cursor: pointer;
 }
 
 .alkaliMetal {--group-colour: var(--colours-alkaliMetal); --group-gradient: var(--gradients-alkaliMetal);}
