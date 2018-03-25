@@ -5,7 +5,7 @@ import {bestElement} from '../../../../../elements'
 
 import Diagram from './Diagram'
 
-import {lens, electronicConfiguration, full as fullStyle, inside, electronsSuperscript, elementAbbreviation,
+import {lens, electronicConfiguration, electronicConfigurationInline, full as fullStyle, inside, electronsSuperscript, elementAbbreviation, label,
         alkaliMetal, halogen, nonMetal, transitionMetal, nobleGas, postTransitionMetal, metalloid, alkalineEarthMetal, actinoid, lanthanoid, unknown} from './style'
 
 const groupColours = {
@@ -40,10 +40,11 @@ export default class ElectronicLens extends Component {
 
   render(){
     return (
-      <section className={lens} key={this.props.key}>
+      <section className={lens}>
         <Diagram element={this.props.element} />
         <section className={electronicConfiguration}>
-          <span className={classnames(inside, {[fullStyle]: this.state.full})} onClick={() => this.state.full && this.setFull(false)}>
+          <label className={label}>Electronic Configuration</label>
+          <span className={classnames(electronicConfigurationInline, {[fullStyle]: this.state.full})} onClick={() => this.state.full && this.setFull(false)}>
             {this.props.element.electronicConfiguration(this.state.full, part => typeof part === 'number'
               ? (
                 <span
