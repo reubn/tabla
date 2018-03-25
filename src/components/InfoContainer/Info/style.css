@@ -65,7 +65,7 @@
   font-weight: lighter;
   color: var(--colours-grey-1);
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
   text-decoration: none;
   cursor: pointer;
   transition: none 0.15s ease-in;
