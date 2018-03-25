@@ -16,7 +16,7 @@ export default class BasicElement {
     this.radioactive = r
   }
 
-  electronicConfiguration(expanded=true, format={}){
+  electronicConfiguration(expanded=true, format=part => typeof part === 'number' ? `${basicElements[part].symbol}` : ` ${part.shell}${part.subshell}${ssn(part.electrons)}`){
     if(!this.electronicConfigurationRaw) return undefined
 
     const parts = this.electronicConfigurationRaw.reduce((list, part) => {
@@ -30,9 +30,7 @@ export default class BasicElement {
 
     if(!format) return parts
 
-    const {element=e => `[${basicElements[e].symbol}]`, shell=s => ` ${s}`, subshell=s=>s, electrons=e => ssn(e), combine=parts => parts.join('')} = format
-
-    return combine(parts.sort(({shell: shellA, subshell: subshellA}, {shell: shellB, subshell: subshellB}) => {
+    return parts.sort(({shell: shellA, subshell: subshellA}, {shell: shellB, subshell: subshellB}) => {
       if(!shellA) return -1; if(!shellB) return 1
 
       const indexA = subshellOrder.indexOf(shellA + subshellA)
@@ -40,9 +38,7 @@ export default class BasicElement {
 
       return indexA - indexB
     })
-      .map(part => (typeof part === 'number' ? element(part) : [shell(part.shell), subshell(part.subshell), electrons(part.electrons)]))
-      .reduce((parts, part) => Object.prototype.toString.call(part) === '[object Array]' ? [...parts, ...part] : [...parts, part], [])
-    )
+      .map(format)
   }
 
   electronsPerShell(string=false){

@@ -43,19 +43,28 @@ export default class ElectronicLens extends Component {
       <section className={lens} key={this.props.key}>
         <Diagram element={this.props.element} />
         <section className={electronicConfiguration}>
-          {this.props.element.electronicConfiguration(this.state.full, {
-            element: atomicNumber => (
-              <span
-                className={classnames(elementAbbreviation, groupColours[this.props.element.groupBlock])}
-                onClick={() => this.setFull(true)}>
-                {bestElement(atomicNumber).symbol}
-              </span>
-            ),
-            shell: shell => <span> {shell}</span>,
-            subshell: subshell => <span>{subshell}</span>,
-            electrons: electrons => <span className={electronsSuperscript}>{electrons}</span>,
-            combine: parts => <span className={classnames(inside, {[fullStyle]: this.state.full})} onClick={() => this.state.full && this.setFull(false)}>{parts}</span>
-        })}
+          <span className={classnames(inside, {[fullStyle]: this.state.full})} onClick={() => this.state.full && this.setFull(false)}>
+            {this.props.element.electronicConfiguration(this.state.full, part => typeof part === 'number'
+              ? (
+                <span
+                  key={part}
+                  className={classnames(elementAbbreviation, groupColours[this.props.element.groupBlock])}
+                  onClick={() => this.setFull(true)}>
+                  {bestElement(part).symbol}
+                </span>
+              )
+              : (
+                <span key={`${part.shell}${part.subshell}${part.electrons}`}>
+                  {' '}
+                  {part.shell}
+                  {part.subshell}
+                  <span className={electronsSuperscript}>
+                    {part.electrons}
+                  </span>
+                </span>
+              )
+            )}
+          </span>
         </section>
       </section>
     )
