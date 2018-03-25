@@ -21,7 +21,7 @@
 
 .elementAbbreviation {
   font-size: 1rem;
-  background: var(--colours-blue);
+  background: var(--group-colour);
   border-radius: 3px;
   color: var(--colours-white);
   font-weight: bold;
@@ -30,3 +30,15 @@
   display: inline-block;
   vertical-align: text-bottom;
 }
+
+.alkaliMetal {--group-colour: var(--colours-alkaliMetal); --group-gradient: var(--gradients-alkaliMetal);}
+.nonMetal {--group-colour: var(--colours-nonMetal); --group-gradient: var(--gradients-nonMetal);}
+.transitionMetal {--group-colour: var(--colours-transitionMetal); --group-gradient: var(--gradients-transitionMetal);}
+.postTransitionMetal {--group-colour: var(--colours-postTransitionMetal); --group-gradient: var(--gradients-postTransitionMetal);}
+.halogen {--group-colour: var(--colours-halogen); --group-gradient: var(--gradients-halogen);}
+.nobleGas {--group-colour: var(--colours-nobleGas); --group-gradient: var(--gradients-nobleGas);}
+.metalloid {--group-colour: var(--colours-metalloid); --group-gradient: var(--gradients-metalloid);}
+.alkalineEarthMetal {--group-colour: var(--colours-alkalineEarthMetal); --group-gradient: var(--gradients-alkalineEarthMetal);}
+.actinoid {--group-colour: var(--colours-actinoid); --group-gradient: var(--gradients-actinoid);}
+.lanthanoid {--group-colour: var(--colours-lanthanoid); --group-gradient: var(--gradients-lanthanoid);}
+.unknown {--group-colour: var(--colours-unknown); --group-gradient: var(--gradients-unknown);}
