@@ -1,4 +1,7 @@
 .info {
+  --open-width: 25vw;
+  --open-min-width: 450px;
+
   display: flex;
   position: relative;
   flex-direction: column;
@@ -15,8 +18,8 @@
 }
 
 .open {
-  width: 25vw;
-  min-width: 450px;
+  width: var(--open-width);
+  min-width: var(--open-min-width);
   border-left: 2px solid var(--colours-white-3);
 }
 .open:not(.enter):not(.exit) > * {
@@ -32,13 +35,13 @@
   transition: none 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition-property: width, min-width;
 
-  width: 20vw;
-  min-width: 300px;
+  width: var(--open-width);
+  min-width: var(--open-min-width);
 }
 
 .exit {
-  width: 20vw;
-  min-width: 300px;
+  width: var(--open-width);
+  min-width: var(--open-min-width);
 }
 .exit > * {
   transition: opacity 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
