@@ -20,10 +20,9 @@ export default class BasicElement {
     if(!this.electronicConfigurationRaw) return undefined
 
     const parts = this.electronicConfigurationRaw.reduce((list, part) => {
-      if(typeof part === 'number'){
+      if(typeof part === 'number' && expanded){
         const element = basicElements[part] // eslint-disable-line no-use-before-define
         if(expanded) return [...list, ...element.electronicConfiguration(true, false)]
-        return [...list, element.symbol]
       }
 
       return [...list, part]
@@ -31,7 +30,7 @@ export default class BasicElement {
 
     if(!format) return parts
 
-    const {element=e => `[${e}]`, shell=s => ` ${s}`, subshell=s=>s, electrons=e => ssn(e), combine=parts => parts.join('')} = format
+    const {element=e => `[${basicElements[e].symbol}]`, shell=s => ` ${s}`, subshell=s=>s, electrons=e => ssn(e), combine=parts => parts.join('')} = format
 
     return combine(parts.sort(({shell: shellA, subshell: subshellA}, {shell: shellB, subshell: subshellB}) => {
       if(!shellA) return -1; if(!shellB) return 1
@@ -41,7 +40,7 @@ export default class BasicElement {
 
       return indexA - indexB
     })
-      .map(part => (typeof part === 'string' ? element(part) : [shell(part.shell), subshell(part.subshell), electrons(part.electrons)]))
+      .map(part => (typeof part === 'number' ? element(part) : [shell(part.shell), subshell(part.subshell), electrons(part.electrons)]))
       .reduce((parts, part) => Object.prototype.toString.call(part) === '[object Array]' ? [...parts, ...part] : [...parts, part], [])
     )
   }
