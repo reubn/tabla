@@ -1,10 +1,11 @@
 .info {
-  --open-width: 25vw;
-  --open-min-width: 450px;
+  --open-width: 50vw;
+  --open-min-width: 850px;
 
-  display: flex;
   position: relative;
-  flex-direction: column;
+  column-count: 2;
+  column-gap: 0;
+  column-fill: auto;
   height: 100%;
   background: var(--colours-white);
   box-sizing: border-box;
@@ -56,16 +57,10 @@
   min-width: 0;
 }
 
-.header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-basis: 40%;
-}
 
 .name {
-  display: inline-block;
+  display: block;
+  column-span: all;
   font-size: 1.75rem;
   font-weight: lighter;
   color: var(--colours-grey-1);
@@ -75,8 +70,6 @@
   cursor: pointer;
   transition: none 0.15s ease-in;
   transition-property: color;
-  position: relative;
-  top: 3.3rem;
   z-index: 1;
 }
 

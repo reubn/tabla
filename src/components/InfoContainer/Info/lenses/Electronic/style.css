@@ -1,0 +1,17 @@
+.lens {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  break-inside: avoid;
+  height: 30vh;
+}
+
+.electronicConfiguration {
+  color: var(--colours-black-4);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.electronsSuperscript {
+  vertical-align: super;
+}

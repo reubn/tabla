@@ -4,12 +4,11 @@ import classnames from 'classnames'
 
 import {bestElement} from '../../../elements'
 
-import Close from '../../Close'
+import lenses from './lenses'
 
-import Diagram from './Diagram'
 import Data from './Data'
 
-import {info, open, header, name as nameStyle, enter, enterActive, exit, exitActive, appear, appearActive,
+import {info, open, enter, enterActive, exit, exitActive, appear, appearActive, name,
   alkaliMetal, halogen, nonMetal, transitionMetal, nobleGas, postTransitionMetal, metalloid, alkalineEarthMetal, actinoid, lanthanoid, unknown} from './style'
 
 const groupColours = {
@@ -58,11 +57,8 @@ class Info extends Component {
         timeout={200}
       >
         <section className={classnames(info, {[open]: this.props.elementSelected}, groupColours[this.state.element.groupBlock] || unknown)}>
-          <header className={header}>
-            <Close onClick={this.props.close} />
-            <a href={`//en.wikipedia.org/wiki/Element_${this.state.element.atomicNumber}`} target="_blank" rel="noopener noreferrer" className={nameStyle}>{this.state.element.name}</a>
-            <Diagram element={this.state.element} />
-          </header>
+          <a href={`//en.wikipedia.org/wiki/Element_${this.state.element.atomicNumber}`} target="_blank" rel="noopener noreferrer" className={name}>{this.state.element.name}</a>
+          {lenses(this.state.element)}
           <Data element={this.state.element} />
         </section>
       </CSSTransition>
