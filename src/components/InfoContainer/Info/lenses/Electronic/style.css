@@ -14,4 +14,19 @@
 
 .electronsSuperscript {
   vertical-align: super;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--colours-grey-4);
+}
+
+.elementAbbreviation {
+  font-size: 1rem;
+  background: var(--colours-blue);
+  border-radius: 3px;
+  color: var(--colours-white);
+  font-weight: bold;
+  padding: 3px 3px 2px;
+  width: fit-content;
+  display: inline-block;
+  vertical-align: text-bottom;
 }
