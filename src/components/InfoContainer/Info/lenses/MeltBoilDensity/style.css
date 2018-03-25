@@ -1,0 +1,50 @@
+.lens {
+  display: flex;
+  break-inside: avoid;
+  margin-top: 2rem;
+}
+
+.label {
+  text-transform: lowercase;
+  font-variant-caps: small-caps;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  color: var(--colours-grey-1);
+  margin-top: -1rem;
+  position: relative;
+  top: -1rem;
+}
+
+.property {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  height: 4rem;
+  justify-content: center;
+  text-align: center;
+}
+.property:not(:last-of-type) {
+  border-right: solid 1px var(--colours-white-3);
+}
+
+.figure {
+  color: var(--colours-black-4);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.sup {
+  vertical-align: super;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--colours-grey-4);
+}
+
+.inline {
+  vertical-align: middle;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--colours-grey-4);
+  margin-left: 2px;
+}
