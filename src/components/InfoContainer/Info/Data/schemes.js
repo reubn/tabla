@@ -23,8 +23,8 @@ const schemes = [
     formats: [element => ({title: 'Ionisation Energies', content: element.ionisationEnergies.join(', '), unit: 'kJ mol⁻¹'})]
   },
   {
-    test: element => element.keyIsotopes && element.keyIsotopes.length,
-    formats: [element => ({title: 'Key Isotopes', content: element.keyIsotopes.length ? element.keyIsotopes.join(', ') : element.keyIsotopes})]
+    test: element => element.isotopes && element.isotopes.length,
+    formats: [element => ({title: 'Isotopes', content: element.isotopes.map(({neutrons, abundance}) => `${neutrons + element.atomicNumber} / ${abundance ? sigdig(abundance*100, 4) : '??'}%`).join(', ')})]
   },
   {
     test: element => element.density,
@@ -59,15 +59,19 @@ const schemes = [
   },
   {
     test: element => element.atomicRadius,
-    formats: [element => ({title: 'Atomic Radius', content: sigdig(element.atomicRadius, 4), unit: 'Å'})]
+    formats: [element => ({title: 'Atomic Radius', content: sigdig(element.atomicRadius, 4), unit: 'pm'})]
   },
   {
     test: element => element.covalentRadius,
-    formats: [element => ({title: 'Covalent Radius', content: sigdig(element.covalentRadius, 4), unit: 'Å'})]
+    formats: [element => ({title: 'Covalent Radius', content: sigdig(element.covalentRadius, 4), unit: 'pm'})]
   },
   {
     test: element => element.cas,
     formats: [element => ({title: 'CAS', content: <a style={{textDecoration: 'none', color: 'inherit'}} target="_blank" rel="noopener noreferrer" href={`http://www.chemspider.com/Search.aspx?q=${element.cas}`}>{element.cas}</a>})]
+  },
+  {
+    test: element => element.protonAffinity,
+    formats: [element => ({content: element.protonAffinity, unit: 'kJ mol⁻¹'})]
   }
 ].map((scheme, index) => ({...scheme, id: index}))
 

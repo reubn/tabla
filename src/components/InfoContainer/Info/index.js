@@ -6,8 +6,6 @@ import {bestElement} from '../../../elements'
 
 import lenses from './lenses'
 
-import Data from './Data'
-
 import {info, open, enter, enterActive, exit, exitActive, appear, appearActive, name,
   alkaliMetal, halogen, nonMetal, transitionMetal, nobleGas, postTransitionMetal, metalloid, alkalineEarthMetal, actinoid, lanthanoid, unknown} from './style'
 
@@ -59,7 +57,6 @@ class Info extends Component {
         <section className={classnames(info, {[open]: this.props.elementSelected}, groupColours[this.state.element.groupBlock] || unknown)}>
           <a href={`//en.wikipedia.org/wiki/Element_${this.state.element.atomicNumber}`} target="_blank" rel="noopener noreferrer" className={name}>{this.state.element.name}</a>
           {lenses(this.state.element)}
-          <Data element={this.state.element} />
         </section>
       </CSSTransition>
     )
