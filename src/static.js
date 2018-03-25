@@ -48,5 +48,8 @@ export default ({routerPath, routeNumber, routerPaths, cssIdentifier, webpackSta
   readline.clearLine(process.stdout, 1)
   process.stdout.write(`rendering path ${routerPath} ${routeNumber + 1} / ${routerPaths.length}`)
 
+  delete global.build
+  delete global.fullElementHack
+
   return `<!DOCTYPE html> ${documentString}`
 }
