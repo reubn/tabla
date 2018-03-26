@@ -22,15 +22,21 @@ const go = async () => {
   const cacheDirectory = makeDir(cacheFolder)
   const distDirectory = makeDir(distFolder)
 
-  const writeStream = createWriteStream(cacheFilename)
-  const writePromise = new Promise(resolve => writeStream.on('finish', resolve))
-
   const request = await fetch(dataUrl)
   console.log('Fetched')
 
   await cacheDirectory
+
+  const writeStream = createWriteStream(cacheFilename)
+  const writeOpenPromise = new Promise(resolve => writeStream.on('open', resolve))
+  const writeClosePromise = new Promise(resolve => writeStream.on('finish', resolve))
+
+  await writeOpenPromise
+  console.log('Created')
+  
   request.body.pipe(writeStream)
-  await writePromise
+
+  await writeClosePromise
   console.log('Written')
 
   const db = await sqlite.open(cacheFilename, {Promise})
