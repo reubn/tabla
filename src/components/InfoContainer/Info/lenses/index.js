@@ -17,4 +17,8 @@ const lenses = [
   }
 ]
 
-export default element => lenses.reduce((active, Current, index) => Current.test(element) ? [...active, <Current element={element} key={index} />] : active, [])
+export default element => lenses.reduce((active, lensOrFactory, index) => {
+  let Lens = lensOrFactory.Lens ? lensOrFactory.Lens : lensOrFactory
+
+  return lensOrFactory.test(element) ? [...active, <Lens element={element} key={index} {...(lensOrFactory.props ? lensOrFactory.props(element) : {})}/>] : active
+}, [])
