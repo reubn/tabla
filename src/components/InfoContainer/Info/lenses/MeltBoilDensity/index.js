@@ -42,7 +42,7 @@ export default class MeltBoilDensityLens extends Component {
         <section className={property}>
           <label className={label}>Density</label>
           <span className={figure}>
-            {sigdig(this.props.element.density, 5)}
+            {this.props.element.density ? sigdig(this.props.element.density, 5) : '???'}
             <span className={inline}>g cm⁻³</span>
           </span>
         </section>

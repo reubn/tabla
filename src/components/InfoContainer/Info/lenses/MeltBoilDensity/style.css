@@ -1,7 +1,7 @@
 .lens {
   display: flex;
   break-inside: avoid;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .label {
@@ -11,9 +11,6 @@
   font-size: 0.8rem;
   letter-spacing: 0.5px;
   color: var(--colours-grey-1);
-  margin-top: -1rem;
-  position: relative;
-  top: -1rem;
 }
 
 .property {
@@ -24,14 +21,17 @@
   justify-content: center;
   text-align: center;
 }
-.property:not(:last-of-type) {
-  border-right: solid 1px var(--colours-white-3);
-}
 
 .figure {
   color: var(--colours-black-4);
   font-size: 1.25rem;
   text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+.property:not(:last-of-type) > .figure {
+  border-right: solid 1px var(--colours-white-3);
 }
 
 .sup {
