@@ -64,10 +64,10 @@
     "superscript-number": "^1.0.0"
   },
   "scripts": {
-    "start": "sudo node_modules/.bin/webpack-dev-server --env=development",
-    "data": "sudo node_modules/.bin/babel-node data/src",
-    "build": "sudo node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js --env=production",
-    "deploy": "sudo sh -c 'node -pe \"require(\\`./package.json\\`).homepage\" > dist/CNAME' && gh-pages -m '🎉' -d dist",
+    "start": "node_modules/.bin/webpack-dev-server --env=development",
+    "data": "node_modules/.bin/babel-node data/src",
+    "build": "node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js --env=production",
+    "deploy": "sh -c 'node -pe \"require(\\`./package.json\\`).homepage\" > dist/CNAME' && gh-pages -m '🎉' -d dist",
     "lint": "eslint ./ || true",
     "lint:fix": "eslint --fix ./ || true",
     "info": "git diff --stat 4b825dc642cb6eb9a060e54bf8d69288fbee4904 | cat"
