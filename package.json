@@ -65,7 +65,7 @@
   },
   "scripts": {
     "start": "sudo node_modules/.bin/webpack-dev-server --env=development",
-    "data": "sudo babel-node data/src",
+    "data": "sudo node_modules/.bin/babel-node data/src",
     "build": "sudo node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js --env=production",
     "deploy": "sudo sh -c 'node -pe \"require(\\`./package.json\\`).homepage\" > dist/CNAME' && gh-pages -m '🎉' -d dist",
     "lint": "eslint ./ || true",
