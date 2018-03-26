@@ -36,7 +36,7 @@ export default class FullElement extends BasicElement {
     this.latticeStructure = json.ls
     this.c6 = json.c6
 
-    this.uses = json.uses
+    this.uses = json.u
     this.sources = json.sour
     this.description = json.desc
     this.nameOrigin = json.no
