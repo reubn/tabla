@@ -23,15 +23,17 @@
 }
 
 .figure {
+  --height: 3rem;
+  --units-size: 0.8rem;
   color: var(--colours-black-4);
   font-size: 1.25rem;
   text-align: center;
-  height: 3rem;
-  line-height: 3rem;
+  height: var(--height)
+  line-height: var(--height)
 }
 
-.figure.sup {
-  line-height: 2.6rem;
+.figure.hasSup {
+  line-height: calc(var(--height) - (var(--units-size) / 2))
 }
 
 .property:not(:last-of-type) > .figure {
@@ -40,14 +42,14 @@
 
 .sup {
   vertical-align: super;
-  font-size: 0.8rem;
+  font-size: var(--units-size);
   font-weight: bold;
   color: var(--colours-grey-4);
 }
 
 .inline {
   vertical-align: middle;
-  font-size: 0.8rem;
+  font-size: var(--units-size);
   font-weight: bold;
   color: var(--colours-grey-4);
   margin-left: 2px;
