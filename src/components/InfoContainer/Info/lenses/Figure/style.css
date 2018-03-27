@@ -30,6 +30,10 @@
   line-height: 3rem;
 }
 
+.figure.sup {
+  line-height: 2.6rem;
+}
+
 .property:not(:last-of-type) > .figure {
   border-right: solid 1px var(--colours-white-3);
 }

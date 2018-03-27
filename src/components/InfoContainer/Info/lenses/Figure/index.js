@@ -1,21 +1,16 @@
 import React, {Component} from 'react'
 import classnames from 'classnames'
-import sigdig from 'sigdig'
 
 import {bestElement} from '../../../../../elements'
 
-import {lens, property, label, figure, sup, inline  } from './style'
+import {lens, property, label, figure as figureStyle, sup, hasSup, inline} from './style'
 
-export default class MeltBoilDensityLens extends Component {
+export default class FigureLens extends Component {
   constructor(props){
     super(props)
     this.state = {
       full: false
     }
-  }
-
-  static test(element){
-    return !!element.meltingPoint || !!element.boilingPoint || !!element.density
   }
 
   setFull(full=!this.state.full){
@@ -25,27 +20,20 @@ export default class MeltBoilDensityLens extends Component {
   render(){
     return (
       <section className={lens}>
-        <section className={property}>
-          <label className={label}>Melting Point</label>
-          <span className={figure}>
-            {sigdig(this.props.element.meltingPoint - 273, 5)}
-            <span className={sup}>°C</span>
-          </span>
-        </section>
-        <section className={property}>
-          <label className={label}>Boiling Point</label>
-          <span className={figure}>
-            {sigdig(this.props.element.boilingPoint - 273, 5)}
-            <span className={sup}>°C</span>
-          </span>
-        </section>
-        <section className={property}>
-          <label className={label}>Density</label>
-          <span className={figure}>
-            {this.props.element.density ? sigdig(this.props.element.density, 5) : '???'}
-            <span className={inline}>g cm⁻³</span>
-          </span>
-        </section>
+        {this.props.figures.reduce((shown, figure) => {
+          if(!figure.test) return shown
+
+          const figureComponent = (
+            <section className={property}>
+              <label className={label}>{figure.label}</label>
+              <span className={classnames(figureStyle, {[hasSup]: figure.units.sup})}>
+                {figure.value}
+                {figure.units && <span className={figure.units.sup ? sup : inline}>{figure.units.text}</span>}
+              </span>
+            </section>
+          )
+          return [...shown, figureComponent]
+        }, [])}
       </section>
     )
   }
