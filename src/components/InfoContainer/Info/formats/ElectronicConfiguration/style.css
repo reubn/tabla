@@ -13,9 +13,9 @@
   width: 100%;
 }
 
-.full:hover {
+.full:hover > * {
   cursor: pointer;
-  box-shadow: 0 21px 0 0 var(--group-colour);
+  box-shadow: 0 2px 0 0 var(--group-colour);
 }
 
 .electronsSuperscript {
