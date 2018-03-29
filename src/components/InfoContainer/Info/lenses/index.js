@@ -6,6 +6,7 @@ import ElectronicConfigurationFormat from '../formats/ElectronicConfiguration'
 import ElectronicDiagramLens from './ElectronicDiagram'
 import FigureLens from './Figure'
 import TextLens from './Text'
+import IonisationEnergiesLens from './IonisationEnergies'
 
 const lenses = [
   ElectronicDiagramLens,
@@ -60,7 +61,8 @@ const lenses = [
       label: 'Description',
       text: element.description
     })
-  }
+  },
+  IonisationEnergiesLens
 ]
 
 export default element => lenses.reduce((active, lensOrFactory, index) => {
