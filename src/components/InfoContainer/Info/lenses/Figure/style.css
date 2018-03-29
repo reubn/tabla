@@ -22,23 +22,35 @@
   text-align: center;
 }
 
+.property:only-child {
+  width: 100%;
+  text-align: start;
+  margin-left: 1.5rem;
+}
+
 .figure {
   --height: 3rem;
   --units-size: 0.8rem;
   color: var(--colours-black-4);
   font-size: 1.25rem;
   text-align: center;
-  height: var(--height)
-  line-height: var(--height)
+  height: var(--height);
+  line-height: var(--height);
 }
 
 .figure.hasSup {
-  line-height: calc(var(--height) - (var(--units-size) / 2))
+  line-height: calc(var(--height) - (var(--units-size) / 2));
 }
 
 .property:not(:last-of-type) > .figure {
   border-right: solid 1px var(--colours-white-3);
 }
+
+.property:only-child .figure {
+  text-align: start;
+  margin-left: 1.5rem;
+}
+
 
 .sup {
   vertical-align: super;

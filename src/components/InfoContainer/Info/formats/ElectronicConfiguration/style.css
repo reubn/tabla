@@ -1,30 +1,4 @@
-.lens {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  break-inside: avoid;
-  height: 30vh;
-}
-
 .electronicConfiguration {
-  text-align: center;
-}
-
-.label {
-  vertical-align: top;
-  text-transform: lowercase;
-  font-variant-caps: small-caps;
-  font-weight: bold;
-  font-size: 0.8rem;
-  letter-spacing: 0.5px;
-  color: var(--colours-grey-1);
-  display: block;
-  text-align: start;
-  margin-left: 1.5rem;
-  margin-bottom: 4px;
-}
-
-.electronicConfigurationInline {
   color: var(--colours-black-4);
   font-size: 1.25rem;
   text-align: center;
@@ -33,7 +7,10 @@
   height: 2px;
   display: inline-block;
   transition: box-shadow 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  margin: 0 1.5rem;
+  line-height: 1.25rem;
+  position: relative;
+  left: -1.25rem;
+  width: 100%;
 }
 
 .full:hover {

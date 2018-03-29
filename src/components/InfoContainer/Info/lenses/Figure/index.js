@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import {bestElement} from '../../../../../elements'
 
-import {lens, property, label, figure as figureStyle, sup, hasSup, inline} from './style'
+import {lens, property, label as labelStyle, figure as figureStyle, sup, hasSup, inline} from './style'
 
 export default class FigureLens extends Component {
   constructor(props){
@@ -20,15 +20,15 @@ export default class FigureLens extends Component {
   render(){
     return (
       <section className={lens}>
-        {this.props.figures.reduce((shown, figure) => {
-          if(!figure.test) return shown
+        {this.props.figures.reduce((shown, {test, label, value, units={}}, index) => {
+          if(!test) return shown
 
           const figureComponent = (
-            <section className={property}>
-              <label className={label}>{figure.label}</label>
-              <span className={classnames(figureStyle, {[hasSup]: figure.units.sup})}>
-                {figure.value}
-                {figure.units && <span className={figure.units.sup ? sup : inline}>{figure.units.text}</span>}
+            <section className={property} key={label + index}>
+              <label className={labelStyle}>{label}</label>
+              <span className={classnames(figureStyle, {[hasSup]: units.sup})}>
+                {value}
+                {units.text && <span className={units.sup ? sup : inline}>{units.text}</span>}
               </span>
             </section>
           )

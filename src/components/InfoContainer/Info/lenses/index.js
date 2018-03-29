@@ -1,12 +1,25 @@
 import React from 'react'
 import sigdig from 'sigdig'
 
-import ElectronicLens from './Electronic'
+import ElectronicConfigurationFormat from '../formats/ElectronicConfiguration'
+
+import ElectronicDiagramLens from './ElectronicDiagram'
 import FigureLens from './Figure'
 import TextLens from './Text'
 
 const lenses = [
-  ElectronicLens,
+  ElectronicDiagramLens,
+  {
+    Lens: FigureLens,
+    test: element => !!element.electronicConfigurationRaw,
+    props: element => ({
+      figures: [{
+        label: 'Electronic Configuration',
+        test: !!element.electronicConfigurationRaw,
+        value: <ElectronicConfigurationFormat element={element} />
+      }]
+    })
+  },
   {
     Lens: FigureLens,
     test: element => !!element.meltingPoint || !!element.boilingPoint || !!element.density,
