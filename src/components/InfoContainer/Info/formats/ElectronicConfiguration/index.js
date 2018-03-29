@@ -3,22 +3,7 @@ import classnames from 'classnames'
 
 import {bestElement} from '../../../../../elements'
 
-import {electronicConfiguration, full as fullStyle, inside, electronsSuperscript, elementAbbreviation,
-        alkaliMetal, halogen, nonMetal, transitionMetal, nobleGas, postTransitionMetal, metalloid, alkalineEarthMetal, actinoid, lanthanoid, unknown} from './style'
-
-const groupColours = {
-  alkaliMetal,
-  halogen,
-  nonMetal,
-  transitionMetal,
-  nobleGas,
-  postTransitionMetal,
-  metalloid,
-  alkalineEarthMetal,
-  actinoid,
-  lanthanoid,
-  unknown
-}
+import {electronicConfiguration, full as fullStyle, inside, electronsSuperscript, elementAbbreviation} from './style'
 
 export default class ElectronicConfiguration extends Component {
   constructor(props){
@@ -39,7 +24,7 @@ export default class ElectronicConfiguration extends Component {
           ? (
             <span
               key={part}
-              className={classnames(elementAbbreviation, groupColours[this.props.element.groupBlock])}
+              className={elementAbbreviation}
               onClick={() => this.setFull(true)}>
               {bestElement(part).symbol}
             </span>
