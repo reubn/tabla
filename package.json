@@ -44,7 +44,13 @@
     "webpack-simple-progress-plugin": "^0.0.3"
   },
   "dependencies": {
+    "@vx/axis": "^0.0.159",
+    "@vx/group": "^0.0.153",
+    "@vx/scale": "^0.0.153",
+    "@vx/shape": "^0.0.158",
     "classnames": "^2.2.5",
+    "d3-array": "^1.2.1",
+    "d3-format": "^1.2.2",
     "fuse.js": "^3.2.0",
     "history": "^4.7.2",
     "react": "^16.2.0",
