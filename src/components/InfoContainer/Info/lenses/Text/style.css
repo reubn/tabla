@@ -1,7 +1,6 @@
 .lens {
   display: flex;
   flex-direction: column;
-  break-inside: avoid;
   margin-top: 1.5rem;
 }
 
