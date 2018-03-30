@@ -1,6 +1,7 @@
 .lens {
   display: flex;
   flex-direction: column;
+  break-inside: avoid;
   margin-top: 1.5rem;
 }
 
@@ -21,4 +22,5 @@
   margin-left: 2.5rem;
   color: var(--colours-black-4);
   line-height: 1.35;
+  break-inside: initial;
 }

@@ -3,10 +3,28 @@
   flex-direction: column;
   justify-content: center;
   break-inside: avoid;
-  height: 30vh;
+  height: 50vh;
+  column-span: all;
+}
+
+.label {
+  text-transform: lowercase;
+  font-variant-caps: small-caps;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  color: var(--colours-grey-1);
+  display: block;
+  text-align: start;
+  margin-left: 1.5rem;
+  margin-bottom: 4px;
 }
 
 .svg {
   width: 100%;
   height: 100%;
+}
+
+.grid {
+  shape-rendering: crispedges;
 }
