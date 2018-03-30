@@ -62,6 +62,39 @@ const lenses = [
       text: element.description
     })
   },
+  {
+    Lens: FigureLens,
+    test: element => !!element.covalentRadius || !!element.covalentRadiusDouble || !!element.covalentRadiusTriple,
+    props: element => ({
+      figures: [{
+        label: 'Covalent Radius',
+        test: !!element.covalentRadius,
+        value: sigdig(element.covalentRadius, 5),
+        units: {
+          inline: true,
+          text: 'pm'
+        }
+      },
+      {
+        label: 'Double',
+        test: !!element.covalentRadiusDouble,
+        value: sigdig(element.covalentRadiusDouble, 5),
+        units: {
+          inline: true,
+          text: 'pm'
+        }
+      },
+      {
+        label: 'Triple',
+        test: !!element.covalentRadiusTriple,
+        value: sigdig(element.covalentRadiusTriple, 5),
+        units: {
+          inline: true,
+          text: 'pm'
+        }
+      }]
+    })
+  },
   IonisationEnergiesLens
 ]
 
