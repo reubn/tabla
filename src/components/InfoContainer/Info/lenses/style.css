@@ -11,6 +11,7 @@
   font-size: 0.8rem;
   letter-spacing: 0.5px;
   color: var(--colours-grey-1);
+  user-select: none;
 }
 
 .value {
