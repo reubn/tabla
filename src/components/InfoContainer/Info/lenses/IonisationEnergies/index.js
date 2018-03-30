@@ -54,7 +54,7 @@ const graph = ({width, height, element}) => {
   const minL = 10 ** Math.floor(Math.log10(min(data, y)))
 
   const tNum = Math.ceil(Math.log10(maxL - minL)) + 1
-  const tValues = Array(tNum).fill().map((_, p) => 10**(p))
+  const tValues = Array(tNum).fill().map((_, p) => 10 ** p)
 
   return (
     <svg viewBox={`0 0 ${width} ${height}`} className={svg}>
