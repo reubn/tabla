@@ -23,3 +23,19 @@
 .grid {
   shape-rendering: crispedges;
 }
+
+.value {
+  composes: value from "../style";
+
+  --font-size: 1rem;
+}
+
+.power {
+  composes: unitsSuper from "../style";
+}
+
+.foreignObject {
+  composes: value;
+
+  transform: translate(calc(-2 * var(--font-size)), calc(-1 * var(--font-size-units)));
+}

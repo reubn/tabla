@@ -8,7 +8,20 @@ import {Point} from '@vx/point'
 import {extent, max, min} from 'd3-array';
 import {format} from 'd3-format';
 
-import {lens, label, svg, grid} from './style'
+import {lens, label, svg, grid, value, power as powerStyle, foreignObject} from './style'
+
+const AxisLeftLabel = ({x, y, formattedValue})=> {
+  return (
+    <foreignObject x={x} y={y} className={foreignObject}>
+      <span className={value}>
+        10
+        <span className={powerStyle}>
+          {Math.round(Math.log10(formattedValue))}
+        </span>
+      </span>
+    </foreignObject>
+  )
+}
 
 const graph = ({width, height, element}) => {
   const data = element.ionisationEnergies
@@ -88,7 +101,7 @@ const graph = ({width, height, element}) => {
         <AxisLeft
           scale={yScale}
           tickValues={tValues}
-          tickFormat={n => `10${[...`${Math.round(Math.log10(n))}`].map(d => '⁰¹²³⁴⁵⁶⁷⁸⁹'[d])}`}
+          tickComponent={AxisLeftLabel}
           top={0}
           left={0}
           label={'kJ mol⁻¹'}
