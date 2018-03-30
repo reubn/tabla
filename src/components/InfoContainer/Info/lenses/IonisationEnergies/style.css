@@ -1,19 +1,14 @@
 .lens {
-  display: flex;
+  composes: lens from "../style.css";
+
   flex-direction: column;
-  justify-content: center;
-  break-inside: avoid;
   height: 50vh;
   column-span: all;
 }
 
 .label {
-  text-transform: lowercase;
-  font-variant-caps: small-caps;
-  font-weight: bold;
-  font-size: 0.8rem;
-  letter-spacing: 0.5px;
-  color: var(--colours-grey-1);
+  composes: label from "../style.css";
+
   display: block;
   text-align: start;
   margin-left: 1.5rem;

@@ -1,13 +1,13 @@
 .electronicConfiguration {
-  color: var(--colours-black-4);
-  font-size: 1.25rem;
+  composes: value from "../../lenses/style";
+
   text-align: center;
-  border-radius: 1px;
-  box-shadow: 0 21px 0 0 transparent;
   height: 2px;
+
   display: inline-block;
   transition: box-shadow 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  line-height: 1.25rem;
+  line-height: var(--font-size);
+
   position: relative;
   left: -1.25rem;
   width: 100%;
@@ -19,21 +19,9 @@
 }
 
 .electronsSuperscript {
-  vertical-align: super;
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: var(--colours-grey-4);
+  composes: unitsSuper from "../../lenses/style";
 }
 
 .elementAbbreviation {
-  font-size: 1rem;
-  background: var(--group-colour);
-  border-radius: 3px;
-  color: var(--colours-white);
-  font-weight: bold;
-  padding: 3px 3px 2px;
-  width: fit-content;
-  display: inline-block;
-  vertical-align: text-bottom;
-  cursor: pointer;
+  composes: elementInline from "../../lenses/style";
 }

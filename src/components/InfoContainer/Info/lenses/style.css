@@ -1,0 +1,59 @@
+.lens {
+  display: flex;
+  break-inside: avoid;
+  margin-top: 1.5rem;
+}
+
+.label {
+  text-transform: lowercase;
+  font-variant-caps: small-caps;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  color: var(--colours-grey-1);
+}
+
+.value {
+  --font-size: 1.25rem;
+  --font-size-units: calc(var(--font-size) * 0.64);
+
+  font-size: var(--font-size);
+  color: var(--colours-black-4);
+}
+
+.text {
+  color: var(--colours-black-4);
+  line-height: 1.35;
+}
+
+.units {
+  font-size: var(--font-size-units);
+  font-weight: bold;
+  color: var(--colours-grey-4);
+}
+
+.unitsSuper {
+  composes: units;
+
+  vertical-align: super;
+}
+
+.unitsInline {
+  composes: units;
+
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+.elementInline {
+  font-size: 1rem;
+  background: var(--group-colour);
+  border-radius: 3px;
+  color: var(--colours-white);
+  font-weight: bold;
+  padding: 3px 3px 2px;
+  width: fit-content;
+  display: inline-block;
+  vertical-align: text-bottom;
+  cursor: pointer;
+}

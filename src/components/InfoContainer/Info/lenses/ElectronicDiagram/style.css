@@ -1,7 +1,6 @@
 .lens {
-  display: flex;
+  composes: lens from "../style";
+
   flex-direction: column;
-  justify-content: center;
-  break-inside: avoid;
   height: 30vh;
 }
