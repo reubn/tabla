@@ -8,7 +8,7 @@ import {Point} from '@vx/point'
 import {extent, max, min} from 'd3-array';
 import {format} from 'd3-format';
 
-import {lens, label, svg, grid, value, power as powerStyle, foreignObject} from './style'
+import {lens, label, svg, grid, value, power as powerStyle, foreignObject, axisLabel} from './style'
 
 const AxisLeftLabel = ({x, y, formattedValue})=> {
   return (
@@ -32,8 +32,8 @@ const graph = ({width, height, element}) => {
   // Bounds
   const margin = {
     top: 20,
-    bottom: 40,
-    left: 60,
+    bottom: 60,
+    left: 80,
     right: 20,
   };
   const xMax = width - margin.left - margin.right;
@@ -104,10 +104,10 @@ const graph = ({width, height, element}) => {
           tickComponent={AxisLeftLabel}
           top={0}
           left={0}
-          label={'kJ mol⁻¹'}
-          stroke={'#1b1a1e'}
-          tickTextFill={'#1b1a1e'}
           tickLength={0}
+          label="kJ mol ⁻¹"
+          labelClassName={axisLabel}
+          labelOffset={margin.left / 2}
           hideAxisLine
         />
       </Group>

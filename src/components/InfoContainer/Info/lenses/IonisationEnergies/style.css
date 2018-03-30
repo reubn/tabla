@@ -39,3 +39,11 @@
 
   transform: translate(calc(-2 * var(--font-size)), calc(-1 * var(--font-size-units)));
 }
+
+
+.axisLabel {
+  composes: value;
+
+  font-family: inherit;
+  fill: var(--colours-grey-1);
+}
