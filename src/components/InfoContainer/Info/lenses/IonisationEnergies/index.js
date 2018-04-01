@@ -189,8 +189,10 @@ class Graph extends Component {
         tooltipData && (
           [<TooltipWithBounds
             key={`${tooltipTop}kj`}
-            top={tooltipTop + margin.top - 12}
-            left={tooltipLeft + margin.left + 12}
+            top={tooltipTop + margin.top}
+            left={tooltipLeft + margin.left}
+            offsetLeft={12}
+            offsetTop={12}
             style={{
               backgroundColor: 'rgba(92, 119, 235, 1.000)',
               color: 'white',
