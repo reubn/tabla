@@ -47,3 +47,7 @@
   font-family: inherit;
   fill: var(--colours-grey-1);
 }
+
+.relativeWrapper {
+  position: relative;
+}

@@ -93,11 +93,23 @@
     classnames "^2.2.5"
     prop-types "^15.6.0"
 
+"@vx/bounds@0.0.153":
+  version "0.0.153"
+  resolved "https://registry.yarnpkg.com/@vx/bounds/-/bounds-0.0.153.tgz#2fc2118fdd3dbb1a3fb897dceabab3d5eb617617"
+  dependencies:
+    prop-types "^15.5.10"
+
 "@vx/curve@0.0.153":
   version "0.0.153"
   resolved "https://registry.yarnpkg.com/@vx/curve/-/curve-0.0.153.tgz#6829c3454f9ec16b7e6925aecbad5a1e3c8b3169"
   dependencies:
     d3-shape "^1.0.6"
+
+"@vx/event@^0.0.153":
+  version "0.0.153"
+  resolved "https://registry.yarnpkg.com/@vx/event/-/event-0.0.153.tgz#80fccaacc7481c51768db8f6d95acc7ede3c0861"
+  dependencies:
+    "@vx/point" "0.0.153"
 
 "@vx/group@0.0.153", "@vx/group@^0.0.153":
   version "0.0.153"
@@ -141,6 +153,14 @@
     classnames "^2.2.5"
     lodash "^4.17.4"
     reduce-css-calc "^1.3.0"
+
+"@vx/tooltip@^0.0.158":
+  version "0.0.158"
+  resolved "https://registry.yarnpkg.com/@vx/tooltip/-/tooltip-0.0.158.tgz#55c4c18762c3a888f53227e33d01ca5d3293943f"
+  dependencies:
+    "@vx/bounds" "0.0.153"
+    classnames "^2.2.5"
+    prop-types "^15.5.10"
 
 abbrev@1:
   version "1.1.1"
