@@ -6,7 +6,7 @@ import {AxisLeft, AxisBottom} from '@vx/axis';
 import {ParentSize} from '@vx/responsive';
 import {Point} from '@vx/point'
 import {localPoint} from '@vx/event'
-import {Tooltip} from '@vx/tooltip'
+import {Tooltip, TooltipWithBounds} from '@vx/tooltip'
 import {extent, max, min, bisector} from 'd3-array';
 import {format} from 'd3-format';
 
@@ -52,6 +52,16 @@ class Graph extends Component {
     });
   }
 
+  hideTooltip(){
+    if(!this.state.tooltipData) return
+
+    this.setState({
+      tooltipData: null,
+      tooltipLeft: 0,
+      tooltipTop: 0,
+    })
+  }
+
   render(){
     const {width, height, element: {ionisationEnergies: data}, showTooltip} = this.props
     const {tooltipData, tooltipTop, tooltipLeft} = this.state
@@ -87,8 +97,7 @@ class Graph extends Component {
     const tValues = Array(tNum).fill().map((_, p) => 10 ** p)
 
     return (
-      <section className={relativeWrapper}>
-        <svg viewBox={`0 0 ${width} ${height}`} className={svg}>
+        [<svg key="svg" viewBox={`0 0 ${width} ${height}`} className={svg}>
 
           <Group top={margin.top} left={margin.left}>
             <Group className={grid}>
@@ -117,17 +126,6 @@ class Graph extends Component {
               x={x}
               y={y}
               stroke={"var(--group-colour)"}
-              // glyph={(d, i) => (
-              //   <circle
-              //     key={i}
-              //     cx={xScale(x(d))}
-              //     cy={yScale(y(d))}
-              //     r={4}
-              //     fill='var(--colours-white)'
-              //     stroke='var(--group-colour)'
-              //     strokeWidth={2}
-              //   />
-              // )}
             />
             <Bar
               x={xScale.range()[0]}
@@ -140,7 +138,7 @@ class Graph extends Component {
               onTouchStart={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
               onTouchMove={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
               onMouseMove={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
-              onMouseLeave={data => event => hideTooltip()}
+              onMouseLeave={data => event => this.hideTooltip()}
             />
             <AxisLeft
               scale={yScale}
@@ -187,9 +185,10 @@ class Graph extends Component {
               </g>
             )}
           </Group>
-        </svg>
-        {tooltipData && (
-          [<Tooltip
+        </svg>,
+        tooltipData && (
+          [<TooltipWithBounds
+            key={`${tooltipTop}kj`}
             top={tooltipTop + margin.top - 12}
             left={tooltipLeft + margin.left + 12}
             style={{
@@ -198,32 +197,32 @@ class Graph extends Component {
             }}
            >
             {`${y(tooltipData)} kJ mol⁻¹`}
-          </Tooltip>,
+          </TooltipWithBounds>,
           <Tooltip
+            key={`${tooltipTop}ie`}
             top={yMax + margin.top}
             left={tooltipLeft + margin.left}
             style={{
-                transform: 'translate(-50%, -50%)',
+              transform: 'translate(-50%, -50%)',
             }}
           >
-            {x(tooltipData)}
+            {`${x(tooltipData)}${['st', 'nd', 'rd'][[...`${x(tooltipData)}`].pop() - 1] || 'th'}`}
           </Tooltip>]
-        )}
-      </section>
-    )
-  }
-}
+        )]
+        )
+        }
+        }
 
-export default class IonisationEnergiesLens extends Component {
-  static test(element){
-    return element.ionisationEnergies && element.ionisationEnergies.length
-  }
+        export default class IonisationEnergiesLens extends Component {
+          static test(element){
+            return element.ionisationEnergies && element.ionisationEnergies.length
+          }
 
-  render(){
-    return (
+          render(){
+            return (
       <section className={lens}>
         <label className={label}>Ionisation Energies</label>
-        <ParentSize>
+        <ParentSize className={relativeWrapper}>
           {wh => <Graph element={this.props.element} {...wh} />}
         </ParentSize>
       </section>
