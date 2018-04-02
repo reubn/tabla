@@ -127,19 +127,6 @@ class Graph extends Component {
               y={y}
               stroke={"var(--group-colour)"}
             />
-            <Bar
-              x={xScale.range()[0]}
-              y={xScale.range()[0]}
-              width={width}
-              height={height}
-              fill="transparent"
-              rx={14}
-              data={data}
-              onTouchStart={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
-              onTouchMove={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
-              onMouseMove={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
-              onMouseLeave={data => event => this.hideTooltip()}
-            />
             <AxisLeft
               scale={yScale}
               tickValues={tValues}
@@ -166,6 +153,19 @@ class Graph extends Component {
               />
               ]
             )}
+            <Bar
+              x={xScale.range()[0]}
+              y={xScale.range()[0]}
+              width={width}
+              height={height}
+              fill="transparent"
+              rx={14}
+              data={data}
+              onTouchStart={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
+              onTouchMove={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
+              onMouseMove={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
+              onMouseLeave={data => event => this.hideTooltip()}
+            />
           </Group>
         </svg>,
         tooltipData && (
