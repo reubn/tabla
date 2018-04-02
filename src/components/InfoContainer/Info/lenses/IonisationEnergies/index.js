@@ -10,7 +10,7 @@ import {Tooltip, TooltipWithBounds} from '@vx/tooltip'
 import {extent, max, min, bisector} from 'd3-array';
 import {format} from 'd3-format';
 
-import {lens, label, svg, grid, value, power as powerStyle, foreignObject, axisLabel, relativeWrapper} from './style'
+import {lens, label, svg, grid, value, power as powerStyle, foreignObject, axisLabel, relativeWrapper, kjTooltip, ieTooltip, selectLine, selectDot} from './style'
 
 const AxisLeftLabel = ({x, y, formattedValue})=> {
   return (
@@ -153,36 +153,18 @@ class Graph extends Component {
               hideAxisLine
             />
             {tooltipData && (
-              <g>
+              [
                 <Line
-                  from={{ x: tooltipLeft, y: 0 }}
-                  to={{ x: tooltipLeft, y: yMax }}
-                  stroke="rgba(92, 119, 235, 1.000)"
-                  strokeWidth={2}
-                  style={{ pointerEvents: 'none' }}
-                  strokeDasharray="2,2"
-                />
-                <circle
-                  cx={tooltipLeft}
-                  cy={tooltipTop}
-                  r={4}
-                  fill="black"
-                  fillOpacity={0.1}
-                  stroke="black"
-                  strokeOpacity={0.1}
-                  strokeWidth={2}
-                  style={{ pointerEvents: 'none' }}
-                />
-                <circle
-                  cx={tooltipLeft}
-                  cy={tooltipTop}
-                  r={4}
-                  fill="rgba(92, 119, 235, 1.000)"
-                  stroke="white"
-                  strokeWidth={2}
-                  style={{ pointerEvents: 'none' }}
-                />
-              </g>
+                  from={{x: tooltipLeft, y: 0}}
+                  to={{x: tooltipLeft, y: yMax}}
+                  className={selectLine}
+                />,
+              <circle
+                cx={tooltipLeft}
+                cy={tooltipTop}
+                className={selectDot}
+              />
+              ]
             )}
           </Group>
         </svg>,
@@ -193,10 +175,7 @@ class Graph extends Component {
             left={tooltipLeft + margin.left}
             offsetLeft={12}
             offsetTop={12}
-            style={{
-              backgroundColor: 'rgba(92, 119, 235, 1.000)',
-              color: 'white',
-            }}
+            className={kjTooltip}
            >
             {`${y(tooltipData)} kJ mol⁻¹`}
           </TooltipWithBounds>,
@@ -204,9 +183,7 @@ class Graph extends Component {
             key={`${tooltipTop}ie`}
             top={yMax + margin.top}
             left={tooltipLeft + margin.left}
-            style={{
-              transform: 'translate(-50%, -50%)',
-            }}
+            className={ieTooltip}
           >
             {`${x(tooltipData)}${['st', 'nd', 'rd'][[...`${x(tooltipData)}`].pop() - 1] || 'th'}`}
           </Tooltip>]

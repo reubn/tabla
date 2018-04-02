@@ -51,3 +51,31 @@
 .relativeWrapper {
   position: relative;
 }
+
+.ieTooltip {
+  transform: translate(-50%, -50%);
+
+  background-color: var(--group-colour)!important;
+  color: var(--colours-white)!important;
+}
+
+.kjTooltip {
+  background-color: var(--colours-white)!important;
+  color: var(--colours-grey-5)!important;
+}
+
+.selectLine {
+  shape-rendering: crispedges;
+  stroke: var(--colours-grey-2);
+  stroke-width: 2px;
+  stroke-dasharray: 2, 2;
+  pointer-events: 'none';
+}
+
+.selectDot {
+  r: 4px;
+  fill: var(--group-colour);
+  stroke: var(--colours-white);
+  stroke-width: 2px;
+  pointer-events: none;
+}
