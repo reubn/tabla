@@ -147,7 +147,7 @@ class Graph extends Component {
               top={0}
               left={0}
               tickLength={0}
-              label="kJ mol⁻¹"
+              label="log(kJ mol⁻¹)"
               labelClassName={axisLabel}
               labelOffset={margin.left / 2}
               hideAxisLine
