@@ -180,7 +180,7 @@ class Graph extends Component {
             {`${y(tooltipData)} kJ mol⁻¹`}
           </TooltipWithBounds>,
           <Tooltip
-            key={`${tooltipTop}ie`}
+            key="ie"
             top={yMax + margin.top}
             left={tooltipLeft + margin.left}
             className={ieTooltip}
