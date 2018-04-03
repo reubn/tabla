@@ -56,7 +56,7 @@ export default ({ieData, isotopesData, oxidationStatesData}) => data => ({
   ies: ieData.filter(({atomic_number}) => atomic_number === data.atomic_number).map(({degree, energy}) => [degree, energy]),
 
   // Oxidation States
-  os: oxidationStatesData.filter(({atomic_number}) => atomic_number === data.atomic_number).map(({oxidation_state}) => oxidation_state),
+  os: [...new Set([...oxidationStatesData.filter(({atomic_number}) => atomic_number === data.atomic_number).map(({oxidation_state}) => oxidation_state), 0])].sort((a, b) => a - b),
 
   // Group
   g: data.group_id,
