@@ -26,9 +26,9 @@ export default class FigureLens extends Component {
           const figureComponent = (
             <section className={property} key={label + index}>
               <label className={labelStyle}>{label}</label>
-              <span className={classnames(figureStyle, {[hasUnitsSuper]: units.sup})}>
+              <span className={classnames(figureStyle, {[hasUnitsSuper]: units.super})}>
                 {value}
-                {units.text && <span className={units.sup ? unitsSuper : unitsInline}>{units.text}</span>}
+                {units.text && <span className={units.super ? unitsSuper : unitsInline}>{units.text}</span>}
               </span>
             </section>
           )

@@ -30,7 +30,7 @@ const lenses = [
         test: !!element.meltingPoint,
         value: sigdig(element.meltingPoint - 273, 5),
         units: {
-          sup: true,
+          super: true,
           text: '°C'
         }
       },
@@ -39,7 +39,7 @@ const lenses = [
         test: !!element.boilingPoint,
         value: sigdig(element.boilingPoint - 273, 5),
         units: {
-          sup: true,
+          super: true,
           text: '°C'
         }
       },
