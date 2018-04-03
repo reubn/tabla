@@ -95,7 +95,115 @@ const lenses = [
       }]
     })
   },
-  IonisationEnergiesLens
+  IonisationEnergiesLens,
+  {
+    Lens: FigureLens,
+    test: element => !!element.oxidationStates,
+    props: element => ({
+      figures: [{
+        label: 'Oxidation States',
+        test: true,
+        value: element.oxidationStates.map(n => n > 0 ? `+${n}` : n).join(', ')
+      }]
+    })
+  },
+  {
+    Lens: TextLens,
+    test: element => !!element.uses,
+    props: element => ({
+      label: 'Uses',
+      text: element.uses
+    })
+  },
+  {
+    Lens: FigureLens,
+    test: element => !!element.electronAffinity || !!element.protonAffinity || !!element.electronegativity,
+    props: element => ({
+      figures: [{
+        label: 'Electron Affinity',
+        test: !!element.electronAffinity,
+        value: sigdig((element.electronAffinity * 96485.3328959) / 1000, 5),
+        units: {
+          inline: true,
+          text: 'kJ mol⁻¹'
+        }
+      },
+      {
+        label: 'Proton Affinity',
+        test: !!element.protonAffinity,
+        value: sigdig(element.protonAffinity, 5),
+        units: {
+          inline: true,
+          text: 'kJ mol⁻¹'
+        }
+      },
+      {
+        label: 'Electronegativity',
+        test: !!element.electronegativity,
+        value: element.electronegativity,
+        units: {
+          inline: true,
+          text: 'PAULING'
+        }
+      }]
+    })
+  },
+  {
+    Lens: FigureLens,
+    test: element => !!element.atomicVolume || !!element.atomicRadius,
+    props: element => ({
+      figures: [{
+        label: 'Atomic Volume',
+        test: !!element.atomicVolume,
+        value: sigdig(element.atomicVolume, 5),
+        units: {
+          inline: true,
+          text: 'cm³ mol⁻¹'
+        }
+      },
+      {
+        label: 'Atomic Radius',
+        test: !!element.atomicRadius,
+        value: sigdig(element.atomicRadius, 5),
+        units: {
+          inline: true,
+          text: 'pm'
+        }
+      }]
+    })
+  },
+  {
+    Lens: FigureLens,
+    test: element => !!element.metallicRadius || !!element.vanDerWaalsRadius,
+    props: element => ({
+      figures: [{
+        label: 'Metallic Radius',
+        test: !!element.metallicRadius,
+        value: sigdig(element.metallicRadius, 5),
+        units: {
+          inline: true,
+          text: 'pm'
+        }
+      },
+      {
+        label: 'Van Der Waals Radius',
+        test: !!element.vanDerWaalsRadius,
+        value: sigdig(element.vanDerWaalsRadius, 5),
+        units: {
+          inline: true,
+          text: 'pm'
+        }
+      }]
+    })
+  },
+  {
+    Lens: TextLens,
+    test: element => !!element.sources,
+    props: element => ({
+      label: 'Sources',
+      text: element.sources
+    })
+  }
 ]
 
 export default element => lenses.reduce((active, lensOrFactory, index) => {
