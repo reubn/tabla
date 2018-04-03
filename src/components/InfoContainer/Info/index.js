@@ -6,7 +6,7 @@ import {bestElement} from '../../../elements'
 
 import lenses from './lenses'
 
-import {info, open, enter, enterActive, exit, exitActive, appear, appearActive, name,
+import {info, open, enter, enterActive, exit, exitActive, appear, appearActive, name, scroll,
   alkaliMetal, halogen, nonMetal, transitionMetal, nobleGas, postTransitionMetal, metalloid, alkalineEarthMetal, actinoid, lanthanoid, unknown} from './style'
 
 const groupColours = {
@@ -55,10 +55,12 @@ class Info extends Component {
         timeout={200}
       >
         <section className={classnames(info, {[open]: this.props.elementSelected}, groupColours[this.state.element.groupBlock] || unknown)}>
-          <a href={`//en.wikipedia.org/wiki/Element_${this.state.element.atomicNumber}`} target="_blank" rel="noopener noreferrer" className={name}>{this.state.element.name}</a>
-          {lenses(this.state.element)}
+          <section className={scroll}>
+            <a href={`//en.wikipedia.org/wiki/Element_${this.state.element.atomicNumber}`} target="_blank" rel="noopener noreferrer" className={name}>{this.state.element.name}</a>
+            {lenses(this.state.element)}
+          </section>
         </section>
-      </CSSTransition>
+        </CSSTransition>
     )
   }
 }
