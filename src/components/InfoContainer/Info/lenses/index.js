@@ -12,22 +12,22 @@ const lenses = [
   ElectronicDiagramLens,
   {
     Lens: FigureLens,
-    test: element => !!element.electronicConfigurationRaw,
+    test: element => element.electronicConfigurationRaw,
     props: element => ({
       figures: [{
         label: 'Electronic Configuration',
-        test: !!element.electronicConfigurationRaw,
+        test: element.electronicConfigurationRaw,
         value: <ElectronicConfigurationFormat element={element} />
       }]
     })
   },
   {
     Lens: FigureLens,
-    test: element => !!element.meltingPoint || !!element.boilingPoint || !!element.density,
+    test: element => element.meltingPoint || element.boilingPoint || element.density,
     props: element => ({
       figures: [{
         label: 'Melting Point',
-        test: !!element.meltingPoint,
+        test: element.meltingPoint,
         value: sigdig(element.meltingPoint - 273, 5),
         units: {
           super: true,
@@ -36,7 +36,7 @@ const lenses = [
       },
       {
         label: 'Boiling Point',
-        test: !!element.boilingPoint,
+        test: element.boilingPoint,
         value: sigdig(element.boilingPoint - 273, 5),
         units: {
           super: true,
@@ -45,7 +45,7 @@ const lenses = [
       },
       {
         label: 'Density',
-        test: !!element.density,
+        test: element.density,
         value: sigdig(element.density, 5),
         units: {
           inline: true,
@@ -56,7 +56,7 @@ const lenses = [
   },
   {
     Lens: TextLens,
-    test: element => !!element.description,
+    test: element => element.description,
     props: element => ({
       label: 'Description',
       text: element.description
@@ -64,11 +64,11 @@ const lenses = [
   },
   {
     Lens: FigureLens,
-    test: element => !!element.covalentRadius || !!element.covalentRadiusDouble || !!element.covalentRadiusTriple,
+    test: element => element.covalentRadius || element.covalentRadiusDouble || element.covalentRadiusTriple,
     props: element => ({
       figures: [{
         label: 'Covalent Radius',
-        test: !!element.covalentRadius,
+        test: element.covalentRadius,
         value: sigdig(element.covalentRadius, 5),
         units: {
           inline: true,
@@ -77,7 +77,7 @@ const lenses = [
       },
       {
         label: 'Double',
-        test: !!element.covalentRadiusDouble,
+        test: element.covalentRadiusDouble,
         value: sigdig(element.covalentRadiusDouble, 5),
         units: {
           inline: true,
@@ -86,7 +86,7 @@ const lenses = [
       },
       {
         label: 'Triple',
-        test: !!element.covalentRadiusTriple,
+        test: element.covalentRadiusTriple,
         value: sigdig(element.covalentRadiusTriple, 5),
         units: {
           inline: true,
@@ -98,7 +98,7 @@ const lenses = [
   IonisationEnergiesLens,
   {
     Lens: FigureLens,
-    test: element => !!element.oxidationStates,
+    test: element => element.oxidationStates,
     props: element => ({
       figures: [{
         label: 'Oxidation States',
@@ -109,7 +109,7 @@ const lenses = [
   },
   {
     Lens: TextLens,
-    test: element => !!element.uses,
+    test: element => element.uses,
     props: element => ({
       label: 'Uses',
       text: element.uses
@@ -117,11 +117,11 @@ const lenses = [
   },
   {
     Lens: FigureLens,
-    test: element => !!element.electronAffinity || !!element.protonAffinity || !!element.electronegativity,
+    test: element => element.electronAffinity || element.protonAffinity || element.electronegativity,
     props: element => ({
       figures: [{
         label: 'Electron Affinity',
-        test: !!element.electronAffinity,
+        test: element.electronAffinity,
         value: sigdig((element.electronAffinity * 96485.3328959) / 1000, 5),
         units: {
           inline: true,
@@ -130,7 +130,7 @@ const lenses = [
       },
       {
         label: 'Proton Affinity',
-        test: !!element.protonAffinity,
+        test: element.protonAffinity,
         value: sigdig(element.protonAffinity, 5),
         units: {
           inline: true,
@@ -139,7 +139,7 @@ const lenses = [
       },
       {
         label: 'Electronegativity',
-        test: !!element.electronegativity,
+        test: element.electronegativity,
         value: element.electronegativity,
         units: {
           inline: true,
@@ -150,11 +150,11 @@ const lenses = [
   },
   {
     Lens: FigureLens,
-    test: element => !!element.atomicVolume || !!element.atomicRadius,
+    test: element => element.atomicVolume || element.atomicRadius,
     props: element => ({
       figures: [{
         label: 'Atomic Volume',
-        test: !!element.atomicVolume,
+        test: element.atomicVolume,
         value: sigdig(element.atomicVolume, 5),
         units: {
           inline: true,
@@ -163,7 +163,7 @@ const lenses = [
       },
       {
         label: 'Atomic Radius',
-        test: !!element.atomicRadius,
+        test: element.atomicRadius,
         value: sigdig(element.atomicRadius, 5),
         units: {
           inline: true,
@@ -174,11 +174,11 @@ const lenses = [
   },
   {
     Lens: FigureLens,
-    test: element => !!element.metallicRadius || !!element.vanDerWaalsRadius,
+    test: element => element.metallicRadius || element.vanDerWaalsRadius,
     props: element => ({
       figures: [{
         label: 'Metallic Radius',
-        test: !!element.metallicRadius,
+        test: element.metallicRadius,
         value: sigdig(element.metallicRadius, 5),
         units: {
           inline: true,
@@ -187,7 +187,7 @@ const lenses = [
       },
       {
         label: 'Van Der Waals Radius',
-        test: !!element.vanDerWaalsRadius,
+        test: element.vanDerWaalsRadius,
         value: sigdig(element.vanDerWaalsRadius, 5),
         units: {
           inline: true,
@@ -198,7 +198,7 @@ const lenses = [
   },
   {
     Lens: TextLens,
-    test: element => !!element.sources,
+    test: element => element.sources,
     props: element => ({
       label: 'Sources',
       text: element.sources
