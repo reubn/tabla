@@ -231,6 +231,30 @@ const lenses = [
       }]
     })
   },
+  {
+    Lens: FigureLens,
+    test: element => element.abundance,
+    props: element => ({
+      figures: [{
+        label: 'Crust Abundance',
+        test: element.abundance.crust,
+        value: sigdig(element.abundance.crust, 5),
+        units: {
+          inline: true,
+          text: 'mg kg⁻¹'
+        }
+      },
+      {
+        label: 'Sea Abundance',
+        test: element.abundance.sea,
+        value: sigdig(element.abundance.sea, 5),
+        units: {
+          inline: true,
+          text: 'mg dm⁻³'
+        }
+      }]
+    })
+  },
   }
 ]
 
