@@ -255,6 +255,62 @@ const lenses = [
       }]
     })
   },
+  {
+    Lens: FigureLens,
+    test: element => element.evaporationHeat || element.fusionHeat || element.heatOfFormation,
+    props: element => ({
+      figures: [{
+        label: 'Enthalpy of Vapourisation ',
+        test: element.evaporationHeat,
+        value: sigdig(element.evaporationHeat, 5),
+        units: {
+          inline: true,
+          text: 'kJ mol⁻¹'
+        }
+      },
+      {
+        label: 'Enthalpy of Fusion',
+        test: element.fusionHeat,
+        value: sigdig(element.fusionHeat, 5),
+        units: {
+          inline: true,
+          text: 'kJ mol⁻¹'
+        }
+      },
+      {
+        label: 'Enthalpy of Formation',
+        test: element.heatOfFormation,
+        value: sigdig(element.heatOfFormation, 5),
+        units: {
+          inline: true,
+          text: 'kJ mol⁻¹'
+        }
+      }]
+    })
+  },
+  {
+    Lens: FigureLens,
+    test: element => element.specificHeat || element.thermalConductivity,
+    props: element => ({
+      figures: [{
+        label: 'Specific Heat - 20°C',
+        test: element.specificHeat,
+        value: sigdig(element.specificHeat, 5),
+        units: {
+          inline: true,
+          text: 'J (g ⋅ K)⁻¹'
+        }
+      },
+      {
+        label: 'Thermal Conductivity',
+        test: element.thermalConductivity,
+        value: sigdig(element.thermalConductivity, 5),
+        units: {
+          inline: true,
+          text: 'W (m ⋅ K)⁻¹'
+        }
+      }]
+    })
   }
 ]
 
