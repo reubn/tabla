@@ -212,6 +212,14 @@ const lenses = [
       text: `Discovered ${element.discoveryYear ? `in ${element.discoveryYear} ` : ''}${element.discoverers? `by ${element.discoverers} ` : ''}${element.discoveryLocation ? `in ${element.discoveryLocation}` : ''}`
     })
   },
+  {
+    Lens: TextLens,
+    test: element => element.nameOrigin,
+    props: element => ({
+      label: 'Name Origin',
+      text: element.nameOrigin
+    })
+  },
   }
 ]
 
