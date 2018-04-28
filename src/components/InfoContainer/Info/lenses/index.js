@@ -220,6 +220,17 @@ const lenses = [
       text: element.nameOrigin
     })
   },
+  {
+    Lens: FigureLens,
+    test: element => element.cas,
+    props: element => ({
+      figures: [{
+        label: 'CAS',
+        test: true,
+        value: (<a target="_blank" rel="noopener noreferrer" href={`https://www.chemspider.com/Search.aspx?q=${element.cas}`} style={{textDecoration: 'none', color: 'inherit'}}>{element.cas}</a>)
+      }]
+    })
+  },
   }
 ]
 
