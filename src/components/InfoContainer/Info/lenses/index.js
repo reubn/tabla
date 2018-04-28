@@ -203,6 +203,15 @@ const lenses = [
       label: 'Sources',
       text: element.sources
     })
+  },
+  {
+    Lens: TextLens,
+    test: element => element.discoveryYear || element.discoverers || element.discoveryLocation,
+    props: element => ({
+      label: 'Discovery',
+      text: `Discovered ${element.discoveryYear ? `in ${element.discoveryYear} ` : ''}${element.discoverers? `by ${element.discoverers} ` : ''}${element.discoveryLocation ? `in ${element.discoveryLocation}` : ''}`
+    })
+  },
   }
 ]
 
