@@ -44,7 +44,7 @@ export default ({routerPath, routeNumber, routerPaths, cssIdentifier, webpackSta
     />
   ))
 
-  readline.cursorTo(process.stdout, 45)
+  readline.cursorTo(process.stdout, 0)
   readline.clearLine(process.stdout, 1)
   process.stdout.write(`rendering path ${routerPath} ${routeNumber + 1} / ${routerPaths.length}`)
 

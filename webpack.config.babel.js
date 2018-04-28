@@ -6,7 +6,7 @@ import BabiliPlugin from 'babili-webpack-plugin'
 import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 import NoEmitPlugin from 'no-emit-webpack-plugin'
-import SimpleProgressPlugin from 'webpack-simple-progress-plugin'
+import WebpackBar from 'webpackbar'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 import {getRouterPaths} from './src/routing'
@@ -26,7 +26,10 @@ export default env => {
 
   const cssIdentifier = 'css.css'
 
+  const stats = 'errors-only'
+
   const config = {
+    stats,
     entry: {
       client: ['babel-polyfill', './src/client.js'],
       static: ['babel-polyfill', './src/static.js']
@@ -111,7 +114,10 @@ export default env => {
       new ExtractTextPlugin(cssIdentifier, {
         allChunks: true
       }),
-      new SimpleProgressPlugin(),
+      new WebpackBar({
+        profile: true,
+        color: '#FFB400'
+      }),
       new CopyWebpackPlugin([{
         from: './data/dist/'
       }], {ignore: ['basic.json', 'full.json']}),
@@ -125,6 +131,7 @@ export default env => {
       new NoEmitPlugin(['static.js', 'static.map.js', cssIdentifier])
     ],
     devServer: {
+      stats,
       contentBase: './dist',
       compress: true,
       host: '0.0.0.0',

@@ -41,7 +41,7 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
-    "webpack-simple-progress-plugin": "^0.0.3"
+    "webpackbar": "^2.6.1"
   },
   "dependencies": {
     "@vx/axis": "^0.0.159",
