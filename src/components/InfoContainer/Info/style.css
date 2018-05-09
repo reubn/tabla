@@ -17,6 +17,7 @@
   column-count: 2;
   column-gap: 0;
   column-fill: auto;
+  margin-bottom: 1rem;
 }
 
 .info * {
