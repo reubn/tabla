@@ -2,6 +2,12 @@ import selectElement from '../store/actions/selectElement'
 
 export default [
   {
+    path: '/',
+    action: null,
+    actionCreator: (getState, dispatch) => dispatch({type: 'TOGGLE_ABOUT', payload: false, triggerRedirect: false})
+                                        && dispatch({type: 'SELECT_ELEMENT', payload: null, triggerRedirect: false})
+  },
+  {
     path: '/about',
     action: 'TOGGLE_ABOUT',
     actionCreator: (getState, dispatch) => dispatch({type: 'TOGGLE_ABOUT', payload: true, triggerRedirect: false}),
