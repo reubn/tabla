@@ -1,19 +1,17 @@
 import React, {Component} from 'react'
-import {Group} from '@vx/group';
-import {scaleLog, scaleLinear} from '@vx/scale';
-import {LinePath, Line, Bar} from '@vx/shape';
-import {AxisLeft, AxisBottom} from '@vx/axis';
-import {ParentSize} from '@vx/responsive';
+import {Group} from '@vx/group'
+import {scaleLog, scaleLinear} from '@vx/scale'
+import {LinePath, Line, Bar} from '@vx/shape'
+import {AxisLeft} from '@vx/axis'
+import {ParentSize} from '@vx/responsive'
 import {Point} from '@vx/point'
 import {localPoint} from '@vx/event'
 import {Tooltip, TooltipWithBounds} from '@vx/tooltip'
-import {extent, max, min, bisector} from 'd3-array';
-import {format} from 'd3-format';
+import {extent, max, min, bisector} from 'd3-array'
 
 import {lens, label, svg, grid, value, power as powerStyle, foreignObject, axisLabel, relativeWrapper, kjTooltip, ieTooltip, selectLine, selectDot} from './style'
 
-const AxisLeftLabel = ({x, y, formattedValue})=> {
-  return (
+const AxisLeftLabel = ({x, y, formattedValue}) => (
     <foreignObject x={x} y={y} className={foreignObject}>
       <span className={value}>
         10
@@ -23,7 +21,6 @@ const AxisLeftLabel = ({x, y, formattedValue})=> {
       </span>
     </foreignObject>
   )
-}
 
 class Graph extends Component {
   constructor(props){
@@ -37,19 +34,19 @@ class Graph extends Component {
   }
 
   handleTooltip({data, event, x, y, xScale, yScale, margin}){
-    const {x: xPoint} = localPoint(event);
-    const x0 = xScale.invert(xPoint - margin.left);
-    const index = bisector(x).left(data, x0, 1);
-    const d0 = data[index - 1];
-    const d1 = data[index];
-    let d = d0;
-    if (d1) d = x0 - x(d0) > x(d1) - x0 ? d1 : d0
+    const {x: xPoint} = localPoint(event)
+    const x0 = xScale.invert(xPoint - margin.left)
+    const index = bisector(x).left(data, x0, 1)
+    const d0 = data[index - 1]
+    const d1 = data[index]
+    let d = d0
+    if(d1) d = x0 - x(d0) > x(d1) - x0 ? d1 : d0
 
     this.setState({
       tooltipData: d,
       tooltipLeft: xScale(x(d)),
-      tooltipTop: yScale(y(d)),
-    });
+      tooltipTop: yScale(y(d))
+    })
   }
 
   hideTooltip(){
@@ -58,37 +55,37 @@ class Graph extends Component {
     this.setState({
       tooltipData: null,
       tooltipLeft: 0,
-      tooltipTop: 0,
+      tooltipTop: 0
     })
   }
 
   render(){
-    const {width, height, element: {ionisationEnergies: data}, showTooltip} = this.props
+    const {width, height, element: {ionisationEnergies: data}} = this.props
     const {tooltipData, tooltipTop, tooltipLeft} = this.state
 
-    const x = ([i, j]) => i;
-    const y = ([i, j]) => j;
+    const x = ([i, j]) => i
+    const y = ([i, j]) => j
 
     // Bounds
     const margin = {
       top: 20,
       bottom: 60,
       left: 80,
-      right: 20,
-    };
-    const xMax = width - margin.left - margin.right;
-    const yMax = height - margin.top - margin.bottom;
+      right: 20
+    }
+    const xMax = width - margin.left - margin.right
+    const yMax = height - margin.top - margin.bottom
 
     const xScale = scaleLinear({
       range: [0, xMax],
       domain: extent(data, x)
-    });
+    })
     const yScale = scaleLog({
       range: [yMax, 1],
       domain: [min(data, y), max(data, y)],
       base: 10,
       nice: true
-    });
+    })
 
     const maxL = 10 ** Math.ceil(Math.log10(max(data, y)))
     const minL = 10 ** Math.floor(Math.log10(min(data, y)))
