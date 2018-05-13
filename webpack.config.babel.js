@@ -29,6 +29,7 @@ export default env => {
 
   const config = {
     stats,
+    mode: devMode ? 'development' : 'production',
     entry: {
       client: ['babel-polyfill', './src/client.js'],
       static: ['babel-polyfill', './src/static.js']
