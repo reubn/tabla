@@ -19,7 +19,7 @@ export const fullElement = async atomicNumber => {
   }
 
   const json = typeof window === 'object'
-    ? (await fetch(`/${atomicNumber}.json`)).json()
+    ? import(/* webpackChunkName: "fullElement[request]" */`../../data/dist/${atomicNumber}.json`)
     : {}
 
   fullElementsCache[atomicNumber] = new FullElement(atomicNumber, await json)

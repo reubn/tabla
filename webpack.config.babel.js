@@ -4,7 +4,6 @@ import webpack from 'webpack'
 
 import BabiliPlugin from 'babili-webpack-plugin'
 import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
-import CopyWebpackPlugin from 'copy-webpack-plugin'
 import NoEmitPlugin from 'no-emit-webpack-plugin'
 import WebpackBar from 'webpackbar'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
@@ -40,7 +39,7 @@ export default env => {
       libraryTarget: 'umd',
       globalObject: `(typeof window === 'object' ? window : global)`
     },
-    target: 'node',
+    target: 'web',
     devtool: devMode ? 'source-map' : undefined,
     module: {
       rules: [
@@ -119,9 +118,6 @@ export default env => {
         profile: true,
         color: '#FFB400'
       }),
-      new CopyWebpackPlugin([{
-        from: './data/dist/'
-      }], {ignore: ['basic.json', 'full.json']}),
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(devMode ? 'development' : 'production')

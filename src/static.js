@@ -13,7 +13,7 @@ import Document from './components/Document'
 import Root from './components/Root'
 
 export default ({routerPath, routeNumber, routerPaths, cssIdentifier, webpackStats: {compilation: {hash, assets}}}) => {
-  const chunks = Object.keys(assets).filter(name => name !== 'static.js' && name.match(/\.js$/))
+  const chunks = Object.keys(assets).filter(name => name !== 'static.js' && !name.includes('fullElement') && name.match(/\.js$/))
 
   history.push(routerPath)
   linkHistoryToStore(store)
