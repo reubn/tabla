@@ -4,8 +4,8 @@ import webpack from 'webpack'
 
 import BabiliPlugin from 'babili-webpack-plugin'
 import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
-import NoEmitPlugin from 'no-emit-webpack-plugin'
 import WebpackBar from 'webpackbar'
+import FilterChunk from 'filter-chunk-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 import {getRouterPaths} from './src/routing'
@@ -126,7 +126,9 @@ export default env => {
         __DEVTOOLS__: devMode
       }),
       !devMode ? new BabiliPlugin() : () => undefined,
-      new NoEmitPlugin(['static.js', 'static.map.js', cssIdentifier])
+      new FilterChunk({
+        patterns: ['static*.js', cssIdentifier]
+      })
     ],
     devServer: {
       stats,
