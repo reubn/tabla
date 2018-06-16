@@ -7,6 +7,7 @@ import ElectronicDiagramLens from './ElectronicDiagram'
 import FigureLens from './Figure'
 import TextLens from './Text'
 import IonisationEnergiesLens from './IonisationEnergies'
+import IsotopesLens from './Isotopes'
 
 const lenses = [
   ElectronicDiagramLens,
@@ -311,7 +312,8 @@ const lenses = [
         }
       }]
     })
-  }
+  },
+  IsotopesLens
 ]
 
 export default element => lenses.reduce((active, lensOrFactory, index) => {

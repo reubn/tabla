@@ -1,0 +1,28 @@
+.lens {
+  composes: lens from "../style";
+
+  flex-direction: column;
+  height: 30vh;
+}
+
+.th {
+  composes: label from "../style.css";
+}
+
+.tr {
+  composes: text from "../style.css";
+  text-align: center;
+  font-size: 1.15rem !important;
+}
+
+.units {
+  composes: unitsInline from "../style.css";
+  font-weight: 500 !important;
+}
+
+.isotopicMass {
+  composes: unitsSuper from "../style.css";
+  margin-right: 1px;
+  font-weight: 500 !important;
+  font-size: 0.85rem !important;
+}
