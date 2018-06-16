@@ -1,7 +1,7 @@
-import readline from 'readline'
-
 import React from 'react'
 import {renderToString, renderToStaticMarkup} from 'react-dom/server'
+
+// import {message} from '../ProgressPlugin'
 
 import fullElements from '../data/dist/full'
 import {FullElement} from './elements'
@@ -12,7 +12,7 @@ import {history, linkHistoryToStore} from './routing'
 import Document from './components/Document'
 import Root from './components/Root'
 
-export default ({routerPath, routeNumber, routerPaths, cssIdentifier, webpackStats: {compilation: {hash, assets}}}) => {
+export default ({routerPath, routeNumber, routerPaths, cssIdentifier, progPlugin, webpackStats: {compilation: {hash, assets}}}) => {
   const chunks = Object.keys(assets).filter(name => name !== 'static.js' && !name.includes('fullElement') && name.match(/\.js$/))
 
   history.push(routerPath)
@@ -44,9 +44,15 @@ export default ({routerPath, routeNumber, routerPaths, cssIdentifier, webpackSta
     />
   ))
 
-  readline.cursorTo(process.stdout, 0)
-  readline.clearLine(process.stdout, 1)
-  process.stdout.write(`rendering path ${routerPath} ${routeNumber + 1} / ${routerPaths.length}`)
+  // readline.cursorTo(process.stdout, 64)
+  // readline.clearLine(process.stdout, 1)
+  // process.stdout.write(`rendering path ${routerPath} ${routeNumber + 1} / ${routerPaths.length}`)
+  progPlugin.setState({
+    progress: ((routeNumber + 1) / routerPaths.length) * 0.99,
+    message: 'rendering',
+    details: [`${routeNumber + 1} / ${routerPaths.length}`, routerPath],
+    altColour: true
+  })
 
   delete global.build
   delete global.fullElementHack

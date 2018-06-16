@@ -4,9 +4,10 @@ import webpack from 'webpack'
 
 import BabiliPlugin from 'babili-webpack-plugin'
 import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
-import WebpackBar from 'webpackbar'
 import FilterChunk from 'filter-chunk-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+
+import ProgPlugin from './ProgPlugin'
 
 import {getRouterPaths} from './src/routing'
 
@@ -26,6 +27,8 @@ export default env => {
   const cssIdentifier = 'css.css'
 
   const stats = 'errors-only'
+
+  const progPlugin = new ProgPlugin()
 
   const config = {
     stats,
@@ -109,20 +112,15 @@ export default env => {
           routerPath,
           routeNumber,
           routerPaths,
-          cssIdentifier
+          cssIdentifier,
+          progPlugin
         }
       })),
       new ExtractTextPlugin(cssIdentifier, {
         allChunks: true
       }),
-      new WebpackBar({
-        profile: true,
-        color: '#FFB400'
-      }),
+      progPlugin._plugin,
       new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: JSON.stringify(devMode ? 'development' : 'production')
-        },
         __DEVTOOLS__: devMode
       }),
       !devMode ? new BabiliPlugin() : () => undefined,
@@ -144,6 +142,9 @@ export default env => {
           to: context => `/${context.match[0]}.html`
         }]
       }
+    },
+    watchOptions: {
+      aggregateTimeout: 4000
     },
     resolve: {
       extensions: ['.js', '.css', '.json']
