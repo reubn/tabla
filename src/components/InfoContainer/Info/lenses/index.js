@@ -238,7 +238,7 @@ const lenses = [
       figures: [{
         label: 'Crust Abundance',
         test: element.abundance.crust,
-        value: sigdig(element.abundance.crust, 5),
+        value: sigdig(element.abundance.crust, 3),
         units: {
           inline: true,
           text: 'mg kg⁻¹'
@@ -247,7 +247,7 @@ const lenses = [
       {
         label: 'Sea Abundance',
         test: element.abundance.sea,
-        value: sigdig(element.abundance.sea, 5),
+        value: sigdig(element.abundance.sea, 3),
         units: {
           inline: true,
           text: 'mg dm⁻³'
