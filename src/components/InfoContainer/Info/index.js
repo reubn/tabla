@@ -4,6 +4,8 @@ import classnames from 'classnames'
 
 import {bestElement} from '../../../elements'
 
+import Close from '../../Close'
+
 import lenses from './lenses'
 
 import {info, open, enter, enterActive, exit, exitActive, appear, appearActive, name, scroll,
@@ -55,6 +57,7 @@ class Info extends Component {
         timeout={200}
       >
         <section className={classnames(info, {[open]: !!this.props.atomicNumber}, groupColours[this.state.element.groupBlock] || unknown)}>
+          <Close onClick={this.props.close} />
           <section className={scroll}>
             <a href={`//en.wikipedia.org/wiki/Element_${this.state.element.atomicNumber}`} target="_blank" rel="noopener noreferrer" className={name}>{this.state.element.name}</a>
             {lenses(this.state.element)}
