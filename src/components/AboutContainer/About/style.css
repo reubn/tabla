@@ -10,6 +10,19 @@
   box-shadow: 0 0 200px 52px var(--colours-blue-dark);
   opacity: 0;
   display: none;
+  padding: 1rem;
+  color: var(--colours-grey-3);
+}
+
+.about > hr {
+  width: 75%;
+  margin: 1rem;
+  border: solid 0.5px var(--colours-white-5);
+}
+
+.about a {
+  text-decoration: none;
+  color: var(--colours-black-3);
 }
 
 .open {
@@ -35,4 +48,10 @@
 
 .build:hover {
   color: var(--colours-grey-5);
+}
+
+.title {
+  color: var(--colours-black-4);
+  text-align: center;
+  margin: 0;
 }
