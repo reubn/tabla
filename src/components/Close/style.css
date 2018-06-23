@@ -1,7 +1,7 @@
 .close {
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 0.5rem;
+  left: 0.5rem;
   font-size: 1.5rem;
   color: var(--colours-grey);
   text-align: center;
@@ -9,6 +9,7 @@
   cursor: pointer;
   transition: color 0.1s ease-in;
   z-index: 2;
+  padding: 1rem;
 }
 
 .close:hover {
@@ -21,7 +22,7 @@
   and (orientation: portrait) {
   .close {
     font-size: 4rem;
-    top: 4rem;
-    left: 4rem;
+    top: 3rem;
+    left: 3rem;
   }
 }
