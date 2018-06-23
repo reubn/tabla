@@ -133,7 +133,7 @@ class Graph extends Component {
               tickLength={0}
               label="log(kJ mol⁻¹)"
               labelClassName={axisLabel}
-              labelOffset={margin.left / 2}
+              labelOffset={(margin.left / 2) + 10}
               hideAxisLine
             />
             {tooltipData && (
