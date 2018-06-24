@@ -41,7 +41,7 @@ export default env => {
       path: devMode ? '/' : path.resolve('./dist'),
       filename: '[name].js',
       libraryTarget: 'umd',
-      globalObject: `(typeof window === 'object' ? window : global)`
+      globalObject: '(typeof window === `object` ? window : global)'
     },
     target: 'web',
     devtool: devMode ? 'source-map' : undefined,
