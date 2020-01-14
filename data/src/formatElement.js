@@ -1,6 +1,12 @@
 import groupBlocks from './groupBlocks.json'
 
-const formatFormulae = string => (string && string.replace) ? string.replace(/(H|Li|Na|K|Rb|Cs|Fr|Be|Mg|Ca|Sr|Ba|Ra|Sc|Y|La|Ac|Ti|Zr|Hf|Rf|Ce|Th|V|Nb|Ta|Db|Pr|Pa|Cr|Mo|W|Sg|Nd|U|Mn|Tc|Re|Bh|Pm|Np|Fe|Ru|Os|Hs|Sm|Pu|Co|Rh|Ir|Mt|Eu|Am|Ni|Pd|Pt|Ds|Gd|Cm|Cu|Ag|Au|Rg|Tb|Bk|Zn|Cd|Hg|Cn|Dy|Cf|B|Al|Ga|In|Tl|Nh|Ho|Es|C|Si|Ge|Sn|Pb|Fl|Er|Fm|N|P|As|Sb|Bi|Mc|Tm|Md|O|S|Se|Te|Po|Lv|Yb|No|F|Cl|Br|I|At|Ts|Lu|Lr|He|Ne|Ar|Kr|Xe|Rn|Og|\))(\d+)/g, (match, element, number) => `${element}${[...number].map(n => '₀₁₂₃₄₅₆₇₈₉'[n]).join('')}`) : string
+const formatFormulae = string => (string && string.replace)
+  ? string.replace(
+    /(H|Li|Na|K|Rb|Cs|Fr|Be|Mg|Ca|Sr|Ba|Ra|Sc|Y|La|Ac|Ti|Zr|Hf|Rf|Ce|Th|V|Nb|Ta|Db|Pr|Pa|Cr|Mo|W|Sg|Nd|U|Mn|Tc|Re|Bh|Pm|Np|Fe|Ru|Os|Hs|Sm|Pu|Co|Rh|Ir|Mt|Eu|Am|Ni|Pd|Pt|Ds|Gd|Cm|Cu|Ag|Au|Rg|Tb|Bk|Zn|Cd|Hg|Cn|Dy|Cf|B|Al|Ga|In|Tl|Nh|Ho|Es|C|Si|Ge|Sn|Pb|Fl|Er|Fm|N|P|As|Sb|Bi|Mc|Tm|Md|O|S|Se|Te|Po|Lv|Yb|No|F|Cl|Br|I|At|Ts|Lu|Lr|He|Ne|Ar|Kr|Xe|Rn|Og|\))(\-?\d+)/g,
+    (match, element, number) =>
+      `${number.includes('-') ? [...number].map(n => '⁰¹²³⁴⁵⁶⁷⁸⁹'[n]).join('') : ''}${element}${number.includes('-') ? '' : [...number].map(n => '₀₁₂₃₄₅₆₇₈₉'[n]).join('')}`
+    )
+  : string
 
 export default ({ieData, isotopesData, oxidationStatesData}) => data => ({
   // Atomic Number
