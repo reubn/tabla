@@ -60,7 +60,7 @@ class Graph extends Component {
   }
 
   render(){
-    const {width, height, element: {ionisationEnergies: data}} = this.props
+    const {parent: {width, height}, element: {ionisationEnergies: data}} = this.props
     const {tooltipData, tooltipTop, tooltipLeft} = this.state
 
     const x = ([i, j]) => i
@@ -94,7 +94,7 @@ class Graph extends Component {
     const tValues = Array(tNum).fill().map((_, p) => 10 ** p)
 
     return (
-        [<svg key="svg" viewBox={`0 0 ${width} ${height}`} className={svg}>
+        [<svg key="svg" viewBox={`0 0 ${width} ${height}`} className={svg} >
 
           <Group top={margin.top} left={margin.left}>
             <Group className={grid}>
@@ -118,10 +118,8 @@ class Graph extends Component {
             </Group>
             <LinePath
               data={data}
-              xScale={xScale}
-              yScale={yScale}
-              x={x}
-              y={y}
+              x={d => xScale(x(d))}
+              y={d => yScale(y(d))}
               stroke={"var(--group-colour)"}
             />
             <AxisLeft
@@ -158,10 +156,10 @@ class Graph extends Component {
               fill="transparent"
               rx={14}
               data={data}
-              onTouchStart={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
-              onTouchMove={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
-              onMouseMove={data => event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
-              onMouseLeave={data => event => this.hideTooltip()}
+              onTouchStart={event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
+              onTouchMove={event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
+              onMouseMove={event => this.handleTooltip({event, data, x, y, xScale, yScale, margin})}
+              onMouseLeave={event => this.hideTooltip()}
             />
           </Group>
         </svg>,
@@ -199,7 +197,7 @@ class Graph extends Component {
       <section className={lens}>
         <label className={label}>Ionisation Energies</label>
         <ParentSize className={relativeWrapper}>
-          {wh => <Graph element={this.props.element} {...wh} />}
+          {parent => <Graph element={this.props.element} parent={parent} />}
         </ParentSize>
       </section>
     )
