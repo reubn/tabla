@@ -164,7 +164,7 @@ export default ({ieData, isotopesData, oxidationStatesData}) => data => ({
   no: formatFormulae(data.name_origin),
 
   // Discoverers
-  disc: data.discoverers,
+  disc: data.discoverers === 'Known to the ancients.' ? 'ancient civilisations' : data.discoverers,
 
   // Disocvery Location
   discLoc: data.discovery_location,
