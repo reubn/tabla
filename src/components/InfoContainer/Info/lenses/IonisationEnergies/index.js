@@ -180,7 +180,7 @@ class Graph extends Component {
             left={tooltipLeft + margin.left}
             className={ieTooltip}
           >
-            {`${x(tooltipData)}${['st', 'nd', 'rd'][[...`${x(tooltipData)}`].pop() - 1] || 'th'}`}
+            {`${x(tooltipData)}${['st', 'nd', 'rd'][(['11', '12', '13'].includes(`${x(tooltipData)}`.slice(-2)) ? null : [...`${x(tooltipData)}`].pop()) - 1] || 'th'}`}
           </Tooltip>]
         )]
         )
