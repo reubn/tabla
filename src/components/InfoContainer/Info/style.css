@@ -103,6 +103,7 @@
   and (orientation: portrait) {
   .open {
     width: 100vw;
+    --open-width: 100vw;
     position: absolute;
     z-index: 100;
     top: 0;
