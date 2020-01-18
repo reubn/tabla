@@ -32,14 +32,14 @@ class Info extends Component {
       element: bestElement(atomicNumber) || {}
     }
   }
-  async componentWillMount(){
+  async UNSAFE_componentWillMount(){
     if(typeof window === 'object'){
       const resolvedElement = await this.props.fullElement
       this.setState({element: resolvedElement})
     }
   }
 
-  async componentWillReceiveProps({atomicNumber: newAtomicNumber, fullElement}){
+  async UNSAFE_componentWillReceiveProps({atomicNumber: newAtomicNumber, fullElement}){
     const oldAtomicNumber = this.props.atomicNumber
     if((newAtomicNumber === oldAtomicNumber) || !newAtomicNumber) return
 

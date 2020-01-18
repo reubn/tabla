@@ -60,7 +60,7 @@ export default env => {
               loader: 'css-loader',
               query: {
                 modules: {
-                  localIdentName: devMode ? '[local]-[emoji:1]' : '[emoji:2]'
+                  localIdentName: devMode ? '[path][name]__[local]' : '[hash:base64]'
                 },
                 sourceMap: devMode
               }

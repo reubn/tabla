@@ -2,11 +2,11 @@ import {Component} from 'react'
 import shortway from 'shortway'
 
 export default class KeyCombo extends Component {
-  componentWillMount(){
+  UNSAFE_componentWillMount(){
     this.bind(this.props)
   }
 
-  componentWillUpdate({combo: newCombo, handler: newHandler}){
+  UNSAFE_componentWillUpdate({combo: newCombo, handler: newHandler}){
     const {combo, handler} = this.props
     if(combo !== newCombo || handler !== newHandler){
       this.unbind()
