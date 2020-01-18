@@ -1,5 +1,5 @@
 .shell {
-  animation: spin 120s linear infinite;
+  animation: spin linear infinite;
 }
 
 .shellRing {
