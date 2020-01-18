@@ -1,16 +1,15 @@
 import {Component} from 'react'
-import shortway from 'shortway'
 
 export default class KeyCombo extends Component {
-  UNSAFE_componentWillMount(){
+  componentDidMount(){
     this.bind(this.props)
   }
 
-  UNSAFE_componentWillUpdate({combo: newCombo, handler: newHandler}){
-    const {combo, handler} = this.props
-    if(combo !== newCombo || handler !== newHandler){
-      this.unbind()
-      this.bind({combo: newCombo, handler: newHandler})
+  UNSAFE_componentWillUpdate({combo: newCombo, handler: newHandler, detection: newDetection}){
+    const {combo, handler, detection} = this.props
+    if(combo !== newCombo){
+      this.unbind({combo, handler, detection})
+      this.bind({combo: newCombo, handler: newHandler, detection: newDetection})
     }
   }
 
@@ -18,16 +17,19 @@ export default class KeyCombo extends Component {
     this.unbind(this.props)
   }
 
-  bind({combo, handler}){
-    if(typeof document !== 'object') return
-
-    this.shortway = shortway(combo, handler)
-    document.addEventListener('keydown', this.shortway)
+  handlePress({key, repeat}){
+    if(repeat) return
+    if(key === this.props.combo) this.props.handler()
   }
 
-  unbind(){
+  bind({combo, handler, detection}){
     if(typeof document !== 'object') return
-    document.removeEventListener('keydown', this.shortway)
+    document.addEventListener(detection || 'keydown', event => this.handlePress(event))
+  }
+
+  unbind({combo, handler, detection}){
+    if(typeof document !== 'object') return
+    document.removeEventListener(detection || 'keydown', event => this.handlePress(event))
   }
 
   render(){

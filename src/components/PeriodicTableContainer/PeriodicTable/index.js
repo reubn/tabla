@@ -11,7 +11,7 @@ import {periodicTable} from './style'
 
 import {layout} from '../../../elements'
 
-const PeriodicTable = ({visibleElements, selectedElement, cursorMove, deselect}) => {
+const PeriodicTable = ({visibleElements, selectedElement, cursorMove, deselect, atomicNumberNavigate}) => {
   const groups =
     layout.map((group, groupIndex) => (
       // eslint-disable-next-line react/no-array-index-key
@@ -31,11 +31,13 @@ const PeriodicTable = ({visibleElements, selectedElement, cursorMove, deselect})
       {groups}
       <Footer />
 
-      <KeyCombo combo="top" handler={() => cursorMove([0, -1])} />
-      <KeyCombo combo="down" handler={() => cursorMove([0, 1])} />
-      <KeyCombo combo="left" handler={() => cursorMove([-1, 0])} />
-      <KeyCombo combo="right" handler={() => cursorMove([1, 0])} />
-      <KeyCombo combo="esc" handler={deselect} />
+      <KeyCombo combo="ArrowUp" handler={() => cursorMove([0, -1])} />
+      <KeyCombo combo="ArrowDown" handler={() => cursorMove([0, 1])} />
+      <KeyCombo combo="ArrowLeft" handler={() => cursorMove([-1, 0])} />
+      <KeyCombo combo="ArrowRight" handler={() => cursorMove([1, 0])} />
+      <KeyCombo combo="-" handler={() => atomicNumberNavigate(-1)} />
+      <KeyCombo combo="+" handler={() => atomicNumberNavigate(+1)} />
+      <KeyCombo combo="Escape" handler={deselect} />
     </section>
   )
 }
