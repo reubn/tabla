@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/*
+node_modulesold/*
 dist/*
 data/dist/*
 data/cache/*

@@ -34,8 +34,8 @@ export default env => {
     stats,
     mode: devMode ? 'development' : 'production',
     entry: {
-      client: ['babel-polyfill', './src/client.js'],
-      static: ['babel-polyfill', './src/static.js']
+      client: ['@babel/polyfill', './src/client.js'],
+      static: ['@babel/polyfill', './src/static.js']
     },
     output: {
       path: devMode ? '/' : path.resolve('./dist'),
@@ -56,12 +56,15 @@ export default env => {
           test: /\.css$/,
           exclude: /node_modules/,
           use: ExtractTextPlugin.extract({
-            use: {loader: 'css-loader',
+            use: {
+              loader: 'css-loader',
               query: {
-                localIdentName: devMode ? '[local]-[emoji:1]' : '[emoji:2]',
-                modules: true,
-                minimize: !devMode
-              }}
+                modules: {
+                  localIdentName: devMode ? '[local]-[emoji:1]' : '[emoji:2]'
+                },
+                sourceMap: devMode
+              }
+            }
           })
         },
         {
@@ -72,7 +75,7 @@ export default env => {
             {
               loader: 'css-loader',
               query: {
-                minimize: !devMode
+                sourceMap: devMode
               }
             }
           ]
