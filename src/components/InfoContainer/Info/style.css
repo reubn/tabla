@@ -18,6 +18,8 @@
   column-gap: 0;
   column-fill: auto;
   margin-bottom: 1rem;
+
+  max-width: var(--open-width);
 }
 
 .info * {
