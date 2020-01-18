@@ -121,6 +121,7 @@ class Graph extends Component {
               x={d => xScale(x(d))}
               y={d => yScale(y(d))}
               stroke={"var(--group-colour)"}
+              strokeWidth={2}
             />
             <AxisLeft
               scale={yScale}

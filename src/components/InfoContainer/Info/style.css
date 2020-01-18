@@ -70,11 +70,11 @@
 .name {
   display: block;
   column-span: all;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: lighter;
   color: var(--colours-grey-1);
   text-align: center;
-  padding: 1rem;
+  padding: 1.75rem;
   text-decoration: none;
   cursor: pointer;
   transition: none 0.15s ease-in;
