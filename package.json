@@ -77,9 +77,9 @@
     "superscript-number": "^1.0.0"
   },
   "scripts": {
-    "start": "npx webpack-dev-server --env=development",
+    "start": "rm -rf ./dist/* && npx webpack-dev-server --env=development",
     "data": "npx babel-node data/src",
-    "build": "rm -rf ./dist/* && node --max_old_space_size=4096 npx webpack --env=production",
+    "build": "rm -rf ./dist/* && npx --max_old_space_size=4096 webpack --env=production",
     "deploy": "sh -c 'node -pe \"require(\\`./package.json\\`).homepage\" > ./dist/CNAME' && gh-pages -m '🎉' -d dist",
     "lint": "npx eslint ./ || true",
     "lint:fix": "npx eslint --fix ./ || true",
