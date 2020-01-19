@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
   render(){
     return (
       <section className={container}>
-        <input type="text" className={searchBar} value={this.state.query} onFocus={() => this.setState({focus: true})} onBlur={() => this.setState({focus: false})} onChange={event => this.onChange(event)} placeholder="Search..." autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" />
+        <input type="text" className={searchBar} value={this.state.query} tabindex={1} onFocus={() => this.setState({focus: true})} onBlur={() => this.setState({focus: false})} onChange={event => this.onChange(event)} placeholder="Search..." autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" />
         <span className={swipeContainer}>
           <span className={classnames(swipe, {[full]: this.state.focus})} />
         </span>

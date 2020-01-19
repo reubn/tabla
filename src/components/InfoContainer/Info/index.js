@@ -56,7 +56,7 @@ class Info extends Component {
         classNames={{enter, enterActive, exit, exitActive, appear, appearActive}}
         timeout={200}
       >
-        <section className={classnames(info, {[open]: !!this.props.atomicNumber}, groupColours[this.state.element.groupBlock] || unknown)}>
+        <section className={classnames(info, {[open]: !!this.props.atomicNumber}, groupColours[this.state.element.groupBlock] || unknown)} tabindex={open ? undefined : -1}>
           <Close onClick={this.props.close} />
           <section className={scroll}>
             <a href={`//en.wikipedia.org/wiki/Element_${this.state.element.atomicNumber}`} target="_blank" rel="noopener noreferrer" className={name}>{this.state.element.name}</a>

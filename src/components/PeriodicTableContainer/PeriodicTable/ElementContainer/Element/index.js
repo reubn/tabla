@@ -21,11 +21,11 @@ const groupColours = {
 }
 
 const Element = ({basicElement: {symbol, groupBlock, atomicMass, atomicNumber}, select, selected, visible}) => (
-  <section className={classnames(elementStyle, {[selectedStyle]: selected, [invisible]: !visible}, groupColours[groupBlock] || unknown)} onClick={select}>
+  <a href={`/${atomicNumber}`} tabindex={visible ? atomicNumber + 1 : -1} className={classnames(elementStyle, {[selectedStyle]: selected, [invisible]: !visible}, groupColours[groupBlock] || unknown)} onClick={select}>
     <span className={atomicNumberStyle}>{atomicNumber}</span>
     <span className={symbolStyle}>{symbol}</span>
     <span className={atomicMassStyle}>{atomicMass.mostStableIsotope ? `(${atomicMass.v})` : sigdig(atomicMass, 4)}</span>
-  </section>
+  </a>
 )
 
 export default Element
