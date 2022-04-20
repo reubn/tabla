@@ -5,7 +5,7 @@
   "main": "./src",
   "homepage": "tabla.reuben.science",
   "repository": "https://github.com/reubn/tabla.git",
-  "author": "reuben <reuben.eggar@me.com>",
+  "author": "reuben",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.8.3",
